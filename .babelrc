@@ -1,0 +1,20 @@
+{
+  "env": {
+    "test": {
+      "plugins": [
+        ["@babel/plugin-proposal-private-methods", { "loose": true }],
+        ["@babel/plugin-proposal-private-methods", { "loose": true }],
+        [
+          "module-resolver",
+          {
+            "root": ["."],
+            "alias": {
+              "@": ".",
+              "~": "."
+            }
+          }
+        ]
+      ]
+    }
+  }
+}
