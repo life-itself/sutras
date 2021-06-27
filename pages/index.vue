@@ -9,6 +9,9 @@
         <NuxtLink to="/sutras/diamond/" class="button--green">
           Diamond Sutra
         </NuxtLink>
+        <NuxtLink to="/sutras/gateless-gate-mumonkan/" class="button--green">
+          Gateless Gate
+        </NuxtLink>
         <a
           href="https://github.com/life-itself/sutras"
           target="_blank"
