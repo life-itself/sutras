@@ -4,6 +4,7 @@ author: Lucius Annaeus Seneca
 translator: John W. Basore
 imprint: Loeb Classical Library
 publisher: "London: William Heinemann, 1932"
+source: https://www.forumromanum.org/literature/seneca_younger/brev_e.html
 ---
 
 ## I
