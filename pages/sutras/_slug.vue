@@ -3,8 +3,6 @@
     <h1>{{ article.title }}</h1>
     <p class="text-sm">
       Source: <a :href="article.source"> {{article.source}}</a>
-      <br /><br />
-      Alternative sources: <a :href="article.alt"> {{article.alt}}</a>
     </p>
     <nuxt-content :document="article" />
   </article>
