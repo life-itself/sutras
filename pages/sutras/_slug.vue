@@ -21,6 +21,19 @@
 
 <style>
 body {
+  font-family: Inter, Raleway, sans-serif;
+}
+
+h1, h2, h3, h4 {
   font-family: 'Libre Baskerville',  serif;
 }
+
+div.footnotes {
+  font-size: small;
+}
+
+.footnote-ref {
+  font-size: small;
+}
+
 </style>
