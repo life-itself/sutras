@@ -15,6 +15,9 @@
         <NuxtLink to="/sutras/seneca-on-the-shortness-of-life/" class="button--green">
           Shortness of Life
         </NuxtLink>
+        <NuxtLink to="/sutras/shodoka/" class="button--green">
+          Shodoka
+        </NuxtLink>
         <a
           href="https://github.com/life-itself/sutras"
           target="_blank"
