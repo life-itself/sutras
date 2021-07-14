@@ -15,7 +15,8 @@
     "@nuxt/content": "^1.14.0",
     "@tailwindcss/typography": "^0.4.0",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "remark-gfm": "^1.0.0"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
