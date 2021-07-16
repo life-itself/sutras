@@ -5,6 +5,9 @@
       <h1 class="title">
         sutras
       </h1>
+      <h2 class="subtitle">
+        curated wisdom teachings
+      </h2>
       <div class="links">
         <NuxtLink to="/sutras/diamond/" class="button--green">
           Diamond Sutra
