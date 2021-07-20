@@ -21,6 +21,9 @@
         <NuxtLink to="/sutras/shodoka/" class="button--green">
           Shodoka
         </NuxtLink>
+        <NuxtLink to="/sutras/faith-in-mind/" class="button--green">
+          Faith in Mind
+        </NuxtLink>
         <a
           href="https://github.com/life-itself/sutras"
           target="_blank"
