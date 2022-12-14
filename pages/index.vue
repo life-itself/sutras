@@ -12,6 +12,9 @@
         <NuxtLink to="/sutras/diamond/" class="button--green">
           Diamond Sutra
         </NuxtLink>
+        <NuxtLink to="/sutras/diamond-red-pine/" class="button--green">
+          Diamond Sutra (Red Pine)
+        </NuxtLink>
         <NuxtLink to="/sutras/gateless-gate-mumonkan/" class="button--green">
           Gateless Gate
         </NuxtLink>
