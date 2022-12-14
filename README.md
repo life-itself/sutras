@@ -1,3 +1,5 @@
+# MOVED into https://github.com/life-itself/community
+
 # Sutras
 
 The Sutras
