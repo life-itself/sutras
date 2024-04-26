@@ -1,24 +1,10 @@
-# MOVED into https://github.com/life-itself/community
+# Sutras - Curated Wisdom Teachings
 
-# Sutras
+- [[diamond|Diamond Sutra (Thich Nhat Hanh)]]
+- [[diamond-red-pine|Diamond Sutra (Red Pine)]]
+- [[gateless-gate-mumonkan|Gateless Gate]]
+- [[seneca-on-the-shortness-of-life|Shortness of Life by Seneca]]
+- [[shodoka|Shodoka]]
+- [[faith-in-mind|Faith in Mind]]
 
-The Sutras
-
-## Build Setup
-
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Source on Github: https://github.com/life-itself/sutras"

@@ -1,8 +1,8 @@
 ---
-title: The Gateless Gate 無門關
-source: https://www.sacred-texts.com/bud/zen/mumonkan.htm
-author: Wu-wen kuan (Mumonkan)
+title: The Gateless Gate 無門關 by Wu-wen kuan (Mumonkan)
 ---
+
+Source: https://www.sacred-texts.com/bud/zen/mumonkan.htm
 
 ## Mumon's Preface
  

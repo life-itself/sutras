@@ -1,8 +1,8 @@
 ---
-title: Diamond Sutra
-translator: Red Pine (Bill Porter)
-source: "The Diamond Sutra: The Perfection of Wisdom : Text and Commentaries Translated From Sanskrit and Chinese"
+title: Diamond Sutra translated by Red Pine (Bill Porter)
 ---
+
+Source: "The Diamond Sutra: The Perfection of Wisdom : Text and Commentaries Translated From Sanskrit and Chinese"
 
 ## Chapter One
 

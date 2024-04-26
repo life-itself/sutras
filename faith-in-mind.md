@@ -1,9 +1,8 @@
 ---
-title: Faith in Mind
-author: Seng Ts'an
-translator: Master Sheng-yen
-source: https://terebess.hu/english/hsin3.html
+title: Faith in Mind by Seng Ts'an translated by Master Sheng-yen
 ---
+
+Source: https://terebess.hu/english/hsin3.html
 
 ## Preface
 

@@ -1,11 +1,8 @@
 ---
-title: On the Shortness of Life
-author: Lucius Annaeus Seneca
-translator: John W. Basore
-imprint: Loeb Classical Library
-publisher: "London: William Heinemann, 1932"
-source: https://www.forumromanum.org/literature/seneca_younger/brev_e.html
+title: On the Shortness of Life by Lucius Annaeus Seneca (translator John W. Basore)
 ---
+
+Source: Loeb Classical Library published by William Heinemann (London), 1932. ([online](https://www.forumromanum.org/literature/seneca_younger/brev_e.html)).
 
 ## I
 

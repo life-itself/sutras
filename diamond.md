@@ -1,8 +1,8 @@
 ---
-title: The Diamond Sutra
-source: https://plumvillage.org/sutra/the-diamond-that-cuts-through-illusion/
-alt: http://buddhasutra.com/files/diamond_sutra.htm
+title: The Diamond Sutra translated by Thich Nhat Hanh
 ---
+
+Source: https://plumvillage.org/sutra/the-diamond-that-cuts-through-illusion/.  Alternative translation: http://buddhasutra.com/files/diamond_sutra.htm.
 
 This is what I heard one time when the Buddha was staying in the monastery in Anathapindika’s park in the Jeta Grove near Shravasti with a community of 1,250 bhikshus, fully ordained monks.
 
