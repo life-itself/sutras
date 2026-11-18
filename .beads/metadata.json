@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "sutras",
+  "project_id": "5a3757e3-ff31-4c64-a16c-dcc847d454c9"
+}
