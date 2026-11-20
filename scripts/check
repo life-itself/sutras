@@ -1,0 +1,212 @@
+#!/usr/bin/env python3
+"""Check every edition and page before it goes live.
+
+Usage: scripts/check                 (run from the repo root; exit status 1 on any failure)
+       scripts/check --strict        also fail on texts not yet made into editions
+       scripts/check --record        add the passage ids of published editions to
+                                     scripts/published-ids.txt (run after an edition goes live)
+
+A text is a Markdown file at the root other than the pages in PAGES. It counts as an edition once
+its frontmatter has a `status`. For each edition:
+
+- frontmatter: every field in REQUIRED is present and not empty, `layout: plain`;
+- passages: inside <div class="rs-verse"> or <div class="rs-passages">, every block (lines between
+  blank lines) starts with a passage link <a class="v" id="3" href="#3">; every such link has an id,
+  its href is "#" + the id, and the id is the number a reader would cite (levels joined by dots);
+- ids: no id appears twice in the file;
+- published ids: every `slug#id` in scripts/published-ids.txt still exists (ids never change);
+- footnotes: every [^n] has a [^n]: note, and every note is used;
+- download: a published edition has downloads/<slug>.epub.
+
+For every published page (texts, home, about): internal links resolve to a published file, and a
+#fragment resolves to an id or heading on the target page.
+"""
+import json, pathlib, re, sys, unicodedata
+
+import yaml
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+PUBLISHED_IDS = ROOT / "scripts" / "published-ids.txt"
+PAGES = {"README.md", "about.md", "AGENTS.md", "CLAUDE.md"}
+REQUIRED = ["title", "description", "author", "translator", "date", "tradition", "source", "licence", "status"]
+STATUSES = {"published", "partial", "draft"}
+PASSAGE_ID = re.compile(r"^[0-9a-z]+(\.[0-9a-z]+)*$")
+PASSAGE_LINK = re.compile(r'<a\s+class="v"([^>]*)>')
+ANY_ID = re.compile(r'\sid="([^"]*)"')
+CONTAINER = re.compile(r'<div class="rs-(?:verse|passages)">(.*?)\n</div>', re.S)
+MD_LINK = re.compile(r"(?<!!)\[(?:[^\]\[]|\[[^\]]*\])*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+HREF = re.compile(r'\shref="([^"]*)"')
+WIKILINK = re.compile(r"\[\[([^\]|#]*)(#[^\]|]*)?(?:\|[^\]]*)?\]\]")
+FN_REF = re.compile(r"\[\^([^\]\s]+)\](?!:)")
+FN_DEF = re.compile(r"^\[\^([^\]\s]+)\]:", re.M)
+HEADING = re.compile(r"^(#{1,6})\s+(.*?)\s*#*\s*$", re.M)
+
+
+def split(path):
+    text = path.read_text(encoding="utf-8")
+    m = re.match(r"---\n(.*?)\n---\n", text, re.S)
+    if not m:
+        return {}, text
+    return yaml.safe_load(m.group(1)) or {}, text[m.end():]
+
+
+def strip_code(body):
+    return re.sub(r"^```.*?^```", "", body, flags=re.S | re.M)
+
+
+def slugify(heading, seen):
+    """Heading id as rehype-slug (github-slugger) makes it."""
+    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", heading)  # [text](url) -> text
+    text = re.sub(r"<[^>]+>|[*_`]", "", text).lower()
+    keep = (c for c in text if c in " -" or unicodedata.category(c)[0] in "LMN" or unicodedata.category(c) == "Pc")
+    slug = "".join(keep).replace(" ", "-")
+    n, base = seen.get(slug, 0), slug
+    seen[base] = n + 1
+    return f"{base}-{n}" if n else base
+
+
+def targets(path):
+    """Every fragment a link may point at on this page."""
+    _, body = split(path)
+    body = strip_code(body)
+    seen = {}
+    return set(ANY_ID.findall(body)) | {slugify(m.group(2), seen) for m in HEADING.finditer(body)}
+
+
+def excluded(rel):
+    config = json.loads((ROOT / "config.json").read_text())
+    for rule in config.get("contentExclude", []):
+        r = rule.strip("/")
+        if rel == r or rel.startswith(r + "/") or rel.startswith("."):
+            return True
+    return False
+
+
+def resolve(link):
+    """The repo file a site path points at, or None."""
+    p = link.strip("/")
+    for cand in ([p + ".md", p, p + "/index.md", p + "/README.md"] if p else ["README.md"]):
+        f = ROOT / cand
+        if f.is_file() and not excluded(cand):
+            return f
+    return None
+
+
+def check_links(path, body, errors):
+    links = MD_LINK.findall(body) + HREF.findall(body)
+    links += [(w + (frag or "")) or "#" for w, frag in WIKILINK.findall(body)]
+    for link in links:
+        if re.match(r"^[a-z][a-z0-9+.-]*:", link) or link.startswith("//"):
+            continue  # external, mailto
+        page, _, frag = link.partition("#")
+        if page and not page.startswith("/"):
+            page = "/" + page  # relative or wikilink: resolved from the root, as all pages are there
+        target = resolve(page) if page else path
+        if target is None:
+            errors.append(f"link {link}: no published page or file")
+        elif frag and target.suffix == ".md" and not frag.startswith(("user-content-", "fn")) and frag not in targets(target):
+            errors.append(f"link {link}: no id or heading #{frag} on {target.name}")
+
+
+def check_edition(path, meta, body, published, errors):
+    for key in REQUIRED:
+        if not str(meta.get(key) or "").strip():
+            errors.append(f"frontmatter: {key} missing or empty")
+    if meta.get("status") not in STATUSES:
+        errors.append(f"frontmatter: status {meta.get('status')!r} is not one of {sorted(STATUSES)}")
+    if meta.get("layout") != "plain":
+        errors.append("frontmatter: layout must be plain")
+
+    for m in PASSAGE_LINK.finditer(body):
+        attrs = m.group(1)
+        pid = re.search(r'\bid="([^"]*)"', attrs)
+        href = re.search(r'\bhref="([^"]*)"', attrs)
+        if not pid:
+            errors.append(f"passage link without id: {m.group(0)}")
+        elif not PASSAGE_ID.match(pid.group(1)):
+            errors.append(f"passage id {pid.group(1)!r}: use the cited number, levels joined by dots")
+        elif not href or href.group(1) != "#" + pid.group(1):
+            errors.append(f'passage {pid.group(1)}: href must be "#{pid.group(1)}"')
+    for c in CONTAINER.finditer(body):
+        for block in re.split(r"\n\s*\n", c.group(1).strip()):
+            if block.strip() and not block.lstrip().startswith('<a class="v"'):
+                errors.append(f"passage without an id: {block.strip().splitlines()[0][:60]!r}")
+
+    ids = ANY_ID.findall(body)
+    for dup in sorted({i for i in ids if ids.count(i) > 1}):
+        errors.append(f"id {dup!r} used {ids.count(dup)} times")
+    for gone in sorted(published.get(path.stem, set()) - set(ids)):
+        errors.append(f"published id #{gone} has vanished (ids never change once live)")
+
+    refs, defs = set(FN_REF.findall(body)), set(FN_DEF.findall(body))
+    for n in sorted(refs - defs):
+        errors.append(f"footnote [^{n}] has no note")
+    for n in sorted(defs - refs):
+        errors.append(f"note [^{n}] is never referenced")
+
+    if meta.get("status") == "published" and not (ROOT / "downloads" / f"{path.stem}.epub").is_file():
+        errors.append(f"no downloads/{path.stem}.epub")
+
+
+def load_published():
+    published = {}
+    if PUBLISHED_IDS.exists():
+        for line in PUBLISHED_IDS.read_text().split():
+            slug, _, pid = line.partition("#")
+            published.setdefault(slug, set()).add(pid)
+    return published
+
+
+def record(editions):
+    lines = PUBLISHED_IDS.read_text().split() if PUBLISHED_IDS.exists() else []
+    added = 0
+    for path, meta, body in editions:
+        if meta.get("status") in ("published", "partial"):
+            for m in PASSAGE_LINK.finditer(body):
+                pid = re.search(r'\bid="([^"]*)"', m.group(1))
+                line = f"{path.stem}#{pid.group(1)}" if pid else None
+                if line and line not in lines:
+                    lines.append(line)
+                    added += 1
+    PUBLISHED_IDS.write_text("".join(l + "\n" for l in lines))
+    print(f"recorded {added} new passage ids in {PUBLISHED_IDS.relative_to(ROOT)}")
+
+
+def main(args):
+    strict, rec = "--strict" in args, "--record" in args
+    published = load_published()
+    failed, editions = 0, []
+    for slug in sorted(published):
+        if not (ROOT / f"{slug}.md").is_file():
+            print(f"FAIL {slug}.md\n  page is gone, but scripts/published-ids.txt lists its ids")
+            failed += 1
+    for path in sorted(ROOT.glob("*.md")):
+        if path.name in {"AGENTS.md", "CLAUDE.md"} or excluded(path.name):
+            continue
+        meta, body = split(path)
+        body = strip_code(body)
+        errors = []
+        is_text = path.name not in PAGES
+        if is_text and "status" in meta:
+            editions.append((path, meta, body))
+            check_edition(path, meta, body, published, errors)
+            kind = f"edition, {meta.get('status')}"
+        elif is_text:
+            kind = "not yet an edition"
+            if strict:
+                errors.append("no status in frontmatter: not yet made into an edition")
+        else:
+            kind = "page"
+        check_links(path, body, errors)
+        print(f"{'FAIL' if errors else 'ok  '} {path.name} ({kind})")
+        for e in errors:
+            print("  " + e)
+        failed += bool(errors)
+    if rec:
+        record(editions)
+    print(f"\n{failed} file(s) failed" if failed else "\nall checks pass")
+    return 1 if failed else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))
