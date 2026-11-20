@@ -25,7 +25,7 @@ Plus `library/<slug>/` (unpublished): the source as fetched, any second copy use
 5. **Build the page** (template below). Typography only: curly quotes and apostrophes, spaced em dashes. Fix a word only for an obvious slip, and list every fix.
 6. **Compare with the source by script.** Zero differences that are not listed in `NOTES.md`. `scripts/compare-source` does *Faith in Mind*; copy it as `library/<slug>/compare.py` (as the Shodoka did) until the general one exists (bead sutras-m2v.7.8). Record the result (passage and line counts, "0 unlisted differences") in `NOTES.md`.
 7. **Write the in brief and introduction** (see Writing). Have a fresh subagent critique them, against the sources, before you ship.
-8. **Make the EPUB:** `scripts/epub <slug>` writes `downloads/<slug>.epub`; commit it. For now it handles verse only (numeric ids, `## About this translation` straight after the verse `</div>`). For prose or dotted ids, open the EPUB and check it; if it is broken, say so on bead sutras-m2v.8.3 (site track).
+8. **Make the EPUB:** `scripts/epub <slug>` writes `downloads/<slug>.epub`; commit it. It handles verse (`rs-verse`), prose (`rs-passages`), dotted ids and linkable headings, and turns links to your own passages (`#3`, `/<slug>#3`) into links inside the book. Set `passageUnit: verse` (or `chapter`, `case`) in the frontmatter if "stanza" or "passage" is the wrong word for the Online line.
 9. **Check:** `scripts/check` must pass.
 10. **Ship:** commit only your files, then `git fetch origin && git rebase origin/main && git push origin HEAD:main`. Look at the live page at phone and desktop width, and open a passage link (`/<slug>#3`).
 11. **Record the ids:** `scripts/check --record`, commit `scripts/published-ids.txt` and push. From now on the check fails if any of them vanishes.
@@ -57,8 +57,8 @@ The body is the `.rs` wrapper copied from `faith-in-mind.md` (header, then `rs-b
 - **`syntaxMode: md` is required.** The site default is MDX, which breaks on raw HTML mixed with Markdown.
 - **Blank lines round any Markdown inside raw HTML**, or Flowershow renders it as literal text. Inside an HTML element (`<p class="rs-inbrief">`), Markdown is not parsed: use `<em>`, not `*…*`.
 - **Verse:** wrap the text in `<div class="rs-verse">`. Each stanza starts with its link on its own line, `<a class="v" id="3" href="#3">3</a>`, then the lines, each ending in two spaces. `scripts/check` fails any stanza without one.
-- **Prose** (Seneca, *Meditations*): the template style for numbered prose passages is not settled yet; ask the site track (bead) before inventing one. Use `<div class="rs-passages">` with the same `<a class="v">` link at the start of each numbered paragraph, so the check covers it.
-- **Links to a passage** from the introduction or notes: write `/<slug>#18`, not `#18`, which breaks in the EPUB (bead sutras-m2v.7.9).
+- **Prose** (Seneca, *Meditations*, the Diamond Sutra): wrap the text in `<div class="rs-passages">` and put `<a class="v" id="4.3" href="#4.3">4.3</a>` at the start of each numbered paragraph; the paragraphs after it, up to the next number, belong to that passage. The number sits in the left margin.
+- **Chapter or case headings as passage targets:** `<h3 id="17"><a href="#17">XVII</a></h3>` (Seneca, Mumonkan).
 - **Notes** are Markdown footnotes, `[^1]`, starting "*Editors’ note.*". reading.js moves them into the margin. Put the marker at the **end of a line**, never mid-line, or an opened note splits the line on a phone. Every quotation in a note is verbatim and its source is listed in `NOTES.md`.
 - Don't edit `css/`, `js/`, `custom.css` or `scripts/` from an edition track: file a bead for the site track.
 

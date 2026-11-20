@@ -4,9 +4,12 @@
 Usage: scripts/epub faith-in-mind      (run from the repo root; writes downloads/<slug>.epub)
 
 Reads <slug>.md, the same file the site publishes, and makes the small changes an e-reader needs:
-the page wrapper and header (raw HTML for the web layout) are dropped, stanza numbers become plain
-spans, site links become full URLs, and the Download section is replaced by a line saying where the
-text lives online. Title, author, translator, source and licence come from the frontmatter.
+the page wrapper and header (raw HTML for the web layout) are dropped; verse (<div class="rs-verse">)
+and prose (<div class="rs-passages">) become Pandoc fenced divs; passage numbers become spans with
+ids s3, s4.3, and linkable headings (<h3 id="17"><a href="#17">XVII</a></h3>) become headings with
+id s17; links to a passage of the same edition (#3 or /slug#3) point at it inside the book; other site
+links become full URLs; and the Download section is replaced by a line saying where the text lives
+online, naming the passage unit (frontmatter `passageUnit`, else "stanza" for verse, "passage"). Title, author, translator, source and licence come from the frontmatter.
 The output is committed, because Flowershow has no build step.
 """
 import datetime, pathlib, re, subprocess, sys, tempfile
@@ -18,10 +21,31 @@ CSS = """
 body { font-family: Georgia, serif; line-height: 1.5; }
 h1, h2, h3 { font-weight: normal; }
 .verse p { margin: 0 0 1.4em; text-align: left; hyphens: none; -webkit-hyphens: none; }
+.passages span.v { font-size: 0.75em; color: #777; margin-right: 0.5em; }
 span.v { display: block; font-size: 0.75em; color: #777; }
 p.inbrief { font-style: italic; }
 p.signed, p.meta { font-size: 0.9em; color: #555; }
 """
+
+
+def containers(body):
+    """Turn the passage containers into Pandoc fenced divs and drop the web layout's wrapper lines."""
+    out, stack = [], []
+    for line in body.split("\n"):
+        m = re.match(r'^<div class="rs-(verse|passages)">$', line)
+        if m:
+            stack.append(m.group(1)); out.append("::: " + m.group(1)); continue
+        if line == "</div>" and stack and stack[-1] != "drop":
+            stack.pop(); out.append(":::"); continue
+        if re.match(r"^</?(div|article)\b", line):
+            for closing in re.findall(r"<(/?)(?:div|article)\b", line):
+                if not closing:
+                    stack.append("drop")
+                elif stack:
+                    stack.pop()
+            continue
+        out.append(line)
+    return "\n".join(out)
 
 
 def main(slug):
@@ -30,18 +54,36 @@ def main(slug):
     m = re.match(r"---\n(.*?)\n---\n", text, re.S)
     meta, body = yaml.safe_load(m.group(1)), text[m.end():]
 
-    # web-only wrapper and header
+    # web-only header
     body = re.sub(r"(?s)<header class=\"rs-head\">.*?</header>\n", "", body)
     # in brief and signature: keep the words, drop the web classes
     body = re.sub(r'<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> (.*?)</p>', r'<p class="inbrief">\1</p>', body)
     body = body.replace('<p class="rs-signed">', '<p class="signed">')
-    # the poem: a fenced div of class verse; each stanza number becomes a span Pandoc can link to
-    body = body.replace('<div class="rs-verse">', "::: verse").replace("</div>\n\n## About this translation", ":::\n\n## About this translation")
-    body = re.sub(r'<a class="v" id="(\d+)" href="#\1">\1</a>\n', r"[\1]{.v #s\1}\n", body)
-    body = re.sub(r"(?m)^</?(div|article)\b[^\n]*\n", "", body)
+    # the text: <div class="rs-verse"> and <div class="rs-passages"> become fenced divs; other wrapper lines go
+    body = containers(body)
+    # passage numbers become spans Pandoc can link to (#s3, #s4.3); linkable headings become Markdown headings
+    ids = []
+    def number(m):
+        ids.append(m.group(1))
+        return "[%s]{.v #s%s}" % (m.group(2), m.group(1))
+    body = re.sub(r'<a class="v" id="([^"]+)" href="#\1">(.*?)</a>', number, body)
+    def heading(m):
+        pid, inner = m.group(2), m.group(3)
+        inner = re.sub(r'^<a href="#%s">(.*)</a>$' % re.escape(pid), r"\1", inner.strip())
+        ids.append(pid)
+        return "%s %s {#s%s}" % ("#" * int(m.group(1)), inner, pid)
+    body = re.sub(r'(?m)^<h([23])\b[^>]*?\bid="([^"]+)"[^>]*>(.*)</h\1>$', heading, body)
+    # links to a passage of this edition (#3, /slug#3) go to its span in the book
+    alt = "|".join(re.escape(i) for i in sorted(ids, key=len, reverse=True)) or "(?!)"
+    body = re.sub(r'(\]\(|href=")(?:/%s)?#(%s)(?=[)"])' % (re.escape(slug), alt), r"\1#s\2", body)
     # download section -> where this lives online
-    body = re.sub(r"(?s)## Download\n.*?(?=\n\[\^|\Z)", "## Online\n\nThis edition lives at <%s/%s>, where each stanza has its own link (for example <%s/%s#3>).\n" % (SITE, slug, SITE, slug), body)
+    unit = meta.get("passageUnit") or ("stanza" if "::: verse" in body else "passage")
+    example = ids[min(2, len(ids) - 1)] if ids else ""
+    online = "This edition lives at <%s/%s>" % (SITE, slug)
+    online += ", where each %s has its own link (for example <%s/%s#%s>).\n" % (unit, SITE, slug, example) if example else ".\n"
+    body = re.sub(r"(?s)## Download\n.*?(?=\n\[\^|\Z)", "## Online\n\n" + online, body)
     body = re.sub(r"\]\(/(?!/)", "](%s/" % SITE, body)
+    body = re.sub(r'href="/(?!/)', 'href="%s/' % SITE, body)
 
     out = root / "downloads" / (slug + ".epub")
     out.parent.mkdir(exist_ok=True)
