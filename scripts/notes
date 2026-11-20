@@ -39,11 +39,14 @@ FIELDS = {"id", "passage", "quote", "prefix", "suffix", "note", "by", "date"}
 # ---------- normalising text for matching (js/notes.js does the same) ----------
 
 FOLD = {"‘": "'", "’": "'", "‚": "'", "′": "'", "“": '"', "”": '"', "„": '"', "″": '"',
-        "‐": "-", "‑": "-", "‒": "-", "–": "-", "—": "-", "―": "-", "−": "-", " ": " "}
+        "‐": "-", "‑": "-", "‒": "-", "–": "-", "—": "-", "―": "-", "−": "-", "…": "..."}
 
 
 def fold(s):
+    """Quotes straight, every dash a hyphen and a run of them one (Flowershow turns -- into a dash),
+    an ellipsis three dots (Flowershow turns ... into one), whitespace one space."""
     s = "".join(FOLD.get(c, c) for c in s)
+    s = re.sub(r"-+", "-", s)
     return re.sub(r"\s+", " ", s)
 
 
@@ -53,7 +56,7 @@ def plain(md):
     """Markdown and HTML to the words shown on the page (roughly; enough to check quotes)."""
     s = md
     s = re.sub(r"<!--.*?-->", " ", s, flags=re.S)
-    s = re.sub(r"<a\b[^>]*\bclass=\"v\"[^>]*>.*?</a>", " ", s)    # passage numbers
+    s = re.sub(r"<a\b(?=[^>]*\sclass=\"(?:[^\"]*\s)?v(?:\s[^\"]*)?\")[^>]*>.*?</a>", " ", s)    # passage numbers
     s = re.sub(r"\[\^[^\]]+\]", "", s)                            # footnote markers
     s = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r"\1", s)               # links and images: keep the words
     s = re.sub(r"<br\s*/?>", " ", s)
@@ -72,17 +75,26 @@ def front_matter_end(md):
 
 
 def passage_region(md, pid):
-    """The Markdown from the element with id=pid to the next element of the same kind, or the next ## heading."""
-    m = re.search(r"<(\w+)\b([^>]*)\bid=\"%s\"[^>]*>" % re.escape(pid), md)
+    """The Markdown of passage pid: from the element with that id to the next passage of the same kind
+    (a.v numbers; headings that link to themselves; else the same tag with an id) or the next ## heading.
+    As in js/notes.js, the words of a passage number or heading are not part of the passage."""
+    m = re.search(r"<(\w+)\b[^>]*\sid=\"%s\"[^>]*>" % re.escape(pid), md)
     if not m:
         return None
-    tag, cls = m.group(1), re.search(r"\bclass=\"([^\"]*)\"", m.group(0))
+    tag, open_tag = m.group(1).lower(), m.group(0)
     start = m.end()
-    close = re.compile(r"</%s\s*>" % tag).search(md, start)    # the element's own words (a number, a heading) are not the passage
-    if close and "\n\n" not in md[start:close.start()]:
-        start = close.end()
-    same = r"<%s\b[^>]*%s[^>]*\bid=\"[^\"]+\"" % (tag, r'\bclass="%s"' % re.escape(cls.group(1)) if cls else "")
-    nxt = re.compile(same).search(md, start)
+    is_v = tag == "a" and re.search(r'\sclass="(?:[^"]*\s)?v(?:\s[^"]*)?"', open_tag)
+    if is_v or re.fullmatch(r"h[1-6]", tag) or re.match(r"\s*</%s\s*>" % tag, md[start:]):
+        close = re.compile(r"</%s\s*>" % tag).search(md, start)
+        if close:
+            start = close.end()
+    if is_v:
+        same = r'<a\b(?=[^>]*\sclass="(?:[^"]*\s)?v(?:\s[^"]*)?")[^>]*\sid="[^"]+"'
+    elif re.fullmatch(r"h[1-6]", tag):
+        same = r'<%s\b[^>]*\sid="([^"]+)"[^>]*>\s*<a\s[^>]*href="#' % tag
+    else:
+        same = r'<%s\b[^>]*\sid="[^"]+"' % tag
+    nxt = re.compile(same, flags=re.I).search(md, start)
     stop = re.search(r"</article>|^##\s|<h2\b", md[start:], flags=re.M)   # a passage never runs past a section heading
     ends = [len(md)] + ([nxt.start()] if nxt else []) + ([start + stop.start()] if stop else [])
     return md[start:min(ends)]
@@ -99,12 +111,19 @@ def occurrences(hay, needle):
 # ---------- Markdown in a note, to HTML ----------
 
 def inline(s):
+    links = []
+    def hold(m):   # links out of the way first, so their URLs are escaped once and never get emphasis
+        links.append((m.group(1), m.group(2)))
+        return "\x00%d\x00" % (len(links) - 1)
+    s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", hold, s)
     s = html.escape(s, quote=False)
-    s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: '<a href="%s">%s</a>' % (html.escape(m.group(2)), m.group(1)), s)
-    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
-    s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", s)
-    s = re.sub(r"(?<!\w)_(?!\s)(.+?)(?<!\s)_(?!\w)", r"<em>\1</em>", s)
-    return s
+    def emph(t):
+        t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
+        t = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", t)
+        return re.sub(r"(?<!\w)_(?!\s)(.+?)(?<!\s)_(?!\w)", r"<em>\1</em>", t)
+    s = emph(s)
+    return re.sub(r"\x00(\d+)\x00", lambda m: '<a href="%s">%s</a>' % (html.escape(links[int(m.group(1))][1]),
+                                                                    emph(html.escape(links[int(m.group(1))][0], quote=False))), s)
 
 
 def note_html(md):
@@ -159,6 +178,8 @@ def check(slug):
         seen.add(nid)
         quote = fold(str(e["quote"])).strip()
         pre, suf = fold(str(e.get("prefix") or "")), fold(str(e.get("suffix") or ""))
+        if e.get("passage") is not None and (isinstance(e["passage"], (float, bool)) or not isinstance(e["passage"], (str, int))):
+            problems.append('%s: passage %r must be quoted ("5.10" not 5.10, which YAML reads as 5.1)' % (where, e["passage"])); continue
         pid = str(e["passage"]) if e.get("passage") is not None else None
         if pid is not None:
             region = passage_region(md, pid)
@@ -189,6 +210,15 @@ def check(slug):
     return out, problems
 
 
+def page_of(slug):
+    """The page the notes belong to, as js/notes.js sees location.pathname."""
+    path = ROOT / "annotations" / (slug + ".yaml")
+    text = (yaml.safe_load(path.read_text()) or {}).get("text", slug + ".md")
+    p = "/" + re.sub(r"\.mdx?$", "", text)
+    p = re.sub(r"(^|/)(README|index)$", "", p, flags=re.I)
+    return p.rstrip("/") or "/"
+
+
 def near(hay, quote):
     """The stretch of the passage most like the quote, to help fix a broken one."""
     import difflib
@@ -206,7 +236,7 @@ def near(hay, quote):
 def write(slug, notes):
     dest = ROOT / "js" / "notes" / (slug + ".js")
     dest.parent.mkdir(parents=True, exist_ok=True)
-    body = json.dumps({"text": slug, "notes": notes}, ensure_ascii=False, indent=1)
+    body = json.dumps({"text": slug, "page": page_of(slug), "notes": notes}, ensure_ascii=False, indent=1)
     dest.write_text("/* Generated by scripts/notes from annotations/%s.yaml. Do not edit: edit the YAML and rerun. */\n"
                     "window.SutrasNotes = %s;\n" % (slug, body))
     return dest
