@@ -1,0 +1,139 @@
+<title>Sutras Mood Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: pictures to look at. One column, each image full width, a line or two under it. White, so the images carry the colour. Light only, by choice. */
+:root{
+  --bg:#ffffff; --ink:#1d1d1b; --muted:#6a6762; --rule:#e2e0da; --wash:#f6f5f2;
+  --ui:"Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Newsreader","Iowan Old Style",Georgia,serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:15.5px;line-height:1.55;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:36px 96px}
+@media(min-width:700px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:500;font-family:var(--serif)}
+h1{font-size:clamp(34px,5vw,52px);line-height:1.05;letter-spacing:-.01em}
+h2{font-size:22px;font-style:italic;font-weight:400;color:var(--muted);margin:0 0 6px}
+h3{font-size:clamp(22px,3vw,30px);line-height:1.15}
+p{margin:0 0 12px}
+.mast{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;color:var(--muted);font-size:13.5px;border-bottom:1px solid var(--ink);padding-bottom:10px}
+.mast b{color:var(--ink);font-weight:600}
+.top{padding:44px 0 8px;max-width:70ch}
+.top p{font-size:17px;line-height:1.5}
+.top p.small{font-size:14.5px;color:var(--muted)}
+section{padding-top:64px}
+.ref{padding:40px 0 0}
+.ref+.ref{margin-top:24px;border-top:1px solid var(--rule)}
+.ref .k{font-family:var(--serif);font-size:15px;color:var(--muted);font-variant-numeric:tabular-nums;display:block;margin-bottom:6px}
+.ref figure{margin:14px 0 0;min-width:0}
+.ref img{display:block;width:100%;max-width:100%;border:1px solid var(--rule)}
+.ref figcaption{font-size:13px;color:var(--muted);padding-top:7px}
+.ref .lines{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px 40px;margin-top:12px}
+.tk,.lv{display:block;font-size:15px;line-height:1.5}
+.tk::before{content:"take → ";font-weight:600}
+.lv{color:var(--muted)}
+.lv::before{content:"leave → ";font-weight:600;color:var(--ink)}
+.anti .ref img{max-width:720px}
+.before img{max-width:720px}
+.ask{max-width:70ch;margin-top:12px;font-size:17px;line-height:1.5}
+.ask li{margin-bottom:6px}
+footer{margin-top:72px;border-top:1px solid var(--ink);padding-top:10px;color:var(--muted);font-size:13px}
+@media(max-width:760px){.ref .lines{grid-template-columns:minmax(0,1fr)} section{padding-top:48px}}
+@media(prefers-reduced-motion:no-preference){a{transition:text-decoration-color .15s}}
+</style>
+
+<div class="wrap">
+<div class="mast"><span><b>Sutras</b> · mood board</span><span>First board · 20 November 2026 · six references, two anti-patterns</span></div>
+
+<header class="top">
+  <h1>Sutras: a first mood board</h1>
+  <p>Six existing things to look at, and two we are not. A small board on purpose: say which of these you feel something for, which leave you cold, and where to look further, and the next board widens from that. Behind this page sit a hundred candidates already captured and a <a href="https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr">separate page of five directions</a> read from them; both change with what you say here.</p>
+  <p class="small">Each image is captured at the moment that matters, which is often scrolled down from the top. Nothing is mocked up. Museum images are open-licence and credited.</p>
+</header>
+
+<section id="refs">
+<h2>Six references</h2>
+
+<article class="ref">
+  <span class="k">1</span>
+  <h3>Emergence Magazine: the opening of a poem</h3>
+  <figure><img src="{{shot:emergence-poem-redpine}}" alt="A Chinese ink landscape of mountains and pines with a salmon-pink brush stroke across it, on warm grey paper, the word POEM in small tracked capitals beneath"><figcaption><a href="https://emergencemagazine.org/poem/red-pine/">emergencemagazine.org/poem/red-pine</a>: Cold Mountain and Stonehouse, translated by Red Pine. The first screen; the poem follows below it in a narrow serif column, Chinese above English.</figcaption></figure>
+  <div class="lines"><span class="tk">warm grey paper; one quiet image per text, an old landscape with one modern stroke; the long breath before the first line.</span><span class="lv">a full screen of art before every page; the magazine nav; a slight sleekness.</span></div>
+</article>
+
+<article class="ref">
+  <span class="k">2</span>
+  <h3>Plum Village: a sutra page</h3>
+  <figure><img src="{{shot:plumvillage-sutra}}" alt="A brushed handwritten Plum Village name, then Sutras / Discourse on Love in brown and italic, the source line, Play and Download Audio, and the text beside a small woodcut"><figcaption><a href="https://plumvillage.org/library/sutras/discourse-on-love">plumvillage.org/library/sutras/discourse-on-love</a>. Your “a little more Plum Village”.</figcaption></figure>
+  <div class="lines"><span class="tk">the brushed name as the only ornament; the title with its source line under it; the text starting at once in a generous serif.</span><span class="lv">the Play and Download buttons above the first line; the picture floated into the text; the yellows elsewhere on the site.</span></div>
+</article>
+
+<article class="ref">
+  <span class="k">3</span>
+  <h3>Co–Star: the black band</h3>
+  <figure><img src="{{shot:costar-scroll}}" alt="A black band with a grey moon, a grey hand and a grey skull, three short grey paragraphs beneath, then a birth chart on near-white"><figcaption><a href="https://www.costarastrology.com">costarastrology.com</a>, the second screen. Your reference for stripped down.</figcaption></figure>
+  <div class="lines"><span class="tk">the nerve to leave a screen almost empty; three objects given a whole screen; one typeface for everything; texture from a faint line drawing, not colour.</span><span class="lv">the cold, the centring, the knowing tone, the small text.</span></div>
+</article>
+
+<article class="ref">
+  <span class="k">4</span>
+  <h3>Kaikado: tea caddies in a row</h3>
+  <figure><img src="{{shot:kaikado}}" alt="Seven copper tea caddies of rising size in a row on a pale grey ground, a small brushed shop mark with a red seal above them"><figcaption><a href="https://www.kaikado.jp/english/">kaikado.jp</a>, Kyoto, tea caddies since 1875. The first screen.</figcaption></figure>
+  <div class="lines"><span class="tk">how much of the page is empty; a grey ground rather than white; things in a row with room between them, which is how a short list of texts could look; one brushed mark.</span><span class="lv">nothing much; it is a shop below this screen.</span></div>
+</article>
+
+<article class="ref">
+  <span class="k">5</span>
+  <h3>Zhao Mengfu: the Heart Sutra, with its readers' seals</h3>
+  <figure><img src="{{shot:heart-sutra-zhao}}" alt="Running script in black ink in columns on gold-brown paper, with the red seals of later owners stamped at the top"><figcaption>Zhao Mengfu, <i>Heart Sutra</i>, Yuan dynasty, handscroll (detail). Wikimedia Commons, public domain. Not a website: the most beautiful thing found in the whole scan.</figcaption></figure>
+  <div class="lines"><span class="tk">black text as one continuous surface; red for nothing but the marks around it; the seals are literally the marks of earlier readers, which is what your notes in the margin are.</span><span class="lv">copying it: vertical text, a scroll layout or a seal-script wordmark would be costume.</span></div>
+</article>
+
+<article class="ref">
+  <span class="k">6</span>
+  <h3>Fitzcarraldo Editions: the covers</h3>
+  <figure><img src="{{shot:fitzcarraldo}}" alt="Two photographed paperbacks: one white with a blue frame and spaced capitals, one plain blue with white spaced capitals, author above and title in the middle"><figcaption><a href="https://fitzcarraldoeditions.com">fitzcarraldoeditions.com</a>. The covers are the whole identity: blue for fiction, white for essays.</figcaption></figure>
+  <div class="lines"><span class="tk">one colour, spaced capitals, author and title and nothing else; a house style that never changes; each text as an edition with a cover, and the EPUB the same object.</span><span class="lv">the shop: basket, breadcrumbs, books photographed in rooms.</span></div>
+</article>
+</section>
+
+<section class="anti" id="not">
+<h2>Two we are not</h2>
+
+<article class="ref">
+  <span class="k">a</span>
+  <h3>Terebess: the archive</h3>
+  <figure><img src="{{shot:terebess}}" alt="Faith in Mind as yellow and green links on a maroon background, a contents list before any text"><figcaption><a href="https://terebess.hu/english/hsin3.html">terebess.hu</a>, our own source for <i>Faith in Mind</i>. Everything is here and none of it can be read.</figcaption></figure>
+</article>
+
+<article class="ref">
+  <span class="k">b</span>
+  <h3>Daily Zen: the gift shop</h3>
+  <figure><img src="{{shot:dailyzen}}" alt="A brush drawing of a monk, a casual script font, a quote in a box, Send a Zen Card"><figcaption><a href="https://www.dailyzen.com">dailyzen.com</a>. Brush drawing, casual script, “Send a Zen card”. One step past Plum Village is this.</figcaption></figure>
+</article>
+</section>
+
+<section class="before" id="before">
+<h2>The site today</h2>
+<article class="ref" style="padding-top:8px">
+  <figure style="margin-top:0"><img src="{{shot:before-fim}}" alt="Sutras today: Faith in Mind on a laptop, a white page with a red label, title, an In brief box and the introduction"><figcaption>sutras.lifeitself.org/faith-in-mind, 20 November 2026. Flowershow's default, tidied.</figcaption></figure>
+</article>
+</section>
+
+<section id="ask">
+<h2>What would help</h2>
+<ul class="ask">
+  <li>Which of the six do you feel something for, and which leave you cold?</li>
+  <li>Where to look further: more like 1 and 2 (warm pages), more like 3 and 4 (empty rooms), more like 5 (the texts' own forms), more like 6 (books as objects), or somewhere not on this board?</li>
+  <li>Anything you already find beautiful, on paper or screen, that should be here.</li>
+</ul>
+</section>
+
+<footer>Screenshots by headless Chromium, scrolled where noted. Everything scanned so far and why it was kept or dropped: <code>docs/design/moodboard-candidates.md</code>. The five directions read from the wider scan: <a href="https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr">Sutras: Five Directions</a>.</footer>
+</div>
