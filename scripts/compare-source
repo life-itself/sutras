@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+"""Compare the Faith in Mind edition with its source, word for word.
+
+Usage: scripts/compare-source            (run from the repo root)
+
+Reads faith-in-mind.md and library/faith-in-mind/hsin3.html (the source as fetched) and prints
+every difference in the words of the poem, the preface and the introduction. Quote style, dashes
+and whitespace are normalised first, so only real changes show. Each difference must be either
+reverted or listed in library/faith-in-mind/NOTES.md. Exit status 1 if there are differences that
+are not in the EXPECTED list below.
+
+Written for one text; generalise it when the second edition is made (workstream 2).
+"""
+import difflib, html, re, sys
+
+EDITION = "faith-in-mind.md"
+SOURCE = "library/faith-in-mind/hsin3.html"
+
+# Changes we made on purpose (all listed in NOTES.md): (source words, edition words)
+EXPECTED = {
+    ("Founded,", "founded,"),
+    ("Nui", "Hui"),
+    ("discriminates;", "discriminate;"),
+    ("hsin", "hsin)"),
+    # line-end dashes restored in the poem
+    ("other", "other -"), ("mind", "mind -"), ("sky", "sky -"), ("wrong", "wrong -"), ("slow", "slow -"),
+}
+
+
+def norm(s):
+    s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
+    s = s.replace("—", "-").replace("–", "-").replace("\xa0", " ")
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def source_parts():
+    h = open(SOURCE, encoding="utf-8").read()
+
+    def cut(a, b):
+        seg = h[h.index('<a name="%s">' % a):h.index('<a name="%s">' % b)]
+        out = []
+        for p in re.findall(r"(?is)<p[^>]*>(.*?)</p>", seg):
+            p = re.sub(r"(?i)<br\s*/?>", "\x00", p)
+            p = html.unescape(re.sub(r"<[^>]+>", " ", p))
+            lines = [norm(l) for l in p.split("\x00")]
+            lines = [l for l in lines if l]
+            if lines:
+                out.append(lines)
+        return out
+
+    preface = [l for p in cut("01", "02") for l in p]
+    intro = [l for p in cut("02", "03") for l in p]
+    poem = cut("03", "1")
+    return preface, intro, poem
+
+
+def edition_parts():
+    t = open(EDITION, encoding="utf-8").read()
+
+    def section(start, end):
+        return t[t.index(start) + len(start):t.index(end)]
+
+    def clean(s):
+        s = re.sub(r"\[\^[^\]]+\]", "", s)      # footnote markers
+        s = re.sub(r"<[^>]+>", "", s)           # raw HTML tags (their text is handled by the caller)
+        return s
+
+    stanzas = []
+    for block in section("## The poem", "## About this translation").split("\n\n"):
+        m = re.match(r'\s*<a class="v" id="(\d+)" href="#\1">\1</a>\n', block)
+        if not m:
+            continue
+        lines = [norm(clean(l)) for l in block[m.end():].split("\n")]
+        stanzas.append((int(m.group(1)), [l for l in lines if l]))
+    preface = [norm(clean(p)) for p in section("### Preface", "### Sheng-yen").split("\n\n") if p.strip()]
+    intro = [norm(clean(p)) for p in section("### Sheng-yen", "## Source and licence").split("\n\n")[1:] if p.strip()]
+    return preface, intro, stanzas
+
+
+def diff_words(label, a, b, problems):
+    aw, bw = a.split(), b.split()
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, aw, bw, autojunk=False).get_opcodes():
+        if op == "equal":
+            continue
+        pair = (" ".join(aw[i1:i2]), " ".join(bw[j1:j2]))
+        if i1 == i2:  # pure insertion: show the word before it for context
+            pair = (" ".join(aw[max(i1 - 1, 0):i2]), " ".join(bw[max(j1 - 1, 0):j2]))
+        known = pair in EXPECTED
+        print("%s %s: source %r -> edition %r" % ("listed  " if known else "UNLISTED", label, pair[0], pair[1]))
+        if not known:
+            problems.append((label, pair))
+
+
+def main():
+    s_pre, s_intro, s_poem = source_parts()
+    e_pre, e_intro, e_poem = edition_parts()
+    problems = []
+    print("Poem: source %d stanzas, %d lines; edition %d stanzas, %d lines" % (
+        len(s_poem), sum(map(len, s_poem)), len(e_poem), sum(len(l) for _, l in e_poem)))
+    if [n for n, _ in e_poem] != list(range(1, len(e_poem) + 1)):
+        problems.append(("poem", "stanza ids are not 1..n in order"))
+    if len(s_poem) != len(e_poem):
+        problems.append(("poem", "stanza count differs"))
+    for (n, el), sl in zip(e_poem, s_poem):
+        if len(el) != len(sl):
+            problems.append(("stanza %d" % n, "line count differs: source %d, edition %d" % (len(sl), len(el))))
+            print("UNLISTED stanza %d: line count differs" % n)
+        for k, (a, b) in enumerate(zip(sl, el), 1):
+            if a != b:
+                diff_words("stanza %d line %d" % (n, k), a, b, problems)
+    for label, sp, ep in (("preface", s_pre, e_pre), ("introduction", s_intro, e_intro)):
+        if len(sp) != len(ep):
+            print("UNLISTED %s: paragraph count differs: source %d, edition %d" % (label, len(sp), len(ep)))
+            problems.append((label, "paragraph count"))
+        diff_words(label, " ".join(sp), " ".join(ep), problems)
+    print("\n%d unlisted difference(s)." % len(problems))
+    return 1 if problems else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

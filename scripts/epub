@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""Build an EPUB of one edition with Pandoc.
+
+Usage: scripts/epub faith-in-mind      (run from the repo root; writes downloads/<slug>.epub)
+
+Reads <slug>.md, the same file the site publishes, and makes the small changes an e-reader needs:
+the page wrapper and header (raw HTML for the web layout) are dropped, stanza numbers become plain
+spans, site links become full URLs, and the Download section is replaced by a line saying where the
+text lives online. Title, author, translator, source and licence come from the frontmatter.
+The output is committed, because Flowershow has no build step.
+"""
+import datetime, pathlib, re, subprocess, sys, tempfile
+
+import yaml
+
+SITE = "https://sutras.lifeitself.org"
+CSS = """
+body { font-family: Georgia, serif; line-height: 1.5; }
+h1, h2, h3 { font-weight: normal; }
+.verse p { margin: 0 0 1.4em; text-align: left; hyphens: none; -webkit-hyphens: none; }
+span.v { display: block; font-size: 0.75em; color: #777; }
+p.inbrief { font-style: italic; }
+p.signed, p.meta { font-size: 0.9em; color: #555; }
+"""
+
+
+def main(slug):
+    root = pathlib.Path(__file__).resolve().parent.parent
+    text = (root / (slug + ".md")).read_text(encoding="utf-8")
+    m = re.match(r"---\n(.*?)\n---\n", text, re.S)
+    meta, body = yaml.safe_load(m.group(1)), text[m.end():]
+
+    # web-only wrapper and header
+    body = re.sub(r"(?s)<header class=\"rs-head\">.*?</header>\n", "", body)
+    # in brief and signature: keep the words, drop the web classes
+    body = re.sub(r'<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> (.*?)</p>', r'<p class="inbrief">\1</p>', body)
+    body = body.replace('<p class="rs-signed">', '<p class="signed">')
+    # the poem: a fenced div of class verse; each stanza number becomes a span Pandoc can link to
+    body = body.replace('<div class="rs-verse">', "::: verse").replace("</div>\n\n## About this translation", ":::\n\n## About this translation")
+    body = re.sub(r'<a class="v" id="(\d+)" href="#\1">\1</a>\n', r"[\1]{.v #s\1}\n", body)
+    body = re.sub(r"(?m)^</?(div|article)\b[^\n]*\n", "", body)
+    # download section -> where this lives online
+    body = re.sub(r"(?s)## Download\n.*?(?=\n\[\^|\Z)", "## Online\n\nThis edition lives at <%s/%s>, where each stanza has its own link (for example <%s/%s#3>).\n" % (SITE, slug, SITE, slug), body)
+    body = re.sub(r"\]\(/(?!/)", "](%s/" % SITE, body)
+
+    out = root / "downloads" / (slug + ".epub")
+    out.parent.mkdir(exist_ok=True)
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = pathlib.Path(tmp)
+        (tmp / "book.md").write_text(body, encoding="utf-8")
+        (tmp / "epub.css").write_text(CSS, encoding="utf-8")
+        cmd = ["pandoc", str(tmp / "book.md"), "-f", "markdown", "-t", "epub3", "-o", str(out),
+               "--css", str(tmp / "epub.css"), "--split-level=2", "--toc", "--toc-depth=2",
+               "--metadata", "title=" + meta["title"],
+               "--metadata", "author=" + meta["author"],
+               "--metadata", "contributor=Translated by " + meta["translator"],
+               "--metadata", "lang=en-GB",
+               "--metadata", "date=" + datetime.date.today().isoformat(),
+               "--metadata", "rights=" + meta["licence"],
+               "--metadata", "source=" + meta["source"],
+               "--metadata", "publisher=Sutras (%s)" % SITE,
+               "--metadata", "identifier=%s/%s" % (SITE, slug)]
+        subprocess.run(cmd, check=True)
+    print("wrote", out.relative_to(root))
+
+
+if __name__ == "__main__":
+    main(sys.argv[1] if len(sys.argv) > 1 else sys.exit(__doc__))

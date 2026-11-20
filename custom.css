@@ -1,0 +1,31 @@
+/* Sutras custom.css. Loads on every page of the site.
+   Everything here is scoped to .rs (the reading layout, used by edition pages with layout: plain),
+   so pages without a .rs wrapper are unchanged. @import lines must stay first. */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("/css/reading.css");
+
+/* The reading system under Flowershow's sticky navbar */
+.rs { --rs-sticky-top: var(--navbar-height, 4rem) }
+
+/* Footnotes: Flowershow renders the footnote list after our closing </div>, outside .rs.
+   reading.js marks it once the notes are in the margin; hide it on screen then. Before that, style it. */
+@media screen { [data-rs-sidenoted] { display: none } }
+.rs ~ .footnotes, .rs ~ [data-footnotes] { max-width: 34em; margin: 0 auto; padding: 2rem 20px 4rem; font-family: "EB Garamond", Garamond, Georgia, serif; font-size: 17px; line-height: 1.5 }
+
+/* Edition header */
+.rs-head .rs-attribution { margin: 0; color: var(--rs-ink2); font-size: 1em; line-height: 1.45 }
+.rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: var(--rs-s5) 0 }
+.rs-text .rs-signed { font-size: .9em; font-style: italic; color: var(--rs-muted) }
+
+/* Verse: one <p> per stanza, lines ended with two spaces. No hyphenation. */
+.rs-verse p { position: relative; hyphens: none; -webkit-hyphens: none; text-wrap: wrap; text-align: left; margin-bottom: var(--rs-s4); hanging-punctuation: none }
+.rs[data-rs-theme="personal"] .rs-verse p::first-line { font-variant: normal; letter-spacing: 0 }
+
+/* Stanza numbers: <a class="v" id="3" href="#3">3</a> at the start of each stanza.
+   The link target must land clear of the navbar. */
+.rs-verse a.v { display: block; font-size: .72em; line-height: 1.2; margin-bottom: .2em; color: var(--rs-muted); text-decoration: none; font-variant-numeric: lining-nums; scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
+.rs-verse a.v:hover, .rs-verse a.v:target { color: var(--rs-accent) }
+@container rs (min-width: 760px) {
+  .rs-verse a.v { position: absolute; left: -2.6em; top: .32em; margin: 0; width: 2.2em; text-align: right }
+}
+.rs-text h2, .rs-text h3 { scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
