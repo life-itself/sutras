@@ -16,7 +16,7 @@ syntaxMode: md
 
 ## What it is
 
-Sutras is a small library of wisdom texts: key Buddhist sutras and Zen texts, and others such as Seneca and Marcus Aurelius’s *Meditations*. Each text is here because Rufus Pollock finds it worth reading, or has found it useful, and wanted an edition of it he would really read.
+Sutras is a small library of texts worth reading slowly: Zen poems and koans, the Diamond Sutra, the Dhammapada, the Tao Te Ching, Seneca and Marcus Aurelius’s *Meditations*. Each text is here because Rufus Pollock finds it worth reading, or has found it useful, and wanted an edition of it he would really read.
 
 ## Who it is for
 
@@ -30,6 +30,7 @@ Then anyone looking online for a wisdom text in a good format: a clean page to r
 - **A link for every passage.** Each verse, stanza or section has a number you can link to, such as [/faith-in-mind#3](/faith-in-mind#3). Once published, a number does not change.
 - **Notes in the margin.** Editorial notes, and Rufus’s own notes beside the passages they are about, starting with [<em>Meditations</em>](/meditations).
 - **A download.** Each text as an EPUB for an e-reader.
+- **Translations compared.** Where more than one translation is worth reading, we set them side by side, beginning with [five chapters of the Tao Te Ching](/tao-te-ching-compared).
 - **Its source.** Where the text came from and, once an edition is finished, how it was checked against that source word for word, with every change listed in the edition notes.
 
 ## Copyright
