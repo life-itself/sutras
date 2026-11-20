@@ -1,10 +1,78 @@
-# Sutras - Curated Wisdom Teachings
+---
+title: Sutras
+description: "A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics, each made into an edition to read slowly online or download as an EPUB."
+layout: plain
+syntaxMode: md
+---
 
-- [[diamond|Diamond Sutra (Thich Nhat Hanh)]]
-- [[diamond-red-pine|Diamond Sutra (Red Pine)]]
-- [[gateless-gate-mumonkan|Gateless Gate]]
-- [[seneca-on-the-shortness-of-life|Shortness of Life by Seneca]]
-- [[shodoka|Shodoka]]
-- [[faith-in-mind|Faith in Mind]]
+<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
+<span class="rs-kicker">A library of wisdom texts</span>
+<h1>Sutras</h1>
+</div></div></header>
+<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-Source on Github: https://github.com/life-itself/sutras"
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics. Each one is made into an edition to read slowly: a clean page with an introduction, a link for every passage, notes in the margin and an EPUB to download. Curated, not complete: each text is here because it is worth reading, and some will carry Rufus Pollock’s own notes alongside.</p>
+
+## Zen (Ch’an)
+
+### [Faith in Mind](/faith-in-mind)
+
+<p class="rs-quiet">Attributed to Seng Ts’an · translated by Master Sheng-yen</p>
+
+A short poem on the mind that does not pick and choose.
+
+### [Shodoka](/shodoka)
+
+<p class="rs-quiet">Attributed to Yung-chia Hsuan-chueh · translated by Nyogen Senzaki, revised by Robert Aitken</p>
+
+The Song of Enlightenment, by a student of Hui-neng, the Sixth Patriarch.
+
+### [The Gateless Gate](/gateless-gate-mumonkan)
+
+<p class="rs-quiet">Wu-men Hui-k’ai (Mumon) · translated by Katsuki Sekida</p>
+
+The Mumonkan: forty-eight koans with Wu-men’s comments and verses, beginning with Chao-chou’s “Mu”.
+
+## Mahayana Buddhism
+
+### [The Diamond Sutra](/diamond)
+
+<p class="rs-quiet">Translated by Thich Nhat Hanh</p>
+
+The Buddha and Subhuti on giving, and on helping all beings, without holding to any idea of a self.
+
+### [The Diamond Sutra, Red Pine’s translation](/diamond-red-pine)
+
+<p class="rs-quiet">Translated by Red Pine (Bill Porter) · partial</p>
+
+The same sutra, translated from Sanskrit and Chinese. Only part of it is here so far.
+
+## Early Buddhism
+
+### The Dhammapada
+
+<p class="rs-quiet">Translated by Thanissaro Bhikkhu · coming</p>
+
+Short verses from the Pāli Canon on the mind and the path: the best-loved early Buddhist text.
+
+## Stoicism
+
+### [On the Shortness of Life](/seneca-on-the-shortness-of-life)
+
+<p class="rs-quiet">Seneca · translated by John W. Basore</p>
+
+“It is not that we have a short space of time, but that we waste much of it.”
+
+### Meditations
+
+<p class="rs-quiet">Marcus Aurelius · translated by Gregory Hays · coming</p>
+
+A Roman emperor’s notes to himself on how to live, with Rufus Pollock’s notes in the margin.
+
+## About
+
+Sutras is an experiment by [Life Itself](https://lifeitself.org) in making texts that are good to read, easy to link to and open to annotation. [More about it](/about), and the [source on GitHub](https://github.com/life-itself/sutras).
+
+</article></div></div>
+</div>

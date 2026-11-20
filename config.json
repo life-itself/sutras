@@ -1,7 +1,41 @@
 {
+  "siteName": "Sutras",
+  "description": "A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics, each made into an edition to read slowly online or download as an EPUB.",
+  "showLogo": false,
+  "showSidebar": false,
+  "showBacklinks": false,
   "umami": {
     "websiteId": "4086b064-e2ec-40f0-b337-d86f402ea5d8",
     "src": "https://umami.lifeitself.org/script.js"
+  },
+  "nav": {
+    "title": "Sutras",
+    "links": [
+      { "name": "Texts", "href": "/" },
+      { "name": "About", "href": "/about" }
+    ]
+  },
+  "social": [
+    { "label": "github", "href": "https://github.com/life-itself/sutras" }
+  ],
+  "footer": {
+    "navigation": [
+      {
+        "title": "Sutras",
+        "links": [
+          { "name": "Texts", "href": "/" },
+          { "name": "About", "href": "/about" },
+          { "name": "Report a mistake", "href": "https://github.com/life-itself/sutras/issues" }
+        ]
+      },
+      {
+        "title": "Made by",
+        "links": [
+          { "name": "Life Itself", "href": "https://lifeitself.org" },
+          { "name": "Rufus Pollock", "href": "https://rufuspollock.com" }
+        ]
+      }
+    ]
   },
   "contentExclude": [
     "/docs",
