@@ -72,7 +72,7 @@ def front_matter_end(md):
 
 
 def passage_region(md, pid):
-    """The Markdown from the element with id=pid to the next element of the same kind."""
+    """The Markdown from the element with id=pid to the next element of the same kind, or the next ## heading."""
     m = re.search(r"<(\w+)\b([^>]*)\bid=\"%s\"[^>]*>" % re.escape(pid), md)
     if not m:
         return None
@@ -83,7 +83,7 @@ def passage_region(md, pid):
         start = close.end()
     same = r"<%s\b[^>]*%s[^>]*\bid=\"[^\"]+\"" % (tag, r'\bclass="%s"' % re.escape(cls.group(1)) if cls else "")
     nxt = re.compile(same).search(md, start)
-    stop = re.search(r"</article>", md[start:])
+    stop = re.search(r"</article>|^##\s|<h2\b", md[start:], flags=re.M)   # a passage never runs past a section heading
     ends = [len(md)] + ([nxt.start()] if nxt else []) + ([start + stop.start()] if stop else [])
     return md[start:min(ends)]
 

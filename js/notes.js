@@ -4,7 +4,7 @@
    js/notes/<slug>.js (written by scripts/notes from annotations/<slug>.yaml) sets window.SutrasNotes.
 
    For each note: find its quote in its passage (the element with that id, up to the next element of
-   the same kind), highlight it, and add a mark at the end of the line with the note beside it. The
+   the same kind or the next h2), highlight it, and add a mark at the end of the line with the note beside it. The
    mark and note reuse the reading system's sidenote classes (rs-sn, rs-sn-ref, rs-sn-note), so they
    share the margin with the footnotes on a wide screen and open under the line on a tap on a phone.
    Highlights use the CSS Custom Highlight API, which leaves the page's HTML alone; older browsers
@@ -70,7 +70,11 @@
     if (!el) return null;
     var sel = el.tagName.toLowerCase() + (el.className ? "." + el.className.trim().split(/\s+/).join(".") : "") + "[id]";
     var all = Array.prototype.slice.call(root.querySelectorAll(sel));
-    return { from: el, to: all[all.indexOf(el) + 1] || null };
+    var to = all[all.indexOf(el) + 1] || null;
+    // a passage never runs past a section heading
+    var h2 = Array.prototype.find.call(root.querySelectorAll("h2"), function (h) { return el.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_FOLLOWING; });
+    if (h2 && (!to || h2.compareDocumentPosition(to) & Node.DOCUMENT_POSITION_FOLLOWING)) to = h2;
+    return { from: el, to: to };
   }
 
   // The one place the note's quote is, as [startNode, startOffset, endNode, endOffset], or a reason.
