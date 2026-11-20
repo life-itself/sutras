@@ -19,7 +19,7 @@ Plus `library/<slug>/` (unpublished): the source as fetched, any second copy use
 ## Steps
 
 1. **Claim the bead** (`bd update <id> --status in_progress`) and read `faith-in-mind.md` end to end.
-2. **Fetch the source** into `library/<slug>/`, unchanged, and note the URL and date in `NOTES.md`. Get a second copy (another site, a PDF of the book) if one exists: it catches typos and settles credits. The Shodoka's second copy showed the old page had the wrong translator.
+2. **Fetch the source** into `library/<slug>/`, unchanged, and note the URL and date in `NOTES.md`. Get a second copy (another site, a PDF of the book) if one exists: it catches typos and settles credits. Treat every credit on the old page as unverified: the Shodoka's was wrong.
 3. **Extract the text by script, never retype it.** Keep the source's paragraphs and line breaks.
 4. **Number the passages.** The id is the number a reader would cite, levels joined by dots: `/dhammapada#183`, `/meditations#4.3`. Use the traditional numbering if there is one; otherwise number the source's own paragraphs and say in `NOTES.md` that the numbers are ours. **An id never changes once live.** If the old page had numbers, keep them where you can and record any that moved.
 5. **Build the page** (template below). Typography only: curly quotes and apostrophes, spaced em dashes. Fix a word only for an obvious slip, and list every fix.
@@ -58,6 +58,7 @@ The body is the `.rs` wrapper copied from `faith-in-mind.md` (header, then `rs-b
 - **Blank lines round any Markdown inside raw HTML**, or Flowershow renders it as literal text. Inside an HTML element (`<p class="rs-inbrief">`), Markdown is not parsed: use `<em>`, not `*…*`.
 - **Verse:** wrap the text in `<div class="rs-verse">`. Each stanza starts with its link on its own line, `<a class="v" id="3" href="#3">3</a>`, then the lines, each ending in two spaces. `scripts/check` fails any stanza without one.
 - **Prose** (Seneca, *Meditations*): the template style for numbered prose passages is not settled yet; ask the site track (bead) before inventing one. Use `<div class="rs-passages">` with the same `<a class="v">` link at the start of each numbered paragraph, so the check covers it.
+- **Links to a passage** from the introduction or notes: write `/<slug>#18`, not `#18`, which breaks in the EPUB (bead sutras-m2v.7.9).
 - **Notes** are Markdown footnotes, `[^1]`, starting "*Editors’ note.*". reading.js moves them into the margin. Put the marker at the **end of a line**, never mid-line, or an opened note splits the line on a phone. Every quotation in a note is verbatim and its source is listed in `NOTES.md`.
 - Don't edit `css/`, `js/`, `custom.css` or `scripts/` from an edition track: file a bead for the site track.
 
