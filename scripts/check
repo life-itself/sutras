@@ -9,7 +9,8 @@ Usage: scripts/check                 (run from the repo root; exit status 1 on a
 A text is a Markdown file at the root other than the pages in PAGES. It counts as an edition once
 its frontmatter has a `status`. For each edition:
 
-- frontmatter: every field in REQUIRED is present and not empty, `layout: plain`;
+- frontmatter: every field in REQUIRED is present and not empty, `layout: plain`, `syntaxMode: md`,
+  and the page scripts in PAGE_SCRIPTS;
 - passages: inside <div class="rs-verse"> or <div class="rs-passages">, every block (lines between
   blank lines) starts with a passage link <a class="v" id="3" href="#3">; every such link has an id,
   its href is "#" + the id, and the id is the number a reader would cite (levels joined by dots);
@@ -29,6 +30,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLISHED_IDS = ROOT / "scripts" / "published-ids.txt"
 PAGES = {"README.md", "about.md", "AGENTS.md", "CLAUDE.md"}
 REQUIRED = ["title", "description", "author", "translator", "date", "tradition", "source", "licence", "status"]
+PAGE_SCRIPTS = ["/js/reading.js", "/js/edition.js"]
 STATUSES = {"published", "partial", "draft"}
 PASSAGE_ID = re.compile(r"^[0-9a-z]+(\.[0-9a-z]+)*$")
 PASSAGE_LINK = re.compile(r'<a\s+class="v"([^>]*)>')
@@ -116,6 +118,11 @@ def check_edition(path, meta, body, published, errors):
         errors.append(f"frontmatter: status {meta.get('status')!r} is not one of {sorted(STATUSES)}")
     if meta.get("layout") != "plain":
         errors.append("frontmatter: layout must be plain")
+    if meta.get("syntaxMode") != "md":
+        errors.append("frontmatter: syntaxMode must be md (the site default, MDX, breaks the raw HTML)")
+    for script in PAGE_SCRIPTS:
+        if script not in (meta.get("scripts") or []):
+            errors.append(f"frontmatter: scripts must include {script}")
 
     for m in PASSAGE_LINK.finditer(body):
         attrs = m.group(1)

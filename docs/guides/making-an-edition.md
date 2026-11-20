@@ -11,7 +11,7 @@ One page per text at the root (`/<slug>`, the URL never changes), in this order:
 3. **Introduction:** ours, short, signed "Editors’ introduction, drafted with an AI assistant. Month YYYY."
 4. **The text,** every passage with a link.
 5. **About this translation:** who translated it, from what book, and any front matter of theirs (preface, translator's introduction).
-6. **Source and licence:** where the words came from, how they were checked, what was changed, the copyright status.
+6. **Source and licence:** where the words came from, how they were checked, a short summary of the changes linking to `library/<slug>/NOTES.md` on GitHub, and the copyright status.
 7. **Download:** the EPUB.
 
 Plus `library/<slug>/` (unpublished): the source as fetched, any second copy used for checking, and `NOTES.md`.
@@ -25,15 +25,15 @@ Plus `library/<slug>/` (unpublished): the source as fetched, any second copy use
 5. **Build the page** (template below). Typography only: curly quotes and apostrophes, spaced em dashes. Fix a word only for an obvious slip, and list every fix.
 6. **Compare with the source by script.** Zero differences that are not listed in `NOTES.md`. `scripts/compare-source` does *Faith in Mind*; copy it as `library/<slug>/compare.py` (as the Shodoka did) until the general one exists (bead sutras-m2v.7.8). Record the result (passage and line counts, "0 unlisted differences") in `NOTES.md`.
 7. **Write the in brief and introduction** (see Writing). Have a fresh subagent critique them, against the sources, before you ship.
-8. **Make the EPUB:** `scripts/epub <slug>` writes `downloads/<slug>.epub`; commit it.
+8. **Make the EPUB:** `scripts/epub <slug>` writes `downloads/<slug>.epub`; commit it. For now it handles verse only (numeric ids, `## About this translation` straight after the verse `</div>`). For prose or dotted ids, open the EPUB and check it; if it is broken, say so on bead sutras-m2v.8.3 (site track).
 9. **Check:** `scripts/check` must pass.
 10. **Ship:** commit only your files, then `git fetch origin && git rebase origin/main && git push origin HEAD:main`. Look at the live page at phone and desktop width, and open a passage link (`/<slug>#3`).
-11. **Record the ids:** `scripts/check --record`, commit `scripts/published-ids.txt`. From now on the check fails if any of them vanishes.
+11. **Record the ids:** `scripts/check --record`, commit `scripts/published-ids.txt` and push. From now on the check fails if any of them vanishes.
 12. **Tell the site track** (a comment on its bead, or a new bead) so the home page line can link to the edition and use its credit.
 
 ## The page
 
-Frontmatter (all of it is checked by `scripts/check`):
+Frontmatter (all of it is checked by `scripts/check`, including `syntaxMode` and both scripts):
 
 ```yaml
 title: Faith in Mind
@@ -59,12 +59,11 @@ The body is the `.rs` wrapper copied from `faith-in-mind.md` (header, then `rs-b
 - **Verse:** wrap the text in `<div class="rs-verse">`. Each stanza starts with its link on its own line, `<a class="v" id="3" href="#3">3</a>`, then the lines, each ending in two spaces. `scripts/check` fails any stanza without one.
 - **Prose** (Seneca, *Meditations*): the template style for numbered prose passages is not settled yet; ask the site track (bead) before inventing one. Use `<div class="rs-passages">` with the same `<a class="v">` link at the start of each numbered paragraph, so the check covers it.
 - **Notes** are Markdown footnotes, `[^1]`, starting "*Editors’ note.*". reading.js moves them into the margin. Put the marker at the **end of a line**, never mid-line, or an opened note splits the line on a phone. Every quotation in a note is verbatim and its source is listed in `NOTES.md`.
-- **Passage links landing:** `edition.js` re-scrolls to `#3` once the fonts have loaded; keep it in `scripts`.
-- Don't edit `css/`, `js/` or `custom.css` from an edition track: file a bead for the site track.
+- Don't edit `css/`, `js/`, `custom.css` or `scripts/` from an edition track: file a bead for the site track.
 
 ## NOTES.md
 
-Sections, as in `library/faith-in-mind/NOTES.md`: **Sources** (each file, URL, date fetched, what it is); **How it was made** (numbered steps, including where the passage numbers come from and the compare result); **Every change to the words** (old and new, each one); **Left as in the source, though possibly slips**; **Not the translator's words** (headings, in brief, introduction, notes); where a second copy differs; **Facts used in the introduction and notes, and where each comes from** (one line per fact, with the source and the date read); **Copyright**.
+Copy the headings of `library/faith-in-mind/NOTES.md`: sources, how it was made, every change to the words, left as in the source, not the translator's words, facts and where each comes from, copyright. Add a section for anything special (a translator correction, where a second copy differs).
 
 ## Writing
 
@@ -76,4 +75,4 @@ Sections, as in `library/faith-in-mind/NOTES.md`: **Sources** (each file, URL, d
 
 ## Done-check for an edition
 
-In brief, introduction, text with passage links, about the translation, source and licence, EPUB; source in `library/<slug>/`; compared by script with 0 unlisted differences; `NOTES.md` lists every change; `scripts/check` passes; live page checked at phone and desktop width; ids recorded; bead closed with a comment.
+Every part in the order above; compared by script with 0 unlisted differences; `scripts/check` passes; live page seen at phone and desktop width; ids recorded and pushed; lessons in `docs/lessons/` (one short file each); bead closed with a comment.
