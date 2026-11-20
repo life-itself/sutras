@@ -1,31 +1,38 @@
 # Sutras design
 
-Status, 2026-11-20 (night): **the second, widened mood board is with Rufus; the gate is his reaction.** He reacted to the first (quoted at the end of brief.md): loves Kaikado and Emergence, Co–Star as inspiration only, Fitzcarraldo for covers, Plum Village too warm, the seals too far, wants a funky option. Bead: sutras-m2v.3. Process: the `designing-look-and-feel` skill, revised today with him: a raw board of 4–6 references first, feedback, then widen; pictures and directions kept on separate pages.
+Status, 2026-11-21: **direction A, warm red, is live on the site** (decision [0005](../decisions/0005-design-direction.md)), chosen by the design and coordination sessions on Rufus's instruction to build and decide without him, with C kept as the backup for him to compare. Bead: sutras-m2v.3. Process: the `designing-look-and-feel` skill.
 
-## The two pages
+## The direction
 
-- **Mood board (pictures to look at):** https://claude.ai/artifact/Wv1GFH5C3QQtXykof4eSrg. Second board, 21 images: the four he reacted to, quoted; five more like Emergence and Kaikado; four open-licence images that could be the one picture a text gets; four funkier pages; a colour strip; Plum Village and the seals set aside in his words; four questions. Reviewed by a fresh agent as an art director before publishing (six images cut, captions corrected). The first board (six and two) is in the git history of `moodboard.src.html`.
-- **Five directions (my reading of the wider scan):** https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr. Ink and space; the warm page; the hand; red and black; Seeds of Renaissance adapted; Co–Star and Reports That Matter as the floor; eight details; a shortlist of four with a recommendation. Kept as is, to be revised after his reaction to the pictures. It was first published as "the mood board", which confused the two; renamed.
+Emergence Magazine's Red Pine poem page as the base (warm grey paper, one open-licence image per text given room, a small label, the title, then the text in a narrow serif column), held to Kaikado's restraint. The apparatus (stanza and passage numbers, note marks, the "In brief" label, the mark in the navbar) is the only place the warm red appears. Literata for the text, Instrument Sans for the one tracked label, Noto Serif TC for Chinese and the mark 慧. The home page is a shelf: one image per text, title, author line.
 
-## How it got here today
+## How it is wired, and how to undo or swap it
 
-The first design page (feel, measured research, a thumbnail board and three directions on one page) was rejected: "mood board is weak. where is the true beauty in this." It is in [archive/2026-11-20-first-page/](archive/2026-11-20-first-page/). A second pass scanned about a hundred candidates and published five directions with one image each, which Rufus liked but read as directions, not a mood board: "where's the actual mood board of existing sites that I'm looking at?" He then asked to start with a basic board of 4–6 sites and 1–2 anti-patterns and get feedback before spending more time. That is the current state.
+- `css/direction-a.css` holds the whole direction: tokens, Flowershow's navbar and footer, the image above the title, the apparatus colours, the home shelf. It is selected by the **last `@import` line of `custom.css`**. Remove that line and the site returns to the stand-in look (EB Garamond on the reading system's personal theme). Swap the file for another direction's CSS to try it live; the samples' CSS is in `directions/` (`base.css` + `a.css`, `b.css`, `c.css`).
+- Each edition page carries two pieces of markup, and nothing else changed in its words: a `<figure class="sd-art">` (image, credit) just before its `<header class="rs-head">`, and a label in its `.rs-kicker` ("Zen · a poem") in place of the old "Sutras" link. `faith-in-mind.md` is the model.
+- Images: `assets/images/<slug>.jpg`, each under 150 KB; every one's source, licence, credit and reason is in [images.md](images.md). Add an image for a new text there first. Scans whose own paper shows through the multiply blend are cleaned (greys pushed to white) before use.
+- The mark: the CSS variable `--sutras-mark` in `direction-a.css` is `"慧"`; set it to `""` for the wordmark alone. Both are screenshotted in `shots/mark-with.jpg` and `shots/mark-without.jpg`; the choice is filed for Rufus as a needs-rufus bead.
+- The home shelf: `README.md` keeps the landing session's copy and structure; each entry is a list item (`<ul class="sd-shelf">`, one per group) with image, title link, author line and one-line description.
+- Checks after a change: `scripts/check`, then every page at 390 (device emulation, `scrollWidth` must equal 390) and 1280; the audit script used is in the session scratch, its rule is simple: no element's right edge past the viewport, and the title on the first screen.
+
+## Pages
+
+- **The direction, three sample sites, marks, fonts, recommendation:** https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr. Sample sites: [A warm red](https://claude.ai/artifact/FrqFoG8gtKYvTyApm4h3K8) (live), [B blue](https://claude.ai/artifact/WFPMxwZ9UNWuFJyenM4uUc) (set aside), [C gold on indigo](https://claude.ai/artifact/FLoxRQmuVwdcpHwh4yZD4F) (the backup). Built by `directions/build.py` from snapshots of the live pages plus the direction CSS.
+- **Mood board (pictures to look at):** https://claude.ai/artifact/Wv1GFH5C3QQtXykof4eSrg, second board, widened from Rufus's reactions.
 
 ## Files
 
-- [brief.md](brief.md): the design brief (goal, who for, kinds of page, Rufus's references decoded, the feel, what is fixed, mood-board rules, done-check, open questions). Sparse on purpose.
-- `moodboard.src.html` → `moodboard.html`: the mood board. `brief.src.html` → `brief.html`: the five directions. Edit the sources, never the built files. Screenshots in `shots/` are written as `{{shot:name}}`; `python3 docs/design/build.py` builds the directions page and `python3 docs/design/build.py moodboard` the board; republish each built file with the Artifact tool at its URL above.
-- [moodboard-candidates.md](moodboard-candidates.md): every candidate scanned, one line each on kept, held or dropped. The pool the board widens from.
-- [research-reading-features.md](research-reading-features.md): how verse is set on screen, margin notes, measurements of reference sites, phone behaviour. A separate thread for the site and notes tracks.
-- `archive/`: earlier versions.
+- [brief.md](brief.md): the design brief, with Rufus's reactions to both boards quoted at the end.
+- `brief.src.html` → `brief.html`: the direction page; `moodboard.src.html` → `moodboard.html`: the board. `python3 docs/design/build.py [moodboard]` inlines `shots/` and writes the built file; republish with the Artifact tool at the page's URL.
+- [moodboard-candidates.md](moodboard-candidates.md): every candidate scanned (about 130), one line each.
+- [images.md](images.md): the site's images, sources and licences.
+- [research-reading-features.md](research-reading-features.md): verse setting, margin notes, measurements, phones. For the site and notes work.
+- `directions/`: the direction CSS, the sample-site builder, DOM snapshots and images.
+- `archive/`: the rejected first page and the earlier "five directions" page.
 
-## What is next
+## Open, for Rufus
 
-1. Rufus reacts to the six and two: which he feels something for, where to look further.
-2. Widen the board where he points (the candidates file and the raw captures are ready), to 10–20 images, grouped. Have a fresh agent review it as an art director before he sees it.
-3. Revise the five directions page from his reactions; he picks two or three.
-4. Only then: stage 2, specimen cards side by side with real lines from *Faith in Mind* and Seneca; then his pick; then the build on the live site.
-
-## How the images were made
-
-Headless Chromium (Playwright) at 1440×900, scrolled to the moment that matters; downscaled to about 1100px JPEG. Museum images from Wikimedia Commons and the Cleveland Museum of Art under the licences stated in their captions. Nothing is mocked up.
+- The mark: 慧 (default, live) or the wordmark alone; also 道 or an italic initial as alternatives. The objection on record: on Seneca's and Marcus's pages a Chinese character claims them for the East.
+- Whether C's gold-on-indigo front matter should return for the Buddhist texts only.
+- Better images for the Dhammapada (a Pali leaf) and Seneca (a Seneca manuscript or early edition), if open-licence ones can be found; the Tao Te Ching needs one.
+- A drawn mark, the EPUB cover in the direction, and the paper's warmth on cheap screens.
