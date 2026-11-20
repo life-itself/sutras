@@ -378,7 +378,7 @@ Until November 2026 this page had only chapters 1, 2 and 32. The rest has now be
 
 **Notes.** The notes are editorial. Where they quote Red Pine, the words are from his commentary or preface in the same book. In the introduction, the sutra’s dates and Red Pine’s are from Wikipedia; what he says of his method is from his preface. Each is listed in the edition notes.
 
-**Licence.** The translation is © 2001 Red Pine and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+**Licence.** The translation is © 2001 Red Pine and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please write to [hello@lifeitself.org](mailto:hello@lifeitself.org). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Download
 

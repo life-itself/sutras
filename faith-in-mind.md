@@ -260,7 +260,7 @@ The poem contains phrases that will later on assume importance in the Ts’ao Tu
 
 **Notes.** The notes are editorial. Where they quote Sheng-yen, the words are from his talks on the same source page. The facts in the introduction are from Sheng-yen’s own introduction below and the book’s front matter; his dates are from Wikipedia. Each is listed in the edition notes.
 
-**Licence.** The translation, preface and introduction are © 1987 Dharma Drum Publications and remain in copyright. They are published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+**Licence.** The translation, preface and introduction are © 1987 Dharma Drum Publications and remain in copyright. They are published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please write to [hello@lifeitself.org](mailto:hello@lifeitself.org). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Download
 

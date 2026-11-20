@@ -532,7 +532,7 @@ Four slips were corrected. Two follow the second copy: a stray letter (“vWhich
 
 **Notes.** The notes are editorial. They draw on John Balcom’s notes to his own translation (on the Terebess page) and on Wikipedia. In the introduction, Hu Shih’s doubts and the set of four texts are quoted on the same Terebess page; Yung-chia’s dates and story, and Aitken’s, are from Wikipedia; Sheng-yen’s judgement is from his introduction on the [Faith in Mind](/faith-in-mind) page. Each is listed in the edition notes.
 
-**Licence.** The translation is © 1991 Diamond Sangha Zen Buddhist Society and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+**Licence.** The translation is © 1991 Diamond Sangha Zen Buddhist Society and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please write to [hello@lifeitself.org](mailto:hello@lifeitself.org). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Download
 

@@ -180,3 +180,8 @@ Rufus's other notes may live elsewhere too, such as Zotero annotations or Kindle
 4. **The Plum Village *Diamond Sutra* is a short version.** Recommendation: keep it but label it, and if you have *The Diamond That Cuts Through Illusion*, convert the full text. The default is to label it.
 5. **Red Pine's full *Diamond Sutra*:** do you have the book (print or EPUB)? If so, the full 32 chapters can be converted. The default is to keep it marked as partial.
 6. **The shortlist itself:** add, cut or reorder. In particular, are the non-Buddhist "wider" texts (Gita, Ashtavakra, Cloud of Unknowing, Boethius) wanted now? Recommendation: keep them, but at the end.
+
+
+## Tao Te Ching: decision (Rufus, 2026-11-20)
+
+"i would love red pine but we may want a gutenberg version for now (would love to have a comparison of samples from versions ...)". So: publish a Project Gutenberg translation now; Red Pine's is the one wanted in the end; and make a page comparing sample chapters across translations.

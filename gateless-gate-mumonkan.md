@@ -1793,7 +1793,7 @@ The Chinese was compared character by character with the Taishō text (T48 no. 2
 
 **Notes.** The notes and headings are editorial. In the introduction and About this translation, Mumon’s dates, the meaning of his name, the book’s history in China and Japan and the pieces the fuller editions add are from Wikipedia; what Mumon says of his own book is from his preface and postscript below; Sekida’s dates are from the Library of Congress. Each is listed in the edition notes.
 
-**Licence.** Sekida’s translation was published in 1977 and is in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Mumon’s Chinese text, from 1228, is in the public domain. Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+**Licence.** Sekida’s translation was published in 1977 and is in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please write to [hello@lifeitself.org](mailto:hello@lifeitself.org). Mumon’s Chinese text, from 1228, is in the public domain. Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Download
 
