@@ -6,8 +6,8 @@ Status, 2026-11-21: the home page was rewritten by the landing track (bead sutra
 
 | | 1280×800 | 390×844 (iPhone emulation) |
 |---|---|---|
-| Before, 2026-11-21 00:30: the first draft under design A | [before-2026-11-21-1280.png](before-2026-11-21-1280.png) | [before-2026-11-21-390.png](before-2026-11-21-390.png) |
-| After, 2026-11-21: the rewrite live | [after-2026-11-21-1280.png](after-2026-11-21-1280.png) | [after-2026-11-21-390.png](after-2026-11-21-390.png) |
+| Before, 2026-11-21 00:30: the first draft under design A | [before-2026-11-21-1280.jpg](before-2026-11-21-1280.jpg) | [before-2026-11-21-390.jpg](before-2026-11-21-390.jpg) |
+| After, 2026-11-21: the rewrite live | [after-2026-11-21-1280.jpg](after-2026-11-21-1280.jpg) | [after-2026-11-21-390.jpg](after-2026-11-21-390.jpg) |
 
 What changed: the kicker that repeated the navbar went; the line under the opening lines now names the text, its kind and its length, and is the link into it; the intro is two sentences; the five tradition sections became one shelf of nine with each edition's own label; reading times are in the editions' words; "Reading here" is one paragraph; "About" is one sentence.
 
