@@ -65,3 +65,32 @@ Doubtful, left as in the source:
 - Footnotes: 101 references, 101 definitions, none missing either way.
 - Words, verses only: `source.md` from "I : Pairs" to the start of Historical Notes, against the draft from "I : Pairs" to "Preface", after normalising quotes, dashes, Markdown and HTML: 10,260 words in each, no differences.
 - Words, front and back matter: Preface and Introduction, Historical Notes, and Glossary to Bibliography match word for word. In the End Notes the only differences are the 101 note labels (now footnote labels) and the line "(Numbers refer and link to verses)", which is dropped.
+
+## The edition page (`/dhammapada`)
+
+Made 2026-11-20 by an AI agent (Claude) on the newtexts track, from `edition-draft.md` by `build_page.py` (words taken by script) with the hand-written parts in `page-template.md`. The page is now edited by hand: do not rerun `build_page.py` over it without copying the page first.
+
+**Words.** No word, letter or punctuation mark of the translation, the translator's matter or the end notes has been changed. `compare.py` checks this against `edition-draft.md` word by word and fails on any difference. Result on 2026-11-20: verses 9,893 words, translator's matter 9,266, end notes 5,685, licence 90: **0 unlisted differences**. Listed, not compared: the table header of the abbreviations (a label), the editors' note `[^e1]` on the preface, the rename of two headings and the title-case "Historical Notes: The Text & the Translation" (the book's own heading, kept). Footnote markers: 101, in the same order as the draft.
+
+**Layout and labels (every change, none to the words):**
+
+1. Each verse has a passage link, `<a class="v" id="N">`, with ids 1 to 423, each once and in order. The book's cite lines ("1-2", "3-6") are dropped; every verse has its own number.
+2. Ten groups the book prints under joint numbers (58-59, 137-140, 188-192, 195-196, 229-230, 244-245, 246-248, 256-257, 271-272, 360-361) show each number at the start of the group, one per line, as the draft already did. The Pāli would allow a finer split between verses; that is an editorial choice and was not made.
+3. A blank line inside a verse (137-140, 188-192, and the other groups where the book sets off a list or a second voice) becomes a line holding a non-breaking space, so the verse stays one stanza for `scripts/check`. The gap still shows.
+4. Chapters are `###` headings, one per chapter, each with its verses in a `rs-verse` block. Verse indentation is shown with `&emsp;`, as in the draft.
+5. The translator's 101 end notes are Markdown footnotes at the last line of the verse or group they discuss, each labelled "*Translator’s note on N.*" with the verse or verses it is about (the label is ours). One editors' note, `[^e1]`, says that the notes sit beside their verses instead of at the back. Cross-references inside notes ("see note 22") are plain text.
+6. The translator's preface, introduction, historical notes, abbreviations, glossary and bibliography sit under About this translation. Two headings are renamed to avoid clashing with ours: "Introduction" is "Translator’s introduction", "Preface" is "Translator’s preface". The rest keep the book's headings, one level down.
+7. The copyright page is quoted in full under Source and licence (the copyright line and the "For Free Distribution" statement). Its "Additional Resources", "Printed Copy" and "Questions" blocks are not reproduced; they are not licence text. The title page is in the page header; the Colophon (about the EPUB's typeface) is not reproduced.
+
+**Source and licence on the page.** It says the words are unmodified and the layout is ours, and quotes the licence statement in full. The page says the edition is derived from the 2011 text and differs from it in layout, labels and the editors’ words, as the licence asks of derivations.
+
+## The 2017 revision (not used)
+
+Fetched 2026-11-20 by a side-task worker, saved in `2017/` (`SOURCE.md`, the PDF, `verses.txt`, `COMPARE.md`). Its copyright line reads "Copyright 2014 Ṭhānissaro Bhikkhu, Revised edition 2017", licensed CC BY-NC 4.0. Compared with the 2011 verses: 413 of 423 identical after normalising; 10 verses differ in words (19 tokens in all; the largest is 4 tokens, in verses 90 and 203); 8 differ only in punctuation. Chapters and numbering are the same. Both the 2011 title page and the 2017 title page give the translator's legal name in brackets, "(Geoffrey DeGraff)"; the About section of the page gives it too.
+
+Decision: the 2011 text stays, as supplied and as the coordinator decided. Switching would change ten verses and the licence (to non-commercial). Recommendation is on the bead.
+
+## Checks (2026-11-20)
+
+- `scripts/check`: dhammapada.md passes. (Failures elsewhere on main are other tracks' files.)
+- `scripts/epub dhammapada` writes `downloads/dhammapada.epub`. Known problem: the page has one verse block per chapter (26), which the builder does not expect. It closes them implicitly with warnings, so the verses and About this translation end up in one EPUB file. The text reads correctly; the structure is untidy. Filed for the site track (see bead).
