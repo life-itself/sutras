@@ -46,9 +46,10 @@
 .rs-passages p { position: relative }
 .rs-passages a.v { white-space: nowrap }
 
-/* Verse inside prose (a gatha in the Diamond Sutra): <p class="rs-gatha">, lines ended with two spaces.
+/* Verse inside prose (a gatha in the Diamond Sutra): <p class="rs-gatha">, or <div class="rs-gatha"> with Markdown
+   inside (blank lines round it) when the verse has a footnote; lines ended with two spaces.
    Indented, left-aligned, no hyphenation; edition.js gives its lines the same hanging indent as verse. */
-.rs-text p.rs-gatha { margin-left: 1.5em; text-align: left; hyphens: none; -webkit-hyphens: none; text-wrap: wrap }
+.rs-text p.rs-gatha, .rs-text .rs-gatha p { margin-left: 1.5em; text-align: left; hyphens: none; -webkit-hyphens: none; text-wrap: wrap }
 .rs-gatha .rs-line { display: block; padding-left: 1.4em; text-indent: -1.4em }
 
 /* Chapter headings as passage targets in prose: <h3 id="17"><a href="#17">XVII</a></h3>.

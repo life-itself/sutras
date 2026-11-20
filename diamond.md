@@ -40,7 +40,7 @@ For a translation from the Sanskrit alone, with its repetitions and its full clo
 
 ## The sutra
 
-<div class="rs-verse">
+<div class="rs-passages">
 
 <a class="v" id="1" href="#1">1</a>
 This is what I heard one time when the Buddha was staying in the monastery in Anathapindika’s park in the Jeta Grove near Shravasti with a community of 1,250 bhikshus, fully ordained monks.
@@ -290,10 +290,14 @@ Subhuti said, “World-Honored One, I understand your teaching. One should not u
 
 Then the World-Honored One spoke this verse:
 
+<div class="rs-gatha">
+
 Someone who looks for me in form  
 or seeks me in sound  
 is on a mistaken path  
 and cannot see the Tathagata.
+
+</div>
 
 <a class="v" id="27" href="#27">27</a>
 “Subhuti, if you think that the Tathagata realizes the highest, most fulfilled, awakened mind and does not need to have all the marks, you are wrong. Subhuti, do not think in that way. Do not think that when one gives rise to the highest, most fulfilled, awakened mind, one needs to see all objects of mind as nonexistent, cut off from life. Please do not think in that way. One who gives rise to the highest, most fulfilled, awakened mind does not contend that all objects of mind are nonexistent and cut off from life.”
@@ -325,10 +329,14 @@ Subhuti replied, “World-Honored One, there would be many indeed. Why? If parti
 <a class="v" id="32" href="#32">32</a>
 “Subhuti, if someone were to offer an immeasurable quantity of the seven treasures to fill the worlds as infinite as space as an act of generosity, the happiness resulting from that virtuous act would not equal the happiness resulting from a son or daughter of a good family who gives rise to the awakened mind and reads, recites, accepts, and puts into practice this sutra, and explains it to others, even if only a gatha of four lines. In what spirit is this explanation given? Without being caught up in signs, just according to things as they are, without agitation. Why is this?
 
+<div class="rs-gatha">
+
 All composed things are like a dream,  
 a phantom, a drop of dew, a flash of lightning.  
 That is how to meditate on them,  
 that is how to observe them.[^5]
+
+</div>
 
 After they heard the Lord Buddha deliver this sutra, the Venerable Subhuti, the bhikshus and bhikshunis, laymen and laywomen, and gods and ashuras, filled with joy and confidence, undertook to put these teachings into practice.
 

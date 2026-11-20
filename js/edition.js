@@ -26,7 +26,7 @@
 
 (() => {
   if (!document.currentScript?.isConnected) return;
-  document.querySelectorAll(".rs .rs-verse p, .rs p.rs-gatha").forEach((p) => {
+  document.querySelectorAll(".rs .rs-verse p, .rs p.rs-gatha, .rs .rs-gatha p").forEach((p) => {
     if (p.dataset.rsLines || !p.querySelector(":scope > br")) return;
     p.dataset.rsLines = "1";
     const nodes = Array.from(p.childNodes);

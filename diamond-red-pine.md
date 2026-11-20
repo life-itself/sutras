@@ -38,7 +38,7 @@ His version keeps the sutra’s formal repetitions: the Buddha’s titles in ful
 
 ## The sutra
 
-<div class="rs-verse">
+<div class="rs-passages">
 
 <a class="v" id="1" href="#1">1</a>
 Thus have I heard: Once the Bhagavan[^1] was dwelling near Shravasti at Anathapindada Garden in Jeta Forest together with the full assembly of 1250 bhikshus and a great many fearless bodhisattvas.[^2]
@@ -308,10 +308,14 @@ The venerable Subhuti said to the Buddha, “As I understand the meaning of what
 
 On that occasion the Buddha then spoke this gatha:
 
+<div class="rs-gatha">
+
 “Who looks for me in form  
 who seeks me in a voice  
 indulges in wasted effort  
 such people see me not.”[^4]
+
+</div>
 
 <a class="v" id="27" href="#27">27</a>
 “Subhuti, what do you think? Was it due to the possession of attributes that the Tathagata realized unexcelled, perfect enlightenment? Subhuti, you should hold no such view. And why not? Subhuti, it could not have been due to the possession of attributes that the Tathagata realized unexcelled, perfect enlightenment.
@@ -345,10 +349,14 @@ The Buddha said, “Indeed, Subhuti, so it is. Those who set forth on the bodhis
 <a class="v" id="32" href="#32">32</a>
 “Furthermore, Subhuti, if a fearless bodhisattva filled measureless, infinite worlds with the seven jewels and gave them as an offering to the tathagatas, the arhans, the fully-enlightened ones, and a noble son or daughter grasped but a single four-line gatha of this teaching on the perfection of wisdom and memorized, discussed, recited, mastered, and explained it in detail to others, the body of merit produced by that noble son or daughter as a result would be immeasurably, infinitely greater. And how should they explain it? By not explaining. Thus is it called ‘explaining.’
 
+<div class="rs-gatha">
+
 “As a lamp, a cataract, a star in space  
 an illusion, a dewdrop, a bubble  
 a dream, a cloud, a flash of lightning  
 view all created things like this.”[^5]
+
+</div>
 
 All this was spoken by the Buddha to the joy of the elder Subhuti, the monks and nuns, the laymen and laywomen, the bodhisattvas, the devas, humans, asuras and gandharvas of the world all of whom were greatly pleased with what the Buddha said.
 
