@@ -36,7 +36,7 @@
       if (n.nodeName === "BR") { n.remove(); line = null; return; }
       if (n.nodeType === 1 && n.matches("a.v")) { p.appendChild(n); return; }
       if (n.nodeType === 3 && !line) {
-        n.nodeValue = n.nodeValue.replace(/^\s+/, "");
+        n.nodeValue = n.nodeValue.replace(/^[ \t\r\n]+/, ""); // not \s, which would eat em-space indents (Dhammapada)
         if (!n.nodeValue) { n.remove(); return; }
       }
       if (!line) start();
