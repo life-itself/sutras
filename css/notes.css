@@ -34,3 +34,6 @@
 /* notes switched off: the clean text */
 .rs.nt-off .nt-sn { display: none }
 .rs.nt-off mark.nt-mark { background: none }
+
+/* phone, verse: an open note is a block that already ends the line, so drop the line break after it */
+.rs-verse .rs-nw:has(> .nt-sn.rs-open) + br { display: none }
