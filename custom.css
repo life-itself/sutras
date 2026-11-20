@@ -29,6 +29,8 @@
    The link target must land clear of the navbar. */
 .rs-verse a.v { display: block; font-size: .72em; line-height: 1.2; margin-bottom: .2em; color: var(--rs-muted); text-decoration: none; font-variant-numeric: lining-nums; scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
 .rs-verse a.v:hover, .rs-verse a.v:target { color: var(--rs-accent) }
+/* arriving on /faith-in-mind#3 focuses the number; the accent colour marks it, so no focus box */
+.rs-verse a.v:target:focus-visible { outline: none }
 @container rs (min-width: 760px) {
   .rs-verse a.v { position: absolute; left: -2.6em; top: .32em; margin: 0; width: 2.2em; text-align: right }
 }

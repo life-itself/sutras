@@ -43,7 +43,7 @@ Sheng-yen’s own introduction follows the poem. In it he sets *Faith in Mind* b
 <div class="rs-verse">
 
 <a class="v" id="1" href="#1">1</a>
-The Supreme Way[^1] is not difficult  
+The Supreme Way is not difficult[^1]  
 If only you do not pick and choose.  
 Neither love nor hate,  
 And you will clearly understand.  
@@ -145,7 +145,7 @@ The erring mind begets tranquillity and confusion;
 In enlightenment there are no likes or dislikes.  
 The duality of all things  
 Issues from false discriminations.  
-A dream, an illusion, a flower in the sky[^2] —  
+A dream, an illusion, a flower in the sky —[^2]  
 How could they be worth grasping?  
 Gain and loss, right and wrong —  
 Discard them all at once.
