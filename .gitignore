@@ -5,3 +5,6 @@
 .beads-credential-key
 .beads/proxieddb/
 *.gate.lock*
+
+# Source EPUBs (copyrighted; kept locally, never committed)
+library/**/*.epub

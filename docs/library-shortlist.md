@@ -4,13 +4,16 @@ Status: draft for Rufus, 2026-11-20. Library workstream ([brief](plans/workstrea
 
 ## In brief
 
-- **Dhammapada:** build on Bhikkhu Sujato's translation (CC0, SuttaCentral). It wins on openness and data: it is public domain and comes with the Pāli aligned line by line. It does not win on reading, where Fronsdal and Munindo are better. Compare them in the side-by-side table in section 1 and choose by ear. Backup: Thanissaro Bhikkhu (CC BY-NC 4.0). Sujato's text is saved in `library/dhammapada/`.
+- **Dhammapada: Thanissaro Bhikkhu is the chosen translation** (Rufus, 2026-11-20). He supplied the EPUB: the 2011 revised edition, whose licence is "for free distribution" (not the CC BY-NC 4.0 of the 2017 revision; see `library/dhammapada/NOTES.md`). Converted, with a draft edition, in `library/dhammapada/`. Bhikkhu Sujato's CC0 translation is kept as a parallel in `library/dhammapada/sujato/`, for a later side-by-side view. The comparison below is kept as the record of the choice.
+- ***Meditations*: Gregory Hays** (Rufus, 2026-11-20), from an EPUB he supplied (Modern Library, 2002; in copyright). Converted, with a draft edition, in `library/meditations/`. 111 of the 111 passages Rufus quotes from the *Meditations* in his notes are found in it (`library/meditations/rufus-notes-match.md`).
 - **Nothing found locally:** no Dhammapada file, and no Zotero library on this Mac. The "good open-source translation" Rufus remembers is most likely Sujato's (guess).
 - **Existing texts:** three problems need fixing. Seneca is missing its chapter XVII heading, and its source link now goes to a hijacked domain. The Plum Village *Diamond Sutra* is a short version of about 1,500 words, not the full sutra. Red Pine has only chapters 1, 2 and 32 of 32.
 - **Do first:** Dhammapada, Heart Sutra (Thich Nhat Hanh, CC BY-NC), Tao Te Ching, *Meditations*.
 - **Rufus's notes:** the big one is `rufuspollock.com/Meditations.md`. It holds about 7,400 words of quotes from the Hays translation, each with a heading and a comment.
 
 ## 1. The Dhammapada
+
+**Decided (Rufus, 2026-11-20): Thanissaro Bhikkhu**, with Sujato kept as a parallel. The comparison and recommendation below are the record from before the choice.
 
 423 short verses in 26 chapters, from the Pāli Canon (Khuddaka Nikāya). It is the best-loved early Buddhist text and the obvious first new text. Every translation numbers the verses 1–423 straight through the book, so a link like `/dhammapada#183` works whichever one we choose. The chapters (vaggas) are numbered 1–26.
 
@@ -120,10 +123,10 @@ Ordered by a suggested sequence. "Best" is the best-reading translation; "open" 
 
 | # | Text | Why it is here | Recommended translation and licence | Source | Length | Cited by |
 |---|---|---|---|---|---|---|
-| 1 | **Dhammapada** | The best-loved early Buddhist text; short verses that suit annotation | Sujato, CC0 ✓ (see section 1) | `library/dhammapada/` | 10,000 words | verse 1–423 |
+| 1 | **Dhammapada** | The best-loved early Buddhist text; short verses that suit annotation | **Chosen: Thanissaro Bhikkhu**, 2011 edition, "for free distribution" ✓ (Rufus, 2026-11-20). Parallel: Sujato, CC0 ✓ (see section 1) | `library/dhammapada/` | 10,000 words | verse 1–423 |
 | 2 | **Heart Sutra** | The core of Mahāyāna wisdom in one page; a companion to the Diamond Sutra | Thich Nhat Hanh, 2014, CC BY-NC 4.0 ✓ ("Translation is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License"). It deliberately departs from the standard wording (e.g. "the Insight that Brings Us to the Other Shore"), so its lines will not map onto other versions. The traditional alternative is Aitken's chant, in the Diamond Sangha *Daily Zen Sutras* (the same source as Shodoka) | https://plumvillage.org/library/sutras/the-heart-sutra | 300 words | by title (Taishō 251); line |
 | 3 | **Tao Te Ching** | The Taoist classic; the vision names it; the natural text for a "compare translations" view | Best: Ursula K. Le Guin (Shambhala, 1997, in copyright). Open: James Legge (1891), Standard Ebooks, PD-US ✓ (dated). J. H. McDonald (1996) reads better and is labelled "A Translation for the PUBLIC DOMAIN", but only on third-party copies (**unverified**) | https://standardebooks.org/ebooks/laozi/tao-te-ching/james-legge | 5,000 words (text only) | chapter 1–81 |
-| 4 | **Meditations**, Marcus Aurelius | The Stoic classic; Rufus already has long notes on it | Best: Gregory Hays (Modern Library, 2002, in copyright); Rufus's notes quote Hays. Open: George Long, Standard Ebooks, PD-US ✓ (stiff, Victorian) | https://standardebooks.org/ebooks/marcus-aurelius/meditations/george-long | 45,000 words (Long) | book.section (4.3) |
+| 4 | **Meditations**, Marcus Aurelius | The Stoic classic; Rufus already has long notes on it | **Chosen: Gregory Hays** (Modern Library, 2002, in copyright), EPUB supplied by Rufus (2026-11-20); Rufus's notes quote Hays. Open alternative: George Long, Standard Ebooks, PD-US ✓ (stiff, Victorian) | `library/meditations/` | 35,000 words (Hays, text only) | book.section (4.3) |
 | 5 | **Enchiridion**, Epictetus | The shortest complete guide to Stoic practice | George Long, in Standard Ebooks' *Short Works*, PD-US ✓. Robin Hard (Oxford) reads better (in copyright) | https://standardebooks.org/ebooks/epictetus/short-works/george-long | 6,000 words (estimate) | chapter 1–53 |
 | 6 | **First sermon** (SN 56.11, *Dhammacakkappavattana Sutta*) | The Four Noble Truths and the Middle Way, in the Buddha's own first teaching; short | Sujato, CC0 | `suttacentral.net/api/bilarasuttas/sn56.11/sujato?lang=en` | 1,000 words (estimate) | SN 56.11 + segment |
 | 7 | **Satipaṭṭhāna Sutta** (MN 10) | The foundational meditation text; links to Rufus's practice | Sujato, CC0 (as for the Dhammapada) | `suttacentral.net/api/bilarasuttas/mn10/sujato?lang=en` | 3,100 words | MN 10 + segment |
@@ -145,10 +148,10 @@ Ordered by a suggested sequence. "Best" is the best-reading translation; "open" 
 
 The focus now is the site, not many texts, so only four:
 
-1. **Dhammapada** (the text is ready; Sujato).
+1. **Dhammapada** (Thanissaro; draft edition ready in `library/dhammapada/`).
 2. **Heart Sutra**: tiny and openly licensed. It tests the "short text" layout, and Thich Nhat Hanh's version sits beside his Diamond Sutra.
 3. **Tao Te Ching**: tests a chaptered text and, later, side-by-side translations.
-4. ***Meditations***: tests a long text with book.section links, and is the first text where Rufus's existing notes can be brought in.
+4. ***Meditations***: tests a long text with book.section links, and is the first text where Rufus's existing notes can be brought in. Hays; draft edition ready in `library/meditations/`.
 
 Numbers 5–10 are short, and most are openly licensed, so they are cheap to add once the pipeline works. Numbers 11–20 are for later and are the most open to cuts. Blue Cliff Record (long, no open text) and the four non-Buddhist texts at the end are the first candidates to drop. A cadence of about one new text a week, once the pipeline works, fits the brief's guess.
 
@@ -171,8 +174,8 @@ Rufus's other notes may live elsewhere too, such as Zotero annotations or Kindle
 
 ## 5. Open questions for Rufus
 
-1. **Which Dhammapada?** Recommendation: Sujato (CC0, structured, with Pāli). The default is to build with Sujato, and to show Thanissaro and Munindo as comparison samples later. Is Sujato the "open-source translation" you remembered, or was it another?
-2. ***Meditations*: Hays or Long?** Recommendation: Hays, published with its status stated (per decision 0001.5). Your notes quote Hays, so his text is the only one their quotes will match, and Hays reads far better. But it is in copyright and needs your copy of the book, as an EPUB to convert. Can you supply it? The default: build with Long (public domain in the US) only as a stopgap until the EPUB arrives. Book.section links stay the same either way.
+1. **Which Dhammapada?** Answered (Rufus, 2026-11-20): Thanissaro Bhikkhu, from his EPUB (2011 edition). Sujato is kept as a parallel.
+2. ***Meditations*: Hays or Long?** Answered (Rufus, 2026-11-20): Hays, from the EPUB he supplied.
 3. **Tao Te Ching: Le Guin or an open one?** Recommendation: Le Guin as the main text, with an open version alongside. Of the open ones, McDonald (1996) reads much better than Legge. The default is McDonald, if the next worker can confirm his public-domain release at its source; otherwise Legge, until a Le Guin EPUB is in hand.
 4. **The Plum Village *Diamond Sutra* is a short version.** Recommendation: keep it but label it, and if you have *The Diamond That Cuts Through Illusion*, convert the full text. The default is to label it.
 5. **Red Pine's full *Diamond Sutra*:** do you have the book (print or EPUB)? If so, the full 32 chapters can be converted. The default is to keep it marked as partial.
