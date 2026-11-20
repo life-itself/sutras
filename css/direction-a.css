@@ -76,9 +76,11 @@
 
 /* ---- home: the shelf, Kaikado's row (README.md, .rs-home) ---- */
 .rs-home .rs-head .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
-.rs-home .rs-head .rs-head-text { grid-column: 1 !important }
+.rs.rs-home[data-rs-theme="personal"] .rs-head .rs-head-text { grid-column: 1 !important; max-width: none; justify-items: start }
 .rs-home .rs-head .rs-kicker { display: none }
-.rs-home .rs-lead { max-width: 22em; font-size: clamp(1.9rem, 3.2vw, 2.5rem); line-height: 1.18 }
+.rs-home .rs-lead { max-width: 30em; font-size: clamp(1.9rem, 3vw, 2.4rem); line-height: 1.18 }
+.rs-home .rs-lead span { display: block; white-space: normal }
+@media (min-width: 900px) { .rs-home .rs-lead span { white-space: nowrap } }
 .rs-home .rs-head .rs-quiet, .rs-home .rs-head .rs-quiet a { font-style: italic; color: var(--sd-muted) }
 .sd-shelf .sd-kind { display: block; font-size: .78em; font-style: italic; color: var(--sd-accent-ink); line-height: 1.3; margin: 0 }
 .rs-home .rs-head .rs-wrap { text-align: left; justify-items: start }
@@ -99,4 +101,4 @@
 .rs-home .rs-body .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
 .rs-home .rs-text { grid-column: 1 !important }
 .rs-home .rs-text > :not(.rs-shelf) { max-width: var(--sd-measure) }
-@media (max-width: 640px) { .sd-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px } .sd-shelf .sd-thumb { max-width: 150px } }
+@media (max-width: 640px) { .sd-shelf, .rs-home .rs-shelf ul.sd-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px } .sd-shelf .sd-thumb { max-width: 150px } }
