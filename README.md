@@ -50,11 +50,11 @@ The same sutra from the Sanskrit, keeping its repetitions and its full closing v
 
 ## Early Buddhism
 
-### The Dhammapada
+### [The Dhammapada](/dhammapada)
 
-<p class="rs-quiet">Translated by Thanissaro Bhikkhu · coming</p>
+<p class="rs-quiet">Translated by Thanissaro Bhikkhu</p>
 
-Short verses from the Pāli Canon on the mind and the path.
+423 short verses from the Pāli Canon, attributed to the Buddha, on the mind and the path.
 
 ## Stoicism
 
