@@ -1,10 +1,10 @@
 # Sutras design
 
-Status, 2026-11-20 (evening): **a first small mood board is with Rufus; the gate is his reaction.** Bead: sutras-m2v.3. Process: the `designing-look-and-feel` skill, revised today with him: a raw board of 4–6 references first, feedback, then widen; pictures and directions kept on separate pages.
+Status, 2026-11-20 (night): **the second, widened mood board is with Rufus; the gate is his reaction.** He reacted to the first (quoted at the end of brief.md): loves Kaikado and Emergence, Co–Star as inspiration only, Fitzcarraldo for covers, Plum Village too warm, the seals too far, wants a funky option. Bead: sutras-m2v.3. Process: the `designing-look-and-feel` skill, revised today with him: a raw board of 4–6 references first, feedback, then widen; pictures and directions kept on separate pages.
 
 ## The two pages
 
-- **Mood board (pictures to look at):** https://claude.ai/artifact/Wv1GFH5C3QQtXykof4eSrg. Six existing things (Emergence's poem opening, Plum Village's sutra page, Co–Star's black band, Kaikado, Zhao Mengfu's Heart Sutra, Fitzcarraldo's covers) and two anti-patterns (Terebess, Daily Zen), each one large image with a line of take and leave, the site today, and three questions. It widens from what Rufus says.
+- **Mood board (pictures to look at):** https://claude.ai/artifact/Wv1GFH5C3QQtXykof4eSrg. Second board, 21 images: the four he reacted to, quoted; five more like Emergence and Kaikado; four open-licence images that could be the one picture a text gets; four funkier pages; a colour strip; Plum Village and the seals set aside in his words; four questions. Reviewed by a fresh agent as an art director before publishing (six images cut, captions corrected). The first board (six and two) is in the git history of `moodboard.src.html`.
 - **Five directions (my reading of the wider scan):** https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr. Ink and space; the warm page; the hand; red and black; Seeds of Renaissance adapted; Co–Star and Reports That Matter as the floor; eight details; a shortlist of four with a recommendation. Kept as is, to be revised after his reaction to the pictures. It was first published as "the mood board", which confused the two; renamed.
 
 ## How it got here today

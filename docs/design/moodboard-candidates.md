@@ -112,7 +112,7 @@ Typewolf, siteInspire (editorial), Hoverstat.es, Fonts In Use, Minimal Gallery a
 |---|---|---|
 | Diamond Sutra, 868, frontispiece and first columns (British Library Or.8210/P.2; via Wikimedia Commons, public domain) | **Kept** | The oldest dated printed book, and it is one of ours. The ruled columns are a frame that then gets out of the way. |
 | Zhao Mengfu, Heart Sutra handscroll, Yuan dynasty (Wikimedia Commons, public domain) | set aside as a page form; held as imagery | Was on the first board. Rufus: "takes us too much that way, though… having this kind of imagery of scrolls and so on is nice." |
-| Lotus Sutra, Jingoji, late Heian, gold and silver on indigo (Wikimedia Commons, public domain) | **Kept** | Gold columns on near-black paper beside a frontispiece. Reverence as a page, not as ornament. |
+| A sutra from the Jingoji canon (Jingoji Issaikyō; the Commons title says Lotus Sutra but the scroll's own title reads 佛説心明経), late Heian, gold and silver on indigo (Wikimedia Commons, public domain) | **Kept** | Gold columns on near-black paper beside a frontispiece. Reverence as a page, not as ornament. |
 | Lotus Sutra, Medicinal Herbs chapter, 12th c. (Met, CC0) | held | Jingoji says it in one image. |
 | Goryeo Lotus Sutra, c. 1340 (Met, public domain) | held | Same family. |
 | Song dynasty printed sutra page (Wikimedia Commons, public domain) | **Kept** | Nothing but even columns of regular script on brown paper. The block of text as a single surface. |
@@ -173,3 +173,8 @@ Rufus asked (2026-11-20) for 5–10 directions at most, a few details, and a sho
 ## Rufus's reactions to the first board
 
 Loved: Kaikado ("almost even better than the Co–Star"), Emergence ("particularly that page"). Liked: Co–Star for its cleanness and images, not its fonts; Fitzcarraldo for EPUB and PDF covers, colour open (warm red vs cool blue). Set aside: Plum Village (too warm), the Zhao Mengfu seals as a page form. Asked for: a funky option. Pass 7 below widens accordingly.
+
+
+## Pass 7 (after Rufus's reactions)
+
+Kept on the second board: Emergence Dendrochronology opening, Emergence Song poem page, Emergence seeds diagram, azmaya.co.jp, nendo.jp; Sesshū, Sengai, Hakuin, the moon jar as imagery; dirt.fyi, poetryproject.org, readingdesign.org, makingsoftware.com as funky. Cut after the art-director review: Emergence The Serviceberry (busy collage with nav), Emergence print page (text and a cut-off book), analoguelife.com (script wordmark, busy nav), departuremono.com (grey, a toy memo). Dropped on sight: nalatanalata.com (a shop), mjolk.ca, kaikado story page (404), thecreativeindependent.com (a grid of coloured cards), robinrendle.com (photo grid), aworkinglibrary.com (quiet and good, but a list page without an image), thebeliever.net (subscribe modal), mcsweeneys.net (banner), e-flux.com (ad), maggieappleton.com, sublime.app, are.na/editorial, teenage.engineering (product), wisdomandai.org (the Seeds family again), pudding.cool, uglyducklingpresse.org, poetryfoundation again; hasamiporcelain.com did not resolve.
