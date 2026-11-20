@@ -26,7 +26,7 @@ Source: bead sutras-m2v.1 (epic sutras-m2v). Vision: [docs/vision.md](../vision.
 What is the smallest Sutras that Rufus himself reads from and adds his notes to?
 
 Criteria:
-- By when: 2027-01-31 (guess)
+- By when: no hard deadline; expected to ship by Monday 2026-11-23 — decided (Rufus, 2026-11-20)
 - For whom: Rufus first — decided (Rufus, 2026-11-20). It must also be a good place for a stranger to read the same texts.
 - Effort: built mainly by AI agents on Flowershow, a few hours a week of Rufus's time (guess)
 - Off the table: a complete catalogue; an academic archive — decided (Rufus, 2026-11-20). Building a custom reading platform (guess)
