@@ -16,8 +16,8 @@ Source: bead sutras-m2v.1 (epic sutras-m2v). Vision: [docs/vision.md](../vision.
 
 ### Complication
 
-- The one person the site is for has not used it in four years. (guess)
-  - Why it stalled: unknown — Rufus to say. Where he reads these texts today: unknown — Rufus to say.
+- The site stalled for four years because Rufus lacked the time and energy to add texts by hand (Rufus, 2026-11-20). AI now removes most of that cost.
+  - Where he reads these texts today: unknown — Rufus to say.
 - It is pulled two ways: a personal library (a few texts done beautifully, for Rufus) and an experiment (general machinery for open literature: annotation, linking, downloads). The second can swallow the first. (guess)
 - If nothing changes, the site stays a dormant list of six raw texts and the Open Literature direction gets no first test. (guess)
 
