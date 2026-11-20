@@ -72,3 +72,47 @@ Other texts, home page redesign, new name, concept wiki, side-by-side translatio
 - The EPUB carries Sheng-yen's preface, introduction and translation, which is a further step than a web page. Rufus to OK; backup: an EPUB of the poem and our intro only.
 - Page script on Flowershow must clean up on `flowershow:page-leave` (reading-system README says so).
 - `custom.css` loads on every page; the reading CSS is scoped to `.rs`, so other texts should be unaffected. Check one.
+
+## Result (2026-11-20)
+
+**Decision: stay on Flowershow.** Every item of the stay-or-leave rule works on the live site after about half a day, with small work-rounds and nothing Flowershow could not do. Built by an AI agent (Claude); checked on https://sutras.lifeitself.org/faith-in-mind with headless Chrome at 1280px and 390px.
+
+Changes to this plan as built (decision 0001 and the coordinator's brief): no preview site, `main` is the preview; stanza ids are plain numbers (`#3`); the EPUB carries the full text.
+
+### Done-check
+
+| Item | Result | Evidence |
+| --- | --- | --- |
+| Intro, poem, About this translation, Source and licence, Download, in that order | Pass | Headings on the live page, in order: In brief, Introduction, The poem, About this translation, Source and licence, Download |
+| Reading layout loads: EB Garamond renders, poem keeps its line breaks | Pass | `document.fonts` reports EB Garamond loaded and it is the computed font; 146 lines in the source, 146 rendered (15 stanzas) |
+| `/faith-in-mind#3` lands on stanza 3, clear of the navbar | Pass | Stanza 3's number sits 84px from the top of the window at both widths, 20px below the 64px navbar (added by the Site work during the spike; the offset uses Flowershow's `--navbar-height`) |
+| Two or more margin notes beside their lines at 1280px; open on tap at 390px | Pass | Three notes, each 220px wide in the right margin, level with its line; at 390px hidden until tapped, then open under the line |
+| EPUB downloads and opens in Apple Books | Part | Downloads from the page link as `application/epub+zip`, identical to the committed file; valid container, well-formed XHTML, reads back through Pandoc. **Not opened in Apple Books by the agent**: Rufus to open it once |
+| Rufus's own note | Not done (left out of this pass) | Follows with notes as data, milestone 2 |
+| Stay-or-leave recorded | Pass | This section |
+
+Also checked: going to the page from the home page and back and forward again re-runs the page scripts cleanly (three notes each time, no console errors); the home page and `/shodoka` look as before; `library/`, `scripts/` and `docs/` return 404 on the live site.
+
+### What Flowershow needed (work-rounds, none blocking)
+
+1. The site parses `.md` as MDX, so the first push showed an error card. Fixed with `syntaxMode: md` on the page.
+2. Footnotes are rendered outside the page's wrapper, so the reading system did not find them. Two-line change in our copy of `reading.js`, one rule in `custom.css`.
+3. `reading.js` was not written as a page script (no clean-up on leaving the page). Patched in our copy.
+4. A passage link is scrolled to before the font loads; `js/edition.js` scrolls again.
+5. Verse needed its own small style, and the note number a real tap target on phones.
+
+Each is written up in `docs/lessons/`. Things that simply worked: raw `id`s on inline anchors, `layout: plain`, page scripts (including on in-site navigation), `@import` of Google Fonts and of a CSS file in the repo from `custom.css`, `.epub` served as a download, `contentExclude`.
+
+A second agent critiqued the introduction and the live page; its points were applied (introduction keeps to what Sheng-yen reports and quotes; shorter source note; no small-caps first lines or automatic hyphenation; the empty band under the page removed). Not applied: a hanging indent for wrapped verse lines (not possible with `<br>` line breaks) and more notes on terms (Rufus's notes come in milestone 2).
+
+### What Flowershow cannot do (the list that would argue for leaving)
+
+Nothing found in this spike. Known limits to design round, not hit here: no build step (the EPUB and any generated file are committed), and a page cannot fetch a data file from the repo (matters for notes as data, milestone 2).
+
+### Left for others
+
+- Flowershow's default footer line, "© 2026 Sutras. All rights reserved.", contradicts the page's licence. `custom.css` hides `.site-footer-copyright` on every page; the Site workstream should write the real line (or a `_footer.html`).
+- The licence paragraph sends rights holders to GitHub issues. An email address would be better; Rufus to say which.
+- `"syntaxMode": "md"` site-wide in `config.json` would remove work-round 1 for every edition (Site workstream; check no page needs MDX).
+- The five reading-system changes should go upstream (needs Rufus's OK to edit `ux-patterns`).
+- `scripts/compare-source` is written for this one text; generalise with the second edition (workstream 2).
