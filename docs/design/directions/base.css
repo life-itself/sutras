@@ -11,7 +11,7 @@
   --sd-accent: #cf5a3d; --sd-accent-ink: #cf5a3d;
   --sd-text: "Literata", Georgia, serif; --sd-display: "Literata", Georgia, serif; --sd-label: "Instrument Sans", system-ui, sans-serif;
   --sd-mark: "Ma Shan Zheng", "Noto Serif TC", serif;
-  --sd-size: 20px; --sd-size-phone: 18px; --sd-lh: 1.58; --sd-measure: 32em;
+  --sd-size: 20px; --sd-size-phone: 18.5px; --sd-lh: 1.58; --sd-measure: 32em;
 }
 .rs[data-rs-theme="personal"] {
   --rs-bg: var(--sd-bg); --rs-ink: var(--sd-ink); --rs-ink2: var(--sd-ink2); --rs-muted: var(--sd-muted); --rs-rule: var(--sd-rule);
@@ -38,19 +38,21 @@ body { font-family: var(--sd-text); -webkit-font-smoothing: antialiased }
 
 /* ---- the text's one image, then the title, as on Emergence's poem page ---- */
 .sd-art { margin: 0; padding: clamp(28px, 6vw, 72px) 20px 0; display: grid; justify-items: center }
-.sd-art img { display: block; max-width: min(100%, 560px); max-height: 62vh; width: auto; height: auto }
-.sd-art figcaption { font-family: var(--sd-label); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--sd-muted); margin-top: 14px }
+.sd-art img { display: block; max-width: min(100%, 560px); max-height: 62vh; width: auto; height: auto; mix-blend-mode: multiply }
+@media (max-width: 640px) { .sd-art { padding-top: 16px } .sd-art img { max-height: 50svh } }
+.sd-art figcaption { font-family: var(--sd-text); font-style: italic; font-size: 14px; color: var(--sd-muted); margin-top: 14px; text-align: center; max-width: 36em }
 .rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: clamp(28px, 5vw, 56px) 0; text-align: center; display: grid; justify-items: center }
 .rs[data-rs-theme="personal"] .rs-head .rs-head-text { display: grid; justify-items: center; max-width: 34em }
 .rs[data-rs-theme="personal"] .rs-head a.rs-kicker, .rs[data-rs-theme="personal"] .rs-head .rs-kicker { align-self: center; font-family: var(--sd-label); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--sd-muted); font-weight: 500 }
-.rs[data-rs-theme="personal"] .rs-head h1 { font-size: clamp(34px, 5vw, 50px); font-weight: 400; line-height: 1.05; margin: 14px 0 6px }
+.rs[data-rs-theme="personal"] .rs-head h1 { font-size: clamp(34px, 5vw, 50px); font-weight: 400; line-height: 1.12; margin: 14px 0 12px }
 .rs[data-rs-theme="personal"] .rs-subtitle { font-style: italic; font-size: 1.05em; color: var(--sd-muted); margin: 0 0 14px; text-align: center }
-.rs[data-rs-theme="personal"] .rs-head .rs-attribution { font-size: .92em; line-height: 1.5; color: var(--sd-ink2); text-align: center }
+.rs[data-rs-theme="personal"] .rs-head .rs-attribution { font-size: .92em; line-height: 1.5; color: var(--sd-ink2); text-align: center; max-width: 26em }
 .rs[data-rs-theme="personal"] .rs-body .rs-wrap { padding-top: clamp(32px, 5vw, 64px) }
 
 /* ---- In brief: no box, no bar; an italic paragraph with a small label, as a book's blurb ---- */
 .rs[data-rs-theme="personal"] .rs-inbrief { background: none; border: 0; padding: 0; margin: 0 0 var(--rs-s5) !important; font-style: italic; font-size: 1em; color: var(--sd-ink2) }
-.rs[data-rs-theme="personal"] .rs-inbrief-label { display: inline; font-family: var(--sd-label); font-style: normal; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--sd-accent-ink); margin-right: 10px }
+.rs[data-rs-theme="personal"] .rs-inbrief-label { display: inline; font-family: var(--sd-text); font-style: italic; font-size: 1em; letter-spacing: 0; text-transform: none; color: var(--sd-accent-ink); margin-right: 8px }
+.rs[data-rs-theme="personal"] .rs-inbrief-label::after { content: "." }
 .rs[data-rs-theme="personal"] .rs-inbrief em { font-style: normal }
 
 /* ---- headings, verse numbers, notes: the apparatus is the only place the accent appears ---- */
@@ -73,15 +75,15 @@ body { font-family: var(--sd-text); -webkit-font-smoothing: antialiased }
 .sd-home .rs-text > * { max-width: none }
 .sd-home .rs-text .rs-inbrief { max-width: 34em; margin: 0 auto var(--rs-s6) !important; text-align: center }
 .sd-home .rs-text .rs-inbrief .rs-inbrief-label { display: none }
-.sd-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 40px); align-items: end }
+.sd-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 40px); align-items: start }
 .sd-shelf li { min-width: 0; display: grid; gap: 12px; justify-items: center; text-align: center }
 .sd-shelf a { color: var(--sd-ink); text-decoration: none; display: grid; gap: 12px; justify-items: center }
-.sd-shelf .sd-thumb { width: 100%; max-width: 220px; aspect-ratio: 1; object-fit: cover; display: block; filter: saturate(.9) }
+.sd-shelf .sd-thumb { width: 100%; max-width: 200px; aspect-ratio: 4 / 5; object-fit: cover; display: block; filter: saturate(.9); mix-blend-mode: multiply }
 .sd-shelf h3 { font-family: var(--sd-display); font-weight: 400; font-size: 1.15em; line-height: 1.25; margin: 0 }
 .sd-shelf .sd-by { font-size: .82em; color: var(--sd-muted); line-height: 1.4; max-width: 24em }
 .sd-shelf .sd-line { font-size: .92em; color: var(--sd-ink2); line-height: 1.45; max-width: 26em; display: none }
 .sd-shelf a:hover h3 { color: var(--sd-accent-ink) }
-.sd-section { font-family: var(--sd-label); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--sd-muted); margin: var(--rs-s6) 0 var(--rs-s3); text-align: center }
+.sd-section { font-family: var(--sd-text); font-style: italic; font-size: 1em; color: var(--sd-muted); margin: var(--rs-s6) 0 var(--rs-s3); text-align: center }
 .sd-section:first-of-type { margin-top: 0 }
 @media (max-width: 640px) { .sd-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 18px } .sd-shelf .sd-thumb { max-width: 150px } .sd-links { gap: 16px } }
 

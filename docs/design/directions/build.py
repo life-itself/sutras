@@ -34,13 +34,13 @@ MARK = "慧"  # the character for wisdom (hui, prajñā); an option, not a decis
 # one open-licence image per text, and the label above the title
 ART = {
     "fim": ("img/sesshu.jpg", "Sesshū Tōyō, Haboku Sansui, 1495. Tokyo National Museum, public domain", "Zen · a poem"),
-    "seneca": ("img/xylander.jpg", "Seneca’s century: the first printed Marcus Aurelius, Zurich 1558. Public domain", "Stoicism · an essay"),
+    "seneca": ("img/aldus.jpg", "A page from Aldus Manutius’s Virgil, Venice 1501: the pocket editions the Roman authors were read in. Public domain", "Stoicism · an essay"),
     "about": (None, None, "About"),
 }
 SHELF = [  # slug, image, label on the shelf
     ("faith-in-mind", "img/sesshu-sq.jpg"), ("shodoka", "img/sengai.jpg"), ("gateless-gate-mumonkan", "img/hakuin.jpg"),
     ("diamond", "img/diamond.jpg"), ("diamond-red-pine", "img/jingoji-sq.jpg"), ("dhammapada", "img/song.jpg"),
-    ("seneca-on-the-shortness-of-life", "img/xylander.jpg"), ("meditations", "img/aldus.jpg"),
+    ("seneca-on-the-shortness-of-life", "img/aldus.jpg"), ("meditations", "img/xylander.jpg"),
 ]
 LOCAL = {"faith-in-mind": "faith-in-mind.html", "seneca-on-the-shortness-of-life": "seneca.html"}
 

@@ -1,12 +1,12 @@
 /* Direction A · Warm red. Emergence's paper and its warm, slightly orange red, used only for the apparatus:
    the mark, the stanza numbers, the note numbers, the label before "In brief". Text in Literata (open licence,
-   a book face made for screens, with optical sizes); the mark 慧 in a brush face. */
+   a book face made for screens, with optical sizes); the mark 慧 printed in Noto Serif TC (a brush face would be the brush script the brief rules out). */
 .rs, :root {
   --sd-bg: #ebe7e0; --sd-ink: #211e1b; --sd-ink2: #3b3733; --sd-muted: #6f6a62; --sd-rule: #d9d4ca;
   --sd-accent: #d85f3f; --sd-accent-ink: #c9502f;
   --sd-text: "Literata", Georgia, serif; --sd-display: "Literata", Georgia, serif; --sd-label: "Instrument Sans", system-ui, sans-serif;
-  --sd-mark: "Ma Shan Zheng", "Noto Serif TC", serif;
-  --sd-size: 20px; --sd-size-phone: 18px; --sd-lh: 1.58; --sd-measure: 32em;
+  --sd-mark: "Noto Serif TC", serif;
+  --sd-size: 20px; --sd-size-phone: 18.5px; --sd-lh: 1.58; --sd-measure: 32em;
 }
 .rs[data-rs-theme="personal"] .rs-head h1 { font-variation-settings: "opsz" 48 }
-.sd-mark { font-size: 27px }
+.sd-mark { font-size: 22px; font-weight: 600 }

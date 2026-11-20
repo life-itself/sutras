@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>About · sample site C · Gold on indigo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap">
+<style>/* ==========================================================================
+   Reading System v0.1: long-form essay and paper pages
+   https://github.com/rufuspollock/ux-patterns/tree/main/reading-system
+
+   Wrap a page in <div class="rs" data-rs-theme="magazine">. Everything is
+   scoped to .rs, so it can sit inside any site. Responsive rules are
+   container queries on .rs, so it reflows to its own width, not the window.
+
+   Themes:   data-rs-theme = "academic" | "magazine" | "personal"
+   Options:  data-rs-rail     = "on" | "off"      contents rail on wide screens
+             data-rs-dropcap  = "on" | "off"      drop cap on chapter openings
+             data-rs-cover    = "beside" | "small" | "none"
+             data-rs-chapters = "auto"            number <h2>s with a counter
+   Accent:   style="--rs-accent: #1f5aa6" (any colour)
+
+   Fonts are not bundled. Load the theme's Google Fonts (see README).
+   ========================================================================== */
+
+/* ---------- 1. Tokens ---------- */
+.rs {
+  /* rhythm: every vertical space comes from this scale */
+  --rs-s1: .375rem; --rs-s2: .75rem; --rs-s3: 1.25rem; --rs-s4: 2rem; --rs-s5: 3.25rem; --rs-s6: 5rem;
+  /* colour */
+  --rs-bg: #ffffff; --rs-ink: #191b21; --rs-ink2: #3a3d47; --rs-muted: #636876; --rs-rule: #e3e5ea;
+  --rs-accent: #c8281e; --rs-on-accent: #ffffff;
+  --rs-tint: color-mix(in srgb, var(--rs-accent) 6%, var(--rs-bg));
+  /* type */
+  --rs-text: "Source Serif 4", Georgia, serif;
+  --rs-display: "Newsreader", Georgia, serif;
+  --rs-ui: "Source Sans 3", system-ui, sans-serif;
+  --rs-size: 19px; --rs-size-phone: 17.5px; --rs-lh: 1.62;
+  /* layout */
+  --rs-measure: 35em; --rs-margin: 230px; --rs-gap: 48px; --rs-rail-w: 180px; --rs-max: 1240px;
+  --rs-sticky-top: 0px; /* set this if your site has its own sticky header */
+}
+
+/* ---------- 2. Themes ---------- */
+.rs[data-rs-theme="academic"] {
+  --rs-accent: #2346b8;
+  --rs-text: "Source Serif 4", Georgia, serif; --rs-display: "Newsreader", Georgia, serif; --rs-ui: "Source Sans 3", system-ui, sans-serif;
+  --rs-size: 19px; --rs-lh: 1.62; --rs-measure: 35em;
+}
+.rs[data-rs-theme="magazine"] {
+  --rs-ink: #141414; --rs-ink2: #333333; --rs-muted: #6a645e; --rs-rule: #e8e3dd;
+  --rs-text: "Newsreader", Georgia, serif; --rs-display: "Cormorant Garamond", Garamond, Georgia, serif; --rs-ui: "Instrument Sans", system-ui, sans-serif;
+  --rs-size: 19.5px; --rs-lh: 1.62; --rs-measure: 33em;
+}
+.rs[data-rs-theme="personal"] {
+  --rs-bg: #f8f7f4; --rs-ink: #252421; --rs-ink2: #3d3b36; --rs-muted: #706d66; --rs-rule: #dedbd3; --rs-accent: #b23a2c;
+  --rs-text: "EB Garamond", Garamond, Georgia, serif; --rs-display: "EB Garamond", Garamond, Georgia, serif; --rs-ui: "IBM Plex Mono", ui-monospace, monospace;
+  --rs-size: 21px; --rs-size-phone: 18.5px; --rs-lh: 1.55; --rs-measure: 31em; --rs-margin: 220px;
+}
+
+/* ---------- 3. Base ---------- */
+.rs { container: rs / inline-size; background: var(--rs-bg); color: var(--rs-ink); font-family: var(--rs-text); font-size: var(--rs-size); line-height: var(--rs-lh); font-variant-numeric: oldstyle-nums proportional-nums; font-kerning: normal; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; position: relative }
+.rs *, .rs *::before, .rs *::after { box-sizing: border-box }
+.rs img { max-width: 100%; display: block; height: auto }
+.rs ::selection { background: color-mix(in srgb, var(--rs-accent) 18%, transparent) }
+.rs a { color: var(--rs-accent); text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; text-decoration-color: color-mix(in srgb, var(--rs-accent) 35%, transparent) }
+.rs a:hover { text-decoration-color: currentColor }
+.rs a:focus-visible, .rs button:focus-visible, .rs summary:focus-visible { outline: 2px solid var(--rs-accent); outline-offset: 2px }
+.rs-wrap { max-width: var(--rs-max); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)) }
+.rs-label, .rs-kicker, .rs-byline dt, .rs-rail-label, .rs-end h2, .rs-inbrief-label, .rs figcaption .rs-fignum { font-family: var(--rs-ui); font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--rs-muted); font-variant-numeric: lining-nums }
+@container rs (max-width: 480px) { .rs-body, .rs-head, .rs-summary { font-size: var(--rs-size-phone) } }
+
+/* ---------- 4. Chapter bar ---------- */
+.rs-bar { position: sticky; top: var(--rs-sticky-top); z-index: 5; background: color-mix(in srgb, var(--rs-bg) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--rs-rule); font-family: var(--rs-ui); font-size: 13px; font-variant-numeric: lining-nums }
+.rs-bar .rs-wrap { display: flex; align-items: center; gap: 14px; min-height: 48px }
+.rs-bar-series { color: var(--rs-muted); white-space: nowrap; display: none }
+.rs-bar-series b { color: var(--rs-ink); font-weight: 600 }
+.rs-bar-current { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--rs-ink); font-weight: 500 }
+.rs-bar button, .rs-bar a { font: inherit; font-size: 12.5px; font-weight: 500; border: 1px solid var(--rs-rule); background: transparent; color: var(--rs-ink); padding: 5px 11px; cursor: pointer; text-decoration: none; white-space: nowrap; border-radius: 3px }
+.rs-progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 0; background: var(--rs-accent) }
+.rs-drawer { position: sticky; top: calc(var(--rs-sticky-top) + 49px); z-index: 4; background: var(--rs-bg); border-bottom: 1px solid var(--rs-rule); max-height: 60vh; overflow: auto }
+.rs-drawer .rs-wrap { padding-block: var(--rs-s3) var(--rs-s4) }
+
+/* ---------- 5. Contents ---------- */
+.rs-toc { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; font-family: var(--rs-ui); font-size: 13.5px; line-height: 1.35; font-variant-numeric: lining-nums }
+.rs-toc a { color: var(--rs-ink2); text-decoration: none }
+.rs-toc a:hover { color: var(--rs-accent) }
+.rs-toc .rs-l3 { padding-left: 14px }
+.rs-toc .rs-l3 a, .rs-toc .rs-l3 span { color: var(--rs-muted); font-size: 13px }
+.rs-toc .rs-off { opacity: .75; color: var(--rs-muted) }
+.rs-toc li.rs-active > a { color: var(--rs-accent); font-weight: 600 }
+.rs-rail { display: none }
+
+/* ---------- 6. Header ---------- */
+.rs-head .rs-wrap { display: flex; flex-direction: column; gap: var(--rs-s4); padding-block: var(--rs-s5) var(--rs-s4) }
+.rs-head h1 { font-family: var(--rs-display); font-weight: 500; line-height: 1.02; margin: var(--rs-s2) 0; text-wrap: balance; letter-spacing: -.012em; font-size: 42px }
+.rs-subtitle { font-size: 1.12em; line-height: 1.38; color: var(--rs-ink2); max-width: 30em; margin: 0 0 var(--rs-s4); text-wrap: balance }
+.rs-byline { display: flex; flex-wrap: wrap; gap: var(--rs-s1) var(--rs-s3); margin: 0 0 var(--rs-s3); line-height: 1.35 }
+.rs-byline div { display: flex; gap: 8px; align-items: baseline }
+.rs-byline dd { margin: 0; font-size: 16px }
+.rs-byline .rs-names { font-size: 17px; color: var(--rs-ink) }
+.rs-actions { display: flex; flex-wrap: wrap; gap: 8px }
+.rs-btn { font-family: var(--rs-ui); font-size: 14px; font-weight: 500; padding: 9px 16px; border: 1px solid var(--rs-ink); color: var(--rs-ink) !important; text-decoration: none !important; background: transparent; border-radius: 3px; line-height: 1.2 }
+.rs-btn.rs-primary { background: var(--rs-ink); color: var(--rs-bg) !important }
+.rs-cover { margin: 0; width: 60px; order: -1; margin-bottom: calc(-1 * var(--rs-s3)) }
+.rs-cover img { width: 100%; aspect-ratio: 707 / 1000; object-fit: cover; box-shadow: 0 1px 2px rgb(0 0 0 / .12), 0 24px 40px -26px rgb(0 0 0 / .5) }
+.rs-cover figcaption { display: none; font-family: var(--rs-ui); font-size: 12px; color: var(--rs-muted); margin-top: 10px }
+.rs[data-rs-cover="none"] .rs-cover { display: none }
+
+/* ---------- 7. Summary ---------- */
+.rs-summary .rs-wrap { padding-block: 0 var(--rs-s3) }
+.rs-summary-box { border-top: 2px solid var(--rs-ink); padding-top: var(--rs-s3); display: grid; gap: var(--rs-s2); max-width: 42em }
+.rs-summary p { margin: 0; text-wrap: pretty }
+.rs-summary .rs-lead { font-size: 1.06em; line-height: 1.55 }
+.rs-summary strong { font-weight: 650 }
+.rs-facts { font-family: var(--rs-ui); font-size: 13.5px; color: var(--rs-muted); font-variant-numeric: lining-nums }
+.rs-keywords { display: none }
+
+/* ---------- 8. Prose (works on plain Markdown output inside .rs-text) ---------- */
+.rs-body .rs-wrap { display: grid; grid-template-columns: minmax(0, 1fr); padding-block: var(--rs-s5) }
+.rs-text { min-width: 0; counter-reset: rs-ch }
+.rs-text > * { max-width: var(--rs-measure) }
+.rs-text p { margin: 0 0 var(--rs-s3); hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; hanging-punctuation: first }
+.rs-text strong { font-weight: 650 }
+.rs-text ul, .rs-text ol { margin: 0 0 var(--rs-s3); padding-left: 1.3em }
+.rs-text li { margin-bottom: var(--rs-s1) }
+.rs-text hr { border: 0; height: auto; margin: var(--rs-s5) 0; text-align: center; color: var(--rs-muted); overflow: visible }
+.rs-text hr::before { content: "⁂"; letter-spacing: .3em }
+
+.rs-text h2 { font-family: var(--rs-display); font-weight: 500; line-height: 1.1; margin: var(--rs-s6) 0 var(--rs-s3); font-size: 1.9em; text-wrap: balance; scroll-margin-top: calc(var(--rs-sticky-top) + 70px) }
+.rs-text > h2:first-child, .rs-text > figure:first-child + h2 { margin-top: 0 }
+/* chapter label above the title: explicit <span class="rs-num">2</span>, or automatic */
+.rs-num, .rs[data-rs-chapters="auto"] .rs-text h2:not(.rs-unnumbered)::before { display: block; font-family: var(--rs-ui); font-size: 11.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--rs-accent); margin: 0 0 var(--rs-s2); font-variant-numeric: lining-nums }
+.rs-num:empty { display: none }
+.rs-num::before { content: "Chapter " }
+.rs[data-rs-chapters="auto"] .rs-text h2:not(.rs-unnumbered) { counter-increment: rs-ch }
+.rs-text :is(.footnotes, [data-footnotes]) h2 { counter-increment: none !important; font-size: 1em; margin: var(--rs-s4) 0 var(--rs-s2) }
+.rs-text :is(.footnotes, [data-footnotes]) h2::before { content: none !important }
+.rs[data-rs-chapters="auto"] .rs-text h2:not(.rs-unnumbered)::before { content: "Chapter " counter(rs-ch) }
+.rs-text h3 { font-family: var(--rs-display); font-weight: 500; font-size: 1.4em; line-height: 1.2; margin: var(--rs-s5) 0 var(--rs-s2); scroll-margin-top: calc(var(--rs-sticky-top) + 70px); text-wrap: balance }
+.rs-text h4 { font-family: var(--rs-text); font-weight: 650; font-size: 1.12em; line-height: 1.3; margin: var(--rs-s4) 0 var(--rs-s1) }
+.rs-text h5 { font-family: var(--rs-text); font-size: 1em; font-style: italic; font-weight: 500; margin: var(--rs-s3) 0 var(--rs-s1); line-height: 1.35 }
+.rs-text h3 + p, .rs-text h4 + p, .rs-text h5 + p { margin-top: 0 }
+
+/* In brief: the chapter's claim. <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> ...</p> */
+.rs-inbrief { margin: 0 0 var(--rs-s4) !important; font-size: 1.04em; line-height: 1.5; background: var(--rs-tint); border-left: 3px solid var(--rs-accent); padding: var(--rs-s2) var(--rs-s3) var(--rs-s3) }
+.rs-inbrief-label { display: block; margin-bottom: var(--rs-s1); color: var(--rs-accent) }
+/* Epigraphs and quotations: a Markdown blockquote. Attribution in <cite> or a last line starting with "— ". */
+.rs-text blockquote { margin: var(--rs-s4) 0; padding: 0 var(--rs-s3) 0 var(--rs-s4) }
+.rs-text blockquote p { font-style: italic; margin: 0 0 var(--rs-s1); font-size: .94em; line-height: 1.55; color: var(--rs-ink2) }
+.rs-text blockquote em { font-style: normal }
+.rs-text blockquote cite { display: block; font-family: var(--rs-ui); font-style: normal; font-size: 12.5px; letter-spacing: .02em; color: var(--rs-muted); font-variant-numeric: lining-nums }
+.rs-text blockquote cite::before { content: "— " }
+.rs-text blockquote + blockquote { margin-top: calc(-1 * var(--rs-s2)) }
+/* Pull quote: <aside class="rs-pull"><p>...</p></aside> */
+.rs-pull { margin: var(--rs-s5) 0; padding: var(--rs-s3) 0; border-block: 1px solid var(--rs-rule) }
+.rs-pull p { font-family: var(--rs-display); font-style: italic; font-weight: 500; font-size: 1.5em; line-height: 1.18; margin: 0; color: var(--rs-ink); text-indent: -.35em }
+.rs[data-rs-pull="off"] .rs-pull { display: none }
+
+/* Figures: <figure class="rs-margin | rs-column | rs-wide"> with <figcaption><span class="rs-fignum">Figure 1</span> ...</figcaption> */
+.rs-text figure { margin: var(--rs-s4) 0 }
+.rs-text figcaption { font-family: var(--rs-ui); font-size: 13px; color: var(--rs-muted); line-height: 1.45; margin-top: var(--rs-s2); font-variant-numeric: lining-nums }
+.rs-text figcaption .rs-fignum { margin-right: 6px; color: var(--rs-ink); font-size: 11px }
+.rs-text figure.rs-margin { border-top: 1px solid var(--rs-rule); padding-top: var(--rs-s2) }
+
+/* Footnotes (GFM output) before reading.js turns them into sidenotes */
+.rs-text sup a[data-footnote-ref], .rs-text sup a.footnote-ref { font-family: var(--rs-ui); font-size: .78em; font-weight: 600; text-decoration: none; padding: 0 1px }
+.rs-footnotes, .rs .footnotes { font-size: 15px; line-height: 1.5; color: var(--rs-ink2) }
+@media screen { .rs [data-rs-sidenoted] { display: none } }
+/* Sidenotes (made by reading.js): inline toggles on phones */
+.rs-nw { white-space: nowrap }
+.rs-nw .rs-sn-note { white-space: normal }
+.rs-sn-ref { font-family: var(--rs-ui); font-size: .6em; font-weight: 600; vertical-align: .55em; line-height: 0; border: 0; background: none; color: var(--rs-accent); padding: 0 1px 0 2px; cursor: pointer; font-variant-numeric: lining-nums }
+.rs-sn-note { display: none; font-family: var(--rs-ui); font-size: 13.5px; line-height: 1.5; color: var(--rs-ink2); background: var(--rs-tint); padding: var(--rs-s2) var(--rs-s2) var(--rs-s2) var(--rs-s3); margin: var(--rs-s1) 0 var(--rs-s2); font-style: normal; font-weight: 400; border-left: 2px solid var(--rs-accent); text-indent: 0; letter-spacing: 0; text-transform: none; text-align: left }
+.rs-sn.rs-open .rs-sn-note { display: block }
+.rs-sn-n { font-weight: 600; color: var(--rs-accent); margin-right: 4px; font-variant-numeric: lining-nums }
+.rs-sn-note a { word-break: break-word }
+
+/* ---------- 9. End matter ---------- */
+.rs-end .rs-wrap { padding-block: var(--rs-s4) var(--rs-s6) }
+.rs-end-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--rs-s4); border-top: 2px solid var(--rs-ink); padding-top: var(--rs-s4); max-width: 980px }
+.rs-end section { display: grid; gap: var(--rs-s2); align-content: start; font-size: 15.5px; line-height: 1.55; min-width: 0 }
+.rs-end h2 { margin: 0 0 var(--rs-s1); color: var(--rs-ink) }
+.rs-end li, .rs-end p { overflow-wrap: anywhere }
+.rs-end ol, .rs-end ul { margin: 0; padding-left: 1.2em; display: grid; gap: var(--rs-s1) }
+.rs-end .rs-notes { columns: 2 22em; column-gap: var(--rs-s5); display: block; font-size: 14.5px }
+.rs-end .rs-notes li { break-inside: avoid; margin-bottom: var(--rs-s1) }
+.rs-refs { max-width: 42em; list-style: none; padding-left: 1.6em !important; text-indent: -1.6em; gap: var(--rs-s2) !important }
+.rs-end details summary { cursor: pointer; font-family: var(--rs-ui); font-size: 14px; color: var(--rs-accent) }
+.rs-end details > :not(summary) { margin-top: var(--rs-s2) }
+.rs-cite { font-family: var(--rs-ui); font-size: 14px; background: var(--rs-tint); padding: var(--rs-s2) var(--rs-s3); margin: 0; word-break: break-word; line-height: 1.5; font-variant-numeric: lining-nums }
+.rs-copy { justify-self: start; font-family: var(--rs-ui); font-size: 13px; border: 1px solid var(--rs-ink); background: transparent; color: var(--rs-ink); padding: 6px 12px; cursor: pointer; border-radius: 3px }
+.rs-series-nav { display: grid; grid-template-columns: 1fr 1fr; gap: var(--rs-s2) }
+.rs-series-nav a { display: grid; gap: 4px; border: 1px solid var(--rs-rule); padding: var(--rs-s2) var(--rs-s3); text-decoration: none; color: var(--rs-ink); border-radius: 3px; font-family: var(--rs-display); font-size: 1.15em }
+.rs-series-nav a:hover { border-color: var(--rs-ink) }
+.rs-series-nav small { font-family: var(--rs-ui); font-size: 11.5px; font-weight: 600; color: var(--rs-muted); letter-spacing: .08em; text-transform: uppercase }
+.rs-series-nav a:last-child { text-align: right }
+.rs-quiet { color: var(--rs-muted) }
+
+/* ---------- 10. Layout: medium (notes in the margin) ---------- */
+@container rs (min-width: 760px) {
+  .rs-wrap { --rs-margin-now: clamp(150px, 21cqi, var(--rs-margin)); --rs-gap-now: 32px }
+  .rs-bar-series { display: inline }
+  .rs-head .rs-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 200px; align-items: end }
+  .rs-head h1 { font-size: 56px }
+  .rs-cover { order: 0; width: auto; margin-bottom: 0 }
+  .rs-cover figcaption { display: block }
+  .rs-body .rs-wrap { grid-template-columns: minmax(0, var(--rs-measure)) var(--rs-margin-now); column-gap: var(--rs-gap-now); justify-content: center }
+  .rs-text > * { max-width: none }
+  .rs-sn-ref { pointer-events: none }
+  .rs-sn-note { display: block; float: right; clear: right; width: var(--rs-margin-now); margin: .25em calc(-1 * (var(--rs-margin-now) + var(--rs-gap-now))) var(--rs-s2) 0; background: none; padding: 0; border: 0; font-size: 14px; line-height: 1.5 }
+  .rs-text blockquote .rs-sn-note, .rs-inbrief .rs-sn-note { margin-right: calc(-1 * (var(--rs-margin-now) + var(--rs-gap-now) + var(--rs-s3))) }
+  .rs[data-rs-theme="magazine"] .rs-text blockquote .rs-sn-note { margin-right: calc(-1 * (var(--rs-margin-now) + var(--rs-gap-now) + var(--rs-s4))) }
+  .rs[data-rs-theme="magazine"] .rs-inbrief .rs-sn-note { margin-right: calc(-1 * (var(--rs-margin-now) + var(--rs-gap-now))) }
+  .rs-text figure.rs-margin { float: right; clear: right; width: var(--rs-margin-now); margin: .25em calc(-1 * (var(--rs-margin-now) + var(--rs-gap-now))) var(--rs-s3) 0 }
+  .rs-text figure.rs-wide { margin-right: calc(-1 * (var(--rs-margin-now) + var(--rs-gap-now))) }
+  .rs-end-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--rs-s5) }
+  .rs-end .rs-span { grid-column: 1 / -1 }
+}
+/* ---------- 11. Layout: wide (contents rail, unless data-rs-rail="off") ---------- */
+@container rs (min-width: 1080px) {
+  .rs-wrap { --rs-margin-now: var(--rs-margin); --rs-gap-now: var(--rs-gap) }
+  .rs-body .rs-wrap, .rs-head .rs-wrap, .rs-summary .rs-wrap, .rs-end .rs-wrap { display: grid; grid-template-columns: var(--rs-rail-w) minmax(0, var(--rs-measure)) var(--rs-margin); column-gap: var(--rs-gap); justify-content: center; max-width: none }
+  .rs-head .rs-head-text { grid-column: 2 }
+  .rs-head .rs-cover { grid-column: 3; width: 150px }
+  .rs-summary-box { grid-column: 2 / 4; max-width: none }
+  .rs-end-grid { grid-column: 2 / 4 }
+  .rs-text { grid-column: 2 }
+  .rs-rail { display: block; grid-column: 1; position: sticky; top: calc(var(--rs-sticky-top) + 76px); align-self: start; max-height: calc(100vh - 110px - var(--rs-sticky-top)); overflow: auto; padding-top: 6px }
+  .rs-rail-label { display: block; margin-bottom: var(--rs-s2) }
+  .rs-bar-toggle { display: none }
+  /* rail off: text and margin only, centred */
+  /* rail off: the rail column becomes an empty margin, so the text stays centred */
+  .rs[data-rs-rail="off"] { --rs-rail-w: var(--rs-margin) }
+  .rs[data-rs-rail="off"] .rs-rail { display: none }
+  .rs[data-rs-rail="off"] .rs-bar-toggle { display: inline-block }
+}
+/* phones: centred blocks read better left-aligned */
+@container rs (max-width: 600px) { .rs-inbrief, .rs-text blockquote, .rs-text h2, .rs-summary-box { text-align: left !important } }
+
+/* ---------- 12. Drop caps (on by default for magazine) ---------- */
+.rs[data-rs-dropcap="on"] :is(.rs-first, .rs-text h2 + p:not(.rs-inbrief), .rs-text h2 + .rs-inbrief + p)::first-letter { font-family: var(--rs-display); font-weight: 600; float: left; font-size: 5.1em; line-height: .78; padding: .08em .08em 0 0; color: var(--rs-accent) }
+@supports (initial-letter: 3) { .rs[data-rs-dropcap="on"] :is(.rs-first, .rs-text h2 + p:not(.rs-inbrief), .rs-text h2 + .rs-inbrief + p)::first-letter { initial-letter: 3; float: none; font-size: inherit; line-height: inherit; padding: 0 .14em 0 0 } }
+
+/* ================= ACADEMIC: a journal ================= */
+.rs[data-rs-theme="academic"] .rs-head h1, .rs[data-rs-theme="academic"] .rs-text h2, .rs[data-rs-theme="academic"] .rs-text h3 { font-variation-settings: "opsz" 72 }
+.rs[data-rs-theme="academic"] .rs-kicker, .rs[data-rs-theme="academic"] .rs-summary .rs-label, .rs[data-rs-theme="academic"] .rs-end h2, .rs[data-rs-theme="academic"] .rs-rail-label { font-family: var(--rs-text); font-weight: 600; font-variant: all-small-caps; text-transform: none; letter-spacing: .09em; font-size: 15.5px; color: var(--rs-ink) }
+.rs[data-rs-theme="academic"] .rs-kicker { color: var(--rs-accent); font-size: 15px }
+.rs[data-rs-theme="academic"] .rs-byline dt { font-size: 11px }
+.rs[data-rs-theme="academic"] .rs-byline dd { font-family: var(--rs-text) }
+.rs[data-rs-theme="academic"] .rs-keywords { display: block }
+.rs[data-rs-theme="academic"] .rs-keywords b { font-weight: 600; color: var(--rs-ink2); margin-right: 4px }
+.rs[data-rs-theme="academic"] .rs-sn-ref, .rs[data-rs-theme="academic"] .rs-sn-n, .rs[data-rs-theme="academic"] .rs-sn-note { font-family: var(--rs-text) }
+.rs[data-rs-theme="academic"] .rs-sn-note { font-size: 14px }
+/* run-in heads for short definitions */
+.rs[data-rs-theme="academic"] .rs-text h5 { display: inline; font-style: italic; font-weight: 600; margin: 0 .45em 0 0 }
+.rs[data-rs-theme="academic"] .rs-text h5::after { content: "." }
+.rs[data-rs-theme="academic"] .rs-text h5 + p { display: inline }
+.rs[data-rs-theme="academic"] .rs-text h5 + p::after { content: ""; display: block; height: var(--rs-s3) }
+.rs[data-rs-theme="academic"] .rs-text blockquote cite { text-align: right }
+.rs[data-rs-theme="academic"] .rs-cover figcaption { display: none }
+.rs[data-rs-theme="academic"] .rs-pull { display: none }
+@container rs (min-width: 760px) {
+  .rs[data-rs-theme="academic"] .rs-head .rs-wrap { grid-template-columns: minmax(0, 1fr) 150px; align-items: start }
+  .rs[data-rs-theme="academic"] .rs-head h1 { font-size: 50px }
+  .rs[data-rs-theme="academic"] .rs-byline { display: grid; grid-template-columns: repeat(auto-fit, minmax(10em, max-content)); gap: var(--rs-s2) var(--rs-s4); border-top: 1px solid var(--rs-rule); border-bottom: 1px solid var(--rs-rule); padding: var(--rs-s2) 0 }
+  .rs[data-rs-theme="academic"] .rs-byline div { display: grid; gap: 3px }
+}
+@container rs (min-width: 1080px) {
+  .rs[data-rs-theme="academic"] .rs-head .rs-wrap { grid-template-columns: var(--rs-rail-w) minmax(0, var(--rs-measure)) var(--rs-margin) }
+}
+
+/* ================= MAGAZINE: art-directed ================= */
+.rs[data-rs-theme="magazine"] .rs-kicker { color: var(--rs-accent); letter-spacing: .16em }
+.rs[data-rs-theme="magazine"] .rs-head h1 { font-weight: 600; font-size: 56px; line-height: .92; letter-spacing: -.015em }
+.rs[data-rs-theme="magazine"] .rs-subtitle { font-style: italic; font-size: 1.18em; line-height: 1.35 }
+.rs[data-rs-theme="magazine"] .rs-byline dt { display: none }
+.rs[data-rs-theme="magazine"] .rs-byline dd { font-family: var(--rs-ui); font-size: 14.5px }
+.rs[data-rs-theme="magazine"] .rs-byline .rs-names { font-size: 15.5px; font-weight: 600 }
+.rs[data-rs-theme="magazine"] .rs-byline div:first-child dd::before { content: "By "; font-weight: 400 }
+.rs[data-rs-theme="magazine"] .rs-btn { border-radius: 999px }
+.rs[data-rs-theme="magazine"] .rs-btn.rs-primary { background: var(--rs-accent); border-color: var(--rs-accent); color: var(--rs-on-accent) !important }
+.rs[data-rs-theme="magazine"] .rs-summary-box { border-top: 1px solid var(--rs-accent) }
+.rs[data-rs-theme="magazine"] .rs-summary .rs-label { color: var(--rs-accent) }
+.rs[data-rs-theme="magazine"] .rs-summary .rs-lead { font-size: 1.16em; line-height: 1.5 }
+.rs[data-rs-theme="magazine"] .rs-text h2 { text-align: center; font-weight: 600; font-size: 2.5em; line-height: 1.02; letter-spacing: -.01em }
+.rs[data-rs-theme="magazine"] .rs-text h3 { font-weight: 600; font-size: 1.9em; line-height: 1.08 }
+.rs[data-rs-theme="magazine"] .rs-text h4 { font-family: var(--rs-ui); font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--rs-accent); margin-top: var(--rs-s5); margin-bottom: var(--rs-s2); display: flex; align-items: center; gap: 10px }
+.rs[data-rs-theme="magazine"] .rs-text h4::before { content: ""; width: 22px; height: 1px; background: var(--rs-accent); flex: none }
+.rs[data-rs-theme="magazine"] .rs-text h5 { font-family: var(--rs-display); font-style: italic; font-weight: 600; font-size: 1.3em; line-height: 1.15; margin-top: var(--rs-s4) }
+.rs[data-rs-theme="magazine"] .rs-inbrief { background: none; border-left: 0; border-top: 2px solid var(--rs-accent); padding: var(--rs-s2) 0 0; font-size: 1.14em; line-height: 1.45 }
+.rs[data-rs-theme="magazine"] .rs-inbrief strong { font-weight: 500 }
+.rs[data-rs-theme="magazine"] .rs-text blockquote { text-align: center; padding: 0 var(--rs-s4) }
+.rs[data-rs-theme="magazine"] .rs-text blockquote p { font-size: .96em }
+.rs[data-rs-theme="magazine"] .rs-series-nav a { font-size: 1.4em; font-weight: 600 }
+.rs[data-rs-theme="magazine"] .rs-progress { height: 3px; bottom: -2px }
+.rs[data-rs-theme="magazine"] .rs-text hr { color: var(--rs-accent) }
+@container rs (min-width: 760px) {
+  .rs[data-rs-theme="magazine"] .rs-head .rs-wrap { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--rs-s5); align-items: center; padding-block: var(--rs-s5) var(--rs-s4) }
+  .rs[data-rs-theme="magazine"] .rs-head h1 { font-size: 92px }
+  .rs[data-rs-theme="magazine"] .rs-cover { justify-self: end; width: min(100%, 380px) }
+  .rs[data-rs-theme="magazine"] .rs-summary-box { max-width: 36em; margin: 0 auto; text-align: center }
+}
+@container rs (min-width: 1080px) {
+  .rs[data-rs-theme="magazine"] .rs-head .rs-wrap, .rs[data-rs-theme="magazine"][data-rs-rail="off"] .rs-head .rs-wrap { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); max-width: var(--rs-max); margin: 0 auto }
+  .rs[data-rs-theme="magazine"] .rs-head .rs-head-text, .rs[data-rs-theme="magazine"] .rs-head .rs-cover { grid-column: auto }
+  .rs[data-rs-theme="magazine"] .rs-head .rs-cover { width: min(100%, 380px) }
+}
+
+/* ================= PERSONAL: quiet, one voice ================= */
+.rs[data-rs-theme="personal"] .rs-kicker { text-transform: none; letter-spacing: 0; font-size: 12.5px; font-weight: 500 }
+.rs[data-rs-theme="personal"] .rs-head h1 { font-weight: 500; font-size: 40px; letter-spacing: -.005em; line-height: 1.08 }
+.rs[data-rs-theme="personal"] .rs-subtitle { color: var(--rs-muted); font-style: italic }
+.rs[data-rs-theme="personal"] .rs-byline dt { font-family: var(--rs-text); font-style: italic; font-size: 14px; text-transform: none; letter-spacing: 0; font-weight: 400 }
+.rs[data-rs-theme="personal"] .rs-byline dd { font-family: var(--rs-text); font-size: 15px }
+.rs[data-rs-theme="personal"] .rs-byline .rs-names { font-size: 18px }
+.rs[data-rs-theme="personal"] .rs-bar, .rs[data-rs-theme="personal"] .rs-btn, .rs[data-rs-theme="personal"] .rs-toc, .rs[data-rs-theme="personal"] .rs-cite, .rs[data-rs-theme="personal"] .rs-text figcaption, .rs[data-rs-theme="personal"] .rs-end details summary, .rs[data-rs-theme="personal"] .rs-copy { font-family: var(--rs-text); font-size: 14.5px }
+.rs[data-rs-theme="personal"] .rs-btn { border-color: var(--rs-rule); padding: 6px 11px }
+.rs[data-rs-theme="personal"] .rs-btn.rs-primary { background: transparent; color: var(--rs-accent) !important; border-color: var(--rs-accent) }
+.rs[data-rs-theme="personal"] .rs-cover figcaption, .rs[data-rs-theme="personal"] .rs-summary .rs-label, .rs[data-rs-theme="personal"] .rs-bar-series { display: none !important }
+.rs[data-rs-theme="personal"] .rs-summary-box { border-top: 1px solid var(--rs-rule); max-width: var(--rs-measure) }
+.rs[data-rs-theme="personal"] .rs-summary .rs-lead { font-style: italic }
+.rs[data-rs-theme="personal"] .rs-summary .rs-lead strong { font-weight: 600 }
+.rs[data-rs-theme="personal"] .rs-label, .rs[data-rs-theme="personal"] .rs-end h2, .rs[data-rs-theme="personal"] .rs-inbrief-label, .rs[data-rs-theme="personal"] .rs-rail-label { text-transform: none; letter-spacing: 0; font-weight: 500 }
+.rs[data-rs-theme="personal"] .rs-end h2 { font-family: var(--rs-text); font-size: 1.15em; color: var(--rs-ink) }
+.rs[data-rs-theme="personal"] .rs-text h2 { font-weight: 400; font-size: 2em }
+.rs[data-rs-theme="personal"] .rs-text h3 { font-size: 1.35em }
+.rs[data-rs-theme="personal"] .rs-text h4 { font-family: var(--rs-display); font-weight: 500; font-style: italic; font-size: 1.1em }
+.rs[data-rs-theme="personal"] .rs-text h5 { font-style: normal; font-weight: 600; font-size: .95em; font-variant: small-caps; letter-spacing: .05em; text-transform: lowercase }
+.rs[data-rs-theme="personal"] :is(.rs-first, .rs-text h2 + p:not(.rs-inbrief), .rs-text h2 + .rs-inbrief + p)::first-line { font-variant: small-caps; letter-spacing: .03em }
+.rs[data-rs-theme="personal"] .rs-inbrief { border-left-width: 2px; font-size: .98em }
+.rs[data-rs-theme="personal"] .rs-inbrief strong { font-weight: 500 }
+.rs[data-rs-theme="personal"] .rs-text blockquote { position: relative }
+.rs[data-rs-theme="personal"] .rs-text blockquote::before { content: "“"; position: absolute; left: calc(var(--rs-s4) - .55em); top: -.12em; font-size: 2em; line-height: 1; color: var(--rs-accent); font-style: normal }
+.rs[data-rs-theme="personal"] .rs-text hr::before { content: "✻"; letter-spacing: 0 }
+.rs[data-rs-theme="personal"] .rs-sn-note { font-family: var(--rs-text); font-size: 15px; line-height: 1.4 }
+.rs[data-rs-theme="personal"] .rs-sn-n, .rs[data-rs-theme="personal"] .rs-sn-ref { font-family: var(--rs-text); font-variant-numeric: oldstyle-nums }
+.rs[data-rs-theme="personal"] .rs-sn-ref { font-size: .62em }
+.rs[data-rs-theme="personal"] .rs-progress { height: 1px }
+.rs[data-rs-theme="personal"] .rs-pull { display: none }
+@container rs (min-width: 760px) {
+  .rs[data-rs-theme="personal"] .rs-head .rs-wrap { grid-template-columns: minmax(0, 1fr) }
+  .rs[data-rs-theme="personal"] .rs-head h1 { font-size: 48px }
+  .rs[data-rs-theme="personal"] .rs-cover { order: -1; width: 104px }
+  .rs[data-rs-theme="personal"] .rs-sn-note { font-size: 14.5px }
+}
+@container rs (min-width: 1080px) {
+  .rs[data-rs-theme="personal"] .rs-head .rs-wrap { grid-template-columns: var(--rs-rail-w) minmax(0, var(--rs-measure)) var(--rs-margin); row-gap: var(--rs-s3) }
+  .rs[data-rs-theme="personal"] .rs-head .rs-cover { grid-column: 2; grid-row: 1; width: 104px }
+  .rs[data-rs-theme="personal"] .rs-head .rs-head-text { grid-column: 2; grid-row: 2 }
+}
+
+@media (prefers-reduced-motion: no-preference) { .rs { scroll-behavior: smooth } }
+@media print {
+  .rs-bar, .rs-drawer, .rs-rail, .rs-actions, .rs-copy { display: none !important }
+  .rs { font-size: 11pt }
+}
+
+/* Sutras notes: highlights and margin notes drawn by js/notes.js. Builds on the reading system's
+   sidenotes (css/reading.css): a note is an .rs-sn with an .rs-sn-ref mark and an .rs-sn-note, so it
+   takes the footnotes' place in the margin on a wide screen and opens under the line on a phone.
+   js/notes.js loads this file itself unless the site's CSS already imports it (it checks for the
+   --sutras-notes-css property below). */
+:root { --sutras-notes-css: 1 }
+
+.rs { --nt-hl: rgba(196, 146, 52, .22); --nt-hl-active: rgba(196, 146, 52, .45) }
+
+/* highlights: the CSS Custom Highlight API, or <mark> where it is missing */
+::highlight(sutras-note) { background-color: rgba(196, 146, 52, .22) }
+::highlight(sutras-note-active) { background-color: rgba(196, 146, 52, .45) }
+.rs-text mark.nt-mark { background: var(--nt-hl); color: inherit; padding: 0 }
+.rs-text mark.nt-mark.nt-active { background: var(--nt-hl-active) }
+
+/* the mark after the line: a reference sign, not a number, so it is not mistaken for a footnote */
+.rs-sn-ref.nt-ref { font-size: .7em; vertical-align: .45em; padding-left: 3px }
+.nt-note .nt-n { font-size: .85em }
+.nt-note .nt-by { display: block; margin-top: .3em; font-size: .78em; letter-spacing: .04em; font-variant: small-caps; color: var(--rs-muted) }
+.nt-note .nt-quote { display: block; margin: .3em 0; padding-left: .8em; border-left: 1px solid var(--rs-rule) }
+.nt-note a { color: inherit; text-decoration-color: var(--rs-accent) }
+
+/* a margin note pointed at: its words light up, and it does too */
+.nt-sn.nt-active .nt-note { color: var(--rs-ink) }
+@container rs (min-width: 760px) {
+  .nt-sn .nt-note { transition: color .2s }
+  .nt-sn.nt-active .nt-note .nt-n { color: var(--rs-accent) }
+}
+
+/* "Notes by …  Hide notes" */
+.rs-text p.nt-switch { font-family: var(--rs-ui); font-size: 13px; letter-spacing: .02em; color: var(--rs-muted); margin: 0 0 var(--rs-s4); text-indent: 0 }
+.nt-switch button { font: inherit; color: var(--rs-accent); background: none; border: 0; padding: .4em .2em; cursor: pointer; text-decoration: underline; text-underline-offset: 2px }
+
+/* notes switched off: the clean text */
+.rs.nt-off .nt-sn { display: none }
+.rs.nt-off mark.nt-mark { background: none }
+
+/* phone, verse: an open note is a block that already ends the line, so drop the line break after it */
+.rs-verse .rs-nw:has(> .nt-sn.rs-open) + br { display: none }
+
+/* Sutras custom.css. Loads on every page of the site.
+   Everything here is scoped to .rs (the reading layout, used by edition pages with layout: plain),
+   so pages without a .rs wrapper are unchanged, with one exception at the end (the footer line).
+   
+/* The reading system under Flowershow's sticky navbar */
+.rs { --rs-sticky-top: var(--navbar-height, 4rem) }
+
+/* Footnotes: Flowershow renders the footnote list after our closing </div>, outside .rs.
+   reading.js marks it once the notes are in the margin; hide it on screen then. Before that, style it. */
+@media screen { [data-rs-sidenoted], .footnotes:has([data-rs-sidenoted]) { display: none } }
+.rs ~ .footnotes, .rs ~ [data-footnotes] { max-width: 34em; margin: 0 auto; padding: 2rem 20px 4rem; font-family: "EB Garamond", Garamond, Georgia, serif; font-size: 17px; line-height: 1.5 }
+
+/* Edition header */
+.rs-head .rs-attribution { margin: 0; color: var(--rs-ink2); font-size: 1em; line-height: 1.45 }
+.rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: var(--rs-s5) 0 }
+.rs-head a.rs-kicker { text-decoration: none; align-self: flex-start }
+.rs-head a.rs-kicker:hover { color: var(--rs-accent) }
+/* no automatic hyphenation: the measure is wide enough, and broken words read badly in quotations */
+.rs-text p, .rs-inbrief { hyphens: manual; -webkit-hyphens: manual }
+/* the Personal theme sets the first line after every h2 in small caps; on these pages that lands on
+   link text, split names and the poem, so it is off */
+.rs[data-rs-theme="personal"] .rs-body .rs-text :is(.rs-first, h2 + p, h2 + .rs-inbrief + p)::first-line { font-variant: normal; letter-spacing: 0 }
+.rs-text .rs-signed { font-size: .9em; font-style: italic; color: var(--rs-muted) }
+
+/* Verse: one <p> per stanza, lines ended with two spaces. No hyphenation. */
+.rs-verse p { position: relative; hyphens: none; -webkit-hyphens: none; text-wrap: wrap; text-align: left; margin-bottom: var(--rs-s4); hanging-punctuation: none }
+
+/* Stanza numbers: <a class="v" id="3" href="#3">3</a> at the start of each stanza.
+   The link target must land clear of the navbar. */
+.rs-verse a.v, .rs-passages a.v { display: block; font-size: .72em; line-height: 1.2; margin-bottom: .2em; color: var(--rs-muted); text-decoration: none; font-variant-numeric: lining-nums; scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
+.rs-verse a.v:hover, .rs-verse a.v:target, .rs-passages a.v:hover, .rs-passages a.v:target { color: var(--rs-accent) }
+/* arriving on /faith-in-mind#3 focuses the number; the accent colour marks it, so no focus box */
+.rs-verse a.v:target:focus-visible, .rs-passages a.v:target:focus-visible { outline: none }
+@container rs (min-width: 760px) {
+  .rs-verse a.v, .rs-passages a.v { position: absolute; left: -2.6em; top: .32em; margin: 0; width: 2.2em; text-align: right }
+}
+/* Verse lines: edition.js wraps each line of a stanza in a .rs-line span, so a line too long for a
+   phone wraps with a hanging indent and does not read as a new line of the poem. */
+.rs-verse .rs-line { display: block; padding-left: 1.4em; text-indent: -1.4em }
+
+/* Prose passages: <div class="rs-passages">, a numbered paragraph starts with <a class="v" id="4.3" href="#4.3">4.3</a>;
+   paragraphs after it, until the next number, belong to the same passage. Numbers sit in the left margin as in verse. */
+.rs-passages p { position: relative }
+.rs-passages a.v { white-space: nowrap }
+
+/* Verse inside prose (a gatha in the Diamond Sutra): <p class="rs-gatha">, or <div class="rs-gatha"> with Markdown
+   inside (blank lines round it) when the verse has a footnote; lines ended with two spaces.
+   Indented, left-aligned, no hyphenation; edition.js gives its lines the same hanging indent as verse. */
+.rs-text p.rs-gatha, .rs-text .rs-gatha p { margin-left: 1.5em; text-align: left; hyphens: none; -webkit-hyphens: none; text-wrap: wrap }
+.rs-gatha .rs-line { display: block; padding-left: 1.4em; text-indent: -1.4em }
+
+/* Chapter headings as passage targets in prose: <h3 id="17"><a href="#17">XVII</a></h3>.
+   The heading reads as a heading; hover or arriving on /…#17 shows it is a link. */
+.rs-text :is(h2, h3)[id] > a[href^="#"]:only-child { color: inherit; text-decoration: none }
+.rs-text :is(h2, h3)[id] > a[href^="#"]:only-child:hover, .rs-text :is(h2, h3):target > a[href^="#"]:only-child { color: var(--rs-accent) }
+.rs-text :is(h2, h3):target > a:focus-visible { outline: none }
+
+/* Editors' notes beside the translator's: reading.js marks a note .rs-sn-editorial when its footnote label starts
+   with "e" ([^e1]) or its text starts "Editors’ note". Ours get a quieter number and an "ed." mark. */
+.rs-sn-editorial .rs-sn-ref, .rs-sn-editorial .rs-sn-n { color: var(--rs-muted) }
+.rs-sn-editorial .rs-sn-note { border-left-color: var(--rs-rule, #ccc) }
+.rs-sn-editorial .rs-sn-n::after { content: " ed."; font-style: italic; font-weight: 400 }
+
+.rs-text h2, .rs-text h3 { scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
+
+/* Phones: the note number is the tap target. Upstream gives it line-height 0, so its box has no
+   height; give it a real one, larger than the glyph, without moving the line. */
+@container rs (max-width: 759.98px) {
+  .rs-sn-ref { line-height: 1; padding: .9em .7em; margin: -.9em -.45em -.9em -.5em; position: relative }
+}
+
+/* Original-language text (Mumonkan Chinese; later Pāli, Tao Te Ching): <p class="orig" lang="zh">.
+   Smaller and quieter than the translation, marked off by a hairline, so it reads as the original. */
+.rs :lang(zh) { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "Noto Serif CJK TC", serif; font-variant-numeric: normal }
+.rs-text p.orig { font-size: .82em; line-height: 1.75; color: var(--rs-muted); text-align: left; hyphens: none; -webkit-hyphens: none;
+  border-left: 1px solid var(--rs-rule); padding-left: .9em; margin-top: calc(-1 * var(--rs-s1)) }
+.rs-verse p.orig { margin-bottom: var(--rs-s4) }
+
+/* Koan cases (Mumonkan): h3.koan-title with span.koan-num and span.koan-title-zh; then div.koan-case,
+   div.koan-comment, div.koan-verse. More space between cases than between the parts of a case. */
+.rs-text h3.koan-title { margin-top: var(--rs-s6) }
+.rs-text h3.koan-title .koan-num { display: block; font-family: var(--rs-ui); font-size: 11.5px; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--rs-accent); margin-bottom: var(--rs-s1); font-variant-numeric: lining-nums }
+.rs-text h3.koan-title .koan-title-zh { font-size: .62em; color: var(--rs-muted); margin-left: .35em; white-space: nowrap }
+.rs-text .koan-comment, .rs-text .koan-verse { margin-top: var(--rs-s3) }
+.rs-text .koan-comment { font-size: .94em; color: var(--rs-ink2) }
+.rs-text p.koan-label { font-family: var(--rs-text); font-variant: all-small-caps; text-transform: none; letter-spacing: .06em;
+  font-size: 1.05em; font-weight: 500; color: var(--rs-muted); margin: 0 0 var(--rs-s1) }
+.rs-text p.koan-label :lang(zh) { font-variant: normal; font-size: .8em }
+/* the contents of the cases: a quiet line that opens a compact list, two columns when there is room */
+.rs-text details.koan-contents { margin: 0 0 var(--rs-s4); font-family: var(--rs-text) }
+.rs-text details.koan-contents summary { cursor: pointer; color: var(--rs-muted); font-style: italic }
+.rs-text details.koan-contents summary:hover { color: var(--rs-accent) }
+.rs-text ol.koan-toc { margin: var(--rs-s2) 0 0; padding-left: 2em; font-size: .9em; line-height: 1.45; list-style: decimal outside }
+.rs-text ol.koan-toc li::marker { color: var(--rs-muted); font-variant-numeric: lining-nums; font-size: .9em }
+.rs-text ol.koan-toc li { margin: 0 0 .15em; break-inside: avoid }
+.rs-text ol.koan-toc a { color: var(--rs-ink2); text-decoration: none }
+.rs-text ol.koan-toc a:hover { color: var(--rs-accent) }
+@container rs (min-width: 600px) { .rs-text ol.koan-toc { columns: 2; column-gap: 2.5em } }
+
+/* Site-wide, not .rs: the navbar, footer and page take the reading page's paper and ink (personal theme in
+   css/reading.css), so there are no white bands; a hairline rule marks them off. Light only, as the reading page is. */
+:root { --sutras-paper: #f8f7f4; --sutras-ink: #252421; --sutras-rule: #dedbd3 }
+body, .site-navbar, .site-footer { background-color: var(--sutras-paper) }
+.site-navbar { border-bottom: 1px solid var(--sutras-rule) }
+.site-footer { border-top: 1px solid var(--sutras-rule) !important; color: var(--sutras-ink) }
+/* On a phone the footer lines up with the page's 20px gutter (its default is 32px). */
+@media (max-width: 640px) { .site-footer { padding-left: 1.25rem; padding-right: 1.25rem } }
+
+/* Site-wide, not .rs: Flowershow's default footer says "(c) year Sutras. All rights reserved.", which is
+   untrue here (texts belong to their rights holders, our additions are CC BY). Hidden until the Site
+   workstream writes a real footer. */
+.site-footer-copyright { display: none }
+
+/* Sutras direction, shared base. Sits on top of css/reading.css (personal theme) and custom.css.
+   The direction, from the mood boards (docs/design/brief.md): Emergence Magazine's Red Pine page as the base
+   (one image per text given room, a small label, the title, then the text in a narrow serif column), held to
+   Kaikado's restraint (nothing on the page but the text, the image and a small mark). Colour is set per
+   direction in a.css, b.css, c.css; this file holds the structure they share. Everything else is the live
+   reading system unchanged, so the notes, verse numbers and phone behaviour are the real ones. */
+
+/* ---- tokens every direction overrides ---- */
+.rs, :root {
+  --sd-bg: #ebe7e0; --sd-ink: #1f1d1a; --sd-ink2: #3a3733; --sd-muted: #6e6961; --sd-rule: #d8d3ca;
+  --sd-accent: #cf5a3d; --sd-accent-ink: #cf5a3d;
+  --sd-text: "Literata", Georgia, serif; --sd-display: "Literata", Georgia, serif; --sd-label: "Instrument Sans", system-ui, sans-serif;
+  --sd-mark: "Ma Shan Zheng", "Noto Serif TC", serif;
+  --sd-size: 20px; --sd-size-phone: 18.5px; --sd-lh: 1.58; --sd-measure: 32em;
+}
+.rs[data-rs-theme="personal"] {
+  --rs-bg: var(--sd-bg); --rs-ink: var(--sd-ink); --rs-ink2: var(--sd-ink2); --rs-muted: var(--sd-muted); --rs-rule: var(--sd-rule);
+  --rs-accent: var(--sd-accent); --rs-tint: transparent;
+  --rs-text: var(--sd-text); --rs-display: var(--sd-display); --rs-ui: var(--sd-label);
+  --rs-size: var(--sd-size); --rs-size-phone: var(--sd-size-phone); --rs-lh: var(--sd-lh); --rs-measure: var(--sd-measure);
+}
+html, body { margin: 0; background: var(--sd-bg); color: var(--sd-ink) }
+body { font-family: var(--sd-text); -webkit-font-smoothing: antialiased }
+
+/* ---- site chrome: a mark, a word, two links, one hairline ---- */
+.sd-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 1240px; margin: 0 auto;
+  padding: 18px max(20px, env(safe-area-inset-left, 0px)) 14px max(20px, env(safe-area-inset-right, 0px)); font-family: var(--sd-text); font-size: 15px }
+.sd-brand { display: inline-flex; align-items: center; gap: 12px; color: var(--sd-ink); text-decoration: none }
+.sd-mark { display: inline-grid; place-items: center; width: 30px; height: 30px; font-family: var(--sd-mark); font-size: 24px; line-height: 1; color: var(--sd-accent-ink) }
+.sd-word { font-size: 18px; letter-spacing: .01em }
+.sd-links { display: flex; gap: 22px }
+.sd-links a { color: var(--sd-muted); text-decoration: none }
+.sd-links a:hover, .sd-links a[aria-current] { color: var(--sd-ink) }
+.sd-foot { max-width: 1240px; margin: 0 auto; padding: 40px max(20px, env(safe-area-inset-left, 0px)) 64px max(20px, env(safe-area-inset-right, 0px));
+  font-size: 14px; color: var(--sd-muted); border-top: 1px solid var(--sd-rule); display: flex; flex-wrap: wrap; gap: 8px 28px }
+.sd-foot a { color: inherit; text-decoration: none }
+.sd-foot a:hover { color: var(--sd-ink) }
+
+/* ---- the text's one image, then the title, as on Emergence's poem page ---- */
+.sd-art { margin: 0; padding: clamp(28px, 6vw, 72px) 20px 0; display: grid; justify-items: center }
+.sd-art img { display: block; max-width: min(100%, 560px); max-height: 62vh; width: auto; height: auto; mix-blend-mode: multiply }
+@media (max-width: 640px) { .sd-art { padding-top: 16px } .sd-art img { max-height: 50svh } }
+.sd-art figcaption { font-family: var(--sd-text); font-style: italic; font-size: 14px; color: var(--sd-muted); margin-top: 14px; text-align: center; max-width: 36em }
+.rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: clamp(28px, 5vw, 56px) 0; text-align: center; display: grid; justify-items: center }
+.rs[data-rs-theme="personal"] .rs-head .rs-head-text { display: grid; justify-items: center; max-width: 34em }
+.rs[data-rs-theme="personal"] .rs-head a.rs-kicker, .rs[data-rs-theme="personal"] .rs-head .rs-kicker { align-self: center; font-family: var(--sd-label); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--sd-muted); font-weight: 500 }
+.rs[data-rs-theme="personal"] .rs-head h1 { font-size: clamp(34px, 5vw, 50px); font-weight: 400; line-height: 1.12; margin: 14px 0 12px }
+.rs[data-rs-theme="personal"] .rs-subtitle { font-style: italic; font-size: 1.05em; color: var(--sd-muted); margin: 0 0 14px; text-align: center }
+.rs[data-rs-theme="personal"] .rs-head .rs-attribution { font-size: .92em; line-height: 1.5; color: var(--sd-ink2); text-align: center; max-width: 26em }
+.rs[data-rs-theme="personal"] .rs-body .rs-wrap { padding-top: clamp(32px, 5vw, 64px) }
+
+/* ---- In brief: no box, no bar; an italic paragraph with a small label, as a book's blurb ---- */
+.rs[data-rs-theme="personal"] .rs-inbrief { background: none; border: 0; padding: 0; margin: 0 0 var(--rs-s5) !important; font-style: italic; font-size: 1em; color: var(--sd-ink2) }
+.rs[data-rs-theme="personal"] .rs-inbrief-label { display: inline; font-family: var(--sd-text); font-style: italic; font-size: 1em; letter-spacing: 0; text-transform: none; color: var(--sd-accent-ink); margin-right: 8px }
+.rs[data-rs-theme="personal"] .rs-inbrief-label::after { content: "." }
+.rs[data-rs-theme="personal"] .rs-inbrief em { font-style: normal }
+
+/* ---- headings, verse numbers, notes: the apparatus is the only place the accent appears ---- */
+.rs[data-rs-theme="personal"] .rs-text h2 { font-size: 1.5em; font-weight: 400; font-style: italic; margin-top: var(--rs-s6) }
+.rs[data-rs-theme="personal"] .rs-text h3 { font-weight: 400 }
+.rs-verse a.v, .rs-passages a.v { color: var(--sd-accent-ink); opacity: .85; font-family: var(--sd-text); font-variant-numeric: oldstyle-nums; font-size: .78em }
+.rs[data-rs-theme="personal"] .rs-sn-ref, .rs[data-rs-theme="personal"] .rs-sn-n { color: var(--sd-accent-ink) }
+.rs[data-rs-theme="personal"] .rs-sn-note { color: var(--sd-ink2) }
+.rs[data-rs-theme="personal"] .rs-text mark.nt-mark { background: none; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--sd-accent) 55%, transparent); text-decoration-thickness: 1px; text-underline-offset: .18em }
+.rs[data-rs-theme="personal"] .rs-text p.nt-switch { font-family: var(--sd-text); font-style: italic; font-size: .85em }
+.rs[data-rs-theme="personal"] .rs-text .rs-signed { color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] .rs a, .rs[data-rs-theme="personal"] .rs-text a { color: var(--sd-ink); text-decoration-color: color-mix(in srgb, var(--sd-accent) 50%, transparent) }
+.rs[data-rs-theme="personal"] .rs-text hr::before { content: "·  ·  ·"; letter-spacing: .2em; color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] :is(.rs-first, .rs-text h2 + p:not(.rs-inbrief), .rs-text h2 + .rs-inbrief + p)::first-line { font-variant: normal; letter-spacing: 0 }
+
+/* ---- home: a shelf, Kaikado's row ---- */
+.sd-home .rs-head .rs-wrap { padding-bottom: 0 }
+.sd-home .rs .rs-body .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; padding-top: 0; justify-content: stretch }
+.sd-home .rs .rs-text { grid-column: 1 !important }
+.sd-home .rs-text > * { max-width: none }
+.sd-home .rs-text .rs-inbrief { max-width: 34em; margin: 0 auto var(--rs-s6) !important; text-align: center }
+.sd-home .rs-text .rs-inbrief .rs-inbrief-label { display: none }
+.sd-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 40px); align-items: start }
+.sd-shelf li { min-width: 0; display: grid; gap: 12px; justify-items: center; text-align: center }
+.sd-shelf a { color: var(--sd-ink); text-decoration: none; display: grid; gap: 12px; justify-items: center }
+.sd-shelf .sd-thumb { width: 100%; max-width: 200px; aspect-ratio: 4 / 5; object-fit: cover; display: block; filter: saturate(.9); mix-blend-mode: multiply }
+.sd-shelf h3 { font-family: var(--sd-display); font-weight: 400; font-size: 1.15em; line-height: 1.25; margin: 0 }
+.sd-shelf .sd-by { font-size: .82em; color: var(--sd-muted); line-height: 1.4; max-width: 24em }
+.sd-shelf .sd-line { font-size: .92em; color: var(--sd-ink2); line-height: 1.45; max-width: 26em; display: none }
+.sd-shelf a:hover h3 { color: var(--sd-accent-ink) }
+.sd-section { font-family: var(--sd-text); font-style: italic; font-size: 1em; color: var(--sd-muted); margin: var(--rs-s6) 0 var(--rs-s3); text-align: center }
+.sd-section:first-of-type { margin-top: 0 }
+@media (max-width: 640px) { .sd-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 18px } .sd-shelf .sd-thumb { max-width: 150px } .sd-links { gap: 16px } }
+
+/* Flowershow's heading-link icons, copied from the live DOM: hidden */
+.heading-link { display: none }
+
+/* Direction C · Gold on indigo. The reading page stays light (a warmer, paler paper), but the front matter of a
+   text, the image, the label and the title, sits in an indigo band with the title in gold, and the mark is gold
+   on an indigo square. Night as an event at the top of each text, not a mode. Numbers and note marks in an
+   ochre gold that still reads on paper. Text in Newsreader (open licence, an editorial serif with optical sizes). */
+.rs, :root {
+  --sd-bg: #f3efe6; --sd-ink: #1d1a16; --sd-ink2: #3a352e; --sd-muted: #726a5c; --sd-rule: #ddd5c6;
+  --sd-accent: #b4893a; --sd-accent-ink: #9a7430;
+  --sd-night: #1c2238; --sd-gold: #d9b56b; --sd-night-muted: #9aa0b4;
+  --sd-text: "Newsreader", Georgia, serif; --sd-display: "Newsreader", Georgia, serif; --sd-label: "Instrument Sans", system-ui, sans-serif;
+  --sd-mark: "Noto Serif TC", serif;
+  --sd-size: 20px; --sd-size-phone: 18.5px; --sd-lh: 1.58; --sd-measure: 32em;
+}
+.sd-mark { width: 30px; height: 30px; background: var(--sd-night); color: var(--sd-gold); font-size: 20px; font-weight: 600; border-radius: 1px }
+/* the front matter band */
+.sd-front { background: var(--sd-night); color: var(--sd-gold) }
+.sd-front .sd-art { padding-top: clamp(32px, 6vw, 80px) }
+.sd-front .sd-art img { filter: none }
+.sd-front .sd-art figcaption { color: var(--sd-night-muted) }
+.sd-front .rs-head { background: var(--sd-night) }
+.rs[data-rs-theme="personal"] .sd-front .rs-head .rs-wrap { padding-bottom: clamp(36px, 6vw, 72px) }
+.rs[data-rs-theme="personal"] .sd-front .rs-head h1 { color: var(--sd-gold); font-weight: 400; font-variation-settings: "opsz" 72 }
+.rs[data-rs-theme="personal"] .sd-front .rs-head .rs-kicker, .rs[data-rs-theme="personal"] .sd-front .rs-head a.rs-kicker { color: var(--sd-night-muted) }
+.rs[data-rs-theme="personal"] .sd-front .rs-subtitle { color: var(--sd-night-muted) }
+.rs[data-rs-theme="personal"] .sd-front .rs-head .rs-attribution { color: #cfd2dc }
+.rs[data-rs-theme="personal"] .sd-front .rs-head a:hover { color: var(--sd-gold) }
+/* the home page: the shelf on paper, the title band in indigo */
+.sd-home .sd-front .rs-head .rs-wrap { padding-bottom: clamp(36px, 6vw, 72px) }
+.sd-home .sd-front .rs-inbrief { color: #cfd2dc }
+</style>
+</head><body class="">
+<nav class="sd-nav"><a class="sd-brand" href="index.html"><span class="sd-mark" aria-hidden="true">慧</span><span class="sd-word">Sutras</span></a><span class="sd-links"><a href="index.html">Texts</a><a href="about.html" aria-current="page">About</a></span></nav>
+<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="sd-front"><header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
+<span class="rs-kicker">About</span>
+<h1 id="about"><a class="heading-link" href="#about"><svg xmlns="http:www.w3.org/2000/svg" fill="#ab2b65" viewBox="0 0 20 20" class="w-5 h-5"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z"></path></svg></a>About</h1>
+</div></div></header></div>
+<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A curated library of wisdom texts, made into editions to read online and download, with Rufus Pollock’s notes and thoughts alongside.</p>
+<h2 id="what-it-is"><a class="heading-link" href="#what-it-is"><svg xmlns="http:www.w3.org/2000/svg" fill="#ab2b65" viewBox="0 0 20 20" class="w-5 h-5"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z"></path></svg></a>What it is</h2>
+<p>Sutras is a small library of wisdom texts: key Buddhist sutras and Zen texts, and others such as Seneca and Marcus Aurelius’s <em>Meditations</em>. Each text is here because Rufus Pollock finds it worth reading, or has found it useful, and wanted an edition of it he would really read.</p>
+<h2 id="who-it-is-for"><a class="heading-link" href="#who-it-is-for"><svg xmlns="http:www.w3.org/2000/svg" fill="#ab2b65" viewBox="0 0 20 20" class="w-5 h-5"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z"></path></svg></a>Who it is for</h2>
+<p>First, Rufus himself. In his words: “I’m always serving myself here.” Making and annotating the library is also his way of studying these texts and the practice they describe.</p>
+<p>Then anyone looking online for a wisdom text in a good format: a clean page to read, and a file to take away.</p>
+<h2 id="what-each-edition-has"><a class="heading-link" href="#what-each-edition-has"><svg xmlns="http:www.w3.org/2000/svg" fill="#ab2b65" viewBox="0 0 20 20" class="w-5 h-5"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z"></path></svg></a>What each edition has</h2>
+<ul>
+<li><strong>A clean reading page.</strong> The text first, set to be read slowly, with a short introduction and a note on the translation.</li>
+<li><strong>A link for every passage.</strong> Each verse, stanza or section has a number you can link to, such as <a href="/faith-in-mind#3">/faith-in-mind#3</a>. Once published, a number does not change.</li>
+<li><strong>Notes in the margin.</strong> Editorial notes, and Rufus’s own notes beside the passages they are about, starting with <a href="https://sutras.lifeitself.org/meditations"><em>Meditations</em></a>.</li>
+<li><strong>A download.</strong> Each text as an EPUB for an e-reader.</li>
+<li><strong>Its source.</strong> Where the text came from and, once an edition is finished, how it was checked against that source word for word, with every change listed in the edition notes.</li>
+</ul>
+<h2 id="copyright"><a class="heading-link" href="#copyright"><svg xmlns="http:www.w3.org/2000/svg" fill="#ab2b65" viewBox="0 0 20 20" class="w-5 h-5"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z"></path></svg></a>Copyright</h2>
+<p>Where a good open translation reads well, we use it. Where the best translation is still in copyright, we publish it in full and say so plainly on the page, with how to reach us if you hold the rights. Our own additions (introductions, notes) are free to reuse under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</p>
+<h2 id="what-it-is-not"><a class="heading-link" href="#what-it-is-not"><svg xmlns="http:www.w3.org/2000/svg" fill="#ab2b65" viewBox="0 0 20 20" class="w-5 h-5"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z"></path></svg></a>What it is not</h2>
+<p>Not an academic archive, and not a complete catalogue. For a vast collection of Zen texts, see <a href="https://terebess.hu/" target="_blank" rel="noopener noreferrer">Terebess Asia Online</a>.</p>
+<h2 id="who-makes-it"><a class="heading-link" href="#who-makes-it"><svg xmlns="http:www.w3.org/2000/svg" fill="#ab2b65" viewBox="0 0 20 20" class="w-5 h-5"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z"></path></svg></a>Who makes it</h2>
+<p>Sutras is made by Rufus Pollock with AI assistants, as part of <a href="https://lifeitself.org" target="_blank" rel="noopener noreferrer">Life Itself</a>. It is also an experiment in texts that are easy to read, to link to, to annotate and to download, which might carry over to literature in general. The pages are Markdown, published with <a href="https://flowershow.app" target="_blank" rel="noopener noreferrer">Flowershow</a>. The <a href="https://github.com/life-itself/sutras" target="_blank" rel="noopener noreferrer">source is on GitHub</a>, where you can also <a href="https://github.com/life-itself/sutras/issues" target="_blank" rel="noopener noreferrer">report a mistake</a>.</p>
+</article></div></div>
+</div>
+<footer class="sd-foot"><span>Sutras · a library of wisdom texts</span><a href="https://lifeitself.org">Life Itself</a><a href="https://github.com/life-itself/sutras/issues">Report a mistake</a><span>Sample site, direction C · Gold on indigo, 慧 is a mark option</span></footer>
+</body></html>

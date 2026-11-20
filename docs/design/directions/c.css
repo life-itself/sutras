@@ -8,7 +8,7 @@
   --sd-night: #1c2238; --sd-gold: #d9b56b; --sd-night-muted: #9aa0b4;
   --sd-text: "Newsreader", Georgia, serif; --sd-display: "Newsreader", Georgia, serif; --sd-label: "Instrument Sans", system-ui, sans-serif;
   --sd-mark: "Noto Serif TC", serif;
-  --sd-size: 20px; --sd-size-phone: 18px; --sd-lh: 1.58; --sd-measure: 32em;
+  --sd-size: 20px; --sd-size-phone: 18.5px; --sd-lh: 1.58; --sd-measure: 32em;
 }
 .sd-mark { width: 30px; height: 30px; background: var(--sd-night); color: var(--sd-gold); font-size: 20px; font-weight: 600; border-radius: 1px }
 /* the front matter band */
