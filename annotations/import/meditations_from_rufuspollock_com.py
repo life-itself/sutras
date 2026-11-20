@@ -39,6 +39,10 @@ def folded_with_map(s):
         for ch in f:
             if ch == " " and (not out or out[-1] == " "):
                 continue
+            if ch == "-" and out and out[-1] == "-":
+                continue
+            if ch == "." and out[-2:] == [".", " "]:       # ". . ." is "...", as in scripts/notes
+                out.pop(); at.pop()
             out.append(ch); at.append(i)
     return "".join(out), at
 
@@ -194,6 +198,11 @@ for b in blocks:
     if b[0] == "p":
         pending.append(b[1]); continue
     # a group of quoted paragraphs
+    # a bare connector between two quotes ("Or", "It continues:") says nothing on its own: leave it out
+    connectors = [x for x in pending if len(x.split()) <= 2 and not x.rstrip().endswith(".") and not re.search(r"[\[\]*]", x)]
+    if connectors:
+        report["dropped"].extend((heading, "connector: " + x) for x in connectors)
+        pending = [x for x in pending if x not in connectors]
     group = {"heading": heading if last_group is None else None, "lead": pending, "trail": [], "quotes": [], "missing": []}
     pending = []
     for q in b[1]:
@@ -223,8 +232,9 @@ def yq(s):
 out = ["# Rufus Pollock's notes on Marcus Aurelius, Meditations (Hays translation).",
        "# Imported 2026-11-20 from rufuspollock.com/Meditations (written 2022-05-30 to 2024-07-15) by",
        "# annotations/import/meditations_from_rufuspollock_com.py; edit by hand from now on.",
-       "# Format: see scripts/notes. Check and rebuild: scripts/notes meditations",
-       "text: %s" % ED.relative_to(ROOT), "notes:"]
+       "# Format: see scripts/notes. Matched first against library/meditations/edition-draft.md, then checked against meditations.md.",
+       "# Check and rebuild: scripts/notes meditations",
+       "text: meditations.md", "notes:"]
 count = 0
 prev_g = None
 for g in notes:

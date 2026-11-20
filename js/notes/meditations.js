@@ -53,7 +53,6 @@ window.SutrasNotes = {
    "quote": "Only a short time left. Live as if you were alone—out in the wilderness. No difference between here and there: the city that you live in is the world. Let people see someone living naturally, and understand what that means. Let them kill him if they can’t stand it. (Better than living like this.)",
    "by": "Rufus Pollock",
    "passage": "10.15",
-   "note": "Or",
    "date": "2024-07-15"
   },
   {
@@ -247,7 +246,6 @@ window.SutrasNotes = {
    "quote": "And to lie is to blaspheme against it too. Because “nature” means the nature of that which is. And that which is and that which is the case are closely linked, so that nature is synonymous with Truth—the source of all true things. To lie deliberately is to blaspheme—the liar commits deceit, and thus injustice. And likewise to lie without realizing it. Because the involuntary liar disrupts the harmony of nature—its order. He is in conflict with the way the world is structured. As anyone is who deviates toward what is opposed to the truth—even against his will. Nature gave him the resources to distinguish between true and false. And he neglected them, and now can’t tell the difference.",
    "by": "Rufus Pollock",
    "passage": "9.1",
-   "note": "It continues:",
    "date": "2024-07-15"
   },
   {

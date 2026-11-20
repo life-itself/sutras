@@ -191,6 +191,8 @@
       if (nwIn) addTo(nwIn, sn); else wrapNode(inl, sn);
       return;
     }
+    var rest = node.nodeValue.slice(off).match(/^[.,;:!?\u2019\u201d)\]]+/);   // keep the closing punctuation with the words
+    if (rest) off += rest[0].length;
     var nw = el.closest(".rs-nw");
     if (nw && off === node.nodeValue.length) { addTo(nw, sn); return; }
     if (off === node.nodeValue.length && isNw(node.nextSibling)) { addTo(node.nextSibling, sn); return; }
