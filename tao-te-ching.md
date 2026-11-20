@@ -3,7 +3,7 @@ title: Tao Te Ching
 description: "The Tao Te Ching in 81 short chapters, in James Legge’s 1891 translation from Project Gutenberg, with the Chinese text beside each chapter. Complete, with an introduction, notes on the sources and an EPUB. The open translation for now."
 author: "Laozi (attributed; doubtful)"
 translator: James Legge (1891)
-date: "Unknown. Attributed to Laozi, a Zhou-dynasty courtier; dated by Legge to the sixth century BC"
+date: "Unknown. Attributed to Laozi, whose birth Legge put at about 604 BC"
 tradition: Taoism
 source: https://www.gutenberg.org/ebooks/216
 licence: "Translation by James Legge (1891): in the public domain (he died in 1897). The Chinese text: public domain (Project Gutenberg). Editorial additions CC BY 4.0."
@@ -26,19 +26,17 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A short classic of Taoism in 81 chapters, attributed to Laozi. Complete, in James Legge’s 1891 translation, which is in the public domain, with the Chinese text beside each chapter. About forty minutes straight through; a chapter at a time is enough.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A short classic of Taoism in 81 chapters. Tradition gives it to Laozi, though that has been doubted. Complete, in James Legge’s 1891 translation, with a Chinese text under each chapter. About forty minutes straight through; a chapter at a time is enough.</p>
 
 ## Introduction
 
-The *Tao Te Ching* (in Chinese <span lang="zh">道德經</span>) is 81 short chapters, most of them only a few lines long, and a classic of Taoism. Tradition gives it to Laozi, an official at the Zhou court. Legge, whose translation this is, dated Laozi to the sixth century BC.
+The *Tao Te Ching* (in Chinese <span lang="zh">道德經</span>) is 81 short chapters, most of them a few lines long. Tradition gives it to Laozi. The historian Sima Qian, who died about 85 BC, says Laozi kept the royal library of the Zhou court and wrote the book, in two parts, as he left the world. Legge took 604 BC as the probable year of his birth. The attribution has been doubted: in 1886 Herbert A. Giles called the book “undoubtedly a forgery”. Legge replied to him in print, and wrote in his preface that his confidence in the book as Laozi’s “has never been shaken for a moment”.
 
-Its authorship has been doubted. In 1886 Herbert Giles questioned it in print. Legge’s preface does not reargue that quarrel. It gives his own grounds for taking the book to be a genuine work of its age, and notes that the historian Ssŭ-ma Ch’ien (Sima Qian), who died about 85 BC, was well acquainted with it.
+It opens: “The Tao that can be trodden is not the enduring and unchanging Tao” ([chapter 1](/tao-te-ching#1)). Chapter 8 begins “The highest excellence is like (that of) water”: water benefits all things and takes the low place that men dislike, and so it is near to the Tao ([chapter 8](/tao-te-ching#8)).
 
-Read the first lines for the claim: “The Tao that can be trodden is not the enduring and unchanging Tao” ([chapter 1](/tao-te-ching#1)). Then take chapter 8: “The highest excellence is like (that of) water” ([chapter 8](/tao-te-ching#8)). Water benefits all things and takes the low place that men dislike, and so it is near to the Tao. Legge set a number of chapters in rhyme, and those are printed as verse.
+Legge made this translation for the *Sacred Books of the East*. His text was that of Ho-shang Kung (Heshang Gong), to whom the division into 81 chapters is also attributed. Of the commentaries he used, he wrote in the same preface that Wu Cheng’s (1249–1333) “has been of the highest service to me”. Where Legge rhymes, his lines are set here as verse.
 
-Legge worked chiefly from the text and commentary of Ho-shang Kung (Heshang Gong), which divides the book into 81 chapters. He used the commentaries of Wang Pi (Wang Bi), who died in 249 at twenty-four, and Wu Ch’eng (Wu Cheng, 1249–1333). Read one chapter at a time, aloud if you can. The Chinese beside each chapter is a second witness, from a different edition, not the text he translated.
-
-This is the open translation for now: Legge is in the public domain, so it can be published in full. The [comparison page](/tao-te-ching-compared) sets five public-domain translations beside one another for five chapters. Modern translations are in copyright and are not yet quoted.
+Read a chapter at a time, aloud if you can. The Chinese under each chapter comes from Project Gutenberg, which does not say what edition it follows, so it may differ here and there from the text Legge translated. The [comparison page](/tao-te-ching-compared) sets other translations beside his for five chapters, among them short samples of modern ones, Red Pine’s first.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -1117,17 +1115,17 @@ They all the name of King accord.’
 
 ## About this translation
 
-The translation is by James Legge (1815–1897), a Scottish sinologist who was the first professor of Chinese at Oxford. His preface is dated Oxford, 20 December 1890, and the translation was published in 1891 in volume 39 of the *Sacred Books of the East*. Only the translation is here. The preface, which discusses Giles’s 1886 doubts and the commentaries Legge used, and his notes are in the *Sacred Books of the East* and in Standard Ebooks’ edition.
+The translation is by James Legge (1815–1897), a Scottish missionary and sinologist who was the first professor of Chinese at Oxford. His preface is dated Oxford, 20 December 1890, and the translation was published in 1891 in volume 39 of the *Sacred Books of the East* (*The Texts of Taoism*, part 1). Only the translation is here. Legge’s preface and introduction, which discuss Giles’s doubts and the commentaries he used, and his notes after each chapter, with the chapter’s Chinese title, are in the 1891 book and in Standard Ebooks’ edition.
 
 ## Source and licence
 
-**Source.** Project Gutenberg eBook 216, *The Tao Teh King, or the Tao and its Characteristics*, by Laozi, translated by James Legge, produced by Gregory Walker and David Widger (first released 1995, updated 2015). www.gutenberg.org was down for maintenance when this edition was made, so the file was taken from the Project Gutenberg mirror at gutenberg.pglaf.org. It was checked by script against a second copy, [Standard Ebooks’ edition of Legge](https://standardebooks.org/ebooks/laozi/tao-te-ching/james-legge), which is based on the same transcription and on Google Books scans. Standard Ebooks differs in spelling and compounding (“nonexistence”, “warhorses”, “Everyone”) and in four readings, Gutenberg first: “Or” and “Of” in chapters 43 and 44, “hold” and “bold” in chapter 64, and an extra “of” in chapter 74. We keep Gutenberg’s reading in each case and list them in the edition notes, since we could not check them against the printed book.
+**Source.** Project Gutenberg eBook 216, *The Tao Teh King, or the Tao and its Characteristics*, by Laozi, translated by James Legge, produced by Gregory Walker and David Widger (first released 1995, updated 2015). It was checked by script against a second copy, [Standard Ebooks’ edition of Legge](https://standardebooks.org/ebooks/laozi/tao-te-ching/james-legge), which is based on the same transcription and on Google Books scans. Standard Ebooks differs in spelling and compounding (“nonexistence”, “warhorses”, “Everyone”) and in four readings, in chapters 44, 64 and 74. We checked all four against a scan of the 1891 printing on archive.org, and Gutenberg has the printed reading in each; they are listed in the edition notes. We also compared every word of the edition with that scan’s text layer by script; the only differences were errors in the scan’s text.
 
 The changes are typographic: apostrophes are set as curly, and the double hyphen as a spaced dash. The Gutenberg heading and the part headings are left out, and each chapter’s number is made the passage link. Legge’s own paragraph numbers stay as he printed them. Every change is listed in [the edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/tao-te-ching.md) on GitHub.
 
-**The Chinese text.** Project Gutenberg eBook 7337, *道德經*, by Laozi, produced by Ching-yi Chen (released 2005, updated 2020). It does not name its printed edition. We compared it with the Wang Bi text on Chinese Wikisource (*道德經 (王弼本)*): the characters agree apart from variant forms (for example 矣 and 已, 于 and 於), and the wording differs in several chapters, most of all 15, 28, 45 and 71. Legge translated Ho-shang Kung’s text, so the Chinese is a second witness, not the text he translated.
+**The Chinese text.** Project Gutenberg eBook 7337, *道德經*, by Laozi, produced by Ching-yi Chen (released 2005, updated 2020). It does not name its printed edition. We compared it with the Wang Bi text on Chinese Wikisource (*道德經 (王弼本)*): the characters agree apart from variant forms (for example 矣 and 已, 于 and 於), and the wording differs in several chapters, most of all 15, 28, 45 and 71. Legge translated Ho-shang Kung’s text, so the Chinese here is a second witness and may differ in places from what he translated.
 
-**Licence.** Legge died in 1897, and his translation is in the public domain. The Chinese text is in the public domain. Our additions (the in brief, the introduction, the notes and this section) are free to use under CC BY 4.0.
+**Licence.** Legge died in 1897, and his translation is in the public domain. Project Gutenberg gives the Chinese text as public domain. Our additions (the in brief, the introduction, the notes and this section) are free to use under CC BY 4.0.
 
 ## Download
 
