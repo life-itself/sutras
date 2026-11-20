@@ -54,7 +54,7 @@
     for (var n = w.nextNode(); n; n = w.nextNode()) {
       if (n === to) break;
       if (!on) continue;
-      if (n.nodeType === 1) { if (n.tagName === "BR" || BLOCK.test(n.tagName)) space(null); continue; }
+      if (n.nodeType === 1) { if (n.tagName === "BR" || BLOCK.test(n.tagName) || n.classList.contains("rs-line")) space(null); continue; }
       var t = n.nodeValue;
       for (var i = 0; i < t.length; i++) {
         var c = fold(t[i]);
@@ -119,16 +119,16 @@
   // footnote mark), at the end of the quote in prose. Keeps the mark with the word before it.
   function place(sn, endNode, endOffset) {
     var verse = endNode.parentNode.closest(".rs-verse");
-    var before = null, block = endNode.parentNode.closest("p, li, blockquote, h2, h3, h4, div") || root;
+    var block = endNode.parentNode.closest("p, li, blockquote, h2, h3, h4, div") || root;
+    // verse with each line in a span (edition.js): the end of the quote's line is the end of its span
+    var line = endNode.parentNode.closest(".rs-line");
+    if (line) { endOfLine(line.lastChild, line, null, sn); return; }
     if (verse) {
-      var w = document.createTreeWalker(block, NodeFilter.SHOW_ELEMENT);
+      // verse with <br> between lines: go on to the next <br> that is not inside a footnote
+      var before = null, w = document.createTreeWalker(block, NodeFilter.SHOW_ELEMENT);
       w.currentNode = endNode;
       for (var n = w.nextNode(); n; n = w.nextNode()) if (n.tagName === "BR" && !n.closest(".rs-sn")) { before = n; break; }
-      var prev = before ? before.previousSibling : block.lastChild;
-      while (prev && prev.nodeType === 3 && !/\S/.test(prev.nodeValue)) prev = prev.previousSibling;
-      if (prev && prev.nodeType === 1 && prev.classList.contains("rs-nw")) { prev.appendChild(sn); return; }
-      if (prev && prev.nodeType === 3) { wrapLastWord(prev, prev.nodeValue.replace(/\s+$/, "").length, sn); return; }
-      block.insertBefore(sn, before);
+      endOfLine(before ? before.previousSibling : block.lastChild, block, before, sn);
       return;
     }
     // prose: the quote ends a word already kept with a mark (a footnote's, or another note's)
@@ -137,6 +137,14 @@
     var next = endNode.nextSibling;
     if (endOffset === endNode.nodeValue.length && next && next.nodeType === 1 && next.classList.contains("rs-nw")) { next.appendChild(sn); return; }
     wrapLastWord(endNode, endOffset, sn);
+  }
+
+  // Put the mark after the last thing on a line: into the footnote's word-wrap if there is one.
+  function endOfLine(prev, parent, before, sn) {
+    while (prev && prev.nodeType === 3 && !/\S/.test(prev.nodeValue)) prev = prev.previousSibling;
+    if (prev && prev.nodeType === 1 && prev.classList.contains("rs-nw")) prev.appendChild(sn);
+    else if (prev && prev.nodeType === 3) wrapLastWord(prev, prev.nodeValue.replace(/\s+$/, "").length, sn);
+    else parent.insertBefore(sn, before);
   }
 
   // Split `node` at `offset`, move the word just before it into <span class="rs-nw"> with `sn`.

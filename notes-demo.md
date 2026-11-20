@@ -5,6 +5,7 @@ layout: plain
 syntaxMode: md
 scripts:
   - /js/reading.js
+  - /js/edition.js
   - /js/notes/notes-demo.js
   - /js/notes.js
 ---

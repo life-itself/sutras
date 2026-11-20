@@ -78,6 +78,9 @@ def passage_region(md, pid):
         return None
     tag, cls = m.group(1), re.search(r"\bclass=\"([^\"]*)\"", m.group(0))
     start = m.end()
+    close = re.compile(r"</%s\s*>" % tag).search(md, start)    # the element's own words (a number, a heading) are not the passage
+    if close and "\n\n" not in md[start:close.start()]:
+        start = close.end()
     same = r"<%s\b[^>]*%s[^>]*\bid=\"[^\"]+\"" % (tag, r'\bclass="%s"' % re.escape(cls.group(1)) if cls else "")
     nxt = re.compile(same).search(md, start)
     stop = re.search(r"</article>", md[start:])
