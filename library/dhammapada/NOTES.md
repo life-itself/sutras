@@ -92,5 +92,6 @@ Decision: the 2011 text stays, as supplied and as the coordinator decided. Switc
 
 ## Checks (2026-11-20)
 
-- `scripts/check`: dhammapada.md passes. (Failures elsewhere on main are other tracks' files.)
+- `scripts/check`: dhammapada.md passes; the 423 passage ids are recorded in `scripts/published-ids.txt`. (The two failures on main, the Diamond Sutras, are other tracks' files.)
+- Live on main, 2026-11-20: `/dhammapada` returns 200 with no MDX error. Screenshots (headless Chrome): 1280px fine, verse numbers in the margin; 390px, the in-brief box runs off the right edge, as Faith in Mind does too (filed on the site track). Verse indentation collapses in the HTML (filed too). Passage-link landing not seen: headless Chrome gives a blank image for any URL with a #fragment.
 - `scripts/epub dhammapada` writes `downloads/dhammapada.epub`. Known problem: the page has one verse block per chapter (26), which the builder does not expect. It closes them implicitly with warnings, so the verses and About this translation end up in one EPUB file. The text reads correctly; the structure is untidy. Filed for the site track (see bead).
