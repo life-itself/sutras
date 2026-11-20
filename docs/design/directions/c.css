@@ -1,0 +1,28 @@
+/* Direction C · Gold on indigo. The reading page stays light (a warmer, paler paper), but the front matter of a
+   text, the image, the label and the title, sits in an indigo band with the title in gold, and the mark is gold
+   on an indigo square. Night as an event at the top of each text, not a mode. Numbers and note marks in an
+   ochre gold that still reads on paper. Text in Newsreader (open licence, an editorial serif with optical sizes). */
+.rs, :root {
+  --sd-bg: #f3efe6; --sd-ink: #1d1a16; --sd-ink2: #3a352e; --sd-muted: #726a5c; --sd-rule: #ddd5c6;
+  --sd-accent: #b4893a; --sd-accent-ink: #9a7430;
+  --sd-night: #1c2238; --sd-gold: #d9b56b; --sd-night-muted: #9aa0b4;
+  --sd-text: "Newsreader", Georgia, serif; --sd-display: "Newsreader", Georgia, serif; --sd-label: "Instrument Sans", system-ui, sans-serif;
+  --sd-mark: "Noto Serif TC", serif;
+  --sd-size: 20px; --sd-size-phone: 18px; --sd-lh: 1.58; --sd-measure: 32em;
+}
+.sd-mark { width: 30px; height: 30px; background: var(--sd-night); color: var(--sd-gold); font-size: 20px; font-weight: 600; border-radius: 1px }
+/* the front matter band */
+.sd-front { background: var(--sd-night); color: var(--sd-gold) }
+.sd-front .sd-art { padding-top: clamp(32px, 6vw, 80px) }
+.sd-front .sd-art img { filter: none }
+.sd-front .sd-art figcaption { color: var(--sd-night-muted) }
+.sd-front .rs-head { background: var(--sd-night) }
+.rs[data-rs-theme="personal"] .sd-front .rs-head .rs-wrap { padding-bottom: clamp(36px, 6vw, 72px) }
+.rs[data-rs-theme="personal"] .sd-front .rs-head h1 { color: var(--sd-gold); font-weight: 400; font-variation-settings: "opsz" 72 }
+.rs[data-rs-theme="personal"] .sd-front .rs-head .rs-kicker, .rs[data-rs-theme="personal"] .sd-front .rs-head a.rs-kicker { color: var(--sd-night-muted) }
+.rs[data-rs-theme="personal"] .sd-front .rs-subtitle { color: var(--sd-night-muted) }
+.rs[data-rs-theme="personal"] .sd-front .rs-head .rs-attribution { color: #cfd2dc }
+.rs[data-rs-theme="personal"] .sd-front .rs-head a:hover { color: var(--sd-gold) }
+/* the home page: the shelf on paper, the title band in indigo */
+.sd-home .sd-front .rs-head .rs-wrap { padding-bottom: clamp(36px, 6vw, 72px) }
+.sd-home .sd-front .rs-inbrief { color: #cfd2dc }

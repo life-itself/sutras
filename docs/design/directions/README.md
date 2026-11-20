@@ -1,0 +1,3 @@
+# Direction CSS and sample sites
+
+`base.css` is the direction's structure (image above the title, the kicker as a label, the shelf on the home page, the apparatus in the accent colour); `a.css`, `b.css`, `c.css` set each direction's colours, faces and mark. They sit on top of the live `css/reading.css` (personal theme), `css/notes.css` and `custom.css`. `build.py` assembles sample sites from `dom/` (snapshots of the live pages' `.rs` block after their scripts ran) and `img/` (open-licence images, credited in the pages) into `out/`, which is not committed; the published sample sites are listed in [../README.md](../README.md). The chosen direction's CSS is what gets applied to `custom.css`.

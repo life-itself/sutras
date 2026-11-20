@@ -1,0 +1,12 @@
+/* Direction B · Blue. The same page on a cooler, lighter grey, with the Fitzcarraldo blue for the apparatus,
+   to test whether blue is cold on paper or only on a cover. Text in Spectral (open licence, a cooler serif with a
+   small x-height that suits a narrow column); the mark 慧 printed rather than brushed, in Noto Serif TC. */
+.rs, :root {
+  --sd-bg: #f2f1ed; --sd-ink: #1b1d22; --sd-ink2: #363a44; --sd-muted: #6a6f7a; --sd-rule: #dcdcd6;
+  --sd-accent: #2a4bb6; --sd-accent-ink: #2341a3;
+  --sd-text: "Spectral", Georgia, serif; --sd-display: "Spectral", Georgia, serif; --sd-label: "Instrument Sans", system-ui, sans-serif;
+  --sd-mark: "Noto Serif TC", serif;
+  --sd-size: 20px; --sd-size-phone: 18px; --sd-lh: 1.6; --sd-measure: 33em;
+}
+.sd-mark { font-size: 22px; font-weight: 600; width: 32px; height: 32px; border: 1.5px solid var(--sd-accent-ink); border-radius: 2px }
+.rs[data-rs-theme="personal"] .rs-head h1 { font-weight: 300 }
