@@ -1,27 +1,55 @@
 ---
-title: "Shodoka: Song on Realizing the Tao"
-author: Yoka Genkaku Daishi 
+title: Shodoka
+description: "A long Ch’an (Zen) poem in 64 verses on seeing one’s own nature, attributed to Yung-chia (Yoka Genkaku), in the Diamond Sangha version of Robert Aitken and Eido Shimano. Complete, with notes and an EPUB."
+author: "Yung-chia Hsuan-chueh (Yoka Genkaku) (attributed; doubtful)"
+translator: Robert Aitken and Eido Shimano (1960s), revised by Robert Aitken (1991)
+date: "Unknown. Attributed to Yung-chia (665–713); Tang dynasty (618–907)"
+tradition: Ch’an (Zen) Buddhism
 source: http://www.ciolek.com/WWWVLPages/ZenPages/Daily-Zen-Sutras.html#SHODO
+licence: "Translation © 1991 Diamond Sangha Zen Buddhist Society: in copyright, reproduced in full without permission. Editorial additions CC BY 4.0."
+status: published
+layout: plain
+syntaxMode: md
+scripts:
+  - /js/reading.js
+  - /js/edition.js
 ---
 
-Yung-chia Hsuan-ch'e (Yoka Genkaku Daishi 665-713) was student of Hui-neng, the Sixth Patriarch of China.
+<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
+<a class="rs-kicker" href="/">Sutras</a>
+<h1>Shodoka</h1>
+<p class="rs-subtitle">Song of Enlightenment <span lang="zh">證道歌</span></p>
+<p class="rs-attribution">Attributed to Yung-chia (Yoka Genkaku)<br>Translated by Robert Aitken and Eido Shimano</p>
+</div></div></header>
+<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-CHENG-TAO-KO [Zhengdaoge], Shodoka (J.), Song of Enlightenment. - a collection of 64 verses from the T'ang Dynasty China, attributed to the Zen Master Yung-chia Hsuan-chueh [Yongjia Xuanjue], aka Yoka Genkaku (J.) (665-713), and presenting the basic tenets of the Ch'an (Zen) Buddhism.
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A long Ch’an (Zen) poem in 64 verses, sung in the first person by someone who has woken up and wants you to stop looking elsewhere. Tradition gives it to Yung-chia, a student of the Sixth Patriarch, though he probably did not write it. Here complete, in the version chanted in the Diamond Sangha’s Zen centres.</p>
 
-Translated by Nyogen Senzaki and revised by Robert Aitken Roshi.
+## Introduction
 
----
+The *Shodoka*, or *Song of Enlightenment* (in Chinese *Cheng-tao-ko*, 證道歌), is a Ch’an (Zen) poem of 64 verses. Tradition gives it to Yung-chia Hsuan-chueh (665–713), known in Japan as Yoka Genkaku. He trained as a monk in the Tiantai school and is remembered for one night: he visited Hui-neng, the Sixth Patriarch, was persuaded to stay a single night, and in that night his enlightenment was acknowledged. The poem speaks of the meeting in [verse 18](/shodoka#18).
 
-## 1
+The attribution is doubtful. The historian Hu Shih pointed out that a manuscript copy from Dunhuang names a different author, and that a monk who died in 713 could not have sung of the “twenty-eight generations of teachers in India” ([verse 42](/shodoka#42)): that list of patriarchs was made up decades later. Whoever wrote it, the poem lasted. Master Sheng-yen counted it, with *[Faith in Mind](/faith-in-mind)*, as the most highly regarded of the Ch’an poems on enlightenment, In Japan both poems belong, with the *Ten Oxherding Pictures* and a manual of sitting meditation, to a set of four texts used to introduce novice monks to Zen.
 
+Where *Faith in Mind* is quiet and even, this is a song: first person, boastful in places, full of lions, jewels, thunder and moons in water. Its claim is in the first verse, that “the real nature of ignorance is the Buddha-nature itself”. The rest is someone who has seen this telling you not to look for it anywhere else.
+
+This English version was made for chanting, translated from the Japanese by Robert Aitken and Eido Shimano. Read it aloud, a few verses at a time. The notes are ours, for names that may be unfamiliar; they can wait for a second reading.
+
+<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+
+## The poem
+
+<div class="rs-verse">
+
+<a class="v" id="1" href="#1">1</a>
 There is the leisurely one,  
 Walking the Tao, beyond philosophy,  
 Not avoiding fantasy, not seeking truth.  
 The real nature of ignorance is the Buddha-nature itself;  
-The empty delusory body is the very body of the Dharma.  
+The empty delusory body is the very body of the Dharma.
 
-## 2
-
+<a class="v" id="2" href="#2">2</a>
 When the Dharma body awakens completely,  
 There is nothing at all.  
 The source of our self-nature  
@@ -29,117 +57,103 @@ Is the Buddha of innocent truth.
 Mental and physical reactions come and go  
 Like clouds in the empty sky;  
 Greed, hatred, and ignorance appear and disappear  
-Like bubbles on the surface of the sea.  
+Like bubbles on the surface of the sea.
 
-## 3
-
+<a class="v" id="3" href="#3">3</a>
 When we realize actuality,  
 There is no distinction between mind and thing  
 And the path to hell instantly vanishes.  
 If this is a lie to fool the world,  
-My tongue may be cut out forever.  
+My tongue may be cut out forever.
 
-## 4
-
+<a class="v" id="4" href="#4">4</a>
 Once we awaken to the Tathagata-Zen,  
 The six noble deeds and the ten thousand good actions  
 Are already complete within us.  
 In our dream we see the six levels of illusion clearly;  
-After we awaken the whole universe is empty.  
+After we awaken the whole universe is empty.
 
-## 5
-
+<a class="v" id="5" href="#5">5</a>
 No bad fortune, no good fortune, no loss, no gain;  
 Never seek such things in eternal serenity.  
 For years the dusty mirror has gone uncleaned,  
-Now let us polish it completely, once and for all.  
+Now let us polish it completely, once and for all.
 
-## 6
-
+<a class="v" id="6" href="#6">6</a>
 Who has no-thought? Who is not-born?  
 If we are truly not-born,  
 We are not un-born either.  
 Ask a robot if this is not so.  
 How can we realize ourselves  
-By virtuous deeds or by seeking the Buddha?  
+By virtuous deeds or by seeking the Buddha?
 
-## 7
-
+<a class="v" id="7" href="#7">7</a>
 Release your hold on earth, water, fire, wind;  
 Drink and eat as you wish in eternal serenity.  
 All things are transient and completely empty;  
-This is the great enlightenment of the Tathagata.  
+This is the great enlightenment of the Tathagata.
 
-## 8
-
-Transience, emptiness and enlightenment --  
+<a class="v" id="8" href="#8">8</a>
+Transience, emptiness and enlightenment —  
 These are the ultimate truths of Buddhism;  
 Keeping and teaching them is true Sangha devotion.  
-If you don`t agree, please ask me about it.  
-Cut out directly the root of it all, --  
+If you don’t agree, please ask me about it.  
+Cut out directly the root of it all, —  
 This is the very point of the Buddha-seal.  
-I can't respond to any concern about leaves and branches.  
+I can’t respond to any concern about leaves and branches.
 
-## 9
-
-People do not recognize the Mani-jewel.  
+<a class="v" id="9" href="#9">9</a>
+People do not recognize the Mani-jewel.[^1]  
 Living intimately within the Tathagata-garbha,  
 It operates our sight, hearing, smell, taste, sensation, awareness;  
-And all of these are empty, yet not empty.  
+And all of these are empty, yet not empty.
 
-## 10
-
+<a class="v" id="10" href="#10">10</a>
 The rays shining from this perfect Mani-jewel  
 Have the form of no form at all.  
 Clarify the five eyes and develop the five powers;  
-This is not intellectual work, -- just realize, just know.  
+This is not intellectual work, — just realize, just know.  
 It is not difficult to see images in a mirror,  
-But who can take hold of the moon in the water?  
+But who can take hold of the moon in the water?
 
-## 11
-
+<a class="v" id="11" href="#11">11</a>
 Always working alone, always walking alone,  
 The enlightened one walks the free way of Nirvana  
 With melody that is old and clear in spirit  
 And naturally elegant in style,  
 But with body that is tough and bony,  
-Passing unnoticed in the world.  
+Passing unnoticed in the world.
 
-## 12
-
-We know that Shakya's sons and daughters  
+<a class="v" id="12" href="#12">12</a>
+We know that Shakya’s sons and daughters  
 Are poor in body, but not in the Tao.  
 In their poverty, they always wear ragged clothing,  
-But they have the jewel of no price treasured within.  
+But they have the jewel of no price treasured within.
 
-## 13
-
+<a class="v" id="13" href="#13">13</a>
 This jewel of no price can never be used up  
 Though they spend it freely to help people they meet.  
-Dharmakaya, Sambogakaya, Nirmanakaya,  
+Dharmakaya, Sambogakaya, Nirmanakaya,[^2]  
 And the four kinds of wisdom  
 Are all contained within.  
 The eight kinds of emancipation and the six universal powers  
-Are all impressed on the ground of their mind.  
+Are all impressed on the ground of their mind.
 
-## 14
-
+<a class="v" id="14" href="#14">14</a>
 The best student goes directly to the ultimate,  
 The others are very learned but their faith is uncertain.  
 Remove the dirty garments from your own mind;  
-Why should you show off your outward striving?  
+Why should you show off your outward striving?
 
-## 15
-
+<a class="v" id="15" href="#15">15</a>
 Some may slander, some may abuse;  
 They try to set fire to the heavens with a torch  
 And end by merely tiring themselves out.  
 I hear their scandal as though it were ambrosial truth;  
 Immediately everything melts  
-And I enter the place beyond thought and words.  
+And I enter the place beyond thought and words.
 
-## 16
-
+<a class="v" id="16" href="#16">16</a>
 When I consider the virtue of abusive words,  
 I find the scandal-monger is my good teacher.  
 If we do not become angry at gossip,  
@@ -149,52 +163,45 @@ And full-moon brilliance of dhyana and prajna
 Does not stagnate in emptiness.  
 Not only can I take hold of complete enlightenment by myself,  
 But all Buddha-bodies, like sands of the Ganges,  
-Can become awakened in exactly the some way.  
+Can become awakened in exactly the same way.
 
-## 17
-
+<a class="v" id="17" href="#17">17</a>
 The incomparable lion-roar of doctrine  
 Shatters the brains of the one hundred kinds of animals.  
 Even the king of elephants will run away, forgetting his pride;  
-Only the heavenly dragon listens calmly, with pure delight.  
+Only the heavenly dragon listens calmly, with pure delight.
 
-## 18
-
+<a class="v" id="18" href="#18">18</a>
 I wandered over rivers and seas, crossing mountains and streams,  
 Visiting teachers, asking about the Way in personal interviews;  
-Since I recognized the Sixth Founding Teacher at Ts'ao Ch'i,  
-I know what is beyond the relativity of birth and death.  
+Since I recognized the Sixth Founding Teacher at Ts’ao Ch’i,[^3]  
+I know what is beyond the relativity of birth and death.
 
-## 19
-
+<a class="v" id="19" href="#19">19</a>
 Walking is Zen, sitting is Zen;  
 Speaking or silent, active or quiet, the essence is at peace.  
 Even facing the sword of death, our mind is unmoved;  
-Even drinking poison, our mind is quiet.  
+Even drinking poison, our mind is quiet.
 
-## 20
-
+<a class="v" id="20" href="#20">20</a>
 Our teacher, Shakyamuni, met Dipankara Buddha  
 And for many eons he trained as Kshanti, the ascetic.  
 Many births, many deaths;  
-I am serene in this cycle,--there is no end to it.  
+I am serene in this cycle, — there is no end to it.
 
-## 21
-
+<a class="v" id="21" href="#21">21</a>
 Since I abruptly realized the unborn,  
 I have had no reason for joy or sorrow  
-At any honor or disgrace.  
+At any honor or disgrace.
 
-## 22
-
+<a class="v" id="22" href="#22">22</a>
 I have entered the deep mountains to silence and beauty;  
 In a profound valley beneath high cliffs,  
 I sit under the old pine trees.  
 Zazen in my rustic cottage  
-Is peaceful, lonely, and truly comfortable.  
+Is peaceful, lonely, and truly comfortable.
 
-## 23
-
+<a class="v" id="23" href="#23">23</a>
 When you truly awaken,  
 You have no formal merit.  
 In the multiplicity of the relative world,  
@@ -202,139 +209,139 @@ You cannot find such freedom.
 Self-centered merit brings the joy of heaven itself,  
 But it is like shooting an arrow at the sky;  
 When the force is exhausted, it falls to the earth,  
-And then everything goes wrong.  
+And then everything goes wrong.
 
-## 24
-
+<a class="v" id="24" href="#24">24</a>
 Why should this be better  
 Than the true way of the absolute,  
-Directly penetrating the ground of Tathagata?  
+Directly penetrating the ground of Tathagata?
 
-## 25
-
+<a class="v" id="25" href="#25">25</a>
 Just take hold of the source  
 And never mind the branches.  
 It is like a treasure-moon  
 Enclosed in a beautiful emerald.  
 Now I understand this Mani-jewel  
-And my gain is the gain of everyone endlessly.  
+And my gain is the gain of everyone endlessly.
 
-## 26
-
+<a class="v" id="26" href="#26">26</a>
 The moon shines on the river,  
-The wind blows through the pines,--  
+The wind blows through the pines, —  
 Whose providence is this long beautiful evening?  
 The Buddha-nature jewel of morality  
 Is impressed on the ground of my mind,  
-And my robe is the dew, the fog, the cloud, and the mist.  
+And my robe is the dew, the fog, the cloud, and the mist.
 
-## 27
-
+<a class="v" id="27" href="#27">27</a>
 A bowl once calmed dragons  
 And a staff separated fighting tigers;  
 The rings on this staff jingle musically.  
 The form of these expressions is not to be taken lightly;  
 The treasure-staff of the Tathagata  
-Has left traces for us to follow.  
+Has left traces for us to follow.
 
-## 28
-
-The awakened one does not seek truth--  
+<a class="v" id="28" href="#28">28</a>
+The awakened one does not seek truth —  
 Does not cut off delusion.  
 Truth and delusion are both vacant and without form,  
 But this no-form is neither empty nor not empty;  
-It is the truly real form of the Tathagata.  
+It is the truly real form of the Tathagata.
 
-## 29
-
+<a class="v" id="29" href="#29">29</a>
 The mind-mirror is clear, so there are no obstacles.  
 Its brilliance illuminates the universe  
 To the depths and in every grain of sand.  
 Multitudinous things of the cosmos  
 Are all reflected in the mind,  
-And this full clarity is beyond inner and outer.  
+And this full clarity is beyond inner and outer.
 
-## 30
-
+<a class="v" id="30" href="#30">30</a>
 To live in nothingness is to ignore cause and effect;  
 This chaos leads only to disaster.  
 The one who clings to vacancy, rejecting the world of things,  
-Escapes from drowning but leaps into fire.  
+Escapes from drowning but leaps into fire.
 
-## 31
-
-Holding truth and rejecting delusion--  
+<a class="v" id="31" href="#31">31</a>
+Holding truth and rejecting delusion —  
 These are but skillful lies.  
 Students who do zazen by such lies  
-Love thievery in their own children.  
+Love thievery in their own children.
 
-## 32
-
+<a class="v" id="32" href="#32">32</a>
 They miss the Dharma-treasure;  
 They lose accumulated power;  
 And this disaster follows directly upon dualistic thinking.  
 So Zen is the complete realization of mind,  
 The complete cutting off of delusion,  
-The power of wise vision penetrating directly to the unborn.  
+The power of wise vision penetrating directly to the unborn.
 
-## 33
-
+<a class="v" id="33" href="#33">33</a>
 Students of vigorous will hold the sword of wisdom;  
 The prajna edge is a diamond flame.  
 It not only cuts off useless knowledge,  
-But also exterminates delusions.  
+But also exterminates delusions.
 
+<a class="v" id="34" href="#34">34</a>
 They roar with Dharma-thunder;  
 They strike the Dharma-drum;  
 They spread clouds of love, and pour ambrosial rain.  
 Their giant footsteps nourish limitless beings;  
-Sravaka, Pratyeka, Bodhisattva--all are enlightened;  
-Five kinds of human nature all are emancipated.  
+Sravaka, Pratyeka, Bodhisattva — all are enlightened;  
+Five kinds of human nature all are emancipated.
 
+<a class="v" id="35" href="#35">35</a>
 High in the Himalayas, only fei-ni grass grows.  
 Here cows produce pure and delicious milk,  
 And this food I continually enjoy.  
 One complete nature passes to all natures;  
-One universal Dharma encloses all Dharmas.  
+One universal Dharma encloses all Dharmas.
 
+<a class="v" id="36" href="#36">36</a>
 One moon is reflected in many waters;  
 All the water-moons are from the one moon.  
-The Dharma-body of all Buddhas has entered my own nature, And my nature becomes one with the Tathagata.  
+The Dharma-body of all Buddhas has entered my own nature,  
+And my nature becomes one with the Tathagata.
 
+<a class="v" id="37" href="#37">37</a>
 One level completely contains all levels;  
 It is not matter, mind nor activity.  
 In an instant eighty-thousand teachings are fulfilled;  
-In a twinkling the evil of eons is destroyed.  
+In a twinkling the evil of eons is destroyed.
 
+<a class="v" id="38" href="#38">38</a>
 All categories are no category;  
-What relation have have these to my insight?  
-Beyond praise, beyond blame, --  
-Like space itself it has no bounds.  
+What relation have these to my insight?  
+Beyond praise, beyond blame, —  
+Like space itself it has no bounds.
 
+<a class="v" id="39" href="#39">39</a>
 Right here it is eternally full and serene,  
 If you search elsewhere, you cannot see it.  
 You cannot grasp it, you cannot reject it;  
 In the midst of not gaining,  
-In that condition you gain it.  
+In that condition you gain it.
 
+<a class="v" id="40" href="#40">40</a>
 It speaks in silence,  
 In speech you hear its silence.  
 The great way has opened and there are no obstacles.  
 If someone asks, what is your sect  
 And how do you understand it?  
-I reply, the power of tremendous prajna.  
+I reply, the power of tremendous prajna.
 
+<a class="v" id="41" href="#41">41</a>
 People say it is positive;  
 People say it is negative;  
 But they do not know.  
-A smooth road, a rough road --  
+A smooth road, a rough road —  
 Even heaven cannot imagine.  
 I have continued my zazen for many eons;  
-I do not say this to confuse you.  
+I do not say this to confuse you.
 
+<a class="v" id="42" href="#42">42</a>
 I raise the Dharma-banner and set forth our teaching;  
 It is the clear doctrine of the Buddha  
-vWhich I found with my teacher, Hui Neng,  
+Which I found with my teacher, Hui Neng,  
 Mahakashyapa became the Buddha-successor,  
 Received the lamp and passed it on.  
 Twenty-eight generations of teachers in India,  
@@ -342,145 +349,204 @@ Then over seas and rivers to our land
 Bodhi Dharma came as our own first founder,  
 And his robe, as we all know, passed through six teachers here,  
 And how many generations to come may gain the path,  
-No one knows.  
+No one knows.
 
+<a class="v" id="43" href="#43">43</a>
 The truth is not set forth;  
 The false is basically vacant.  
 Put both existence and non-existence aside,  
 Then even non-vacancy is vacant,  
 The twenty kinds of vacancy have no basis,  
 And the oneness of the Tathagata-being  
-Is naturally sameness.  
+Is naturally sameness.
 
+<a class="v" id="44" href="#44">44</a>
 Mind is the base, phenomena are dust;  
 Yet both are like a flaw in the mirror.  
 When the flaw is brushed aside,  
 The light begins to shine.  
 When both mind and phenomena are forgotten,  
-Then we become naturally genuine.  
+Then we become naturally genuine.
 
+<a class="v" id="45" href="#45">45</a>
 Ah, the degenerate materialistic world!  
 People are unhappy; they find self-control difficult.  
 In the centuries since Shakyamuni, false views are deep,  
-Demons are strong, the Dharma is weak, disturbances are many.  
+Demons are strong, the Dharma is weak, disturbances are many.
 
-People hear the Buddha's doctrine of immediacy,  
+<a class="v" id="46" href="#46">46</a>
+People hear the Buddha’s doctrine of immediacy,  
 And if they accept it, the demons will be crushed  
 As easily as a roofing tile.  
-But they cannot accept, what a pity!  
+But they cannot accept, what a pity!
 
+<a class="v" id="47" href="#47">47</a>
 Your mind is the source of action;  
 Your body is the agent of calamity;  
 No pity nor blame to anyone else.  
-If you don't seek an invitation to hell,  
-Never slander the Tathagata's true teaching.  
+If you don’t seek an invitation to hell,  
+Never slander the Tathagata’s true teaching.
 
+<a class="v" id="48" href="#48">48</a>
 In the sandalwood forest, there is no other tree.  
 Only the lion lives in such deep luxuriant woods,  
 Wandering freely in a state of peace.  
-Other animals and birds stay far away.  
+Other animals and birds stay far away.
 
+<a class="v" id="49" href="#49">49</a>
 Just baby lions follow the parent,  
 And three-year-olds already roar loudly.  
 How can the jackal pursue the king of the Dharma  
-Even with a hundred-thousand demonic arts?  
+Even with a hundred-thousand demonic arts?
 
-The Buddha's doctrine of directness  
+<a class="v" id="50" href="#50">50</a>
+The Buddha’s doctrine of directness  
 Is not a matter for human emotion.  
 If you doubt this or feel uncertain,  
 Then you must discuss it with me.  
-This is not the free rein of a mountain monk's ego.  
+This is not the free rein of a mountain monk’s ego.  
 I fear your training may lead to wrong views  
-Of permanent soul or complete extinction.  
+Of permanent soul or complete extinction.
 
+<a class="v" id="51" href="#51">51</a>
 Being is not being; non-being is not non-being;  
 Miss this rule by a hair,  
 And you are off by a thousand miles.  
-Understanding it, the dragon-child abruptly attains Buddhahood;  
-Misunderstanding it, the greatest scholar falls into hell.  
+Understanding it, the dragon-child abruptly attains Buddhahood;[^4]  
+Misunderstanding it, the greatest scholar falls into hell.
 
+<a class="v" id="52" href="#52">52</a>
 From my youth I piled studies upon studies,  
 In sutras and sastras I searched and researched,  
 Classifying terms and forms, oblivious to fatigue.  
 I entered the sea to count the sands in vain  
 And then the Tathagata scolded me kindly  
-As I read "What profit in counting your neighbor's treasure?"  
+As I read “What profit in counting your neighbor’s treasure?”  
 My work had been scattered and entirely useless,  
-For years I was dust blown by the wind.  
+For years I was dust blown by the wind.
 
+<a class="v" id="53" href="#53">53</a>
 If the seed-nature is wrong, misunderstandings arise,  
-And the Buddha's doctrine of immediacy cannot be attained.  
+And the Buddha’s doctrine of immediacy cannot be attained.  
 Shravaka and Pratyeka students may study earnestly  
 But they lack aspiration.  
 Others may be very clever,  
-But they lack prajna.  
+But they lack prajna.
 
+<a class="v" id="54" href="#54">54</a>
 Stupid ones, childish ones,  
 They suppose there is something in an empty fist.  
 They mistake the pointing finger for the moon.  
-They are idle dreamers lost in form and sensation.  
+They are idle dreamers lost in form and sensation.
 
+<a class="v" id="55" href="#55">55</a>
 Not supposing something is the Tathagata.  
 This is truly called Kwan-Yin, the Bodhisattva who sees freely.  
 When awakened we find karmic hindrances fundamentally empty.  
-But when not awakened, we must repay all our debts.  
+But when not awakened, we must repay all our debts.
 
-The hungry are served a king's repast,  
+<a class="v" id="56" href="#56">56</a>
+The hungry are served a king’s repast,  
 And they cannot eat.  
 The sick meet the king of doctors;  
-Why don't they recover?  
-The practice of Zen in this greedy world --  
+Why don’t they recover?  
+The practice of Zen in this greedy world —  
 This is the power of wise vision.  
 The lotus lives in the midst of the fire;  
-It is never destroyed.  
+It is never destroyed.
 
+<a class="v" id="57" href="#57">57</a>
 Pradhanashura broke the gravest precepts;  
 But he went on to realize the unborn.  
 The Buddhahood he attained in that moment  
-Lives with us now in our time.  
+Lives with us now in our time.
 
+<a class="v" id="58" href="#58">58</a>
 The incomparable lion roar of the doctrine!  
 How sad that people are stubbornly ignorant;  
 Just knowing that crime blocks enlightenment,  
-Not seeing the secret of the Tathagata teaching.  
+Not seeing the secret of the Tathagata teaching.
 
+<a class="v" id="59" href="#59">59</a>
 Two monks were guilty of murder and carnality.  
 Their leader, Upali, had the light of a glow-worm;  
 He just added to their guilt.  
-Vimalakirti cleared their doubts at once  
-As sunshine melts the frost and snow.  
+Vimalakirti cleared their doubts at once[^5]  
+As sunshine melts the frost and snow.
 
+<a class="v" id="60" href="#60">60</a>
 The remarkable power of emancipation  
 Works wonders innumerable as the sands of the Ganges.  
 To this we offer clothing, food, bedding, medicine.  
 Ten thousand pieces of gold are not sufficient;  
 Though you break your body  
-And your bones become powder, --  
+And your bones become powder, —  
 This is not enough for repayment.  
-One vivid word surpasses millions of years of practice.  
+One vivid word surpasses millions of years of practice.
 
+<a class="v" id="61" href="#61">61</a>
 The King of the Dharma deserves our highest respect.  
 Tathagatas, innumerable as sands of the Ganges,  
 All prove this fact by their attainment.  
 Now I know what the Mani-jewel is:  
-Those who believe this will gain it accordingly.  
+Those who believe this will gain it accordingly.
 
+<a class="v" id="62" href="#62">62</a>
 When we see truly, there is nothing at all.  
 There is no person; there is no Buddha.  
 Innumerable things of the universe  
 Are just bubbles on the sea.  
-Wise sages are all like flashes of lightning  
+Wise sages are all like flashes of lightning
 
+<a class="v" id="63" href="#63">63</a>
 However the burning iron ring revolves around my head,  
 With bright completeness of dhyana and prajna  
 I never lose my equanimity.  
 If the sun becomes cold, and the moon hot,  
 Evil cannot shatter the truth.  
 The carriage of the elephant moves like a mountain,  
-How can the mantis block the road?  
+How can the mantis block the road?
 
-The great elephant does not loiter on the rabbit's path.  
+<a class="v" id="64" href="#64">64</a>
+The great elephant does not loiter on the rabbit’s path.  
 Great enlightenment is not concerned with details.  
-Don't belittle the sky by looking through a pipe.  
-If you still don't understand,  
-I will settle it for you.  
+Don’t belittle the sky by looking through a pipe.  
+If you still don’t understand,  
+I will settle it for you.
+
+</div>
+
+## About this translation
+
+The translation was made from the Japanese in the 1960s by Robert Aitken (1917–2010) and Eido Shimano for the Diamond Sangha, the Zen community Aitken co-founded in Honolulu in 1959. It was reprinted by the New York Zendo in *Daily Sutras for Chanting and Recitation*. In December 1991 Aitken revised it, and it became the *Shodoka* in the Diamond Sangha’s *Daily Zen Sutras*, the chanting book used in its centres. That 1991 version is the one given here.
+
+It is a version to be said aloud, not a scholar’s translation: plain words, some of them modern (“Ask a robot if this is not so”, [verse 6](/shodoka#6), where other translations have a wooden puppet). Earlier copies of this page credited the translation to Nyogen Senzaki; that was a mistake. Senzaki’s own version, with Ruth Stout McCandless, is a different text.
+
+The source gives the 64 verses as unnumbered paragraphs. The numbers are ours, one to each paragraph, and they match the source’s own description of the poem as “a collection of 64 verses”. Other translations divide the poem differently, so verse numbers will not always match between versions.
+
+## Source and licence
+
+**Source.** The text was taken from the Diamond Sangha *Daily Zen Sutras* (“December 1991 version”) as published by [T. Matthew Ciolek](http://www.ciolek.com/WWWVLPages/ZenPages/Daily-Zen-Sutras.html#SHODO) on 20 November 2026, and compared with that page word for word by script. It was checked against a second copy of the same translation on [Terebess Asia Online](https://terebess.hu/zen/sodoka.html).
+
+Four slips were corrected: a stray letter (“vWhich”), a lost line break in [verse 36](/shodoka#36) (both as in the second copy), “the some way” for “the same way” ([verse 16](/shodoka#16)), and “have have” ([verse 38](/shodoka#38)), which are in both copies. Dashes and quotation marks were set in modern type. Otherwise every word is as in the source. Each change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/shodoka/NOTES.md).
+
+**Notes.** The notes are editorial.
+
+**Licence.** The translation is © 1991 Diamond Sangha Zen Buddhist Society and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+## Download
+
+[Shodoka (EPUB)](/downloads/shodoka.epub): the introduction, the poem, and the source and licence.
+
+</article></div></div>
+</div>
+
+[^1]: *Editors’ note.* The Mani-jewel is the wish-fulfilling jewel of Buddhist stories. In Buddhist writing it can stand for the Buddha-nature each of us has and does not see. The poem comes back to it in verses 10, 25 and 61.
+
+[^2]: *Editors’ note.* The three bodies of a Buddha: the Dharma body (reality itself, without form), the enjoyment body (seen by advanced bodhisattvas) and the body that appears in the world, as the historical Buddha did.
+
+[^3]: *Editors’ note.* Ts’ao Ch’i (Caoxi) is where Hui-neng, the Sixth Patriarch, taught; the name is also used for Hui-neng himself. This is the visit of the introduction, when Yung-chia stayed one night.
+
+[^4]: *Editors’ note.* In the Lotus Sutra the young daughter of the dragon king becomes a Buddha in an instant, though one of the Buddha’s disciples has just said that a woman cannot.
+
+[^5]: *Editors’ note.* From chapter 3 of the Vimalakirti Sutra. Upali, one of the Buddha’s disciples, judges the two monks’ offences by the monastic rules; the layman Vimalakirti tells them their offences are as empty as everything else, and they are freed.
