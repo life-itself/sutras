@@ -1,0 +1,36 @@
+/* Sutras notes: highlights and margin notes drawn by js/notes.js. Builds on the reading system's
+   sidenotes (css/reading.css): a note is an .rs-sn with an .rs-sn-ref mark and an .rs-sn-note, so it
+   takes the footnotes' place in the margin on a wide screen and opens under the line on a phone.
+   js/notes.js loads this file itself unless the site's CSS already imports it (it checks for the
+   --sutras-notes-css property below). */
+:root { --sutras-notes-css: 1 }
+
+.rs { --nt-hl: rgba(196, 146, 52, .22); --nt-hl-active: rgba(196, 146, 52, .45) }
+
+/* highlights: the CSS Custom Highlight API, or <mark> where it is missing */
+::highlight(sutras-note) { background-color: rgba(196, 146, 52, .22) }
+::highlight(sutras-note-active) { background-color: rgba(196, 146, 52, .45) }
+.rs-text mark.nt-mark { background: var(--nt-hl); color: inherit; padding: 0 }
+.rs-text mark.nt-mark.nt-active { background: var(--nt-hl-active) }
+
+/* the mark after the line: a reference sign, not a number, so it is not mistaken for a footnote */
+.rs-sn-ref.nt-ref { font-size: .7em; vertical-align: .45em; padding-left: 3px }
+.nt-note .nt-n { font-size: .85em }
+.nt-note .nt-by { display: block; margin-top: .3em; font-size: .78em; letter-spacing: .04em; font-variant: small-caps; color: var(--rs-muted) }
+.nt-note .nt-quote { display: block; margin: .3em 0; padding-left: .8em; border-left: 1px solid var(--rs-rule) }
+.nt-note a { color: inherit; text-decoration-color: var(--rs-accent) }
+
+/* a margin note pointed at: its words light up, and it does too */
+.nt-sn.nt-active .nt-note { color: var(--rs-ink) }
+@container rs (min-width: 760px) {
+  .nt-sn .nt-note { transition: color .2s }
+  .nt-sn.nt-active .nt-note .nt-n { color: var(--rs-accent) }
+}
+
+/* "Notes by …  Hide notes" */
+.rs-text p.nt-switch { font-family: var(--rs-ui); font-size: 13px; letter-spacing: .02em; color: var(--rs-muted); margin: 0 0 var(--rs-s4); text-indent: 0 }
+.nt-switch button { font: inherit; color: var(--rs-accent); background: none; border: 0; padding: .4em .2em; cursor: pointer; text-decoration: underline; text-underline-offset: 2px }
+
+/* notes switched off: the clean text */
+.rs.nt-off .nt-sn { display: none }
+.rs.nt-off mark.nt-mark { background: none }

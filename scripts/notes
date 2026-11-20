@@ -1,0 +1,232 @@
+#!/usr/bin/env python3
+"""Check each text's notes against the text, and write the page script that carries them.
+
+Usage: scripts/notes              check every annotations/<slug>.yaml and write js/notes/<slug>.js
+       scripts/notes <slug> ...   only these texts
+       scripts/notes --check      check only; write nothing (exit status 1 on any problem)
+
+A notes file is annotations/<slug>.yaml:
+
+    text: faith-in-mind.md        # optional; the page the notes belong to (default <slug>.md)
+    notes:
+      - id: fim-1-supreme-way     # unique in the file; never reused
+        passage: "1"              # the passage id, as in /faith-in-mind#1 (optional but wise)
+        quote: The Supreme Way is not difficult
+        prefix: ...               # optional: words just before the quote, to tell repeats apart
+        suffix: ...               # optional: words just after it
+        note: A comment, in Markdown (*italic*, **bold**, [links](/shodoka#3)). Omit for a highlight.
+        by: Rufus Pollock
+        date: 2026-11-20
+
+Every quote must be found exactly once, word for word, in its passage of the text (in the whole
+text if there is no passage). Curly and straight quotes, kinds of dash and runs of whitespace count
+as the same; nothing else is forgiven. Markdown and HTML markup (emphasis, footnote markers, tags,
+line breaks) is ignored, as it is on the page. Any failure is printed and the script exits 1
+without writing that text's page script.
+
+The generated js/notes/<slug>.js is a Flowershow page script: list it in the page's frontmatter
+after /js/reading.js and before /js/notes.js. Flowershow pages cannot fetch data files
+(flowershow#1373), so the notes travel as a script. Commit the generated file.
+"""
+import datetime, html, json, re, sys
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parent.parent
+FIELDS = {"id", "passage", "quote", "prefix", "suffix", "note", "by", "date"}
+
+# ---------- normalising text for matching (js/notes.js does the same) ----------
+
+FOLD = {"‘": "'", "’": "'", "‚": "'", "′": "'", "“": '"', "”": '"', "„": '"', "″": '"',
+        "‐": "-", "‑": "-", "‒": "-", "–": "-", "—": "-", "―": "-", "−": "-", " ": " "}
+
+
+def fold(s):
+    s = "".join(FOLD.get(c, c) for c in s)
+    return re.sub(r"\s+", " ", s)
+
+
+# ---------- the text of a page, as a reader sees it ----------
+
+def plain(md):
+    """Markdown and HTML to the words shown on the page (roughly; enough to check quotes)."""
+    s = md
+    s = re.sub(r"<!--.*?-->", " ", s, flags=re.S)
+    s = re.sub(r"<a\b[^>]*\bclass=\"v\"[^>]*>.*?</a>", " ", s)    # passage numbers
+    s = re.sub(r"\[\^[^\]]+\]", "", s)                            # footnote markers
+    s = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r"\1", s)               # links and images: keep the words
+    s = re.sub(r"<br\s*/?>", " ", s)
+    s = re.sub(r"</?(p|div|li|ul|ol|h\d|blockquote|section|article|header)\b[^>]*>", " ", s)
+    s = re.sub(r"<[^>]+>", "", s)                                  # other tags: keep their words
+    s = re.sub(r"^\s{0,3}#{1,6}\s+", "", s, flags=re.M)            # heading marks
+    s = re.sub(r"^\s{0,3}>\s?", "", s, flags=re.M)                 # blockquote marks
+    s = re.sub(r"\\([\\`*_{}\[\]()#+\-.!])", r"\1", s)             # backslash escapes
+    s = re.sub(r"(\*{1,3}|(?<!\w)_{1,3}|_{1,3}(?!\w))", "", s)    # emphasis marks
+    return html.unescape(s)
+
+
+def front_matter_end(md):
+    m = re.match(r"---\n.*?\n---\n", md, flags=re.S)
+    return m.end() if m else 0
+
+
+def passage_region(md, pid):
+    """The Markdown from the element with id=pid to the next element of the same kind."""
+    m = re.search(r"<(\w+)\b([^>]*)\bid=\"%s\"[^>]*>" % re.escape(pid), md)
+    if not m:
+        return None
+    tag, cls = m.group(1), re.search(r"\bclass=\"([^\"]*)\"", m.group(0))
+    start = m.end()
+    same = r"<%s\b[^>]*%s[^>]*\bid=\"[^\"]+\"" % (tag, r'\bclass="%s"' % re.escape(cls.group(1)) if cls else "")
+    nxt = re.compile(same).search(md, start)
+    stop = re.search(r"</article>", md[start:])
+    ends = [len(md)] + ([nxt.start()] if nxt else []) + ([start + stop.start()] if stop else [])
+    return md[start:min(ends)]
+
+
+def occurrences(hay, needle):
+    out, i = [], hay.find(needle)
+    while needle and i != -1:
+        out.append(i)
+        i = hay.find(needle, i + 1)
+    return out
+
+
+# ---------- Markdown in a note, to HTML ----------
+
+def inline(s):
+    s = html.escape(s, quote=False)
+    s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: '<a href="%s">%s</a>' % (html.escape(m.group(2)), m.group(1)), s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", s)
+    s = re.sub(r"(?<!\w)_(?!\s)(.+?)(?<!\s)_(?!\w)", r"<em>\1</em>", s)
+    return s
+
+
+def note_html(md):
+    """Paragraphs joined by <br><br>, as reading.js does for footnotes: a margin note is a <span>."""
+    paras = [p.strip() for p in re.split(r"\n\s*\n", md.strip()) if p.strip()]
+    out = []
+    for p in paras:
+        if all(l.lstrip().startswith(">") for l in p.splitlines()):
+            body = " ".join(re.sub(r"^\s*>\s?", "", l) for l in p.splitlines())
+            out.append('<span class="nt-quote">%s</span>' % inline(body))
+        else:
+            out.append(inline(" ".join(l.strip() for l in p.splitlines())))
+    return "<br><br>".join(out)
+
+
+# ---------- one text ----------
+
+def check(slug):
+    """Return (notes for the page, problems)."""
+    path = ROOT / "annotations" / (slug + ".yaml")
+    problems = []
+    try:
+        data = yaml.safe_load(path.read_text()) or {}
+    except yaml.YAMLError as e:
+        return None, ["%s: not valid YAML: %s" % (path.name, e)]
+    text_file = ROOT / data.get("text", slug + ".md")
+    if not text_file.exists():
+        return None, ["%s: text %s not found" % (path.name, text_file.name)]
+    md = text_file.read_text()
+    md = md[front_matter_end(md):]
+    art = re.search(r"<article\b[^>]*>(.*?)</article>", md, flags=re.S)
+    whole = fold(plain(art.group(1) if art else md))   # the page script looks only inside the article
+    out, seen = [], set()
+    for n, e in enumerate(data.get("notes") or [], 1):
+        where = "%s note %d" % (path.name, n)
+        if not isinstance(e, dict):
+            problems.append("%s: not a mapping" % where); continue
+        nid = str(e.get("id") or "")
+        where = "%s %s" % (path.name, nid or "note %d" % n)
+        extra = set(e) - FIELDS
+        if extra:
+            problems.append("%s: unknown field(s) %s" % (where, ", ".join(sorted(extra))))
+        for f in ("id", "quote", "by"):
+            if not e.get(f):
+                problems.append("%s: missing %s" % (where, f))
+        if not nid or not e.get("quote"):
+            continue
+        if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", nid):
+            problems.append("%s: id must be letters, digits, dots, hyphens" % where)
+        if nid in seen:
+            problems.append("%s: id used twice" % where)
+        seen.add(nid)
+        quote = fold(str(e["quote"])).strip()
+        pre, suf = fold(str(e.get("prefix") or "")), fold(str(e.get("suffix") or ""))
+        pid = str(e["passage"]) if e.get("passage") is not None else None
+        if pid is not None:
+            region = passage_region(md, pid)
+            if region is None:
+                problems.append("%s: passage %s not found in %s" % (where, pid, text_file.name)); continue
+            hay = fold(plain(region))
+        else:
+            hay = whole
+        hits = [i for i in occurrences(hay, quote)
+                if hay[:i].rstrip().endswith(pre.strip()) and hay[i + len(quote):].lstrip().startswith(suf.strip())]
+        scope = "passage %s" % pid if pid is not None else text_file.name
+        if not hits:
+            elsewhere = " (it is elsewhere in the text: wrong passage?)" if pid is not None and quote in whole else ""
+            close = near(hay, quote)
+            problems.append("%s: quote not found in %s%s\n    quote: %s%s" % (where, scope, elsewhere, quote,
+                            "\n    near:  %s" % close if close else ""))
+            continue
+        if len(hits) > 1:
+            problems.append("%s: quote found %d times in %s; add a prefix or suffix" % (where, len(hits), scope)); continue
+        date = e.get("date")
+        rec = {"id": nid, "quote": str(e["quote"]).strip(), "by": str(e["by"])}
+        if pid is not None: rec["passage"] = pid
+        if e.get("prefix"): rec["prefix"] = str(e["prefix"])
+        if e.get("suffix"): rec["suffix"] = str(e["suffix"])
+        if e.get("note"): rec["note"] = note_html(str(e["note"]))
+        if date: rec["date"] = date.isoformat() if isinstance(date, datetime.date) else str(date)
+        out.append(rec)
+    return out, problems
+
+
+def near(hay, quote):
+    """The stretch of the passage most like the quote, to help fix a broken one."""
+    import difflib
+    words = hay.split(" ")
+    k = max(1, len(quote.split(" ")))
+    best, score = "", 0.0
+    for i in range(0, max(1, len(words) - k + 1)):
+        cand = " ".join(words[i:i + k])
+        r = difflib.SequenceMatcher(None, cand, quote).ratio()
+        if r > score:
+            best, score = cand, r
+    return best if score > 0.6 else ""
+
+
+def write(slug, notes):
+    dest = ROOT / "js" / "notes" / (slug + ".js")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    body = json.dumps({"text": slug, "notes": notes}, ensure_ascii=False, indent=1)
+    dest.write_text("/* Generated by scripts/notes from annotations/%s.yaml. Do not edit: edit the YAML and rerun. */\n"
+                    "window.SutrasNotes = %s;\n" % (slug, body))
+    return dest
+
+
+def main(argv):
+    check_only = "--check" in argv
+    slugs = [a for a in argv if not a.startswith("-")] or sorted(p.stem for p in (ROOT / "annotations").glob("*.yaml"))
+    bad = 0
+    for slug in slugs:
+        notes, problems = check(slug)
+        if problems:
+            bad += 1
+            print("FAIL %s" % slug)
+            for p in problems:
+                print("  " + p)
+            continue
+        if check_only:
+            print("ok   %s: %d notes" % (slug, len(notes)))
+        else:
+            print("ok   %s: %d notes -> %s" % (slug, len(notes), write(slug, notes).relative_to(ROOT)))
+    return 1 if bad else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))
