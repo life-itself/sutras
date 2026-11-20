@@ -33,3 +33,9 @@
   .rs-verse a.v { position: absolute; left: -2.6em; top: .32em; margin: 0; width: 2.2em; text-align: right }
 }
 .rs-text h2, .rs-text h3 { scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
+
+/* Phones: the note number is the tap target. Upstream gives it line-height 0, so its box has no
+   height; give it a real one, larger than the glyph, without moving the line. */
+@container rs (max-width: 759.98px) {
+  .rs-sn-ref { line-height: 1; padding: .9em .7em; margin: -.9em -.45em -.9em -.5em; position: relative }
+}
