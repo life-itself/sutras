@@ -6,7 +6,7 @@ translator: John W. Basore
 date: "About 49 CE (some scholars argue for about 55)"
 tradition: Roman Stoicism
 source: https://en.wikisource.org/wiki/On_the_shortness_of_life
-licence: "Translation (Loeb Classical Library, 1932): public domain in the US; in copyright until the end of 2029 where copyright lasts 70 years after the translator’s death. Published in full. Editorial additions CC BY 4.0."
+licence: "Translation (Loeb Classical Library, 1932): probably public domain in the US (not renewed); in copyright until the end of 2029 where copyright lasts 70 years after the translator’s death. Published in full. Editorial additions CC BY 4.0."
 status: published
 layout: plain
 syntaxMode: md
@@ -24,7 +24,7 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Seneca’s short essay on time: life is long enough, if we stop wasting it. Here complete in John W. Basore’s 1932 translation, with his notes.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Seneca’s essay on time: life is long enough, if we stop wasting it. Complete, with the translator’s notes; about an hour to read.</p>
 
 ## Introduction
 
@@ -34,7 +34,7 @@ Its claim comes in the first chapter: “It is not that we have a short space of
 
 Much of the detail is Roman: consuls, games, legacy-hunters, the emperor Augustus longing for rest. Very little of the argument is. The busy man of chapter 7 who cries out “I have no chance to live” is easy to recognise.
 
-The essay takes about an hour to read. One way is to read it straight through once, then a chapter a day. Basore’s notes explain the Roman names and quotations and can be left for later; the four marked “Editors’ note” are ours and show where the argument turns.
+The essay takes about an hour to read. One way is to read it straight through once, then a chapter a day. Basore’s notes explain the Roman names and quotations and can be left for later. The four marked “Editors’ note” are ours: three mark where the argument turns, one is on the essay’s date.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -151,19 +151,19 @@ And so when you see a man often wearing the robe of office, when you see one who
 
 ## About this translation
 
-The translation is by John W. Basore (1870–1959). It was published in 1932 in the Loeb Classical Library, in the second volume of Seneca’s *Moral Essays* (London: William Heinemann), with the Latin on the facing pages. The text is complete. The forty-seven numbered notes without a label are Basore’s: they name the people and places Seneca mentions and give the sources of his quotations, sometimes in Latin or Greek. The four notes marked “Editors’ note” are ours.
+The translation is by John W. Basore (1870–1959). It was published in 1932 in the Loeb Classical Library, in the second volume of Seneca’s *Moral Essays* (London: William Heinemann; New York: G. P. Putnam’s Sons), with the Latin on the facing pages. The text is complete. The forty-seven numbered notes without a label are Basore’s: they name the people and places Seneca mentions and give the sources of his quotations, sometimes in Latin or Greek. The four notes marked “Editors’ note” are ours.
 
 The chapter numbers I to XX are the traditional ones, and each chapter has its own link: [/seneca-on-the-shortness-of-life#17](/seneca-on-the-shortness-of-life#17) is chapter XVII. The printed Loeb also numbers smaller sections within chapters, but the copies of it online leave them out, so links here go only to chapters.
 
 ## Source and licence
 
-**Source.** The text was taken from [Wikisource](https://en.wikisource.org/wiki/On_the_shortness_of_life) on 20 November 2026 and compared with it word for word by script. A second online copy, at Forum Romanum (the source of an earlier version of this page, now offline), was read from the [Internet Archive](http://web.archive.org/web/20061207132316/http://www.forumromanum.org/literature/seneca_younger/brev_e.html) and compared too. Where Wikisource drops one of Basore’s notes (on Scipio’s exile at Liternum, chapter 17) and misplaces two others, the Forum Romanum copy has been followed. An opening quotation mark missing at the start of chapter 17 and a doubled full stop in one note have been put right, and straight quotation marks made curly. No other word has been changed. Every change, and the readings where the two copies differ, are listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/seneca-on-the-shortness-of-life/NOTES.md).
+**Source.** The text was taken from [Wikisource](https://en.wikisource.org/wiki/On_the_shortness_of_life) on 20 November 2026 and compared with it word for word by script. A second online copy, at Forum Romanum (the source of an earlier version of this page, now offline), was read from the [Internet Archive](http://web.archive.org/web/20061207132316/http://www.forumromanum.org/literature/seneca_younger/brev_e.html) and compared too. Where Wikisource drops one of Basore’s notes (on Scipio’s exile at Liternum, chapter 17) and misplaces two others, the Forum Romanum copy has been followed. An opening quotation mark missing in chapter 17 and a doubled full stop in one note have been put right, and straight quotation marks made curly. No other word has been changed. Every change, and the readings where the two copies differ, are listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/seneca-on-the-shortness-of-life/NOTES.md).
 
-**Licence.** Basore’s translation was published in 1932 and its copyright was not renewed, so it is in the public domain in the United States. Basore died in 1959, so in countries where copyright lasts seventy years after the author’s death, such as the UK and the EU, it stays in copyright until the end of 2029. It is published here in full. If you hold the rights and want this changed, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the editors’ notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+**Licence.** Basore’s translation was published in 1932, in London and New York. Wikisource records that its US copyright was not renewed, which would make it public domain in the United States; HathiTrust, though, still treats the volume as in copyright, so we say “probably”. Basore died in 1959, so in countries where copyright lasts seventy years after the author’s death, such as the UK and the EU, it stays in copyright until the end of 2029. It is published here in full. If you hold the rights and want this changed, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the editors’ notes, About this translation and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Download
 
-[On the Shortness of Life (EPUB)](/downloads/seneca-on-the-shortness-of-life.epub): the introduction, the essay with all the notes, and the source and licence.
+[On the Shortness of Life (EPUB)](/downloads/seneca-on-the-shortness-of-life.epub): the introduction, the essay with all the notes, About this translation, and the source and licence.
 
 </article></div></div>
 </div>
@@ -266,10 +266,10 @@ The chapter numbers I to XX are the traditional ones, and each chapter has its o
 
 [^47]: *i.e.*, as if they were children, whose funerals took place by night (Servius, *Aeneid*, xi. 143).
 
-[^e1]: *Editors’ note.* The whole essay in one sentence. Chapters 2 to 9 show how time is wasted; chapters 10 to 17 set the busy life against the life given to philosophy; chapters 18 to 20 turn to Paulinus himself.
+[^e1]: *Editors’ note.* The whole essay in one sentence. Chapters 2 to 9 show how time is wasted; chapters 10 to 17 set the busy life against the life given to philosophy, which Seneca describes from chapter 14; chapters 18 to 20 turn to Paulinus himself.
 
-[^e2]: *Editors’ note.* This remark has been used to date the essay. The emperor Claudius extended the *pomerium* in 49 or 50 CE, so if Seneca wrote this before then, the essay is from about 49. The historian Miriam Griffin read it instead as Seneca reporting a pedant’s claim that Claudius had no right to do so, which would make the essay later; she suggested about 55.
+[^e2]: *Editors’ note.* This remark has been used to date the essay. The emperor Claudius extended the *pomerium* in 49 or 50 CE. Seneca names Sulla as the last to extend it, which suggests he wrote before then, in about 49. The historian Miriam Griffin read it instead as Seneca reporting a pedant’s claim that Claudius had no right to do so, which would make the essay later; she suggested about 55.
 
-[^e3]: *Editors’ note.* The turn of the essay. After eight chapters on the busy, Seneca says who the leisured are; Basore’s note on *otiosi* in chapter 12 points here.
+[^e3]: *Editors’ note.* Here, after thirteen chapters on the busy, Seneca says at last who the leisured are. Basore’s note on *otiosi* in chapter 12 points here.
 
-[^e4]: *Editors’ note.* From here Seneca speaks to Paulinus directly. As the official in charge of Rome’s grain supply (see Basore’s first note) he held a post of real importance. Miriam Griffin suggested that the essay was written to give him a reason to retire early.
+[^e4]: *Editors’ note.* Here Seneca turns back to Paulinus. As the official in charge of Rome’s grain supply (see Basore’s first note) he held a post of real importance. Miriam Griffin suggested that the essay was written to give him a reason to retire early.
