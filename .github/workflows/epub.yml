@@ -1,0 +1,67 @@
+name: EPUB
+
+# Rebuilds every published EPUB when an edition, the builder or its stylesheet changes on main,
+# checks them with epubcheck, and commits the ones that changed back to main. Flowershow has no
+# build step, so the committed files are what the site serves. See docs/guides/epub.md.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.md"
+      - "scripts/epub"
+      - "scripts/epub.css"
+      - ".github/workflows/epub.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: epub
+  cancel-in-progress: false
+
+jobs:
+  epub:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # the build reads each source's last commit date
+
+      - name: Install Pandoc 3.10.1, epubcheck 5.4.0 and PyYAML
+        run: |
+          curl -fsSL -o pandoc.deb https://github.com/jgm/pandoc/releases/download/3.10.1/pandoc-3.10.1-1-amd64.deb
+          curl -fsSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
+          sudo apt-get install -y ./pandoc.deb python3-yaml default-jre-headless
+          unzip -q epubcheck.zip -d "$HOME/epubcheck"
+          printf '#!/bin/sh\nexec java -jar "%s/epubcheck-5.4.0/epubcheck.jar" "$@"\n' "$HOME" | sudo tee /usr/local/bin/epubcheck > /dev/null
+          sudo chmod +x /usr/local/bin/epubcheck
+          pandoc --version | head -1
+          epubcheck --version
+
+      - name: Build, check and commit the EPUBs that changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # A push from this job does not start another run: GITHUB_TOKEN pushes trigger no workflows,
+          # and the commit touches only downloads/, which the paths filter leaves out.
+          for attempt in 1 2 3; do
+            scripts/epub --all
+            git add downloads
+            if git diff --cached --quiet; then
+              echo "EPUBs unchanged; nothing to commit"
+              exit 0
+            fi
+            git commit -q -m "EPUB: rebuild from source [skip ci]"
+            if git push -q origin HEAD:main; then
+              echo "pushed attempt $attempt"
+              exit 0
+            fi
+            # main moved on: drop this commit, rebuild from the new main, try again
+            git fetch -q origin main
+            git reset -q --hard origin/main
+          done
+          echo "could not push after 3 attempts" >&2
+          exit 1
