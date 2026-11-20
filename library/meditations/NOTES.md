@@ -68,3 +68,20 @@ Doubtful, left as in the source:
 - Footnotes: 147 references (134 notes + 13 introduction notes), 147 definitions, none missing either way.
 - Words, Books 1–12: `source.md` 34,923, draft 34,912, after normalising quotes, dashes, Markdown and HTML. All 17 differences are explained: the book headings (Pandoc splits the small capitals into "B ook 2" and the draft writes "Book 2: On the River Gran, Among the Quadi"; Book 1's title words sit before the first section in the source: 14 fewer words in the draft) and the five fixes above (three of them split a joined word: 3 more words).
 - Words, Introduction, Notes and Index: the only differences are small capitals that Pandoc splits ("A LEXANDER") and the note numbers and lemma keys that became footnote labels.
+
+## The edition page (meditations.md), 2026-11-20
+
+Edition: `/meditations` (`meditations.md`). Made for bead sutras-m2v.7.13 (track `newtexts`); built by `library/meditations/make_page.py` from `edition-draft.md`, so the words are the draft's. Rebuild with `python3 library/meditations/make_page.py`.
+
+- **Passage ids:** 499 sections (488 standard, 11 split entries such as 4.49a), each in its own `<div class="rs-passages">` starting with `<a class="v" id="4.3" href="#4.3">4.3</a>`. Hays's printed section numbers are dropped from the text; the link shows the id. Twelve book headings carry the ids `1` to `12`.
+- **Notes:** Hays's 134 notes are footnotes at the words they explain; his 13 introduction notes are footnotes in his introduction. The two book-title notes (on Books 2 and 3) sit on each book's first entry, not in the heading, because the contents rail copies heading text.
+- **Our parts:** in brief, introduction (signed as drafted with an AI assistant), contents list, the "About this translation" lead, and Source and licence. Nothing of ours is in Hays's text.
+- **Rufus's notes:** `annotations/meditations.yaml` (122 notes) checked by `scripts/notes meditations` against `meditations.md`, and shown in the margin through `js/notes/meditations.js` and `js/notes.js`. Its `text:` field now points at `meditations.md` (it pointed at the draft).
+- **Hays's introduction and index** follow the text under About this translation. Index references are links to the entries (`/meditations#4.3`).
+- **EPUB:** `downloads/meditations.epub`, via `scripts/epub`. It has all 499 ids and no broken internal links. Known faults, filed: an empty "Contents" label from the web rail (sutras-ypl), and the "Online" line says each stanza has its own link (sutras-m2v.8.6).
+
+## Checks
+
+- `library/meditations/compare.py` compares the page's words with the draft, book by book, with Hays's introduction, index and translator note: **0 unlisted differences** (2 listed: our headings "Introduction by Gregory Hays" and "About the translator"). Markup, printed numbers and passage links are removed on both sides before comparing.
+- The draft against the EPUB was checked earlier (see "Checks (2026-11-20)" above): 34,912 words against 34,923 in the EPUB text, every difference explained.
+- `scripts/check` passes on `meditations.md`.
