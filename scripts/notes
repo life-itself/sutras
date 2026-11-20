@@ -77,7 +77,7 @@ def front_matter_end(md):
 
 def passage_region(md, pid):
     """The Markdown of passage pid: from the element with that id to the next passage of the same kind
-    (a.v numbers; headings that link to themselves; else the same tag with an id) or the next ## heading.
+    (a.v numbers; headings of the same level; else the same tag with an id) or the next ## heading.
     As in js/notes.js, the words of a passage number or heading are not part of the passage."""
     m = re.search(r"<(\w+)\b[^>]*\sid=\"%s\"[^>]*>" % re.escape(pid), md)
     if not m:
@@ -91,11 +91,11 @@ def passage_region(md, pid):
             start = close.end()
     if is_v:
         same = r'<a\b(?=[^>]*\sclass="(?:[^"]*\s)?v(?:\s[^"]*)?")[^>]*\sid="[^"]+"'
-    elif re.fullmatch(r"h[1-6]", tag):
-        same = r'<%s\b[^>]*\sid="([^"]+)"[^>]*>\s*<a\s[^>]*href="#' % tag
+    elif re.fullmatch(r"h[1-6]", tag):    # the next heading of the same level (reading.js gives every heading an id)
+        same = r'<%s\b|^%s\s' % (tag, "#" * int(tag[1]))
     else:
         same = r'<%s\b[^>]*\sid="[^"]+"' % tag
-    nxt = re.compile(same, flags=re.I).search(md, start)
+    nxt = re.compile(same, flags=re.I | re.M).search(md, start)
     stop = re.search(r"</article>|^##\s|<h2\b", md[start:], flags=re.M)   # a passage never runs past a section heading
     ends = [len(md)] + ([nxt.start()] if nxt else []) + ([start + stop.start()] if stop else [])
     return md[start:min(ends)]

@@ -78,10 +78,10 @@
     return f;
   }
 
-  // Passages of the same kind: a.v numbers; headings that link to themselves; else the same tag with an id.
+  // Passages of the same kind: a.v numbers; headings of the same level; else the same tag with an id.
   function kindOf(el) {
     if (el.matches("a.v")) return function (x) { return x.matches("a.v[id]"); };
-    if (/^H[1-6]$/.test(el.tagName)) return function (x) { return x.tagName === el.tagName && !!x.id && !!x.querySelector("a[href='#" + CSS.escape(x.id) + "']"); };
+    if (/^H[1-6]$/.test(el.tagName)) return function (x) { return x.tagName === el.tagName; };
     return function (x) { return x.tagName === el.tagName && !!x.id; };
   }
   function passageBounds(pid) {
