@@ -2,7 +2,7 @@
 
 ## What this project is
 
-Sutras (sutras.lifeitself.org) — a library of wisdom teachings, published with Flowershow. Being re-visioned from November 2026: see the open epic in Beads (`bd list`) and `docs/2026-11-18-current-state.md`. Sister project and pattern reference: `life-itself/wilber-wiki`.
+Sutras (sutras.lifeitself.org) — a library of wisdom teachings, published with Flowershow. Being re-visioned from November 2026: see `docs/vision.md` (purpose, audience, what it is not), `docs/brand.md`, the open epic in Beads (`bd list`) and `docs/2026-11-18-current-state.md`. Sister project and pattern reference: `life-itself/wilber-wiki`.
 
 ## Work tracking
 
