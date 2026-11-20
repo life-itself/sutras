@@ -56,6 +56,7 @@ def main(slug):
 
     # web-only header
     body = re.sub(r"(?s)<header class=\"rs-head\">.*?</header>\n", "", body)
+    body = re.sub(r"(?s)<nav class=\"rs-rail\".*?</nav>\n?", "", body)  # web contents rail; the book has its own
     # in brief and signature: keep the words, drop the web classes
     body = re.sub(r'<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> (.*?)</p>', r'<p class="inbrief">\1</p>', body)
     body = body.replace('<p class="rs-signed">', '<p class="signed">')
