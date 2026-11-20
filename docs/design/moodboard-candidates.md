@@ -67,7 +67,7 @@ Everything scanned for the Sutras mood board on 2026-11-20, with one line on why
 
 | Site | Verdict | Why |
 |---|---|---|
-| plumvillage.org/library/sutras/discourse-on-love | **Kept** | A brushed name, then "Sutras / Discourse on Love" in a warm brown italic, the source line, the text. The warmth is a hand and a face, not a palette. |
+| plumvillage.org/library/sutras/discourse-on-love | set aside by Rufus | Was on the first board. Rufus: "not really, not at all… too warm. I don't really buy the Plum Village stuff at all." Now the ceiling for "warmer". |
 | plumvillage.org home | held | The brushed name again beside monks; the sutra page is the better case. |
 | suttacentral.net, Dhammapada | **Kept** | Short verse on a faintly warm ground, no numbers in sight, a long pause before the first line. The quietest reading page found. |
 | lionsroar.com | dropped | A magazine grid with coloured dots. |
@@ -111,7 +111,7 @@ Typewolf, siteInspire (editorial), Hoverstat.es, Fonts In Use, Minimal Gallery a
 | Object | Verdict | Why |
 |---|---|---|
 | Diamond Sutra, 868, frontispiece and first columns (British Library Or.8210/P.2; via Wikimedia Commons, public domain) | **Kept** | The oldest dated printed book, and it is one of ours. The ruled columns are a frame that then gets out of the way. |
-| Zhao Mengfu, Heart Sutra handscroll, Yuan dynasty (Wikimedia Commons, public domain) | **Kept** | Running script in ruled columns with the red seals of later owners: the text, and the marks of the readers who came before. |
+| Zhao Mengfu, Heart Sutra handscroll, Yuan dynasty (Wikimedia Commons, public domain) | set aside as a page form; held as imagery | Was on the first board. Rufus: "takes us too much that way, though… having this kind of imagery of scrolls and so on is nice." |
 | Lotus Sutra, Jingoji, late Heian, gold and silver on indigo (Wikimedia Commons, public domain) | **Kept** | Gold columns on near-black paper beside a frontispiece. Reverence as a page, not as ornament. |
 | Lotus Sutra, Medicinal Herbs chapter, 12th c. (Met, CC0) | held | Jingoji says it in one image. |
 | Goryeo Lotus Sutra, c. 1340 (Met, public domain) | held | Same family. |
@@ -168,3 +168,8 @@ After an art-director review of the first cut ("where is the true beauty in this
 Cut by the review and now **held**: the Emergence Song-poem verse as a direction image (white, nav-heavy; kept as a detail), Aldus 1501 (mostly border), the Diamond Sutra frontispiece (dense, the opposite of a frame that gets out of the way), the Cao Quan rubbing (a skewed photo, and a second night image for a light-only site), SuttaCentral (plain; its virtue, hidden numbers, cannot be seen), the Seeds design-system cover specimen (a metadata table on black).
 
 Rufus asked (2026-11-20) for 5–10 directions at most, a few details, and a shortlist of 3–4, so everything marked **held** above stays in this file and off the page.
+
+
+## Rufus's reactions to the first board
+
+Loved: Kaikado ("almost even better than the Co–Star"), Emergence ("particularly that page"). Liked: Co–Star for its cleanness and images, not its fonts; Fitzcarraldo for EPUB and PDF covers, colour open (warm red vs cool blue). Set aside: Plum Village (too warm), the Zhao Mengfu seals as a page form. Asked for: a funky option. Pass 7 below widens accordingly.

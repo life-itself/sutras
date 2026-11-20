@@ -64,3 +64,18 @@ Verse (*Faith in Mind*, Shodoka, Dhammapada), prose (Seneca, *Meditations*), cas
 - How much of the East Asian inheritance (red and black, vertical title, the ruled block) is right for a library that also holds Seneca and Marcus Aurelius?
 - Is the home page a list or a place?
 - Three things Rufus already finds beautiful, on paper or screen. Default if unanswered: the archive in ux-patterns stands in.
+
+## Rufus's reactions to the first board (2026-11-20, evening)
+
+Quoted, with scope, from his reply to the six-and-two board:
+
+- **Kaikado:** "I love the tea caddies in a row." "Very clean… almost even better than the Co–Star."
+- **Emergence:** "I love the emergence magazine, particularly that page that we've got." "If I were following something emergence, this is really very good."
+- **Co–Star:** "just very clean. It's very beautiful and clean. I like the fact that it has images a lot. I think the images are something that would add here, of some kind, to a textual site. Charming." But: "I'm not sure I would be using the fonts or other things from it." Then, clarifying: "co-star not just images per se but how they weave into the page and the layout but not sure so relevant for us. so more some inspiration."
+- **Fitzcarraldo:** "these look great, potentially for the epubs, or if we produce PDFs." On colour: "Blue can be quite cold. I like the red of the page on emergence, on that particular example, and the scroll behind it, but I also like the blue of the Fitzcarraldo covers."
+- **Plum Village:** "not really, not at all. It's not got the beauty and elegance. It's nice, but it's too warm. I don't really buy the Plum Village stuff at all."
+- **Zhao Mengfu, the seals:** "not really… I think this takes us too much that way, though. I think having this kind of imagery of scrolls and so on is nice."
+- **Funky:** "I think we could go something also a bit funkier… I don't know if we have any funky options." "That would take us in a very different direction."
+- "I'm open here."
+
+What follows for the next board: widen towards Emergence and Kaikado (quiet, clean, with images); show what images could do on a textual site (drawn or photographed objects, scroll and ink imagery as pictures rather than as page forms); find a genuinely funky option; set Plum Village and the seals aside; carry the colour question (a warm red versus a cool blue) as a small strip. "A little warmer" now has a ceiling: Plum Village is past it.

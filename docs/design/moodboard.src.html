@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: pictures to look at. One column, each image full width, a line or two under it. White, so the images carry the colour. Light only, by choice. */
+/* Layout: pictures to look at, grouped. White, so the images carry the colour; light only by choice. Large images one across in the main groups, two across where a group is a set, a small strip for colour and for what was set aside. */
 :root{
   --bg:#ffffff; --ink:#1d1d1b; --muted:#6a6762; --rule:#e2e0da; --wash:#f6f5f2;
   --ui:"Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -19,28 +19,40 @@ a:hover{text-decoration-color:var(--ink)}
 a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 h1,h2,h3{text-wrap:balance;margin:0;font-weight:500;font-family:var(--serif)}
 h1{font-size:clamp(34px,5vw,52px);line-height:1.05;letter-spacing:-.01em}
-h2{font-size:22px;font-style:italic;font-weight:400;color:var(--muted);margin:0 0 6px}
-h3{font-size:clamp(22px,3vw,30px);line-height:1.15}
+h2{font-size:26px;font-weight:500;margin:0 0 4px}
+h3{font-size:clamp(20px,2.6vw,26px);line-height:1.2}
 p{margin:0 0 12px}
 .mast{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;color:var(--muted);font-size:13.5px;border-bottom:1px solid var(--ink);padding-bottom:10px}
 .mast b{color:var(--ink);font-weight:600}
 .top{padding:44px 0 8px;max-width:70ch}
 .top p{font-size:17px;line-height:1.5}
 .top p.small{font-size:14.5px;color:var(--muted)}
-section{padding-top:64px}
-.ref{padding:40px 0 0}
-.ref+.ref{margin-top:24px;border-top:1px solid var(--rule)}
-.ref .k{font-family:var(--serif);font-size:15px;color:var(--muted);font-variant-numeric:tabular-nums;display:block;margin-bottom:6px}
-.ref figure{margin:14px 0 0;min-width:0}
+section{padding-top:72px;border-top:1px solid var(--ink);margin-top:40px}
+section>p.lead{color:var(--muted);max-width:70ch;margin-bottom:8px}
+.ref{padding:28px 0 0}
+.ref figure{margin:10px 0 0;min-width:0}
 .ref img{display:block;width:100%;max-width:100%;border:1px solid var(--rule)}
+.ref img.fit{background:var(--wash)}
 .ref figcaption{font-size:13px;color:var(--muted);padding-top:7px}
-.ref .lines{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px 40px;margin-top:12px}
-.tk,.lv{display:block;font-size:15px;line-height:1.5}
+.ref .lines{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px 40px;margin-top:10px}
+.ref .lines.one{grid-template-columns:minmax(0,1fr)}
+.tk,.lv,.yo{display:block;font-size:15px;line-height:1.5}
 .tk::before{content:"take → ";font-weight:600}
 .lv{color:var(--muted)}
 .lv::before{content:"leave → ";font-weight:600;color:var(--ink)}
-.anti .ref img{max-width:720px}
-.before img{max-width:720px}
+.yo{color:var(--muted)}
+.yo::before{content:"you → ";font-weight:600;color:var(--ink)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 22px;margin-top:8px}
+.two .ref{padding-top:12px}
+.two .ref img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+.two .ref img.tall{aspect-ratio:auto;max-height:560px;width:auto;margin:0 auto;object-fit:contain}
+.strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:22px 18px;margin-top:8px}
+.strip figure{margin:0;min-width:0}
+.strip img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border:1px solid var(--rule)}
+.strip img.fit{object-fit:contain;background:var(--wash)}
+.strip figcaption{font-size:13.5px;padding-top:7px;line-height:1.45}
+.strip figcaption b{font-weight:600;display:block}
+.strip figcaption span{color:var(--muted)}
 .ask{max-width:70ch;margin-top:12px;font-size:17px;line-height:1.5}
 .ask li{margin-bottom:6px}
 footer{margin-top:72px;border-top:1px solid var(--ink);padding-top:10px;color:var(--muted);font-size:13px}
@@ -49,91 +61,114 @@ footer{margin-top:72px;border-top:1px solid var(--ink);padding-top:10px;color:va
 </style>
 
 <div class="wrap">
-<div class="mast"><span><b>Sutras</b> · mood board</span><span>First board · 20 November 2026 · six references, two anti-patterns</span></div>
+<div class="mast"><span><b>Sutras</b> · mood board</span><span>Second board · 20 November 2026 · widened from your reactions to the first</span></div>
 
 <header class="top">
-  <h1>Sutras: a first mood board</h1>
-  <p>Six existing things to look at, and two we are not. A small board on purpose: say which of these you feel something for, which leave you cold, and where to look further, and the next board widens from that. Behind this page sit a hundred candidates already captured and a <a href="https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr">separate page of five directions</a> read from them; both change with what you say here.</p>
-  <p class="small">Each image is captured at the moment that matters, which is often scrolled down from the top. Nothing is mocked up. Museum images are open-licence and credited.</p>
+  <h1>Sutras: mood board, widened</h1>
+  <p>You loved Kaikado and the Emergence page, found Co–Star clean and its use of images charming (as inspiration, not a model), saw Fitzcarraldo as the cover for EPUBs and PDFs, set Plum Village aside as too warm and the seals as too far, and asked for something funkier. So this board keeps the three you loved and widens in three directions: more like Emergence and Kaikado, images for a textual site, and a funkier option. A colour strip carries the red-or-blue question.</p>
+  <p class="small">Captured at the moment that matters, often scrolled; nothing mocked up; museum images open-licence and credited. The <a href="https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr">five directions</a> page will be rewritten from what you say here.</p>
 </header>
 
-<section id="refs">
-<h2>Six references</h2>
-
-<article class="ref">
-  <span class="k">1</span>
-  <h3>Emergence Magazine: the opening of a poem</h3>
-  <figure><img src="{{shot:emergence-poem-redpine}}" alt="A Chinese ink landscape of mountains and pines with a salmon-pink brush stroke across it, on warm grey paper, the word POEM in small tracked capitals beneath"><figcaption><a href="https://emergencemagazine.org/poem/red-pine/">emergencemagazine.org/poem/red-pine</a>: Cold Mountain and Stonehouse, translated by Red Pine. The first screen; the poem follows below it in a narrow serif column, Chinese above English.</figcaption></figure>
-  <div class="lines"><span class="tk">warm grey paper; one quiet image per text, an old landscape with one modern stroke; the long breath before the first line.</span><span class="lv">a full screen of art before every page; the magazine nav; a slight sleekness.</span></div>
-</article>
-
-<article class="ref">
-  <span class="k">2</span>
-  <h3>Plum Village: a sutra page</h3>
-  <figure><img src="{{shot:plumvillage-sutra}}" alt="A brushed handwritten Plum Village name, then Sutras / Discourse on Love in brown and italic, the source line, Play and Download Audio, and the text beside a small woodcut"><figcaption><a href="https://plumvillage.org/library/sutras/discourse-on-love">plumvillage.org/library/sutras/discourse-on-love</a>. Your “a little more Plum Village”.</figcaption></figure>
-  <div class="lines"><span class="tk">the brushed name as the only ornament; the title with its source line under it; the text starting at once in a generous serif.</span><span class="lv">the Play and Download buttons above the first line; the picture floated into the text; the yellows elsewhere on the site.</span></div>
-</article>
-
-<article class="ref">
-  <span class="k">3</span>
-  <h3>Co–Star: the black band</h3>
-  <figure><img src="{{shot:costar-scroll}}" alt="A black band with a grey moon, a grey hand and a grey skull, three short grey paragraphs beneath, then a birth chart on near-white"><figcaption><a href="https://www.costarastrology.com">costarastrology.com</a>, the second screen. Your reference for stripped down.</figcaption></figure>
-  <div class="lines"><span class="tk">the nerve to leave a screen almost empty; three objects given a whole screen; one typeface for everything; texture from a faint line drawing, not colour.</span><span class="lv">the cold, the centring, the knowing tone, the small text.</span></div>
-</article>
-
-<article class="ref">
-  <span class="k">4</span>
-  <h3>Kaikado: tea caddies in a row</h3>
-  <figure><img src="{{shot:kaikado}}" alt="Seven copper tea caddies of rising size in a row on a pale grey ground, a small brushed shop mark with a red seal above them"><figcaption><a href="https://www.kaikado.jp/english/">kaikado.jp</a>, Kyoto, tea caddies since 1875. The first screen.</figcaption></figure>
-  <div class="lines"><span class="tk">how much of the page is empty; a grey ground rather than white; things in a row with room between them, which is how a short list of texts could look; one brushed mark.</span><span class="lv">nothing much; it is a shop below this screen.</span></div>
-</article>
-
-<article class="ref">
-  <span class="k">5</span>
-  <h3>Zhao Mengfu: the Heart Sutra, with its readers' seals</h3>
-  <figure><img src="{{shot:heart-sutra-zhao}}" alt="Running script in black ink in columns on gold-brown paper, with the red seals of later owners stamped at the top"><figcaption>Zhao Mengfu, <i>Heart Sutra</i>, Yuan dynasty, handscroll (detail). Wikimedia Commons, public domain. Not a website: the most beautiful thing found in the whole scan.</figcaption></figure>
-  <div class="lines"><span class="tk">black text as one continuous surface; red for nothing but the marks around it; the seals are literally the marks of earlier readers, which is what your notes in the margin are.</span><span class="lv">copying it: vertical text, a scroll layout or a seal-script wordmark would be costume.</span></div>
-</article>
-
-<article class="ref">
-  <span class="k">6</span>
-  <h3>Fitzcarraldo Editions: the covers</h3>
-  <figure><img src="{{shot:fitzcarraldo}}" alt="Two photographed paperbacks: one white with a blue frame and spaced capitals, one plain blue with white spaced capitals, author above and title in the middle"><figcaption><a href="https://fitzcarraldoeditions.com">fitzcarraldoeditions.com</a>. The covers are the whole identity: blue for fiction, white for essays.</figcaption></figure>
-  <div class="lines"><span class="tk">one colour, spaced capitals, author and title and nothing else; a house style that never changes; each text as an edition with a cover, and the EPUB the same object.</span><span class="lv">the shop: basket, breadcrumbs, books photographed in rooms.</span></div>
-</article>
+<section id="kept">
+<h2>Kept from the first board</h2>
+<div class="two">
+  <article class="ref"><h3>Kaikado</h3><figure><img src="{{shot:kaikado}}" alt="Seven copper tea caddies of rising size in a row on pale grey, a brushed shop mark above"><figcaption><a href="https://www.kaikado.jp/english/">kaikado.jp</a></figcaption></figure><div class="lines one"><span class="yo">"I love the tea caddies in a row… very clean, almost even better than the Co–Star."</span></div></article>
+  <article class="ref"><h3>Emergence Magazine, a poem's opening</h3><figure><img src="{{shot:emergence-poem-redpine}}" alt="A Chinese ink landscape with a salmon-pink brush stroke across it on warm grey paper, POEM beneath"><figcaption><a href="https://emergencemagazine.org/poem/red-pine/">emergencemagazine.org/poem/red-pine</a></figcaption></figure><div class="lines one"><span class="yo">"I love the emergence magazine, particularly that page."</span></div></article>
+  <article class="ref"><h3>Co–Star, as inspiration</h3><figure><img src="{{shot:costar-scroll}}" alt="A black band with a grey moon, hand and skull above three short paragraphs"><figcaption><a href="https://www.costarastrology.com">costarastrology.com</a></figcaption></figure><div class="lines one"><span class="yo">"very beautiful and clean… not just images per se but how they weave into the page and the layout; not sure so relevant for us, so more some inspiration." Not the fonts.</span></div></article>
+  <article class="ref"><h3>Fitzcarraldo, for the covers</h3><figure><img src="{{shot:fitzcarraldo}}" alt="Two paperbacks: white with a blue frame, and plain blue, spaced capitals"><figcaption><a href="https://fitzcarraldoeditions.com">fitzcarraldoeditions.com</a></figcaption></figure><div class="lines one"><span class="yo">"these look great, potentially for the epubs, or if we produce PDFs." Colour open: "blue can be quite cold."</span></div></article>
+</div>
 </section>
 
-<section class="anti" id="not">
-<h2>Two we are not</h2>
+<section id="more">
+<h2>More like Emergence and Kaikado</h2>
+<p class="lead">Quiet pages with one image given room, and objects photographed plainly on a pale ground.</p>
 
 <article class="ref">
-  <span class="k">a</span>
-  <h3>Terebess: the archive</h3>
-  <figure><img src="{{shot:terebess}}" alt="Faith in Mind as yellow and green links on a maroon background, a contents list before any text"><figcaption><a href="https://terebess.hu/english/hsin3.html">terebess.hu</a>, our own source for <i>Faith in Mind</i>. Everything is here and none of it can be read.</figcaption></figure>
+  <h3>Emergence: the opening of an essay</h3>
+  <figure><img src="{{shot:emergence-essay-art2}}" alt="A waxwing on a branch against blue sky, overlaid with a scatter of small coloured dots, centred on a white page with nothing else"><figcaption><a href="https://emergencemagazine.org/essay/the-serviceberry/">emergencemagazine.org</a>, The Serviceberry (Robin Wall Kimmerer). One artwork, white around it, and then the title below.</figcaption></figure>
+  <div class="lines"><span class="tk">one commissioned or found image per text, printed small on a wide white page; the pause before anything is said.</span><span class="lv">the magazine's nav and store.</span></div>
 </article>
 
 <article class="ref">
-  <span class="k">b</span>
-  <h3>Daily Zen: the gift shop</h3>
-  <figure><img src="{{shot:dailyzen}}" alt="A brush drawing of a monk, a casual script font, a quote in a box, Send a Zen Card"><figcaption><a href="https://www.dailyzen.com">dailyzen.com</a>. Brush drawing, casual script, “Send a Zen card”. One step past Plum Village is this.</figcaption></figure>
+  <h3>Emergence: a drawn opening</h3>
+  <figure><img src="{{shot:emergence-essay}}" alt="A tall drawing of fine grey marks like woven cloth, centred on warm paper, nothing else on the screen"><figcaption><a href="https://emergencemagazine.org/essay/dendrochronology/">emergencemagazine.org</a>, Dendrochronology. The first screen.</figcaption></figure>
+  <div class="lines"><span class="tk">a drawing rather than a photograph; grey on warm paper; art that reads as texture, not illustration.</span><span class="lv">a whole screen of it before every page.</span></div>
 </article>
+
+<article class="ref">
+  <h3>Emergence: the poem itself</h3>
+  <figure><img src="{{shot:emergence-poem-song-scroll2}}" alt="Lines of Chinese verse, then DIM SCENT in small capitals, an italic attribution, and the English poem in a narrow serif column"><figcaption><a href="https://emergencemagazine.org/poem/poems-from-the-song-dynasty/">emergencemagazine.org</a>, Poems from the Song Dynasty, scrolled to the second poem. What their reading page looks like once the art is past.</figcaption></figure>
+  <div class="lines"><span class="tk">Chinese above English as equals; a small-caps title and an italic line for poet and translator; a narrow column with air.</span><span class="lv">white rather than the warm grey of the opening; the nav.</span></div>
+</article>
+
+<div class="two">
+  <article class="ref"><h3>Emergence: a diagram through the page</h3><figure><img src="{{shot:emergence-essay-seeds}}" alt="A circular diagram printed through a page of faint text, a two-line small-caps title beneath"><figcaption><a href="https://emergencemagazine.org/essay/seeds-and-our-coevolved-psyches/">emergencemagazine.org</a>, Seeds and Our Coevolved Psyches.</figcaption></figure><div class="lines one"><span class="tk">an old diagram as the one image; the title in two lines of small capitals.</span></div></article>
+  <article class="ref"><h3>Emergence: the print edition</h3><figure><img src="{{shot:emergence-print}}" alt="Print, a short paragraph, and a photograph of a grey printed volume"><figcaption><a href="https://emergencemagazine.org/print/">emergencemagazine.org/print</a>. Their books, shown plainly.</figcaption></figure><div class="lines one"><span class="tk">the book photographed flat on grey: how our EPUB and PDF could be presented.</span></div></article>
+  <article class="ref"><h3>Azmaya</h3><figure><img src="{{shot:azmaya}}" alt="A pale blue page with a tiny nav and a single porcelain bowl photographed in the centre"><figcaption><a href="https://www.azmaya.co.jp/">azmaya.co.jp</a>, Japanese tableware. The first screen.</figcaption></figure><div class="lines one"><span class="tk">one object, one pale colour, the smallest possible nav. The Kaikado nerve again.</span></div></article>
+  <article class="ref"><h3>Analogue Life</h3><figure><img src="{{shot:analoguelife}}" alt="A dark stoneware bowl photographed on white under a small serif name"><figcaption><a href="https://www.analoguelife.com/">analoguelife.com</a>, Japanese ceramics. The first screen.</figcaption></figure><div class="lines one"><span class="tk">a dark object on white and a quiet serif name; the shop shown as a single thing at a time.</span></div></article>
+</div>
 </section>
 
-<section class="before" id="before">
-<h2>The site today</h2>
-<article class="ref" style="padding-top:8px">
-  <figure style="margin-top:0"><img src="{{shot:before-fim}}" alt="Sutras today: Faith in Mind on a laptop, a white page with a red label, title, an In brief box and the introduction"><figcaption>sutras.lifeitself.org/faith-in-mind, 20 November 2026. Flowershow's default, tidied.</figcaption></figure>
+<section id="images">
+<h2>Images for a textual site</h2>
+<p class="lead">You said images would add something, and that scroll imagery is nice as pictures. Open-licence ink, calligraphy and objects could be the one image each text gets, in the manner of Emergence or Kaikado.</p>
+<div class="two">
+  <article class="ref"><h3>Sesshū, splashed ink</h3><figure><img class="tall fit" src="{{shot:sesshu}}" alt="A mountain and a few trees in wet grey strokes, most of the tall paper empty"><figcaption>Sesshū Tōyō, <i>Haboku Sansui</i>, 1495. Tokyo National Museum via Wikimedia Commons, public domain.</figcaption></figure></article>
+  <article class="ref"><h3>Sengai, three shapes</h3><figure><img src="{{shot:sengai}}" alt="A brush painting of a square, a triangle and a circle"><figcaption>Sengai Gibon, <i>Circle, Triangle, Square</i>. Wikimedia Commons, public domain.</figcaption></figure></article>
+  <article class="ref"><h3>Hakuin, one character</h3><figure><img class="tall fit" src="{{shot:hakuin-virtue}}" alt="One huge brushed character with small running script above"><figcaption>Hakuin Ekaku, <i>Virtue</i> (悳), 18th c. Met, CC0.</figcaption></figure></article>
+  <article class="ref"><h3>A moon jar</h3><figure><img src="{{shot:moonjar}}" alt="A white Joseon moon jar, slightly off-round, on a dark grey ground"><figcaption>Joseon moon jar. Cleveland Museum of Art, CC0.</figcaption></figure></article>
+</div>
+<p class="small" style="margin-top:14px;color:var(--muted)">All four could sit where Emergence puts its artwork: one per text, small, on a pale ground. The scroll you set aside (Zhao Mengfu's Heart Sutra) could return this way, as a picture rather than a page form.</p>
+</section>
+
+<section id="funky">
+<h2>A funkier option</h2>
+<p class="lead">Five pages with real personality. Two are from your own archive. None is a quiet reading page; the question is whether any of this energy belongs on Sutras at all.</p>
+
+<article class="ref">
+  <h3>Dirt</h3>
+  <figure><img src="{{shot:dirt}}" alt="A lime-green card with a three-circle Venn diagram of Are.na, Areal and Arial, a playful serif headline In the font family, a purple card below"><figcaption><a href="https://dirt.fyi/">dirt.fyi</a>, a newsletter about culture. Coloured cards, a wry serif, a diagram as the image.</figcaption></figure>
+  <div class="lines"><span class="tk">colour used as a card, not a ground; a diagram where others put a photo; a sense of humour.</span><span class="lv">most of it, for a sutra. It is a feed.</span></div>
 </article>
+
+<div class="two">
+  <article class="ref"><h3>The Poetry Project</h3><figure><img src="{{shot:poetryproject}}" alt="Large thin sans text: ) The Poetry Project ( Poetry sustains people and place, with the nav words in different colours"><figcaption><a href="https://www.poetryproject.org/">poetryproject.org</a>. The site is one running sentence; the nav is coloured words in it.</figcaption></figure><div class="lines one"><span class="tk">the nerve to make the whole page one sentence of type; nav as coloured words in prose.</span></div></article>
+  <article class="ref"><h3>Reading Design</h3><figure><img src="{{shot:readingdesign}}" alt="An orange page with a black cantilevered chair drawn behind a large serif title Reading Design"><figcaption><a href="https://www.readingdesign.org/">readingdesign.org</a>, an archive of design writing. One strong colour, one object, one serif.</figcaption></figure><div class="lines one"><span class="tk">a single saturated ground with one object on it; how far one colour can go.</span></div></article>
+  <article class="ref"><h3>Making Software (your archive)</h3><figure><img src="{{shot:makingsoftware}}" alt="A pixel-font title MAKING SOFTWARE in blue, blueprint-style drawings of a floppy disk and a screen"><figcaption><a href="https://www.makingsoftware.com/">makingsoftware.com</a>. You: "beautiful, elegant technical reference manual."</figcaption></figure><div class="lines one"><span class="tk">drawings in one ink doing all the work; a pixel title as the only flourish.</span></div></article>
+  <article class="ref"><h3>Departure Mono (your archive)</h3><figure><img src="{{shot:departuremono}}" alt="A pixel monospace title DEPARTURE MONO with a mock memo and a dot-matrix card on cream"><figcaption><a href="https://departuremono.com/">departuremono.com</a>. You: "beautiful, elegant, software-geeky energy."</figcaption></figure><div class="lines one"><span class="tk">warm cream with a geeky mono; paper objects laid on the page.</span></div></article>
+</div>
+</section>
+
+<section id="colour">
+<h2>Colour: the red-or-blue question</h2>
+<p class="lead">You like the red on the Emergence page and the Fitzcarraldo blue, and worry blue is cold. Three more ways one colour has been used on paper.</p>
+<div class="strip">
+  <figure><img class="fit" src="{{shot:doves}}" alt="A page of black type with one long red initial"><figcaption><b>One red stroke</b><span>Doves Press Bible, 1903. Wikimedia Commons, public domain.</span></figcaption></figure>
+  <figure><img src="{{shot:sor-home}}" alt="Large serif capitals on paper with two words in red"><figcaption><b>Red as an event in text</b><span><a href="https://seedsofrenaissance.org">seedsofrenaissance.org</a>, the sister project.</span></figcaption></figure>
+  <figure><img src="{{shot:jingoji}}" alt="Gold and silver columns of text on indigo paper"><figcaption><b>Gold on indigo</b><span>Lotus Sutra, Jingoji, late Heian. Wikimedia Commons, public domain. A third answer: neither red nor blue, but light on dark.</span></figcaption></figure>
+  <figure><img src="{{shot:emergence-poem-redpine}}" alt="An ink landscape with a salmon-pink stroke"><figcaption><b>The red you liked</b><span>Emergence: a warm, slightly orange red on grey, not a pure red.</span></figcaption></figure>
+</div>
+</section>
+
+<section id="aside">
+<h2>Set aside, in your words</h2>
+<div class="strip">
+  <figure><img src="{{shot:plumvillage-sutra}}" alt="Plum Village sutra page"><figcaption><b>Plum Village</b><span>"not really, not at all… too warm. I don't really buy the Plum Village stuff at all." Now the ceiling for "warmer".</span></figcaption></figure>
+  <figure><img src="{{shot:heart-sutra-zhao}}" alt="Zhao Mengfu's Heart Sutra with red seals"><figcaption><b>The seals as a page form</b><span>"takes us too much that way, though… having this kind of imagery of scrolls and so on is nice." Kept as possible imagery above.</span></figcaption></figure>
+  <figure><img src="{{shot:terebess}}" alt="Terebess"><figcaption><b>Terebess</b><span>Still the archive we are not.</span></figcaption></figure>
+  <figure><img src="{{shot:dailyzen}}" alt="Daily Zen"><figcaption><b>Daily Zen</b><span>Still the gift shop we are not.</span></figcaption></figure>
+</div>
 </section>
 
 <section id="ask">
 <h2>What would help</h2>
 <ul class="ask">
-  <li>Which of the six do you feel something for, and which leave you cold?</li>
-  <li>Where to look further: more like 1 and 2 (warm pages), more like 3 and 4 (empty rooms), more like 5 (the texts' own forms), more like 6 (books as objects), or somewhere not on this board?</li>
-  <li>Anything you already find beautiful, on paper or screen, that should be here.</li>
+  <li>Of the "more like" group, which pages feel right for a reading page, and which for the home?</li>
+  <li>Images: should each text get one picture (Emergence's way), or should the page stay bare (Kaikado's way, the objects being the texts)? And is open-licence ink and calligraphy the right kind of picture?</li>
+  <li>Funky: anything here you would want on Sutras, or is this a no, and we stay quiet?</li>
+  <li>Colour: the warm red, the cool blue, light on dark, or none until the specimens?</li>
 </ul>
 </section>
 
-<footer>Screenshots by headless Chromium, scrolled where noted. Everything scanned so far and why it was kept or dropped: <code>docs/design/moodboard-candidates.md</code>. The five directions read from the wider scan: <a href="https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr">Sutras: Five Directions</a>.</footer>
+<footer>Screenshots by headless Chromium, scrolled where noted. Everything scanned and why it was kept or dropped: <code>docs/design/moodboard-candidates.md</code>. Your reactions, quoted: <code>docs/design/brief.md</code>. The five directions page: <a href="https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr">Sutras: Five Directions</a>.</footer>
 </div>
