@@ -14,7 +14,7 @@ The earlier `diamond.md` was a copy of an older state of that Plum Village page 
 
 1. `library/diamond/compare.py diamond --emit` reads the sutra out of `source.txt` (between the second "THE VAJRACCHEDIKA PRAJÑAPARAM ITA" heading and the second "COMMENTARIES"), by the PDF layout: a centred number starts a section, an indented line starts a paragraph, an indented block after a blank line is a verse. It joins wrapped lines and prints the text as edition Markdown. The text was made from that output, not retyped.
 2. Each of the 32 sections has a passage id, its number: `/diamond#14`. The numbers are the book's, and follow the traditional 32-chapter division of the Chinese text (credited by Red Pine to Prince Chao-ming, 501–531). They are the same as in the Red Pine edition, so `#n` is the same passage in both.
-3. Verses (section 26, section 32) are set as block quotes. Five footnote markers were added.
+3. Verses (section 26, section 32) are set line by line, as in the source. Five footnote markers were added.
 4. `python3 library/diamond/compare.py diamond` compares the edition with `source.txt` word for word and fails on any difference not listed here. Result on 2026-11-20: 32 sections, 126 paragraphs and verses, 0 differences.
 
 ## Every change to the words

@@ -19,22 +19,22 @@ scripts:
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <a class="rs-kicker" href="/">Sutras</a>
 <h1>The Diamond Sutra</h1>
-<p class="rs-subtitle">The Diamond That Cuts through Illusion · <i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
+<p class="rs-subtitle">The Diamond That Cuts through Illusion<br><i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
 <p class="rs-attribution">Translated by Thich Nhat Hanh<br>Also in this library: <a href="/diamond-red-pine">Red Pine’s translation</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha, back from his almsround, answers one question from his disciple Subhuti: how should someone who wants to wake up live and train the mind? The answer is to free all beings while holding on to no idea of self, of beings, or even of the teaching. Here complete, all 32 sections, in Thich Nhat Hanh’s translation.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to live and train the mind: free all beings, while holding on to no idea of self, of beings, or even of the teaching. The complete text, all 32 sections, in Thich Nhat Hanh’s translation.</p>
 
 ## Introduction
 
-The *Diamond Sutra* (in Sanskrit *Vajracchedikā Prajñāpāramitā*, “the diamond that cuts through, perfection of wisdom”; in Chinese 金剛經) is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism. Nobody knows who composed it, or when: scholars have argued for dates from the second to the fifth century CE. Kumārajīva put it into Chinese around 401, and his version became the one most chanted in China and in Zen. A printed copy dated 868, found at Dunhuang, is the oldest dated printed book we have.
+The *Diamond Sutra* (in Sanskrit *Vajracchedikā Prajñāpāramitā*, “the diamond that cuts through, perfection of wisdom”; in Chinese 金剛經) is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism. Nobody knows who composed it; scholars have argued for dates from the second to the fifth century CE. Kumārajīva put it into Chinese around 401, and his became the version most chanted in China and in Zen. A printed copy dated 868, found at Dunhuang, is the oldest dated printed book we have.
 
-The setting is ordinary. The Buddha comes back from begging for his meal, washes his feet and sits down. Subhuti asks his question, and the Buddha answers: lead all beings to liberation, and do not think that a single being has been liberated. Then the same turn is applied to everything else: generosity, merit, the marks of a Buddha, the Buddha himself, and the teaching, which is “a raft”. One form of words comes back again and again: what is called X is not X, “that is why it is called” X.
+The Buddha comes back from begging for his meal, washes his feet and sits down. Subhuti asks his question, and the Buddha answers: lead all beings to liberation, and do not think that a single being has been liberated. Then the same turn is applied to everything else: generosity, merit, the marks of a Buddha, the Buddha himself, and the teaching, which is “a raft”. One form of words comes back again and again: what is called X is not X, “that is why it is called” X.
 
-Thich Nhat Hanh (1926–2022), the Vietnamese Zen teacher who founded the Plum Village tradition, translated it from the Sanskrit and from the Chinese (Taishō 235). In his book a long commentary follows the sutra, and his first advice is: “Don’t rush into the commentaries or you may be unduly influenced by them. Please read the sutra first.” It is about 6,000 words. One way in: read it straight through once, then a section a day. The few notes are ours, mostly quoting his commentary; they can wait for a second reading.
+Thich Nhat Hanh (1926–2022), the Vietnamese Zen teacher who founded the Plum Village tradition, translated it from the Sanskrit and from the Chinese (Taishō 235). In his book a commentary follows the sutra, and his first advice is: “Don’t rush into the commentaries or you may be unduly influenced by them. Please read the sutra first.” We find his English plain and easy to follow. It is about 6,000 words. One way in: read it straight through once, then a section a day. The few notes are ours, mostly quoting him; they can wait.
 
-Red Pine’s translation, from the Sanskrit, is also in this library. Both use the same 32 sections, so [/diamond#14](/diamond#14) and [/diamond-red-pine#14](/diamond-red-pine#14) are the same passage.
+For a translation from the Sanskrit alone, with its repetitions and its full closing verse, read [Red Pine’s translation](/diamond-red-pine), also in this library. Both use the same 32 sections, so [/diamond#14](/diamond#14) and [/diamond-red-pine#14](/diamond-red-pine#14) are the same passage.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -52,7 +52,7 @@ At that time, the Venerable Subhuti stood up, bared his right shoulder, put his 
 
 “World-Honored One, if sons and daughters of good families want to give rise to the highest, most fulfilled, awakened mind, what should they rely on and what should they do to master their thinking?”
 
-The Buddha replied, “Well said, Subhuti! What you have said is absolutely correct. The Tathagata always supports and shows special confidence in the bodhisattvas. Please listen with all of your attention and the Tathagata will respond to your question. If daughters and sons of good families want to give rise to the highest, most fulfilled, awakened mind, they should rely on the following and master their thinking in the following way.”
+The Buddha replied, “Well said, Subhuti! What you have said is absolutely correct. The Tathagata always supports and shows special confidence in the bodhisattvas.[^1] Please listen with all of your attention and the Tathagata will respond to your question. If daughters and sons of good families want to give rise to the highest, most fulfilled, awakened mind, they should rely on the following and master their thinking in the following way.”
 
 The Venerable Subhuti said, “Lord, we are so happy to hear your teachings.”
 
@@ -73,7 +73,7 @@ The Buddha said to Subhuti, “This is how the bodhisattva mahasattvas master th
 “Subhuti, if a bodhisattva does not rely on any concept when practicing generosity, then the happiness that results from that virtuous act is as great as space. It cannot be measured. Subhuti, the bodhisattvas should let their minds dwell in the teachings I have just given.”
 
 <a class="v" id="5" href="#5">5</a>
-“What do you think, Subhuti? Is it possible to grasp the Tathagata by means of bodily signs?”[^1]
+“What do you think, Subhuti? Is it possible to grasp the Tathagata by means of bodily signs?”
 
 “No, World-Honored One. When the Tathagata speaks of bodily signs, there are no signs being talked about.”
 
@@ -290,10 +290,10 @@ Subhuti said, “World-Honored One, I understand your teaching. One should not u
 
 Then the World-Honored One spoke this verse:
 
-> Someone who looks for me in form  
-> or seeks me in sound  
-> is on a mistaken path  
-> and cannot see the Tathagata.
+Someone who looks for me in form  
+or seeks me in sound  
+is on a mistaken path  
+and cannot see the Tathagata.
 
 <a class="v" id="27" href="#27">27</a>
 “Subhuti, if you think that the Tathagata realizes the highest, most fulfilled, awakened mind and does not need to have all the marks, you are wrong. Subhuti, do not think in that way. Do not think that when one gives rise to the highest, most fulfilled, awakened mind, one needs to see all objects of mind as nonexistent, cut off from life. Please do not think in that way. One who gives rise to the highest, most fulfilled, awakened mind does not contend that all objects of mind are nonexistent and cut off from life.”
@@ -325,10 +325,10 @@ Subhuti replied, “World-Honored One, there would be many indeed. Why? If parti
 <a class="v" id="32" href="#32">32</a>
 “Subhuti, if someone were to offer an immeasurable quantity of the seven treasures to fill the worlds as infinite as space as an act of generosity, the happiness resulting from that virtuous act would not equal the happiness resulting from a son or daughter of a good family who gives rise to the awakened mind and reads, recites, accepts, and puts into practice this sutra, and explains it to others, even if only a gatha of four lines. In what spirit is this explanation given? Without being caught up in signs, just according to things as they are, without agitation. Why is this?
 
-> All composed things are like a dream,  
-> a phantom, a drop of dew, a flash of lightning.  
-> That is how to meditate on them,  
-> that is how to observe them.[^5]
+All composed things are like a dream,  
+a phantom, a drop of dew, a flash of lightning.  
+That is how to meditate on them,  
+that is how to observe them.[^5]
 
 After they heard the Lord Buddha deliver this sutra, the Venerable Subhuti, the bhikshus and bhikshunis, laymen and laywomen, and gods and ashuras, filled with joy and confidence, undertook to put these teachings into practice.
 
@@ -340,11 +340,11 @@ The translation is by Thich Nhat Hanh. It comes from his book *The Diamond That 
 
 The section numbers are the book’s. They follow the traditional division of the Chinese text into 32 chapters, which Red Pine credits to Prince Chao-ming (501–531).
 
-Until November 2026 this page carried a shorter version, about 1,500 words, from the Plum Village website, where it is still read and chanted. It leaves out much of the sutra, including the grains of sand in the Ganges and the closing verse. This page now has the full text.
+Until November 2026 this page carried a shorter version, about 1,500 words, from the Plum Village website, where it still is. It leaves out much of the sutra, including the grains of sand in the Ganges and the closing verse. This page now has the full text.
 
 ## Source and licence
 
-**Source.** The text was taken from an electronic copy of the 2010 Parallax Press edition, hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Thich%20Nhat%20Hanh%20-%20The%20Diamond%20That%20Cuts%20Through%20I.pdf), on 20 November 2026, and compared with it word for word by script. No word of the translation has been changed. Two faults of the electronic copy were put right: a capital M split from the rest of its word (“M oreover”), and line breaks inside the paragraphs. The verses are set as block quotes; the section numbers are the book’s. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/diamond/NOTES.md).
+**Source.** The text was taken from an unauthorised electronic copy of the 2010 Parallax Press edition, hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Thich%20Nhat%20Hanh%20-%20The%20Diamond%20That%20Cuts%20Through%20I.pdf), on 20 November 2026, and compared with it word for word by script. No word of the translation has been changed. Two faults of the electronic copy were put right: a capital M split from the rest of its word (“M oreover”), and line breaks inside the paragraphs. The section numbers are the book’s. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/diamond/NOTES.md).
 
 **Notes.** The notes are editorial. Where they quote Thich Nhat Hanh, the words are from his commentary in the same book.
 
@@ -352,16 +352,16 @@ Until November 2026 this page carried a shorter version, about 1,500 words, from
 
 ## Download
 
-[The Diamond Sutra, Thich Nhat Hanh (EPUB)](/downloads/diamond.epub): the introduction, the sutra, and the source and licence.
+[The Diamond Sutra, Thich Nhat Hanh (EPUB)](/downloads/diamond.epub): the introduction, the sutra (in copyright; see above), and the source and licence.
 
 </article></div></div>
 </div>
 
-[^1]: *Editors’ note.* The Tathagata is the Buddha, speaking of himself. Thich Nhat Hanh: “Tathagata means coming from nowhere and going nowhere, showing no sign of coming and no sign of going, no sign of being and no sign of non-being, no sign of birth and no sign of death.”
+[^1]: *Editors’ note.* Tathagata is the Buddha’s name for himself; others use it of him too. Thich Nhat Hanh: “Tathagata means coming from nowhere and going nowhere, showing no sign of coming and no sign of going, no sign of being and no sign of non-being, no sign of birth and no sign of death.”
 
 [^2]: *Editors’ note.* Thich Nhat Hanh: “At this point, the Diamond Sutra repeats what was said in the Alaggadupama Sutta, The Snake Simile. There the Buddha tells us that his teachings are like a raft that needs to be abandoned when we reach the other shore.”
 
-[^3]: *Editors’ note.* Thich Nhat Hanh: chiliocosm “comes from two Greek words: chilioi, meaning ‘a thousand,’ and kosmos, meaning ‘universe.’ Three thousand chiliocosms means an innumerable number of universes.”
+[^3]: *Editors’ note.* Thich Nhat Hanh: “Chiliocosm comes from two Greek words: chilioi, meaning “a thousand,” and kosmos, meaning “universe.” Three thousand chiliocosms means an innumerable number of universes.”
 
 [^4]: *Editors’ note.* Thich Nhat Hanh: “A Cakravartin is a king who keeps the wheel of righteousness turning throughout his reign. He, too, was said to have the thirty-two marks of a great person.”
 

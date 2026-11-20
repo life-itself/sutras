@@ -23,7 +23,7 @@ The earlier `diamond-red-pine.md` (chapters 1, 2, 32) named the book only. It ag
 
 1. `library/diamond/compare.py diamond-red-pine --emit` reads the sutra out of `source.txt` (from "ONE: Thus have I heard" to the "TRANSLATOR’S PREFACE"). Chapter heads are "ONE:", "TWO:" … "THIRTY-TWO:"; paragraphs are separated by blank lines (or, after a page break, start with an indent); an indented block after a blank line is a verse. It joins wrapped lines and prints edition Markdown. The text was made from that output, not retyped.
 2. Each of the 32 chapters has a passage id, its number: `/diamond-red-pine#14`. Red Pine's chapters are the traditional ones, which he credits to Prince Chao-ming (501–531). The numbers match the Thich Nhat Hanh edition (checked by comparing the opening of each chapter).
-3. The "ONE:" … labels are dropped (the number is in the margin). Verses (chapters 26 and 32) are set as block quotes. Five footnote markers were added.
+3. The "ONE:" … labels are dropped (the number is in the margin). Verses (chapters 26 and 32) are set line by line, as in the source. Five footnote markers were added.
 4. `python3 library/diamond/compare.py diamond-red-pine` compares the edition with `source.txt` word for word and fails on any difference not listed here. Result on 2026-11-20: 32 chapters, 0 unlisted differences, 1 listed.
 
 ## Every change to the words
@@ -44,10 +44,10 @@ Compared word for word (diacritics removed) on 2026-11-20. Every difference is o
 
 - Sanskrit and Chinese titles, Perfection of Wisdom, date of composition uncertain (2nd–5th century), Kumārajīva 401 and the most chanted Chinese version: English Wikipedia, "Diamond Sutra", read 2026-11-20.
 - Red Pine is the pen name of Bill Porter, born 1943, American, translates Chinese Taoist and Buddhist texts: English Wikipedia, "Red Pine (author)", read 2026-11-20.
-- About thirty years with the sutra ("Not long after I first read it thirty years ago"); translated from the Sanskrit editions of Müller (1881) and Conze (1957); compared "the six extant Chinese translations"; "It turns out the sutra isn’t about emptiness…"; "can be read in half an hour": Red Pine's preface (`source.txt`), verbatim where quoted.
+- First read some thirty years before ("Not long after I first read it thirty years ago"); told it was about emptiness; the sutra "originally in verse … its meaning still depended on its poetry"; translated from the Sanskrit editions of Müller (1881) and Conze (1957); compared "the six extant Chinese translations"; "It turns out the sutra isn’t about emptiness…"; "can be read in half an hour": Red Pine's preface (`source.txt`), verbatim where quoted.
 - Prince Chao-ming (501–531), eldest son of Emperor Wu of the Liang, divided the text into 32 chapters and titled them: Red Pine's commentary to chapter 1.
-- The commentators named in About this translation (Asanga, Vasubandhu, Hui-neng, "several dozen monks"): the preface.
-- The notes quote Red Pine's commentary verbatim: chapter 1 ("mahasattva", "fearless"), chapter 2 ("Bhagavan is a general expression…"), chapter 8 (the gatha), chapter 32 (on the gatha of chapter 26; on the cataract and the star; Kumārajīva's six similes instead of nine).
+- The commentators named in About this translation: Asanga, Vasubandhu and "several dozen monks" from the preface; Hui-neng from the commentaries (e.g. chapters 6 and 31).
+- The notes quote Red Pine's commentary verbatim: chapter 2 ("Bhagavan is a general expression…", note on chapter 1), chapter 1 ("mahasattva", "fearless"), chapter 8 (the gatha), chapter 32 (on the gatha of chapter 26; on the cataract and the star; Kumārajīva's six similes instead of nine).
 
 ## Copyright
 

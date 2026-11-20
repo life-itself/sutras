@@ -156,7 +156,7 @@ def emit(sections):
             if kind == "p":
                 out.append(('<a class="v" id="%d" href="#%d">%d</a>\n' % (n, n, n) if first else "") + b)
             else:
-                out.append("  \n".join("> " + l for l in b))  # a verse (gatha): a block quote
+                out.append("  \n".join(b))  # a verse (gatha): one line per line
             first = False
     return "\n\n".join(out)
 
@@ -174,8 +174,8 @@ def edition(slug):
         if not sections or not block.strip() or block.lstrip().startswith(("<", "#")):
             continue
         lines = block.strip().split("\n")
-        if lines[0].startswith("> "):
-            sections[-1][1].append(("v", [l[2:].strip() for l in lines]))
+        if len(lines) > 1:  # paragraphs are one line each; a verse has a line per line
+            sections[-1][1].append(("v", [l.strip() for l in lines]))
         else:
             sections[-1][1].append(("p", " ".join(l.strip() for l in lines)))
     return sections

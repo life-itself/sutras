@@ -19,22 +19,20 @@ scripts:
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <a class="rs-kicker" href="/">Sutras</a>
 <h1>The Diamond Sutra</h1>
-<p class="rs-subtitle">The Perfection of Wisdom · <i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
+<p class="rs-subtitle">The Perfection of Wisdom<br><i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
 <p class="rs-attribution">Translated by Red Pine<br>Also in this library: <a href="/diamond">Thich Nhat Hanh’s translation</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to set out on the path to awakening: free all beings, and cling to nothing, not even the teaching. Here complete, all 32 chapters, in Red Pine’s translation from the Sanskrit, which keeps the sutra’s repetitions and its full closing verse.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to set out on the path to awakening: free all beings, and cling to nothing, not even the teaching. The complete text, all 32 chapters, in Red Pine’s translation from the Sanskrit.</p>
 
 ## Introduction
 
-The *Diamond Sutra* (in Sanskrit *Vajracchedikā Prajñāpāramitā*; in Chinese 金剛經) is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism. Nobody knows who composed it, or when: scholars have argued for dates from the second to the fifth century CE. Kumārajīva’s Chinese version of about 401 became the one chanted in China and in Zen.
+The *Diamond Sutra* is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism, composed in India by an unknown author some time between the second and fifth centuries CE. There is more about the sutra itself in the introduction to [Thich Nhat Hanh’s translation](/diamond), also in this library.
 
-Red Pine is the pen name of Bill Porter (born 1943), an American translator of Chinese Buddhist and Taoist texts. He worked on this sutra, on and off, for about thirty years. He translated it from the Sanskrit, using the editions of Max Müller (1881) and Edward Conze (1957), and compared all six Chinese translations. For years he was told the sutra was about emptiness. Reading the Sanskrit changed his mind: “It turns out the sutra isn’t about emptiness. Or at least, it isn’t emptiness that distinguishes this sutra. It’s about bodies, beginning with the Buddha’s body and ending with the body of every noble son or daughter who practices this teaching.”
+Red Pine is the pen name of Bill Porter (born 1943), an American translator of Chinese Buddhist and Taoist texts. He first read the sutra some thirty years before this translation, and for years was told it was about emptiness. He translated it from the Sanskrit, using the editions of Max Müller (1881) and Edward Conze (1957), and compared all six Chinese translations. The Sanskrit changed how he read it. “The thought had never occurred to me that since the Diamond Sutra was originally in verse, even though it was now in prose, its meaning still depended on its poetry, which was still apparent in the Sanskrit but not in the Chinese.” And: “It turns out the sutra isn’t about emptiness. Or at least, it isn’t emptiness that distinguishes this sutra. It’s about bodies, beginning with the Buddha’s body and ending with the body of every noble son or daughter who practices this teaching.”
 
-His English is close to the original and keeps its formal repetitions: the Buddha’s titles in full, the same questions put again and again. He writes that the sutra “can be read in half an hour”. One way to read it: once straight through, aloud if you can, for the rhythm, then a chapter at a time. The few notes are ours, mostly quoting his commentary.
-
-Thich Nhat Hanh’s translation is also in this library, and is easier going. Both use the same 32 chapters, so [/diamond-red-pine#14](/diamond-red-pine#14) and [/diamond#14](/diamond#14) are the same passage.
+His version keeps the sutra’s formal repetitions: the Buddha’s titles in full, the same questions put again and again. He writes that it “can be read in half an hour”. So read it once straight through, aloud if you can, for the rhythm he heard in the Sanskrit; then a chapter at a time. The few notes are ours, mostly quoting his commentary. We find Thich Nhat Hanh’s version easier going; the two use the same 32 chapters, so [/diamond-red-pine#14](/diamond-red-pine#14) and [/diamond#14](/diamond#14) are the same passage.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -43,14 +41,14 @@ Thich Nhat Hanh’s translation is also in this library, and is easier going. Bo
 <div class="rs-verse">
 
 <a class="v" id="1" href="#1">1</a>
-Thus have I heard: Once the Bhagavan was dwelling near Shravasti at Anathapindada Garden in Jeta Forest together with the full assembly of 1250 bhikshus and a great many fearless bodhisattvas.[^1]
+Thus have I heard: Once the Bhagavan[^1] was dwelling near Shravasti at Anathapindada Garden in Jeta Forest together with the full assembly of 1250 bhikshus and a great many fearless bodhisattvas.[^2]
 
 One day before noon, the Bhagavan put on his patched robe and picked up his bowl and entered the capital of Shravasti for offerings. After begging for food in the city and eating his meal of rice, he returned from his daily round in the afternoon, put his robe and bowl away, washed his feet, and sat down on the appointed seat. After crossing his legs and adjusting his body, he turned his awareness to what was before him.
 
 A number of bhikshus then came up to where the Bhagavan was sitting. After touching their heads to his feet, they walked around him to the right three times and sat down to one side.
 
 <a class="v" id="2" href="#2">2</a>
-On this occasion, the venerable Subhuti was also present in the assembly. Rising from his seat, he uncovered one shoulder and touched his right knee to the ground. Pressing his palms together and bowing to the Buddha, he said: “It is rare, Bhagavan,[^2] most rare, indeed, Sugata, how the Tathagata, the Arhan, the Fully-Enlightened One blesses fearless bodhisattvas with the best of blessings. And it is rare, Bhagavan, how the Tathagata, the Arhan, the Fully-Enlightened One entrusts fearless bodhisattvas with the greatest of trusts.
+On this occasion, the venerable Subhuti was also present in the assembly. Rising from his seat, he uncovered one shoulder and touched his right knee to the ground. Pressing his palms together and bowing to the Buddha, he said: “It is rare, Bhagavan, most rare, indeed, Sugata, how the Tathagata, the Arhan, the Fully-Enlightened One blesses fearless bodhisattvas with the best of blessings. And it is rare, Bhagavan, how the Tathagata, the Arhan, the Fully-Enlightened One entrusts fearless bodhisattvas with the greatest of trusts.
 
 “Even so, Bhagavan, if a noble son or daughter should set forth on the bodhisattva path, how should they stand, how should they walk, and how should they control their thoughts?”
 
@@ -310,10 +308,10 @@ The venerable Subhuti said to the Buddha, “As I understand the meaning of what
 
 On that occasion the Buddha then spoke this gatha:
 
-> “Who looks for me in form  
-> who seeks me in a voice  
-> indulges in wasted effort  
-> such people see me not.”[^4]
+“Who looks for me in form  
+who seeks me in a voice  
+indulges in wasted effort  
+such people see me not.”[^4]
 
 <a class="v" id="27" href="#27">27</a>
 “Subhuti, what do you think? Was it due to the possession of attributes that the Tathagata realized unexcelled, perfect enlightenment? Subhuti, you should hold no such view. And why not? Subhuti, it could not have been due to the possession of attributes that the Tathagata realized unexcelled, perfect enlightenment.
@@ -347,10 +345,10 @@ The Buddha said, “Indeed, Subhuti, so it is. Those who set forth on the bodhis
 <a class="v" id="32" href="#32">32</a>
 “Furthermore, Subhuti, if a fearless bodhisattva filled measureless, infinite worlds with the seven jewels and gave them as an offering to the tathagatas, the arhans, the fully-enlightened ones, and a noble son or daughter grasped but a single four-line gatha of this teaching on the perfection of wisdom and memorized, discussed, recited, mastered, and explained it in detail to others, the body of merit produced by that noble son or daughter as a result would be immeasurably, infinitely greater. And how should they explain it? By not explaining. Thus is it called ‘explaining.’
 
-> “As a lamp, a cataract, a star in space  
-> an illusion, a dewdrop, a bubble  
-> a dream, a cloud, a flash of lightning  
-> view all created things like this.”[^5]
+“As a lamp, a cataract, a star in space  
+an illusion, a dewdrop, a bubble  
+a dream, a cloud, a flash of lightning  
+view all created things like this.”[^5]
 
 All this was spoken by the Buddha to the joy of the elder Subhuti, the monks and nuns, the laymen and laywomen, the bodhisattvas, the devas, humans, asuras and gandharvas of the world all of whom were greatly pleased with what the Buddha said.
 
@@ -362,11 +360,11 @@ The translation is by Red Pine. It comes from his book *The Diamond Sutra: The P
 
 The division into 32 chapters is the traditional one of the Chinese text. Red Pine credits it to Prince Chao-ming (501–531), eldest son of Emperor Wu of the Liang dynasty, who also gave each chapter a title.
 
-Until November 2026 this page had only chapters 1, 2 and 32. The full text has since been found and is given here.
+Until November 2026 this page had only chapters 1, 2 and 32. The rest has now been added.
 
 ## Source and licence
 
-**Source.** The text was taken from an electronic copy of the book hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Diamond-Sutra.pdf), on 20 November 2026, and compared with it word for word by script. In that copy the whole sutra comes first, chapter after chapter, before the commentaries. One word has been changed: “billionworld” to “billion-world” in chapter 30, where the same phrase is hyphenated two lines earlier. Four stray spaces before closing quotation marks were removed, and line breaks inside paragraphs were joined. The verses are set as block quotes. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/diamond-red-pine/NOTES.md).
+**Source.** The text was taken from an unauthorised electronic copy of the book hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Diamond-Sutra.pdf), on 20 November 2026, and compared with it word for word by script. In that copy the whole sutra comes first, chapter after chapter, before the commentaries. One word has been changed: “billionworld” to “billion-world” in chapter 30, where the same phrase is hyphenated earlier in the same paragraph. Four stray spaces before closing quotation marks were removed, and line breaks inside paragraphs were joined. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/diamond-red-pine/NOTES.md).
 
 **Notes.** The notes are editorial. Where they quote Red Pine, the words are from his commentary in the same book.
 
@@ -374,17 +372,17 @@ Until November 2026 this page had only chapters 1, 2 and 32. The full text has s
 
 ## Download
 
-[The Diamond Sutra, Red Pine (EPUB)](/downloads/diamond-red-pine.epub): the introduction, the sutra, and the source and licence.
+[The Diamond Sutra, Red Pine (EPUB)](/downloads/diamond-red-pine.epub): the introduction, the sutra (in copyright; see above), and the source and licence.
 
 </article></div></div>
 </div>
 
-[^1]: *Editors’ note.* “Fearless” is Red Pine’s word for the Sanskrit *mahasattva*: “Normally, mahasattva is interpreted quite literally as ‘great being’ … However, this term was first applied not to humans but to lions and only later to those who had the courage of the king of beasts.”
+[^1]: *Editors’ note.* Red Pine: “Bhagavan is a general expression used as a form of address.” In chapter 2 Subhuti gives the Buddha his other titles: Sugata, Tathagata, Arhan, Fully-Enlightened One.
 
-[^2]: *Editors’ note.* Red Pine: “Bhagavan is a general expression used as a form of address.” Subhuti goes on to give the Buddha his other titles: Sugata, Tathagata, Arhan, Fully-Enlightened One.
+[^2]: *Editors’ note.* “Fearless” is Red Pine’s word for the Sanskrit *mahasattva*: “Normally, mahasattva is interpreted quite literally as “great being,” as Purna does in the Perfection of Wisdom in Eight Thousand Lines … However, this term was first applied not to humans but to lions and only later to those who had the courage of the king of beasts.”
 
 [^3]: *Editors’ note.* A gatha is a verse. Red Pine: “The gatha was developed in India long before the rise of Buddhism, but it was Buddhism that introduced this poetic form to China, where it encouraged the development of the four-line chueh-chu, which formed the basis of Japanese haiku.”
 
-[^4]: *Editors’ note.* Of the closing verse in chapter 32, Red Pine writes: “If any single gatha ‘explains’ this sutra, a better choice would be the gatha in Chapter Twenty-six.”
+[^4]: *Editors’ note.* Red Pine thinks this verse, not the one that closes the sutra in chapter 32, is the one that sums it up: “If any single gatha “explains” this sutra, a better choice would be the gatha in Chapter Twenty-six.”
 
-[^5]: *Editors’ note.* Red Pine on these images: “A cataract presents images of flowers and other objects that turn out to be defects of vision. A star in the sky appears at dusk only to disappear at dawn.” Kumārajīva’s Chinese has six images instead of nine, which is why the verse is shorter in versions from the Chinese, such as [Thich Nhat Hanh’s](/diamond#32).
+[^5]: *Editors’ note.* Red Pine on these images: “A cataract presents images of flowers and other objects that turn out to be defects of vision. A star in the sky appears at dusk only to disappear at dawn.” He notes that Kumārajīva’s Chinese has six images instead of nine. [Thich Nhat Hanh’s](/diamond#32) verse has four.
