@@ -2,7 +2,7 @@
 
 Status, 2026-11-20 (second pass): **brief and mood board published, waiting for Rufus's reaction.** The first design page was rejected ("mood board is weak. where is the true beauty in this") and is archived in [archive/2026-11-20-first-page/](archive/2026-11-20-first-page/). Nothing is settled until Rufus picks. Bead: sutras-m2v.3. Process: the `designing-look-and-feel` skill, one stage at a time; this is the end of stage 1 (mood board), and the gate is his reaction.
 
-**The living page:** https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr (private to Rufus). It holds, and only holds: the brief in three lines and the feel bullets; the site today as "before"; eight directions, one large image each with take → and leave →; ten details worth stealing; three anti-references; a shortlist of three and four questions for Rufus.
+**The living page:** https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr (private to Rufus). It holds, and only holds: the brief in a paragraph and the feel bullets; five directions, one large image each with take → and leave →; the two references Rufus named (Co–Star, Reports That Matter) as the floor; eight details worth stealing; three anti-references; the site today; a shortlist of four with a recommendation and three questions for Rufus. A fresh agent reviewed a first cut of this page as an art director ("where is the true beauty in this?"); its changes were applied: the ink-and-space direction promoted from the details, Co–Star and Reports That Matter demoted to the floor, the Emergence and Aldus images swapped for more beautiful ones, captions cut to one take/leave pair each, measurements and font names removed, "before" moved to the end.
 
 ## Files
 
@@ -12,11 +12,11 @@ Status, 2026-11-20 (second pass): **brief and mood board published, waiting for 
 - [research-reading-features.md](research-reading-features.md): how verse is set on screen, margin notes, measurements of reference sites, phone behaviour. A separate research thread for the site and notes tracks, not part of the mood board.
 - `archive/`: earlier versions of the page.
 
-## The eight directions on the board
+## The five directions on the board
 
-1. The empty room (Co–Star). 2. The sober document (Reports That Matter), the floor. 3. The warm page (Emergence Magazine). 4. The hand (Plum Village). 5. Red and black, the inherited page (Zhao Mengfu's Heart Sutra). 6. The pocket classic (Aldus, 1501). 7. The text as object (Fitzcarraldo). 8. Seeds of Renaissance, adapted (added at Rufus's suggestion: keep the ink-and-paper system, swap in a reading serif, drop the movement's imagery).
+1. Ink and space (Sesshū's splashed-ink landscape; Kaikado's row of caddies). 2. The warm page (Emergence Magazine, Red Pine's Cold Mountain poem). 3. The hand (Plum Village's sutra page). 4. Red and black (Zhao Mengfu's Heart Sutra with its red seals; the Doves Bible). 5. Seeds of Renaissance, adapted (added at Rufus's suggestion: keep the ink-and-paper system, swap in a reading serif, drop the movement's imagery). The floor: Co–Star and Reports That Matter.
 
-Shortlist proposed: A the warm page (3 with 4), B red and black (5 held to 1, with 6), C Seeds of Renaissance adapted (8). Default if Rufus does not answer: A and B go to specimens.
+Shortlist: A red and black held to ink and space; B the warm page with the hand; C Seeds of Renaissance adapted; D ink and space alone. Recommendation: A and B to specimens; C only if Rufus wants the family resemblance; D is the restraint A is held to. Default if Rufus does not answer: A and B.
 
 ## What is next
 
