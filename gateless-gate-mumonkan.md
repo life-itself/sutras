@@ -96,7 +96,7 @@ The cases are not puzzles with answers in the back. Mumon’s own advice, in his
 
 </details>
 
-<h3 class="koan-title" id="preface"><a class="koan-num" href="#preface">Mumon’s preface</a></h3>
+<h3 class="koan-title" id="preface"><a href="#preface">Mumon’s preface</a></h3>
 
 <div class="koan-prose">
 
@@ -127,11 +127,11 @@ You stride through the universe.
 
 </div>
 
-<h3 class="koan-title" id="1"><a class="koan-num" href="#1">Case 1</a> Jōshū’s “Mu” <span lang="zh">一　趙州狗子</span></h3>
+<h3 class="koan-title" id="1"><a href="#1"><span class="koan-num">Case 1</span> Jōshū’s “Mu” <span class="koan-title-zh" lang="zh">一　趙州狗子</span></a></h3>
 
 <div class="koan-case">
 
-A monk asked Jōshū,[^joshu] “Has a dog the Buddha Nature?” Jōshū answered, “Mu.”[^mu]
+A monk asked Jōshū, “Has a dog the Buddha Nature?” Jōshū answered, “Mu.”[^mu]
 
 <p class="orig" lang="zh">趙州和尚、因僧問、狗子還有佛性也無。州云、無。</p>
 
@@ -172,7 +172,7 @@ You are a dead man on the spot.
 
 </div>
 
-<h3 class="koan-title" id="2"><a class="koan-num" href="#2">Case 2</a> Hyakujō’s Fox <span lang="zh">二　百丈野狐</span></h3>
+<h3 class="koan-title" id="2"><a href="#2"><span class="koan-num">Case 2</span> Hyakujō’s Fox <span class="koan-title-zh" lang="zh">二　百丈野狐</span></a></h3>
 
 <div class="koan-case">
 
@@ -209,7 +209,7 @@ A thousand errors, a million mistakes.
 
 </div>
 
-<h3 class="koan-title" id="3"><a class="koan-num" href="#3">Case 3</a> Gutei Raises a Finger <span lang="zh">三　倶胝竪指</span></h3>
+<h3 class="koan-title" id="3"><a href="#3"><span class="koan-num">Case 3</span> Gutei Raises a Finger <span class="koan-title-zh" lang="zh">三　倶胝竪指</span></a></h3>
 
 <div class="koan-case">
 
@@ -246,7 +246,7 @@ To let the Yellow River run through.
 
 </div>
 
-<h3 class="koan-title" id="4"><a class="koan-num" href="#4">Case 4</a> The Western Barbarian with No Beard <span lang="zh">四　胡子無髭</span></h3>
+<h3 class="koan-title" id="4"><a href="#4"><span class="koan-num">Case 4</span> The Western Barbarian with No Beard <span class="koan-title-zh" lang="zh">四　胡子無髭</span></a></h3>
 
 <div class="koan-case">
 
@@ -279,7 +279,7 @@ Obscures the clarity.
 
 </div>
 
-<h3 class="koan-title" id="5"><a class="koan-num" href="#5">Case 5</a> Kyōgen’s “Man up in a Tree” <span lang="zh">五　香嚴上樹</span></h3>
+<h3 class="koan-title" id="5"><a href="#5"><span class="koan-num">Case 5</span> Kyōgen’s “Man up in a Tree” <span class="koan-title-zh" lang="zh">五　香嚴上樹</span></a></h3>
 
 <div class="koan-case">
 
@@ -312,7 +312,7 @@ And devil’s eyes sprout from their bodies.
 
 </div>
 
-<h3 class="koan-title" id="6"><a class="koan-num" href="#6">Case 6</a> The Buddha Holds Out a Flower <span lang="zh">六　世尊拈花</span></h3>
+<h3 class="koan-title" id="6"><a href="#6"><span class="koan-num">Case 6</span> The Buddha Holds Out a Flower <span class="koan-title-zh" lang="zh">六　世尊拈花</span></a></h3>
 
 <div class="koan-case">
 
@@ -345,7 +345,7 @@ At Mahakashyapa’s smile.
 
 </div>
 
-<h3 class="koan-title" id="7"><a class="koan-num" href="#7">Case 7</a> Jōshū’s “Wash Your Bowl” <span lang="zh">七　趙州洗鉢</span></h3>
+<h3 class="koan-title" id="7"><a href="#7"><span class="koan-num">Case 7</span> Jōshū’s “Wash Your Bowl” <span class="koan-title-zh" lang="zh">七　趙州洗鉢</span></a></h3>
 
 <div class="koan-case">
 
@@ -378,7 +378,7 @@ Your rice has long been cooked.
 
 </div>
 
-<h3 class="koan-title" id="8"><a class="koan-num" href="#8">Case 8</a> Keichū the Wheelmaker <span lang="zh">八　奚仲造車</span></h3>
+<h3 class="koan-title" id="8"><a href="#8"><span class="koan-num">Case 8</span> Keichū the Wheelmaker <span class="koan-title-zh" lang="zh">八　奚仲造車</span></a></h3>
 
 <div class="koan-case">
 
@@ -411,7 +411,7 @@ North, south, east, and west.
 
 </div>
 
-<h3 class="koan-title" id="9"><a class="koan-num" href="#9">Case 9</a> Daitsū Chishō Buddha <span lang="zh">九　大通智勝</span></h3>
+<h3 class="koan-title" id="9"><a href="#9"><span class="koan-num">Case 9</span> Daitsū Chishō Buddha <span class="koan-title-zh" lang="zh">九　大通智勝</span></a></h3>
 
 <div class="koan-case">
 
@@ -444,7 +444,7 @@ Even gods and spirits ignore worldly power.
 
 </div>
 
-<h3 class="koan-title" id="10"><a class="koan-num" href="#10">Case 10</a> Seizei Is Utterly Destitute <span lang="zh">十　清税孤貧</span></h3>
+<h3 class="koan-title" id="10"><a href="#10"><span class="koan-num">Case 10</span> Seizei Is Utterly Destitute <span class="koan-title-zh" lang="zh">十　清税孤貧</span></a></h3>
 
 <div class="koan-case">
 
@@ -477,7 +477,7 @@ He dares to rival the richest.
 
 </div>
 
-<h3 class="koan-title" id="11"><a class="koan-num" href="#11">Case 11</a> Jōshū Sees the Hermits <span lang="zh">十一　州勘庵主</span></h3>
+<h3 class="koan-title" id="11"><a href="#11"><span class="koan-num">Case 11</span> Jōshū Sees the Hermits <span class="koan-title-zh" lang="zh">十一　州勘庵主</span></a></h3>
 
 <div class="koan-case">
 
@@ -510,7 +510,7 @@ A life-giving sword.
 
 </div>
 
-<h3 class="koan-title" id="12"><a class="koan-num" href="#12">Case 12</a> Zuigan Calls His Master <span lang="zh">十二　巖喚主人</span></h3>
+<h3 class="koan-title" id="12"><a href="#12"><span class="koan-num">Case 12</span> Zuigan Calls His Master <span class="koan-title-zh" lang="zh">十二　巖喚主人</span></a></h3>
 
 <div class="koan-case">
 
@@ -543,7 +543,7 @@ The fool calls it the true original self.
 
 </div>
 
-<h3 class="koan-title" id="13"><a class="koan-num" href="#13">Case 13</a> Tokusan Holds His Bowls <span lang="zh">十三　徳山托鉢</span></h3>
+<h3 class="koan-title" id="13"><a href="#13"><span class="koan-num">Case 13</span> Tokusan Holds His Bowls <span class="koan-title-zh" lang="zh">十三　徳山托鉢</span></a></h3>
 
 <div class="koan-case">
 
@@ -576,7 +576,7 @@ Are not one word.
 
 </div>
 
-<h3 class="koan-title" id="14"><a class="koan-num" href="#14">Case 14</a> Nansen Cuts the Cat in Two <span lang="zh">十四　南泉斬猫</span></h3>
+<h3 class="koan-title" id="14"><a href="#14"><span class="koan-num">Case 14</span> Nansen Cuts the Cat in Two <span class="koan-title-zh" lang="zh">十四　南泉斬猫</span></a></h3>
 
 <div class="koan-case">
 
@@ -609,7 +609,7 @@ Even Nansen begs for his life.
 
 </div>
 
-<h3 class="koan-title" id="15"><a class="koan-num" href="#15">Case 15</a> Tōzan’s Sixty Blows <span lang="zh">十五　洞山三頓</span></h3>
+<h3 class="koan-title" id="15"><a href="#15"><span class="koan-num">Case 15</span> Tōzan’s Sixty Blows <span class="koan-title-zh" lang="zh">十五　洞山三頓</span></a></h3>
 
 <div class="koan-case">
 
@@ -642,7 +642,7 @@ The first arrow was light, but the second went deep.
 
 </div>
 
-<h3 class="koan-title" id="16"><a class="koan-num" href="#16">Case 16</a> When the Bell Sounds <span lang="zh">十六　鐘聲七條</span></h3>
+<h3 class="koan-title" id="16"><a href="#16"><span class="koan-num">Case 16</span> When the Bell Sounds <span class="koan-title-zh" lang="zh">十六　鐘聲七條</span></a></h3>
 
 <div class="koan-case">
 
@@ -675,7 +675,7 @@ With realization, things are separated in a thousand ways.
 
 </div>
 
-<h3 class="koan-title" id="17"><a class="koan-num" href="#17">Case 17</a> Chū the National Teacher Gives Three Calls <span lang="zh">十七　國師三喚</span></h3>
+<h3 class="koan-title" id="17"><a href="#17"><span class="koan-num">Case 17</span> Chū the National Teacher Gives Three Calls <span class="koan-title-zh" lang="zh">十七　國師三喚</span></a></h3>
 
 <div class="koan-case">
 
@@ -708,7 +708,7 @@ You must climb a mountain of swords with bare feet.
 
 </div>
 
-<h3 class="koan-title" id="18"><a class="koan-num" href="#18">Case 18</a> Tōzan’s “Masagin” <span lang="zh">十八　洞山三斤</span></h3>
+<h3 class="koan-title" id="18"><a href="#18"><span class="koan-num">Case 18</span> Tōzan’s “Masagin” <span class="koan-title-zh" lang="zh">十八　洞山三斤</span></a></h3>
 
 <div class="koan-case">
 
@@ -741,7 +741,7 @@ Are those enslaved by right and wrong.
 
 </div>
 
-<h3 class="koan-title" id="19"><a class="koan-num" href="#19">Case 19</a> Nansen’s “Ordinary Mind Is the Way” <span lang="zh">十九　平常是道</span></h3>
+<h3 class="koan-title" id="19"><a href="#19"><span class="koan-num">Case 19</span> Nansen’s “Ordinary Mind Is the Way” <span class="koan-title-zh" lang="zh">十九　平常是道</span></a></h3>
 
 <div class="koan-case">
 
@@ -774,7 +774,7 @@ You have the best days of your life.
 
 </div>
 
-<h3 class="koan-title" id="20"><a class="koan-num" href="#20">Case 20</a> The Man of Great Strength <span lang="zh">二十　大力量人</span></h3>
+<h3 class="koan-title" id="20"><a href="#20"><span class="koan-num">Case 20</span> The Man of Great Strength <span class="koan-title-zh" lang="zh">二十　大力量人</span></a></h3>
 
 <div class="koan-case">
 
@@ -807,7 +807,7 @@ Now, somebody write the last line here.
 
 </div>
 
-<h3 class="koan-title" id="21"><a class="koan-num" href="#21">Case 21</a> Unmon’s “Kanshiketsu” <span lang="zh">二十一　雲門屎橛</span></h3>
+<h3 class="koan-title" id="21"><a href="#21"><span class="koan-num">Case 21</span> Unmon’s “Kanshiketsu” <span class="koan-title-zh" lang="zh">二十一　雲門屎橛</span></a></h3>
 
 <div class="koan-case">
 
@@ -840,7 +840,7 @@ Missed forever.
 
 </div>
 
-<h3 class="koan-title" id="22"><a class="koan-num" href="#22">Case 22</a> Kashyapa’s “Knock Down the Flagpole” <span lang="zh">二十二　迦葉刹竿</span></h3>
+<h3 class="koan-title" id="22"><a href="#22"><span class="koan-num">Case 22</span> Kashyapa’s “Knock Down the Flagpole” <span class="koan-title-zh" lang="zh">二十二　迦葉刹竿</span></a></h3>
 
 <div class="koan-case">
 
@@ -873,7 +873,7 @@ They had a special spring, not one of yin and yang.
 
 </div>
 
-<h3 class="koan-title" id="23"><a class="koan-num" href="#23">Case 23</a> Think Neither Good Nor Evil <span lang="zh">二十三　不思善惡</span></h3>
+<h3 class="koan-title" id="23"><a href="#23"><span class="koan-num">Case 23</span> Think Neither Good Nor Evil <span class="koan-title-zh" lang="zh">二十三　不思善惡</span></a></h3>
 
 <div class="koan-case">
 
@@ -906,7 +906,7 @@ When the world is destroyed, it is not destroyed.
 
 </div>
 
-<h3 class="koan-title" id="24"><a class="koan-num" href="#24">Case 24</a> Fuketsu’s Speech and Silence <span lang="zh">二十四　離却語言</span></h3>
+<h3 class="koan-title" id="24"><a href="#24"><span class="koan-num">Case 24</span> Fuketsu’s Speech and Silence <span class="koan-title-zh" lang="zh">二十四　離却語言</span></a></h3>
 
 <div class="koan-case">
 
@@ -948,7 +948,7 @@ You will find you have lost your way.
 
 </div>
 
-<h3 class="koan-title" id="25"><a class="koan-num" href="#25">Case 25</a> Kyōzan’s Dream <span lang="zh">二十五　三座説法</span></h3>
+<h3 class="koan-title" id="25"><a href="#25"><span class="koan-num">Case 25</span> Kyōzan’s Dream <span class="koan-title-zh" lang="zh">二十五　三座説法</span></a></h3>
 
 <div class="koan-case">
 
@@ -981,7 +981,7 @@ And tries to deceive the whole crowd.
 
 </div>
 
-<h3 class="koan-title" id="26"><a class="koan-num" href="#26">Case 26</a> Two Monks Roll Up the Blinds <span lang="zh">二十六　二僧卷簾</span></h3>
+<h3 class="koan-title" id="26"><a href="#26"><span class="koan-num">Case 26</span> Two Monks Roll Up the Blinds <span class="koan-title-zh" lang="zh">二十六　二僧卷簾</span></a></h3>
 
 <div class="koan-case">
 
@@ -1014,7 +1014,7 @@ And keep your practice so close that no air can escape?
 
 </div>
 
-<h3 class="koan-title" id="27"><a class="koan-num" href="#27">Case 27</a> Nansen’s “Not Mind, Not Buddha, Not Things” <span lang="zh">二十七　不是心佛</span></h3>
+<h3 class="koan-title" id="27"><a href="#27"><span class="koan-num">Case 27</span> Nansen’s “Not Mind, Not Buddha, Not Things” <span class="koan-title-zh" lang="zh">二十七　不是心佛</span></a></h3>
 
 <div class="koan-case">
 
@@ -1047,7 +1047,7 @@ I’ll give you no comment.
 
 </div>
 
-<h3 class="koan-title" id="28"><a class="koan-num" href="#28">Case 28</a> Ryūtan Blows Out the Candle <span lang="zh">二十八　久嚮龍潭</span></h3>
+<h3 class="koan-title" id="28"><a href="#28"><span class="koan-num">Case 28</span> Ryūtan Blows Out the Candle <span class="koan-title-zh" lang="zh">二十八　久嚮龍潭</span></a></h3>
 
 <div class="koan-case">
 
@@ -1080,7 +1080,7 @@ But alas! he lost his eyes.
 
 </div>
 
-<h3 class="koan-title" id="29"><a class="koan-num" href="#29">Case 29</a> The Sixth Patriarch’s “Your Mind Moves” <span lang="zh">二十九　非風非幡</span></h3>
+<h3 class="koan-title" id="29"><a href="#29"><span class="koan-num">Case 29</span> The Sixth Patriarch’s “Your Mind Moves” <span class="koan-title-zh" lang="zh">二十九　非風非幡</span></a></h3>
 
 <div class="koan-case">
 
@@ -1113,7 +1113,7 @@ Unaware of his fault in talking.
 
 </div>
 
-<h3 class="koan-title" id="30"><a class="koan-num" href="#30">Case 30</a> Baso’s “This Very Mind Is the Buddha” <span lang="zh">三十　即心即佛</span></h3>
+<h3 class="koan-title" id="30"><a href="#30"><span class="koan-num">Case 30</span> Baso’s “This Very Mind Is the Buddha” <span class="koan-title-zh" lang="zh">三十　即心即佛</span></a></h3>
 
 <div class="koan-case">
 
@@ -1146,7 +1146,7 @@ With loot in your pocket, you declare yourself innocent.
 
 </div>
 
-<h3 class="koan-title" id="31"><a class="koan-num" href="#31">Case 31</a> Jōshū Investigates an Old Woman <span lang="zh">三十一　趙州勘婆</span></h3>
+<h3 class="koan-title" id="31"><a href="#31"><span class="koan-num">Case 31</span> Jōshū Investigates an Old Woman <span class="koan-title-zh" lang="zh">三十一　趙州勘婆</span></a></h3>
 
 <div class="koan-case">
 
@@ -1179,7 +1179,7 @@ Thorns in the mud.
 
 </div>
 
-<h3 class="koan-title" id="32"><a class="koan-num" href="#32">Case 32</a> A Non-Buddhist Philosopher Questions the Buddha <span lang="zh">三十二　外道問佛</span></h3>
+<h3 class="koan-title" id="32"><a href="#32"><span class="koan-num">Case 32</span> A Non-Buddhist Philosopher Questions the Buddha <span class="koan-title-zh" lang="zh">三十二　外道問佛</span></a></h3>
 
 <div class="koan-case">
 
@@ -1212,7 +1212,7 @@ Climbing the cliffs without hands.
 
 </div>
 
-<h3 class="koan-title" id="33"><a class="koan-num" href="#33">Case 33</a> Baso’s “No Mind, No Buddha” <span lang="zh">三十三　非心非佛</span></h3>
+<h3 class="koan-title" id="33"><a href="#33"><span class="koan-num">Case 33</span> Baso’s “No Mind, No Buddha” <span class="koan-title-zh" lang="zh">三十三　非心非佛</span></a></h3>
 
 <div class="koan-case">
 
@@ -1245,7 +1245,7 @@ Don’t divulge the whole at once.
 
 </div>
 
-<h3 class="koan-title" id="34"><a class="koan-num" href="#34">Case 34</a> Nansen’s “Reason Is Not the Way” <span lang="zh">三十四　智不是道</span></h3>
+<h3 class="koan-title" id="34"><a href="#34"><span class="koan-num">Case 34</span> Nansen’s “Reason Is Not the Way” <span class="koan-title-zh" lang="zh">三十四　智不是道</span></a></h3>
 
 <div class="koan-case">
 
@@ -1278,7 +1278,7 @@ But I fear he is little appreciated.
 
 </div>
 
-<h3 class="koan-title" id="35"><a class="koan-num" href="#35">Case 35</a> Seijō’s Soul Separated <span lang="zh">三十五　倩女離魂</span></h3>
+<h3 class="koan-title" id="35"><a href="#35"><span class="koan-num">Case 35</span> Seijō’s Soul Separated <span class="koan-title-zh" lang="zh">三十五　倩女離魂</span></a></h3>
 
 <div class="koan-case">
 
@@ -1311,7 +1311,7 @@ Are they one or are they two?
 
 </div>
 
-<h3 class="koan-title" id="36"><a class="koan-num" href="#36">Case 36</a> When You Meet a Man of the Way <span lang="zh">三十六　路逢達道</span></h3>
+<h3 class="koan-title" id="36"><a href="#36"><span class="koan-num">Case 36</span> When You Meet a Man of the Way <span class="koan-title-zh" lang="zh">三十六　路逢達道</span></a></h3>
 
 <div class="koan-case">
 
@@ -1344,7 +1344,7 @@ Understand, if you can directly understand.
 
 </div>
 
-<h3 class="koan-title" id="37"><a class="koan-num" href="#37">Case 37</a> Jōshū’s Oak Tree <span lang="zh">三十七　庭前栢樹</span></h3>
+<h3 class="koan-title" id="37"><a href="#37"><span class="koan-num">Case 37</span> Jōshū’s Oak Tree <span class="koan-title-zh" lang="zh">三十七　庭前栢樹</span></a></h3>
 
 <div class="koan-case">
 
@@ -1377,7 +1377,7 @@ Blocked by phrases, one is belwildered.
 
 </div>
 
-<h3 class="koan-title" id="38"><a class="koan-num" href="#38">Case 38</a> A Buffalo Passes the Window <span lang="zh">三十八　牛過窓櫺</span></h3>
+<h3 class="koan-title" id="38"><a href="#38"><span class="koan-num">Case 38</span> A Buffalo Passes the Window <span class="koan-title-zh" lang="zh">三十八　牛過窓櫺</span></a></h3>
 
 <div class="koan-case">
 
@@ -1410,7 +1410,7 @@ What a strange thing it is!
 
 </div>
 
-<h3 class="koan-title" id="39"><a class="koan-num" href="#39">Case 39</a> A Mistake in Speaking <span lang="zh">三十九　雲門話墮</span></h3>
+<h3 class="koan-title" id="39"><a href="#39"><span class="koan-num">Case 39</span> A Mistake in Speaking <span class="koan-title-zh" lang="zh">三十九　雲門話墮</span></a></h3>
 
 <div class="koan-case">
 
@@ -1443,7 +1443,7 @@ Your life is already lost!
 
 </div>
 
-<h3 class="koan-title" id="40"><a class="koan-num" href="#40">Case 40</a> Tipping Over a Water Bottle <span lang="zh">四十　趯倒淨瓶</span></h3>
+<h3 class="koan-title" id="40"><a href="#40"><span class="koan-num">Case 40</span> Tipping Over a Water Bottle <span class="koan-title-zh" lang="zh">四十　趯倒淨瓶</span></a></h3>
 
 <div class="koan-case">
 
@@ -1476,7 +1476,7 @@ Thousands of Buddhas come forth from the tips of his feet.
 
 </div>
 
-<h3 class="koan-title" id="41"><a class="koan-num" href="#41">Case 41</a> Bodhidharma’s Mind-Pacifying <span lang="zh">四十一　達磨安心</span></h3>
+<h3 class="koan-title" id="41"><a href="#41"><span class="koan-num">Case 41</span> Bodhidharma’s Mind-Pacifying <span class="koan-title-zh" lang="zh">四十一　達磨安心</span></a></h3>
 
 <div class="koan-case">
 
@@ -1509,7 +1509,7 @@ Is all because of you.
 
 </div>
 
-<h3 class="koan-title" id="42"><a class="koan-num" href="#42">Case 42</a> The Girl Comes out of Samadhi <span lang="zh">四十二　女子出定</span></h3>
+<h3 class="koan-title" id="42"><a href="#42"><span class="koan-num">Case 42</span> The Girl Comes out of Samadhi <span class="koan-title-zh" lang="zh">四十二　女子出定</span></a></h3>
 
 <div class="koan-case">
 
@@ -1546,7 +1546,7 @@ Even in defeat, a beautiful performance.
 
 </div>
 
-<h3 class="koan-title" id="43"><a class="koan-num" href="#43">Case 43</a> Shuzan’s Shippei <span lang="zh">四十三　首山竹篦</span></h3>
+<h3 class="koan-title" id="43"><a href="#43"><span class="koan-num">Case 43</span> Shuzan’s Shippei <span class="koan-title-zh" lang="zh">四十三　首山竹篦</span></a></h3>
 
 <div class="koan-case">
 
@@ -1579,7 +1579,7 @@ Even Buddhas and patriarchs beg for their lives.
 
 </div>
 
-<h3 class="koan-title" id="44"><a class="koan-num" href="#44">Case 44</a> Bashō’s Staff <span lang="zh">四十四　芭蕉拄杖</span></h3>
+<h3 class="koan-title" id="44"><a href="#44"><span class="koan-num">Case 44</span> Bashō’s Staff <span class="koan-title-zh" lang="zh">四十四　芭蕉拄杖</span></a></h3>
 
 <div class="koan-case">
 
@@ -1612,7 +1612,7 @@ Everywhere, it enhances the doctrine.
 
 </div>
 
-<h3 class="koan-title" id="45"><a class="koan-num" href="#45">Case 45</a> Hōen’s “Who Is He?” <span lang="zh">四十五　他是阿誰</span></h3>
+<h3 class="koan-title" id="45"><a href="#45"><span class="koan-num">Case 45</span> Hōen’s “Who Is He?” <span class="koan-title-zh" lang="zh">四十五　他是阿誰</span></a></h3>
 
 <div class="koan-case">
 
@@ -1645,7 +1645,7 @@ Don’t explore another’s affairs.
 
 </div>
 
-<h3 class="koan-title" id="46"><a class="koan-num" href="#46">Case 46</a> Proceed On from the Top of the Pole <span lang="zh">四十六　竿頭進歩</span></h3>
+<h3 class="koan-title" id="46"><a href="#46"><span class="koan-num">Case 46</span> Proceed On from the Top of the Pole <span class="koan-title-zh" lang="zh">四十六　竿頭進歩</span></a></h3>
 
 <div class="koan-case">
 
@@ -1678,7 +1678,7 @@ He is only a blind man leading the blind.
 
 </div>
 
-<h3 class="koan-title" id="47"><a class="koan-num" href="#47">Case 47</a> Tosotsu’s Three Barriers <span lang="zh">四十七　兜率三關</span></h3>
+<h3 class="koan-title" id="47"><a href="#47"><span class="koan-num">Case 47</span> Tosotsu’s Three Barriers <span class="koan-title-zh" lang="zh">四十七　兜率三關</span></a></h3>
 
 <div class="koan-case">
 
@@ -1717,7 +1717,7 @@ You see through the man who sees through this moment.
 
 </div>
 
-<h3 class="koan-title" id="48"><a class="koan-num" href="#48">Case 48</a> Kempō’s One Road <span lang="zh">四十八　乾峰一路</span></h3>
+<h3 class="koan-title" id="48"><a href="#48"><span class="koan-num">Case 48</span> Kempō’s One Road <span class="koan-title-zh" lang="zh">四十八　乾峰一路</span></a></h3>
 
 <div class="koan-case">
 
@@ -1750,7 +1750,7 @@ There is still a transcendent secret.
 
 </div>
 
-<h3 class="koan-title" id="postscript"><a class="koan-num" href="#postscript">Mumon’s postscript</a> <span lang="zh">後序</span></h3>
+<h3 class="koan-title" id="postscript"><a href="#postscript">Mumon’s postscript <span class="koan-title-zh" lang="zh">後序</span></a></h3>
 
 <div class="koan-prose">
 
@@ -1803,9 +1803,7 @@ The Chinese was compared character by character with the Taishō text (T48 no. 2
 </article></div></div>
 </div>
 
-[^mu]: *Editors’ note.* 無: *wu* in Chinese, *mu* in Japanese. It means “to lack” or “without”, and so “no”. Mumon’s comment and verse below are about this one word.
-
-[^joshu]: *Editors’ note.* Zhaozhou Congshen (778–897), in Japanese Jōshū Jūshin. Five cases carry his name in their titles: 1, 7, 11, 31 and 37.
+[^mu]: *Editors’ note.* 無: *wu* in Chinese, *mu* in Japanese. It means “to lack” or “without”, and so “no”. Mumon’s comment and verse below are about this one word. Jōshū is the Chinese master Zhaozhou Congshen (778–897); five cases carry his name in their titles: 1, 7, 11, 31 and 37.
 
 [^patriarchs]: *Editors’ note.* Four sevens and two threes: the twenty-eight patriarchs of Zen in India and the six in China. The [Shodoka](/shodoka#42), also in this library, gives the same line: “Twenty-eight generations of teachers in India”, then Bodhidharma’s robe “passed through six teachers here”.
 

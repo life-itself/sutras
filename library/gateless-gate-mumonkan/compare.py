@@ -65,8 +65,10 @@ def edition():
     for block in re.split(r'(?=<h3 class="koan-title")', t)[1:]:
         sid = re.match(r'<h3 class="koan-title" id="([^"]+)"', block).group(1)
         head, body = block.split("</h3>", 1)
-        title = re.sub(r'<span lang="zh">[^<]*</span>\s*$', "", re.sub(r"<a [^>]*>.*?</a>", "", head.split(">", 1)[1])).strip()
-        title_zh = re.search(r'<span lang="zh">([^<]*)</span>\s*$', head)
+        head = re.sub(r'<span class="koan-num">.*?</span>', "", head)
+        title = re.sub(r"<[^>]+>", "", re.sub(r'<span class="koan-title-zh" lang="zh">[^<]*</span>', "", head.split(">", 1)[1]))
+        title = "" if sid in ("preface", "postscript") else title.strip()
+        title_zh = re.search(r'<span class="koan-title-zh" lang="zh">([^<]*)</span>', block.split("</h3>", 1)[0])
         zh = (title_zh.group(1) if title_zh else "") + "".join(re.findall(r'<p class="orig" lang="zh">(.*?)</p>', body))
         body = re.sub(r'<p class="orig" lang="zh">.*?</p>', "", body)
         body = re.sub(r'<p class="koan-label[^>]*>.*?</p>', "", body)

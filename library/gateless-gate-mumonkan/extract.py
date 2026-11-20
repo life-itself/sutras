@@ -126,10 +126,10 @@ def verse(paras):
 def section(s):
     if s["id"] in ("preface", "postscript"):
         name = "Mumon’s preface" if s["id"] == "preface" else "Mumon’s postscript"
-        zh_title = ' <span lang="zh">%s</span>' % s["zh"] if s["zh"] else ""
-        head = '<h3 class="koan-title" id="%s"><a class="koan-num" href="#%s">%s</a>%s</h3>' % (s["id"], s["id"], name, zh_title)
+        zh_title = ' <span class="koan-title-zh" lang="zh">%s</span>' % s["zh"] if s["zh"] else ""
+        head = '<h3 class="koan-title" id="%s"><a href="#%s">%s%s</a></h3>' % (s["id"], s["id"], name, zh_title)
     else:
-        head = ('<h3 class="koan-title" id="%s"><a class="koan-num" href="#%s">Case %s</a> %s <span lang="zh">%s</span></h3>'
+        head = ('<h3 class="koan-title" id="%s"><a href="#%s"><span class="koan-num">Case %s</span> %s <span class="koan-title-zh" lang="zh">%s</span></a></h3>'
                 % (s["id"], s["id"], s["id"], en(s["title"]), s["zh"]))
     out = [head]
     for part in s["parts"]:
