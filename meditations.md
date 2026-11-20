@@ -348,13 +348,13 @@ All things for which “we need the help[^1.17-7] of fortune and the gods.”
 
 <a id="2"></a>
 
-## Book 2: On the River Gran, Among the Quadi[^book2]
+## Book 2: On the River Gran, Among the Quadi
 
 
 <div class="rs-passages">
 
 <a class="v" id="2.1" href="#2.1">2.1</a>
-When you wake up in the morning, tell yourself: The people I deal with today will be meddling, ungrateful, arrogant, dishonest, jealous, and surly. They are like this because they can’t tell good from evil. But I have seen the beauty of good, and the ugliness of evil, and have recognized that the wrongdoer has a nature related to my own—not of the same blood or birth, but the same mind, and possessing a share of the divine. And so none of them can hurt me. No one can implicate me in ugliness. Nor can I feel angry at my relative, or hate him. We were born to work together like feet, hands, and eyes, like the two rows of teeth, upper and lower. To obstruct each other is unnatural. To feel anger at someone, to turn your back on him: these are obstructions.
+When you wake up in the morning, tell yourself: The people I deal with today will be meddling, ungrateful, arrogant, dishonest, jealous, and surly. They are like this because they can’t tell good from evil. But I have seen the beauty of good, and the ugliness of evil, and have recognized that the wrongdoer has a nature related to my own—not of the same blood or birth, but the same mind, and possessing a share of the divine. And so none of them can hurt me. No one can implicate me in ugliness. Nor can I feel angry at my relative, or hate him. We were born to work together like feet, hands, and eyes, like the two rows of teeth, upper and lower. To obstruct each other is unnatural. To feel anger at someone, to turn your back on him: these are obstructions.[^book2]
 
 </div>
 
@@ -502,13 +502,13 @@ Which means making sure that the power within stays safe and free from assault, 
 
 <a id="3"></a>
 
-## Book 3: In Carnuntum[^book3]
+## Book 3: In Carnuntum
 
 
 <div class="rs-passages">
 
 <a class="v" id="3.1" href="#3.1">3.1</a>
-Not just that every day more of our life is used up and less and less of it is left, but this too: if we live longer, can we be sure our mind will still be up to understanding the world—to the contemplation that aims at divine and human knowledge? If our mind starts to wander, we’ll still go on breathing, go on eating, imagining things, feeling urges and so on. But getting the most out of ourselves, calculating where our duty lies, analyzing what we hear and see, deciding whether it’s time to call it quits—all the things you need a healthy mind for . . . all those are gone.
+Not just that every day more of our life is used up and less and less of it is left, but this too: if we live longer, can we be sure our mind will still be up to understanding the world—to the contemplation that aims at divine and human knowledge? If our mind starts to wander, we’ll still go on breathing, go on eating, imagining things, feeling urges and so on. But getting the most out of ourselves, calculating where our duty lies, analyzing what we hear and see, deciding whether it’s time to call it quits—all the things you need a healthy mind for . . . all those are gone.[^book3]
 
 So we need to hurry.
 

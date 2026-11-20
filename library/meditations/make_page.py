@@ -107,6 +107,7 @@ SOURCE = """
 
 """
 
+BOOK_NOTE = re.compile(r"\[\^book\d\]")
 FIRST_NOTE = re.compile(r"^\[\^[^\]]+\]:")
 SECTION_ANCHOR = re.compile(r'^<a id="([^"]+)"></a>$')
 PRINTED_NUMBER = re.compile(r"^(\d+a?)\\\.\s*")
@@ -137,7 +138,7 @@ def split_draft(text):
 
 def build_text(lines):
     """The twelve books, each section in its own passage container."""
-    out, ids, open_section = [], [], False
+    out, ids, open_section, pending_note = [], [], False, ""
 
     def close():
         nonlocal open_section
@@ -158,7 +159,12 @@ def build_text(lines):
             while lines[i] == "":
                 i += 1
             assert lines[i].startswith("## Book "), lines[i]
-            out.extend([lines[i], ""])
+            # A note on a book title cannot sit in the heading: the contents rail copies the heading's text.
+            # It goes on the book's first entry instead.
+            bm = BOOK_NOTE.search(lines[i])
+            if bm:
+                pending_note = bm.group(0)
+            out.extend([BOOK_NOTE.sub("", lines[i]), ""])
             i += 1
             continue
         if m:
@@ -172,6 +178,9 @@ def build_text(lines):
             pm = PRINTED_NUMBER.match(first)
             assert pm and pm.group(1) == pid.split(".", 1)[1], (pid, first[:60])
             rest = first[pm.end():]
+            if pending_note:
+                rest += pending_note
+                pending_note = ""
             out.extend(['<div class="rs-passages">', "", f'<a class="v" id="{pid}" href="#{pid}">{pid}</a>', rest])
             open_section = True
             i += 1
