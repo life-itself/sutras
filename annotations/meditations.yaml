@@ -2,7 +2,7 @@
 # Imported 2026-11-20 from rufuspollock.com/Meditations (written 2022-05-30 to 2024-07-15) by
 # annotations/import/meditations_from_rufuspollock_com.py; edit by hand from now on.
 # Format: see scripts/notes. Check and rebuild: scripts/notes meditations
-text: library/meditations/edition-draft.md
+text: meditations.md
 notes:
 
   - id: rp-5.23

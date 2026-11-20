@@ -13,6 +13,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/meditations.js
+  - /js/notes.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">

@@ -34,6 +34,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/meditations.js
+  - /js/notes.js
 ---
 """
 
