@@ -7,7 +7,7 @@ syntaxMode: md
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">About</span>
 <h1>About</h1>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">

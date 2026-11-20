@@ -18,8 +18,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/diamond-red-pine.jpg" alt="" width="720" height="829"><figcaption>A sutra from the Jingoji canon, late Heian period, gold and silver on indigo, detail. Public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Mahayana · a sutra</span>
 <h1>The Diamond Sutra</h1>
 <p class="rs-subtitle">The Perfection of Wisdom<br><i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
 <p class="rs-attribution">Translated by Red Pine<br>Also in this library: <a href="/diamond">Thich Nhat Hanh’s translation</a></p>

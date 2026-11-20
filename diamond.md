@@ -18,8 +18,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/diamond.jpg" alt="" width="680" height="913"><figcaption>The Diamond Sutra of 868, frontispiece, detail. British Library Or.8210/P.2, public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Mahayana · a sutra</span>
 <h1>The Diamond Sutra</h1>
 <p class="rs-subtitle">The Diamond That Cuts through Illusion<br><i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
 <p class="rs-attribution">Translated by Thich Nhat Hanh<br>Also in this library: <a href="/diamond-red-pine">Red Pine’s translation</a></p>

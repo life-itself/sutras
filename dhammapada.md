@@ -18,8 +18,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/dhammapada.jpg" alt="" width="640" height="800"><figcaption>A printed sutra page, Song dynasty, detail. Public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Early Buddhism · verses</span>
 <h1>Dhammapada</h1>
 <p class="rs-subtitle">The verses of the Dhamma, from the Pāli</p>
 <p class="rs-attribution">Verses attributed to the Buddha<br />Translated by Thanissaro Bhikkhu</p>

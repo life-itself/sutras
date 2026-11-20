@@ -18,8 +18,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/seneca-on-the-shortness-of-life.jpg" alt="" width="640" height="1057"><figcaption>A page from Aldus Manutius’s Virgil, Venice 1501: the pocket editions the Roman authors were read in. CC0.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Stoicism · an essay</span>
 <h1>On the Shortness of Life</h1>
 <p class="rs-subtitle"><span lang="la">De Brevitate Vitae</span></p>
 <p class="rs-attribution">Seneca, to Paulinus<br>Translated by John W. Basore</p>

@@ -19,8 +19,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/gateless-gate-mumonkan.jpg" alt="" width="640" height="854"><figcaption>Hakuin Ekaku, <i>Virtue</i> (悳), 18th century, detail. Metropolitan Museum of Art, CC0.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Zen · koans</span>
 <h1>The Gateless Gate</h1>
 <p class="rs-subtitle">Mumonkan <span lang="zh">無門關</span></p>
 <p class="rs-attribution">Forty-eight cases, with comments and verses by Wumen Huikai (Mumon Ekai)<br />Translated by Katsuki Sekida</p>

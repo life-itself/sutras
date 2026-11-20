@@ -18,8 +18,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/shodoka.jpg" alt="" width="900" height="533"><figcaption>Sengai Gibon, <i>Circle, Triangle, Square</i>, Edo period. Public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Zen · a song</span>
 <h1>Shodoka</h1>
 <p class="rs-subtitle">Song of Enlightenment <span lang="zh">證道歌</span></p>
 <p class="rs-attribution">Attributed to Yung-chia (Yoka Genkaku)<br>Translated by Robert Aitken and Eido Shimano</p>

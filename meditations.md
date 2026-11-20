@@ -18,8 +18,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/meditations.jpg" alt="" width="640" height="800"><figcaption>Title page of the first printed edition of Marcus Aurelius, Zurich 1558. Public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Stoicism · a journal</span>
 <h1>Meditations</h1>
 <p class="rs-subtitle">Also known as <span lang="grc">Eis heauton</span>, “To Himself”</p>
 <p class="rs-attribution">Marcus Aurelius<br>Translated by Gregory Hays</p>
