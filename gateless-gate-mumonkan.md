@@ -1776,7 +1776,7 @@ End of the book
 
 ## About this translation
 
-The translation is by Katsuki Sekida (1893–1987), a Japanese Zen teacher and the author of *Zen Training* (1975). It comes from his *Two Zen Classics: Mumonkan and Hekiganroku*, “translated with commentaries by Katsuki Sekida; edited and introduced by A. V. Grimstone” (Weatherhill, New York, 1977; Shambhala edition 2005). Only the translation is given here; Sekida’s commentaries on each case are in the book. Words in square brackets are in the online copy; we have not checked whether they are Sekida’s.
+The translation is by Katsuki Sekida (1893–1987), a Japanese Zen teacher and the author of *Zen Training* (1975). It comes from his *Two Zen Classics: Mumonkan and Hekiganroku*, translated with commentaries by Katsuki Sekida; edited and introduced by A. V. Grimstone (Weatherhill, New York, 1977; Shambhala edition 2005). Only the translation is given here; Sekida’s commentaries on each case are in the book. Words in square brackets are in the online copy; we have not checked whether they are Sekida’s.
 
 The Chinese text comes from a Japanese edition of the *Mumonkan* published by Iwanami Bunko, through a Japanese website, and keeps that edition’s Japanese forms of some characters.
 

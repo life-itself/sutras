@@ -23,13 +23,23 @@ its frontmatter has a `status`. For each edition:
 
 For every published page (texts, home, about): internal links resolve to a published file, and a
 #fragment resolves to an id or heading on the target page.
+
+Quotations: every quotation in curly double quotes (15+ characters, one paragraph) outside the passage
+text (introductions, notes, about) is found in that text, in another edition or in the private sources
+(SUTRAS_LIBRARY, default ../sutras-library; skipped with a note if absent). Matching ignores markup,
+quote and dash styles, diacritics and spacing; a quotation with [...] or ... is checked piece by piece.
+
+Rufus's notes: scripts/notes --check runs too, so every quote in annotations/ still matches its text.
 """
-import json, pathlib, re, sys, unicodedata
+import html, json, os, pathlib, re, subprocess, sys, unicodedata
 
 import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLISHED_IDS = ROOT / "scripts" / "published-ids.txt"
+LIBRARY = pathlib.Path(os.environ.get("SUTRAS_LIBRARY", ROOT.parent / "sutras-library"))
+QUOTE = re.compile(r"“([^“”\n]{15,})”")   # one paragraph, no nested double quotes
+SOURCE_SUFFIXES = {".md", ".html", ".htm", ".txt", ".wiki", ".xml", ".json"}
 PAGES = {"README.md", "about.md", "notes-demo.md", "AGENTS.md", "CLAUDE.md"}
 REQUIRED = ["title", "description", "author", "translator", "date", "tradition", "source", "licence", "status"]
 PAGE_SCRIPTS = ["/js/reading.js", "/js/edition.js"]
@@ -183,6 +193,67 @@ def record(editions):
     print(f"recorded {added} new passage ids in {PUBLISHED_IDS.relative_to(ROOT)}")
 
 
+def words(s):
+    """Matching form of a text: markup gone, quotes and dashes straight, diacritics and spacing ignored."""
+    s = html.unescape(re.sub(r"<[^>]+>|[*_`]|\[\^[^\]]+\]", " ", s))
+    s = s.translate(str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", "‑": "-"}))
+    s = re.sub(r"\s+/\s+", " ", s)                       # a verse quoted inline: "line one / line two"
+    s = "".join(c for c in unicodedata.normalize("NFD", s) if unicodedata.category(c) != "Mn")
+    return re.sub(r"\s+", " ", re.sub(r"-+", "-", s)).lower()
+
+
+def text_spans(body):
+    """Spans of the passage text on a page: every rs-verse, rs-passages, rs-gatha, koan-case and koan-comment block,
+    to its own closing tag (blocks nest)."""
+    spans = []
+    for m in re.finditer(r'<div\b[^>]*\bclass="[^"]*\b(?:rs-verse|rs-passages|rs-gatha|koan-case|koan-comment)\b[^"]*"[^>]*>', body):
+        depth = 1
+        for t in re.finditer(r"<div\b[^>]*>|</div>", body[m.end():]):
+            depth += 1 if t.group(0).startswith("<div") else -1
+            if depth == 0:
+                spans.append((m.start(), m.end() + t.end()))
+                break
+    return spans
+
+
+def found(quote, whole, corpus):
+    """Every piece of a quotation (split at omissions) is in the page twice or in the corpus."""
+    for piece in re.split(r"\[…\]|…|\.\.\.|\. \. \.", quote):
+        n = words(piece).strip(" .,;:!?")
+        if len(n) >= 15 and n not in corpus and whole.count(n) < 2:
+            return False
+    return True
+
+
+def check_quotes(editions):
+    """Every quotation (in curly double quotes, 15+ characters) outside the passage text, in an
+    introduction, note or about section, is found in that text, in another edition, or in the sources."""
+    if not LIBRARY.is_dir():
+        print("quotations: sutras-library not found at %s; not checked (set SUTRAS_LIBRARY)" % LIBRARY)
+        return 0
+    sources = " || ".join(words(f.read_text(encoding="utf-8", errors="ignore"))
+                          for f in LIBRARY.rglob("*") if f.is_file() and f.suffix in SOURCE_SUFFIXES)
+    bodies = {path: strip_code(body) for path, _, body in editions}
+    words_of = {path: words(body) for path, body in bodies.items()}
+    failed = 0
+    for path, body in bodies.items():
+        spans = text_spans(body)
+        passages = " ".join(body[a:b] for a, b in spans)
+        rest, last = [], 0
+        for a, b in spans:
+            rest.append(body[last:a])
+            last = b
+        rest.append(body[last:])
+        others = " || ".join(w for p, w in words_of.items() if p != path)
+        corpus = " || ".join([words(passages), others, sources])
+        missing = [q for q in dict.fromkeys(QUOTE.findall("\n".join(rest))) if not found(q, words_of[path], corpus)]
+        print("%s quotations: %s" % ("FAIL" if missing else "ok  ", path.name))
+        for q in missing:
+            print("  not found in the text or the sources: “%s”" % q[:100])
+        failed += bool(missing)
+    return failed
+
+
 def main(args):
     strict, rec = "--strict" in args, "--record" in args
     published = load_published()
@@ -213,6 +284,14 @@ def main(args):
         for e in errors:
             print("  " + e)
         failed += bool(errors)
+    failed += check_quotes(editions)
+    if (ROOT / "annotations").is_dir():
+        notes = subprocess.run([sys.executable, str(ROOT / "scripts" / "notes"), "--check"],
+                               capture_output=True, text=True)
+        print(f"{'FAIL' if notes.returncode else 'ok  '} annotations/ (scripts/notes --check)")
+        for line in (notes.stdout + notes.stderr).splitlines():
+            print("  " + line)
+        failed += notes.returncode != 0
     if rec:
         record(editions)
     print(f"\n{failed} file(s) failed" if failed else "\nall checks pass")

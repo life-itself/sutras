@@ -28,7 +28,7 @@ scripts:
 
 ## Introduction
 
-The *Diamond Sutra* (in Sanskrit *Vajracchedikā Prajñāpāramitā*, “the diamond that cuts through, perfection of wisdom”; in Chinese 金剛經) is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism. Nobody knows who composed it; scholars have argued for dates from the second to the fifth century CE. Kumārajīva put it into Chinese around 401, and his became the version most chanted in China and in Zen. A printed copy dated 868, found at Dunhuang, is the oldest dated printed book we have.
+The *Diamond Sutra* (in Sanskrit *Vajracchedikā Prajñāpāramitā*, *the diamond that cuts through, perfection of wisdom*; in Chinese 金剛經) is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism. Nobody knows who composed it; scholars have argued for dates from the second to the fifth century CE. Kumārajīva put it into Chinese around 401, and his became the version most chanted in China and in Zen. A printed copy dated 868, found at Dunhuang, is the oldest dated printed book we have.
 
 The Buddha comes back from begging for his meal, washes his feet and sits down. Subhuti asks his question, and the Buddha answers: lead all beings to liberation, and do not think that a single being has been liberated. Then the same turn is applied to everything else: generosity, merit, the marks of a Buddha, the Buddha himself, and the teaching, which is “a raft”. One form of words comes back again and again: what is called X is not X, “that is why it is called” X.
 
