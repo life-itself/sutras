@@ -2,7 +2,7 @@
    Everything here is scoped to .rs (the reading layout, used by edition pages with layout: plain),
    so pages without a .rs wrapper are unchanged, with one exception at the end (the footer line).
    @import lines must stay first. */
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+TC:wght@400&display=swap");
 @import url("/css/reading.css");
 
 /* The reading system under Flowershow's sticky navbar */
@@ -70,6 +70,34 @@
 @container rs (max-width: 759.98px) {
   .rs-sn-ref { line-height: 1; padding: .9em .7em; margin: -.9em -.45em -.9em -.5em; position: relative }
 }
+
+/* Original-language text (Mumonkan Chinese; later Pāli, Tao Te Ching): <p class="orig" lang="zh">.
+   Smaller and quieter than the translation, marked off by a hairline, so it reads as the original. */
+.rs :lang(zh) { font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "Noto Serif CJK TC", serif; font-variant-numeric: normal }
+.rs-text p.orig { font-size: .82em; line-height: 1.75; color: var(--rs-muted); text-align: left; hyphens: none; -webkit-hyphens: none;
+  border-left: 1px solid var(--rs-rule); padding-left: .9em; margin-top: calc(-1 * var(--rs-s1)) }
+.rs-verse p.orig { margin-bottom: var(--rs-s4) }
+
+/* Koan cases (Mumonkan): h3.koan-title with span.koan-num and span.koan-title-zh; then div.koan-case,
+   div.koan-comment, div.koan-verse. More space between cases than between the parts of a case. */
+.rs-text h3.koan-title { margin-top: var(--rs-s6) }
+.rs-text h3.koan-title .koan-num { display: block; font-family: var(--rs-ui); font-size: 11.5px; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--rs-accent); margin-bottom: var(--rs-s1); font-variant-numeric: lining-nums }
+.rs-text h3.koan-title .koan-title-zh { font-size: .62em; color: var(--rs-muted); margin-left: .35em; white-space: nowrap }
+.rs-text .koan-comment, .rs-text .koan-verse { margin-top: var(--rs-s3) }
+.rs-text .koan-comment { font-size: .94em; color: var(--rs-ink2) }
+.rs-text p.koan-label { font-family: var(--rs-text); font-variant: all-small-caps; text-transform: none; letter-spacing: .06em;
+  font-size: 1.05em; font-weight: 500; color: var(--rs-muted); margin: 0 0 var(--rs-s1) }
+.rs-text p.koan-label :lang(zh) { font-variant: normal; font-size: .8em }
+/* the contents of the cases: a quiet line that opens a compact list, two columns when there is room */
+.rs-text details.koan-contents { margin: 0 0 var(--rs-s4); font-family: var(--rs-text) }
+.rs-text details.koan-contents summary { cursor: pointer; color: var(--rs-muted); font-style: italic }
+.rs-text details.koan-contents summary:hover { color: var(--rs-accent) }
+.rs-text ol.koan-toc { margin: var(--rs-s2) 0 0; padding-left: 2em; font-size: .9em; line-height: 1.45 }
+.rs-text ol.koan-toc li { margin: 0 0 .15em; break-inside: avoid }
+.rs-text ol.koan-toc a { color: var(--rs-ink2); text-decoration: none }
+.rs-text ol.koan-toc a:hover { color: var(--rs-accent) }
+@container rs (min-width: 600px) { .rs-text ol.koan-toc { columns: 2; column-gap: 2.5em } }
 
 /* Site-wide, not .rs: the navbar, footer and page take the reading page's paper and ink (personal theme in
    css/reading.css), so there are no white bands; a hairline rule marks them off. Light only, as the reading page is. */
