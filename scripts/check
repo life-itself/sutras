@@ -3,7 +3,8 @@
 
 Usage: scripts/check                 (run from the repo root; exit status 1 on any failure)
        scripts/check --strict        also fail on texts not yet made into editions
-       scripts/check --record        add the passage ids of published editions to
+       scripts/check --record        add the passage ids (every id="4.3"-style id: stanza links,
+                                     chapter headings) of published editions to
                                      scripts/published-ids.txt (run after an edition goes live)
 
 A text is a Markdown file at the root other than the pages in PAGES. It counts as an edition once
@@ -169,10 +170,9 @@ def record(editions):
     added = 0
     for path, meta, body in editions:
         if meta.get("status") in ("published", "partial"):
-            for m in PASSAGE_LINK.finditer(body):
-                pid = re.search(r'\bid="([^"]*)"', m.group(1))
-                line = f"{path.stem}#{pid.group(1)}" if pid else None
-                if line and line not in lines:
+            for pid in ANY_ID.findall(body):
+                line = f"{path.stem}#{pid}"
+                if PASSAGE_ID.match(pid) and line not in lines:
                     lines.append(line)
                     added += 1
     PUBLISHED_IDS.write_text("".join(l + "\n" for l in lines))
