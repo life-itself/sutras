@@ -26,7 +26,7 @@ For every published page (texts, home, about): internal links resolve to a publi
 
 Quotations: every quotation in curly double quotes (15+ characters, one paragraph) outside the passage
 text (introductions, notes, about) is found in that text, in another edition or in the private sources
-(SUTRAS_LIBRARY, default ../sutras-library; skipped with a note if absent). Matching ignores markup,
+(SUTRAS_LIBRARY, default ../sutras-library; skipped with a WARNING if absent). Matching ignores markup,
 quote and dash styles, diacritics and spacing; a quotation with [...] or ... is checked piece by piece.
 
 Rufus's notes: scripts/notes --check runs too, so every quote in annotations/ still matches its text.
@@ -216,11 +216,14 @@ def text_spans(body):
     return spans
 
 
-def found(quote, whole, corpus):
-    """Every piece of a quotation (split at omissions) is in the page twice or in the corpus."""
-    for piece in re.split(r"\[…\]|…|\.\.\.|\. \. \.", quote):
+OMISSION = re.compile(r"\[\s*(?:…|\.\.\.|\. \. \.)\s*\]|…|\.\.\.|\. \. \.")
+
+
+def found(quote, corpus):
+    """Every piece of a quotation (split at omissions) is in the corpus."""
+    for piece in OMISSION.split(quote):
         n = words(piece).strip(" .,;:!?")
-        if len(n) >= 15 and n not in corpus and whole.count(n) < 2:
+        if len(n) >= 15 and n not in corpus:
             return False
     return True
 
@@ -246,7 +249,7 @@ def check_quotes(editions):
         rest.append(body[last:])
         others = " || ".join(w for p, w in words_of.items() if p != path)
         corpus = " || ".join([words(passages), others, sources])
-        missing = [q for q in dict.fromkeys(QUOTE.findall("\n".join(rest))) if not found(q, words_of[path], corpus)]
+        missing = [q for q in dict.fromkeys(QUOTE.findall("\n".join(rest))) if not found(q, corpus)]
         print("%s quotations: %s" % ("FAIL" if missing else "ok  ", path.name))
         for q in missing:
             print("  not found in the text or the sources: “%s”" % q[:100])
