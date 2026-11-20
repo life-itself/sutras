@@ -16,7 +16,7 @@ Not used: Senzaki and Reps's 1934 translation (possibly public domain in the US,
 - `compare_chinese.py`: compares the source's Chinese with the Taishō, section by section, punctuation dropped and common variant forms treated as equal. `--boxes` lists the boxes and the Taishō character at each; `--kept` lists the differences left after the fixes (saved as `chinese-differences.txt`).
 - `fixes.py`: every correction to the source's words, used by the two scripts below.
 - `extract.py`: made the first version of the text section of the page (run once; the page has since been edited by hand, so do not overwrite it).
-- `compare.py`: compares the page with the source, word for word (English) and character by character (Chinese), and fails on any difference not accounted for here. `scripts/compare-source` is written for *Faith in Mind* only; this is its approach for this text. Result on 2026-11-20: 50 sections (preface, 48 cases, postscript), 8,342 English words, 7,899 Chinese characters, 35 boxes filled, 0 unexpected differences.
+- `compare.py`: compares the page with the source, word for word (English) and character by character (Chinese), and fails on any difference not accounted for here. `scripts/compare-source` is written for *Faith in Mind* only; this is its approach for this text. Result on 2026-11-20: 50 sections (preface, 48 cases, postscript), 8,342 English words, 7,899 Chinese characters, 35 boxes in the text filled as the Taishō has them (the 36th, in the title of case 40, is listed as expected), 0 unexpected differences.
 
 ## How it was made
 
@@ -33,8 +33,9 @@ English:
 - No word of the translation changed, except: case 10 title "Seizei Is Utterly Destitude" to "Destitute".
 - Long vowels: the source's "õ", "û" and "Õ" (a conversion slip in the Word export: Jõshû, Hyakujõ, Õbai) printed as "ō", "ū", "Ō" (Jōshū, Hyakujō, Ōbai), the standard Hepburn macrons, throughout (148, 56 and 4 times).
 - Straight quotation marks and apostrophes made curly.
+- Words in square brackets ("[three pounds of flax]", "[1228]", "[典座 head cook]") are as in the source. Whether they are Sekida's or the web page's is not checked; the page says so.
 - "1.", "2.", "3." in case 47 escaped so Markdown does not make them a list; not a change to the words.
-- Left as in the source: "Oshō" and "Osho" both occur (case 44 has "Bashō Osho"); "Bunkō", "rises towering waves" (case 48), "This moment's thoughts sees" (case 47 verse), "you are a Buddha himself" (case 30), American spelling.
+- Left as in the source: "Oshō" and "Osho" both occur (case 44 has "Bashō Osho"); "rises towering waves" (case 48), "This moment's thoughts sees" (case 47 verse), "you are a Buddha himself" (case 30), American spelling.
 
 Chinese:
 
@@ -51,13 +52,14 @@ The source gives Mumon's preface and verse, the 48 cases and his postscript. The
 
 ## Facts used in the introduction, About this translation and the notes, and where each comes from
 
-- Wumen Huikai, 1183–1260, Mumon Ekai in Japanese; 48 koans; compiled in the summer of 1228 at Longxiang; "Wumen" means "no gate" and the title also reads "Wumen's Barrier"; each koan has a comment and a verse; dropped from the Chinese canon after the Song, taken to Japan by his disciples and reprinted many times; with the Blue Cliff Record central in Rinzai practice; the extra material in printed editions: English Wikipedia, "The Gateless Barrier", read 2026-11-20.
+- Wumen Huikai, 1183–1260, Mumon Ekai in Japanese; Longxiang is Ryūshō (the translation's preface has "Ryûshõ Temple"; Wikipedia, "Wumen Huikai": "Longxiang (Wade-Giles: Lung-hsiang; Japanese: Ryusho)"); 48 koans; compiled in the summer of 1228 at Longxiang; "Wumen" means "no gate" and the title also reads "Wumen's Barrier"; each koan has a comment and a verse; dropped from the Chinese canon after the Song, taken to Japan by his disciples and reprinted many times; with the Blue Cliff Record central in Rinzai practice; the extra material in the best-known version, "the Japanese woodblock edition made from the 1246 manuscript edition" (an introduction by Chen Xun, "publisher of the 1228 edition"; a dedication to the emperor; the "Zen Warnings", "believed to be written by Wumen"; a 49th case by Anwan, "dated the beginning of summer 1246"): English Wikipedia, "The Gateless Barrier", read 2026-11-20. The same pieces are in the Taishō text (`cbeta-T48n2005.xml`).
+- *Hekiganroku* is the Japanese name of the *Blue Cliff Record*: English Wikipedia, "Blue Cliff Record", read 2026-11-20.
 - "as brickbats to batter the gate" (preface), “the front gate to Zen” (case 1 comment), “Your direct realization is demanded; it should not be sought through others” (postscript): the text, verbatim.
 - Sekida's dates, *Zen Training* (1975): Library of Congress name authority n80164936 (it cites "His Zen training, 1975"). "Japanese Zen teacher": the same record cites *A Guide to Zen* (2003) calling him a "modern Zen master". Book details: Open Library, above. Pages 26–137: the source's head note.
-- Note on Mu: English Wikipedia, "Mu (negative)": 無, *wu* in Chinese, *mu* in Japanese, "'to lack' or 'without'".
-- Note on Jōshū: English Wikipedia, "Zhaozhou Congshen" (778–897; Japanese Jōshū Jūshin). The five cases with his name in their titles (1, 7, 11, 31, 37) were counted from the text.
-- Note on the patriarchs: the Shodoka in this library, verse 42, quoted verbatim ("Twenty-eight generations of teachers in India", "passed through six teachers here"); that Bodhidharma is counted the 28th in India and first in China is also in English Wikipedia, "Lineage (Buddhism)".
-- Note on samadhi: English Wikipedia, "Samadhi" ("a state of meditative consciousness").
+- Note on Mu (which also says who Jōshū is): English Wikipedia, "Mu (negative)": 無, *wu* in Chinese, *mu* in Japanese, "'to lack' or 'without'".
+- Jōshū in that note: English Wikipedia, "Zhaozhou Congshen" (778–897; Japanese Jōshū Jūshin). The five cases with his name in their titles (1, 7, 11, 31, 37) were counted from the text.
+- Note on the patriarchs: the Shodoka in this library, verse 42, quoted verbatim ("Twenty-eight generations of teachers in India", "passed through six teachers here"); Bodhidharma as first patriarch in China and 28th in the line from the Buddha: English Wikipedia, "Lineage (Buddhism)", read 2026-11-20.
+- Note on samadhi: English Wikipedia, "Samadhi" ("a state of meditative consciousness", quoted). "Comes back in cases 24 and 42": the text.
 
 ## Copyright
 

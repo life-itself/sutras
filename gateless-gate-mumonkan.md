@@ -6,7 +6,7 @@ translator: Katsuki Sekida
 date: "1228 (Song dynasty)"
 tradition: Ch’an (Zen) Buddhism
 source: https://www.sacred-texts.com/bud/zen/mumonkan.htm
-licence: "Translation © 1977 (Weatherhill; now published by Shambhala): in copyright, reproduced in full without permission. The Chinese text (1228) is in the public domain. Editorial additions CC BY 4.0."
+licence: "Translation © 1977 (Weatherhill; Shambhala edition 2005): in copyright, reproduced in full without permission. The Chinese text (1228) is in the public domain. Editorial additions CC BY 4.0."
 status: published
 layout: plain
 syntaxMode: md
@@ -24,17 +24,17 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Forty-eight Zen koans, short records of what teachers said and did, each followed by a comment and a four-line verse from the Chinese master Wumen, who gathered them in 1228. Still used in Rinzai Zen training. Here complete in Katsuki Sekida’s translation, with the Chinese.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Forty-eight Zen koans, short records of what teachers said and did, each followed by a comment and a four-line verse from the Chinese master Wumen (Mumon in Japanese), who gathered them in 1228. Still used in Rinzai Zen training. Here complete in Katsuki Sekida’s translation, with the Chinese.</p>
 
 ## Introduction
 
-*The Gateless Gate* (in Chinese *Wumenguan*, in Japanese *Mumonkan*, 無門關) is a collection of forty-eight koans: brief exchanges between Zen teachers and their students, a question and an answer, a gesture, a story. The Chinese master Wumen Huikai (1183–1260), Mumon Ekai in Japanese, gathered them in the summer of 1228, when he was head monk of a monastery at Longxiang. He used them, his preface says, “as brickbats to batter the gate”. His name means “no gate”, so the title also reads as *Wumen’s Barrier*.
+*The Gateless Gate* (in Chinese *Wumenguan*, in Japanese *Mumonkan*, 無門關) is a collection of forty-eight koans: brief exchanges between Zen teachers and their students, a question and an answer, a gesture, a story. The Chinese master Wumen Huikai (1183–1260) gathered them in the summer of 1228, when he was head monk of a monastery at Longxiang (Ryūshō in the translation). He used them, his preface says, “as brickbats to batter the gate”. Sekida, whose translation this is, gives the names in their Japanese readings, and so does this page: Wumen is Mumon. His name means “no gate”, so the title also reads as *Mumon’s Barrier*.
 
-Each case comes in three parts: the case itself, often a few lines; Mumon’s comment, which prods and teases; and his four-line verse. The first is the best known. A monk asks Jōshū whether a dog has the Buddha Nature, and Jōshū answers: “Mu.” Mumon calls that one word “the front gate to Zen”.
+Each case comes in three parts: the case itself, often a few lines; Mumon’s comment, which prods and teases; and his four-line verse. The first case is one exchange. A monk asks Jōshū whether a dog has the Buddha Nature, and Jōshū answers: “Mu.” Mumon calls that one word “the front gate to Zen”.
 
-The book dropped out of the Chinese Buddhist canon after the Song dynasty, but Wumen’s disciples took it to Japan, where it was reprinted many times. With the *Blue Cliff Record* it is still central to training in the Rinzai school.
+The book dropped out of the Chinese Buddhist canon after the Song dynasty, but Mumon’s disciples took it to Japan, where it was reprinted many times. With the *Blue Cliff Record* (*Hekiganroku* in Japanese, the other half of Sekida’s book) it is still central to training in the Rinzai school.
 
-The cases are not puzzles with answers in the back. Mumon’s own advice, in his postscript: “Your direct realization is demanded; it should not be sought through others.” One way to read them is one case at a time, the comment and verse with it, and then to leave it alone for a day. Sekida gives the names in their Japanese readings: Jōshū is the Chinese Zhaozhou, and Mumon is Wumen. The Chinese follows each part, in smaller type. The few notes are ours.
+Mumon does not explain the cases. His advice, in his postscript: “Your direct realization is demanded; it should not be sought through others.” One way to read them is one case at a time, the comment and verse with it, and then to leave it alone for a day. The Chinese follows each part. The three notes are ours; they can wait for a second reading.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -108,7 +108,7 @@ In the summer of the first year of Jōtei, Ekai was in Ryūshō Temple and as he
 
 <p class="orig" lang="zh">慧開、紹定戊子夏、首衆于東嘉龍翔。因納子請益、遂將古人公案作敲門瓦子、隨機引導學者。竟爾抄録、不覺成集。初不以前後敍列、共成四十八則。通曰無門關。</p>
 
-A man of determination will unflinchingly push his way straight forward, regardless of all dangers. Then even the eight-armed Nata cannot hinder him. Even the four sevens of the West and the two threes of the East[^patriarchs] would beg for their lives. If one has no determination, then it will be like catching a glimpse of a horse galloping past the window: in the twinkling of an eye it will be gone.
+A man of determination will unflinchingly push his way straight forward, regardless of all dangers. Then even the eight-armed Nata cannot hinder him. Even the four sevens of the West and the two threes of the East would beg for their lives. If one has no determination, then it will be like catching a glimpse of a horse galloping past the window: in the twinkling of an eye it will be gone.[^patriarchs]
 
 <p class="orig" lang="zh">若是箇漢、不顧危亡單刀直入。八臂那咤、擱他不在。縦使西天四七、東土二三、只得望風乞命。設或躊躇、也似隔窓看馬騎、眨得眼來、早已蹉過。</p>
 
@@ -1776,31 +1776,31 @@ End of the book
 
 ## About this translation
 
-The translation is by Katsuki Sekida (1893–1987), a Japanese Zen teacher and the author of *Zen Training* (1975). It comes from his *Two Zen Classics: Mumonkan and Hekiganroku*, “translated with commentaries by Katsuki Sekida; edited and introduced by A. V. Grimstone” (Weatherhill, New York, 1977; reissued by Shambhala, 2005). Only the translation is given here, from the online copy described below; Sekida’s commentaries on each case are in the book. The words in square brackets are his.
+The translation is by Katsuki Sekida (1893–1987), a Japanese Zen teacher and the author of *Zen Training* (1975). It comes from his *Two Zen Classics: Mumonkan and Hekiganroku*, “translated with commentaries by Katsuki Sekida; edited and introduced by A. V. Grimstone” (Weatherhill, New York, 1977; Shambhala edition 2005). Only the translation is given here; Sekida’s commentaries on each case are in the book. Words in square brackets are in the online copy; we have not checked whether they are Sekida’s.
 
-The Chinese text follows a Japanese edition of the *Mumonkan* published by Iwanami Bunko, and keeps that edition’s Japanese forms of some characters. Where the online copy had empty boxes for characters it could not display, they have been filled from the Taishō canon, and its slips of transcription corrected (see Source and licence).
+The Chinese text comes from a Japanese edition of the *Mumonkan* published by Iwanami Bunko, through a Japanese website, and keeps that edition’s Japanese forms of some characters.
 
-What is here is the core of the book: Wumen’s preface and verse, the forty-eight cases, and his postscript. Printed editions often add more around it, including an introduction by the first publisher, a dedication to the emperor, the “Zen Warnings” attributed to Wumen and a forty-ninth case added in 1246. Those are not in the source and are not given here.
+What is here is the core of the book: Mumon’s preface and verse, the forty-eight cases, and his postscript. The Taishō text and the best-known Japanese edition add more around it: an introduction by Chen Xun, a dedication to the emperor, the “Zen Warnings” (thought to be Mumon’s) and a forty-ninth case by Anwan. Those are not in the source and are not given here.
 
 ## Source and licence
 
-**Source.** The text was taken from the [Internet Sacred Text Archive](https://www.sacred-texts.com/bud/zen/mumonkan.htm), as archived by the [Wayback Machine on 1 May 2026](http://web.archive.org/web/20260501170316/https://www.sacred-texts.com/bud/zen/mumonkan.htm) (the live page refuses automated copying). That page names Sekida’s translation in *Two Zen Classics*, pages 26–137, and takes its Chinese from a Japanese website based on the Iwanami Bunko edition. It was compared with this page word for word by script. No word of the translation has been changed, except one misspelling in a case title (“Destitude”, case 10). The source sets each Chinese sentence above its English; here the sentences of each part are run together as paragraphs, English first. Long vowels in Japanese names, which the source shows as “õ” and “û” (Jõshû), are printed with macrons (Jōshū), and straight quotation marks made curly.
+**Source.** The text was taken from the [Internet Sacred Text Archive](https://www.sacred-texts.com/bud/zen/mumonkan.htm), as archived by the [Wayback Machine on 1 May 2026](http://web.archive.org/web/20260501170316/https://www.sacred-texts.com/bud/zen/mumonkan.htm), and compared with this page word for word by script. No word of the translation has been changed, except one misspelling in a case title (“Destitude”, case 10). Long vowels in Japanese names, which the source shows as “õ” and “û” (Jõshû), are printed with macrons (Jōshū), and straight quotation marks made curly.
 
-The Chinese was compared character by character with the Taishō text (T48 no. 2005, from [CBETA](https://cbetaonline.dila.edu.tw/T2005)). Thirty-six characters that the source shows as empty boxes were filled from it. Forty slips of transcription were corrected where the Taishō has a character of similar shape that the sense and Sekida’s English require: 堅 for 竪 “raise”, 方 for 法 in “True Dharma Eye”, and the like. Other differences between the two Chinese texts, mostly variant forms of the same character, were left as in the source. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/gateless-gate-mumonkan/NOTES.md).
+The Chinese was compared character by character with the Taishō text (T48 no. 2005, from [CBETA](https://cbetaonline.dila.edu.tw/T2005)). Thirty-six characters that the source shows as empty boxes were filled from it. Forty slips of transcription were corrected, mostly where the source has a character of similar shape to the right one: for example 竪 “raise”, where the source has 堅. Other differences, mostly variant forms of the same character, were left as in the source. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/gateless-gate-mumonkan/NOTES.md).
 
 **Notes.** The notes and headings are editorial.
 
-**Licence.** Sekida’s translation was published in 1977 and is in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Wumen’s Chinese text, from 1228, is in the public domain. Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+**Licence.** Sekida’s translation was published in 1977 and is in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Mumon’s Chinese text, from 1228, is in the public domain. Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Download
 
-[The Gateless Gate (EPUB)](/downloads/gateless-gate-mumonkan.epub): the introduction, the forty-eight cases with Mumon’s preface and postscript, the Chinese, and the source and licence.
+[The Gateless Gate (EPUB)](/downloads/gateless-gate-mumonkan.epub): everything on this page, including the translation, which is in copyright (see above).
 
 </article></div></div>
 </div>
 
 [^mu]: *Editors’ note.* 無: *wu* in Chinese, *mu* in Japanese. It means “to lack” or “without”, and so “no”. Mumon’s comment and verse below are about this one word. Jōshū is the Chinese master Zhaozhou Congshen (778–897); five cases carry his name in their titles: 1, 7, 11, 31 and 37.
 
-[^patriarchs]: *Editors’ note.* Four sevens and two threes: the twenty-eight patriarchs of Zen in India and the six in China. The [Shodoka](/shodoka#42), also in this library, gives the same line: “Twenty-eight generations of teachers in India”, then Bodhidharma’s robe “passed through six teachers here”.
+[^patriarchs]: *Editors’ note.* “the four sevens of the West and the two threes of the East”: the twenty-eight patriarchs of Zen in India and the six in China. Bodhidharma is both the last in India and the first in China. The [Shodoka](/shodoka#42), also in this library, counts them the same way: “Twenty-eight generations of teachers in India”, then Bodhidharma’s robe “passed through six teachers here”.
 
-[^samadhi]: *Editors’ note.* Samādhi (Sanskrit and Pali): a state of meditative consciousness.
+[^samadhi]: *Editors’ note.* Samādhi (Sanskrit and Pali): “a state of meditative consciousness”. The word comes back in cases 24 and 42.
