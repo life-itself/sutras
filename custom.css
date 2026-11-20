@@ -107,6 +107,8 @@
 body, .site-navbar, .site-footer { background-color: var(--sutras-paper) }
 .site-navbar { border-bottom: 1px solid var(--sutras-rule) }
 .site-footer { border-top: 1px solid var(--sutras-rule) !important; color: var(--sutras-ink) }
+/* On a phone the footer lines up with the page's 20px gutter (its default is 32px). */
+@media (max-width: 640px) { .site-footer { padding-left: 1.25rem; padding-right: 1.25rem } }
 
 /* Site-wide, not .rs: Flowershow's default footer says "(c) year Sutras. All rights reserved.", which is
    untrue here (texts belong to their rights holders, our additions are CC BY). Hidden until the Site
