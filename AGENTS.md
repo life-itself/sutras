@@ -22,6 +22,10 @@ Use Beads (`bd`) for all tasks; no TODO lists in Markdown. `git push` also pushe
 
 `README.md` is the home page. `config.json` `contentExclude` keeps `docs/`, `.beads/`, `AGENTS.md` and `CLAUDE.md` off the live site. Don't publish new top-level folders without checking that list. `yogins-of-ladakh.md` is an untracked source dump with unclear copyright: don't commit or publish it.
 
+## Sources
+
+Source texts go in the private repo `life-itself/sutras-library` (checked out at `~/src/life-itself/sutras-library`), not here: see `docs/decisions/` on the private library. Never commit a whole in-copyright book, PDF or EPUB to this public repo.
+
 ## Docs
 
 `docs/` holds analyses and references (dated `YYYY-MM-DD-<topic>.md`); `docs/plans/` holds plans and vision docs. Not published. Don't use a `notes/` folder.
