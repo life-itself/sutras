@@ -18,7 +18,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/meditations.jpg" alt="" width="640" height="800"><figcaption>Title page of the first printed edition of Marcus Aurelius, Zurich 1558. Public domain.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/meditations.jpg" alt="" width="720" height="844"><figcaption>Title page of the first printed edition of Marcus Aurelius, Zurich 1558. Public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Stoicism · a journal</span>
 <h1>Meditations</h1>
