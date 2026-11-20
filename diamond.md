@@ -352,7 +352,7 @@ Until November 2026 this page carried a shorter version, about 1,500 words, from
 
 ## Source and licence
 
-**Source.** The text was taken from an unauthorised electronic copy of the 2010 Parallax Press edition, hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Thich%20Nhat%20Hanh%20-%20The%20Diamond%20That%20Cuts%20Through%20I.pdf), on 20 November 2026, and compared with it word for word by script. No word of the translation has been changed. Two faults of the electronic copy were put right: a capital M split from the rest of its word (“M oreover”), and line breaks inside the paragraphs. The section numbers are the book’s. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/diamond/NOTES.md).
+**Source.** The text was taken from an unauthorised electronic copy of the 2010 Parallax Press edition, hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Thich%20Nhat%20Hanh%20-%20The%20Diamond%20That%20Cuts%20Through%20I.pdf), on 20 November 2026, and compared with it word for word by script. No word of the translation has been changed. Two faults of the electronic copy were put right: a capital M split from the rest of its word (“M oreover”), and line breaks inside the paragraphs. The section numbers are the book’s. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/diamond.md).
 
 **Notes.** The notes are editorial. Where they quote Thich Nhat Hanh, the words are from his commentary in the same book.
 

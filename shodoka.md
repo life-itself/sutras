@@ -526,7 +526,7 @@ The source gives the 64 verses as unnumbered paragraphs. The numbers are ours, o
 
 **Source.** The text was taken from the Diamond Sangha *Daily Zen Sutras* (“December 1991 version”) as published by [T. Matthew Ciolek](http://www.ciolek.com/WWWVLPages/ZenPages/Daily-Zen-Sutras.html#SHODO) on 20 November 2026, and compared with that page word for word by script. It was checked against a second copy of the same translation on [Terebess Asia Online](https://terebess.hu/zen/sodoka.html).
 
-Four slips were corrected. Two follow the second copy: a stray letter (“vWhich”, [verse 42](/shodoka#42)) and a lost line break ([verse 36](/shodoka#36)). Two are in both copies and were corrected by us: “the some way” for “the same way” ([verse 16](/shodoka#16)) and “have have” ([verse 38](/shodoka#38)). Dashes and quotation marks were set in modern type. Otherwise every word is as in the source. Each change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/shodoka/NOTES.md).
+Four slips were corrected. Two follow the second copy: a stray letter (“vWhich”, [verse 42](/shodoka#42)) and a lost line break ([verse 36](/shodoka#36)). Two are in both copies and were corrected by us: “the some way” for “the same way” ([verse 16](/shodoka#16)) and “have have” ([verse 38](/shodoka#38)). Dashes and quotation marks were set in modern type. Otherwise every word is as in the source. Each change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/shodoka.md).
 
 **Notes.** The notes are editorial. They draw on John Balcom’s notes to his own translation (on the Terebess page) and on Wikipedia.
 

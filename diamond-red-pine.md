@@ -372,7 +372,7 @@ Until November 2026 this page had only chapters 1, 2 and 32. The rest has now be
 
 ## Source and licence
 
-**Source.** The text was taken from an unauthorised electronic copy of the book hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Diamond-Sutra.pdf), on 20 November 2026, and compared with it word for word by script. In that copy the whole sutra comes first, chapter after chapter, before the commentaries. One word has been changed: “billionworld” to “billion-world” in chapter 30, where the same phrase is hyphenated earlier in the same paragraph. Four stray spaces before closing quotation marks were removed, and line breaks inside paragraphs were joined. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/diamond-red-pine/NOTES.md).
+**Source.** The text was taken from an unauthorised electronic copy of the book hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Diamond-Sutra.pdf), on 20 November 2026, and compared with it word for word by script. In that copy the whole sutra comes first, chapter after chapter, before the commentaries. One word has been changed: “billionworld” to “billion-world” in chapter 30, where the same phrase is hyphenated earlier in the same paragraph. Four stray spaces before closing quotation marks were removed, and line breaks inside paragraphs were joined. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/diamond-red-pine.md).
 
 **Notes.** The notes are editorial. Where they quote Red Pine, the words are from his commentary in the same book.
 

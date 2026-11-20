@@ -5651,7 +5651,7 @@ GREGORY HAYS is assistant professor of classics at the University of Virginia. H
 
 ## Source and licence
 
-**Source.** The text was taken from the EPUB of the 2002 Modern Library edition (a conversion of the Kindle edition) on 20 November 2026, and checked against it word for word by script. Its words are Hays’s, as printed, except for the few fixes listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/meditations/NOTES.md). Small capitals are set as capitals; nothing else in the words has been changed.
+**Source.** The text was taken from the EPUB of the 2002 Modern Library edition (a conversion of the Kindle edition) on 20 November 2026, and checked against it word for word by script. Its words are Hays’s, as printed, except for the few fixes listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/meditations.md). Small capitals are set as capitals; nothing else in the words has been changed.
 
 **Licence.** The 2002 Modern Library edition is marked “All rights reserved,” and its introduction and notes are © 2002 Gregory Hays. The book is in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the contents list and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

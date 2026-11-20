@@ -253,7 +253,7 @@ The poem contains phrases that will later on assume importance in the Ts’ao Tu
 
 ## Source and licence
 
-**Source.** Taken from [Terebess Asia Online](https://terebess.hu/english/hsin3.html) on 20 November 2026 and checked against it word for word. No word of the poem is changed. Five dashes at line ends, dropped on that page, are restored; the stanza numbers and the headings are ours. Every correction is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/faith-in-mind/NOTES.md).
+**Source.** Taken from [Terebess Asia Online](https://terebess.hu/english/hsin3.html) on 20 November 2026 and checked against it word for word. No word of the poem is changed. Five dashes at line ends, dropped on that page, are restored; the stanza numbers and the headings are ours. Every correction is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/faith-in-mind.md).
 
 **Notes.** The notes are editorial. Where they quote Sheng-yen, the words are from his talks on the same source page.
 

@@ -3,18 +3,19 @@
 
 Usage: scripts/compare-source            (run from the repo root)
 
-Reads faith-in-mind.md and library/faith-in-mind/hsin3.html (the source as fetched) and prints
-every difference in the words of the poem, the preface and the introduction. Quote style, dashes
-and whitespace are normalised first, so only real changes show. Each difference must be either
-reverted or listed in library/faith-in-mind/NOTES.md. Exit status 1 if there are differences that
-are not in the EXPECTED list below.
+Reads faith-in-mind.md and faith-in-mind/hsin3.html in the private sutras-library checkout (the
+source as fetched; SUTRAS_LIBRARY sets its place, default ../sutras-library) and prints every
+difference in the words of the poem, the preface and the introduction. Quote style, dashes and
+whitespace are normalised first, so only real changes show. Each difference must be either
+reverted or listed in docs/editions/faith-in-mind.md. Exit status 1 if there are differences that
+are not in the EXPECTED list below. If the library is not checked out, it says so and exits 0.
 
 Written for one text; generalise it when the second edition is made (workstream 2).
 """
-import difflib, html, re, sys
+import difflib, html, os, re, sys
 
 EDITION = "faith-in-mind.md"
-SOURCE = "library/faith-in-mind/hsin3.html"
+SOURCE = os.path.join(os.environ.get("SUTRAS_LIBRARY", "../sutras-library"), "faith-in-mind", "hsin3.html")
 
 # Changes we made on purpose (all listed in NOTES.md): (source words, edition words)
 EXPECTED = {
@@ -92,6 +93,9 @@ def diff_words(label, a, b, problems):
 
 
 def main():
+    if not os.path.exists(SOURCE):
+        print("WARNING: source not found at %s; set SUTRAS_LIBRARY to the sutras-library checkout. Comparison skipped." % SOURCE)
+        return 0
     s_pre, s_intro, s_poem = source_parts()
     e_pre, e_intro, e_poem = edition_parts()
     problems = []

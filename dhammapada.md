@@ -3857,7 +3857,7 @@ In addition to the above works, I have also consulted many previous English tran
 
 ## Source and licence
 
-**Source.** The text is from the EPUB of *Dhammapada: A Translation*, by Thanissaro Bhikkhu, revised edition 2011, supplied by Rufus Pollock on 20 November 2026. No word of the translation, of the translator’s front and back matter or of the end notes has been changed. The layout is ours: verse numbers, stanzas, chapter headings, indentation, the end notes as footnotes at their verses, each labelled with its verse, and the omissions from the copyright page. Every change, and how the words were checked, is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/dhammapada/NOTES.md).
+**Source.** The text is from the EPUB of *Dhammapada: A Translation*, by Thanissaro Bhikkhu, revised edition 2011, supplied by Rufus Pollock on 20 November 2026. No word of the translation, of the translator’s front and back matter or of the end notes has been changed. The layout is ours: verse numbers, stanzas, chapter headings, indentation, the end notes as footnotes at their verses, each labelled with its verse, and the omissions from the copyright page. Every change, and how the words were checked, is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/dhammapada.md).
 
 **Licence.** The book’s copyright and licence statement reads, in full (the copyright page’s other blocks, on additional resources, printed copies and questions, are not reproduced):
 
@@ -3869,7 +3869,7 @@ In addition to the above works, I have also consulted many previous English tran
 
 This edition is free of charge. It is a reformatting of the 2011 text, so it states here that it is derived from that text and differs from it in layout, labels and the editors’ words (the in brief, the introduction, and this section), and that it leaves out the book’s colophon and the copyright page’s other blocks. The licence text is reproduced above in full. Our own additions are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-The translator revised the book in 2017. That revision changes the wording of ten verses and the punctuation of eight more, and it is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (non-commercial). This edition uses the 2011 text, as supplied, and the comparison is in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/dhammapada/NOTES.md).
+The translator revised the book in 2017. That revision changes the wording of ten verses and the punctuation of eight more, and it is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (non-commercial). This edition uses the 2011 text, as supplied, and the comparison is in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/dhammapada.md).
 
 ## Download
 

@@ -1,6 +1,6 @@
 # Making an edition
 
-Status: v1, 2026-11-20, written from *Faith in Mind* (`faith-in-mind.md`, `library/faith-in-mind/NOTES.md`) and the Shodoka. Copy those two; this guide says why they are the way they are. Rules come from the [goal](../plans/2026-11-20-goal.md) and [decision 0001](../decisions/0001-founding-decisions.md).
+Status: v2, 2026-11-20 (sources moved out of this repo; see step 2), written from *Faith in Mind* (`faith-in-mind.md`, `docs/editions/faith-in-mind.md`) and the Shodoka. Copy those two; this guide says why they are the way they are. Rules come from the [goal](../plans/2026-11-20-goal.md) and [decision 0001](../decisions/0001-founding-decisions.md).
 
 ## What an edition is
 
@@ -11,19 +11,19 @@ One page per text at the root (`/<slug>`, the URL never changes), in this order:
 3. **Introduction:** ours, short, signed "Editors’ introduction, drafted with an AI assistant. Month YYYY."
 4. **The text,** every passage with a link.
 5. **About this translation:** who translated it, from what book, and any front matter of theirs (preface, translator's introduction).
-6. **Source and licence:** where the words came from, how they were checked, a short summary of the changes linking to `library/<slug>/NOTES.md` on GitHub, and the copyright status.
+6. **Source and licence:** where the words came from, how they were checked, a short summary of the changes linking to `docs/editions/<slug>.md` on GitHub, and the copyright status.
 7. **Download:** the EPUB.
 
-Plus `library/<slug>/` (unpublished): the source as fetched, any second copy used for checking, and `NOTES.md`.
+Plus, in the private repo `life-itself/sutras-library` (checked out beside this one, `~/src/life-itself/sutras-library`), folder `<slug>/` (unpublished): the source as fetched, any second copy used for checking, the compare script, and the working `NOTES.md`. The public note, `docs/editions/<slug>.md`, is the same notes without the source files; keep the two in step.
 
 ## Steps
 
 1. **Claim the bead** (`bd update <id> --status in_progress`) and read `faith-in-mind.md` end to end.
-2. **Fetch the source** into `library/<slug>/`, unchanged, and note the URL and date in `NOTES.md`. Get a second copy (another site, a PDF of the book) if one exists: it catches typos and settles credits. Treat every credit on the old page as unverified: the Shodoka's was wrong.
+2. **Fetch the source** into `sutras-library/<slug>/` (the private repo), unchanged, and note the URL and date in its `NOTES.md`. `scripts/compare-source` reads `SUTRAS_LIBRARY` (default `../sutras-library`) and skips with a warning if the checkout is missing. Get a second copy (another site, a PDF of the book) if one exists: it catches typos and settles credits. Treat every credit on the old page as unverified: the Shodoka's was wrong.
 3. **Extract the text by script, never retype it.** Keep the source's paragraphs and line breaks.
 4. **Number the passages.** The id is the number a reader would cite, levels joined by dots: `/dhammapada#183`, `/meditations#4.3`. Use the traditional numbering if there is one; otherwise number the source's own paragraphs and say in `NOTES.md` that the numbers are ours. **An id never changes once live.** If the old page had numbers, keep them where you can and record any that moved.
 5. **Build the page** (template below). Typography only: curly quotes and apostrophes, spaced em dashes. Fix a word only for an obvious slip, and list every fix.
-6. **Compare with the source by script.** Zero differences that are not listed in `NOTES.md`. `scripts/compare-source` does *Faith in Mind*; copy it as `library/<slug>/compare.py` (as the Shodoka did) until the general one exists (bead sutras-m2v.7.8). Record the result (passage and line counts, "0 unlisted differences") in `NOTES.md`.
+6. **Compare with the source by script.** Zero differences that are not listed in `NOTES.md`. `scripts/compare-source` does *Faith in Mind*; copy it as `sutras-library/<slug>/compare.py` (as the Shodoka did) until the general one exists (bead sutras-m2v.7.8). Record the result (passage and line counts, "0 unlisted differences") in `NOTES.md` and in `docs/editions/<slug>.md`.
 7. **Write the in brief and introduction** (see Writing). Have a fresh subagent critique them, against the sources, before you ship.
 8. **Make the EPUB:** `scripts/epub <slug>` writes `downloads/<slug>.epub`; commit it. It handles verse (`rs-verse`), prose (`rs-passages`), dotted ids and linkable headings, and turns links to your own passages (`#3`, `/<slug>#3`) into links inside the book. Set `passageUnit: verse` (or `chapter`, `case`) in the frontmatter if "stanza" or "passage" is the wrong word for the Online line.
 9. **Check:** `scripts/check` must pass.
@@ -66,7 +66,7 @@ The body is the `.rs` wrapper copied from `faith-in-mind.md` (header, then `rs-b
 
 ## NOTES.md
 
-Copy the headings of `library/faith-in-mind/NOTES.md`: sources, how it was made, every change to the words, left as in the source, not the translator's words, facts and where each comes from, copyright. Add a section for anything special (a translator correction, where a second copy differs).
+Copy the headings of `docs/editions/faith-in-mind.md`: sources, how it was made, every change to the words, left as in the source, not the translator's words, facts and where each comes from, copyright. Add a section for anything special (a translator correction, where a second copy differs). The file is public and has no source files in it: the note lives in `docs/editions/`, and the source and working files live in the private library.
 
 ## Writing
 
