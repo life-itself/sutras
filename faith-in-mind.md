@@ -27,7 +27,7 @@ scripts:
 
 ## Introduction
 
-*Faith in Mind* (in Chinese *Hsin Hsin Ming*, 信心銘) is a short poem from the Ch’an (Zen) tradition: 146 lines in this translation, a few minutes to read through. Tradition gives it to Seng Ts’an, the Third Patriarch of Ch’an, who by Sheng-yen’s account died in 606. The attribution is doubtful. Sheng-yen himself reports that scholars doubt it, and that some place the poem after the time of the Sixth Patriarch, Hui Neng. Who wrote it is not known.
+*Faith in Mind* (in Chinese *Hsin Hsin Ming*, <span lang="zh">信心銘</span>) is a short poem from the Ch’an (Zen) tradition: 146 lines in this translation, a few minutes to read through. Tradition gives it to Seng Ts’an, the Third Patriarch of Ch’an, who by Sheng-yen’s account died in 606. The attribution is doubtful. Sheng-yen himself reports that scholars doubt it, and that some place the poem after the time of the Sixth Patriarch, Hui Neng. Who wrote it is not known.
 
 Its opening lines carry the theme: “The Supreme Way is not difficult / If only you do not pick and choose.” The rest returns to it through pairs: love and hate, for and against, right and wrong, stillness and activity, existence and emptiness. Its last stanza begins “The path of words is cut off”.
 

@@ -28,7 +28,7 @@ scripts:
 
 ## Introduction
 
-*The Gateless Gate* (in Chinese *Wumenguan*, in Japanese *Mumonkan*, 無門關) is a collection of forty-eight koans: brief exchanges between Zen teachers and their students, a question and an answer, a gesture, a story. The Chinese master Wumen Huikai (1183–1260) gathered them in the summer of 1228, when he was head monk of a monastery at Longxiang (Ryūshō in the translation). He used them, his preface says, “as brickbats to batter the gate”. Sekida, whose translation this is, gives the names in their Japanese readings, and so does this page: Wumen is Mumon. His name means “no gate”, so the title also reads as *Mumon’s Barrier*.
+*The Gateless Gate* (in Chinese *Wumenguan*, in Japanese *Mumonkan*, <span lang="zh">無門關</span>) is a collection of forty-eight koans: brief exchanges between Zen teachers and their students, a question and an answer, a gesture, a story. The Chinese master Wumen Huikai (1183–1260) gathered them in the summer of 1228, when he was head monk of a monastery at Longxiang (Ryūshō in the translation). He used them, his preface says, “as brickbats to batter the gate”. Sekida, whose translation this is, gives the names in their Japanese readings, and so does this page: Wumen is Mumon. His name means “no gate”, so the title also reads as *Mumon’s Barrier*.
 
 Each case comes in three parts: the case itself, often a few lines; Mumon’s comment, which prods and teases; and his four-line verse. The first case is one exchange. A monk asks Jōshū whether a dog has the Buddha Nature, and Jōshū answers: “Mu.” Mumon calls that one word “the front gate to Zen”.
 
