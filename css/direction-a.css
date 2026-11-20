@@ -84,10 +84,12 @@
 .sd-shelf li { min-width: 0; margin: 0; display: grid; gap: 10px }
 .sd-shelf li a { color: var(--sd-ink); text-decoration: none; display: grid; gap: 10px }
 .sd-shelf .sd-thumb { width: 100%; max-width: 190px; aspect-ratio: 4 / 5; object-fit: cover; display: block; filter: saturate(.9); mix-blend-mode: multiply }
-.sd-shelf h3 { font-family: var(--sd-display); font-weight: 400; font-size: 1.15em; line-height: 1.25; margin: 0 }
-.sd-shelf .rs-quiet, .sd-shelf .sd-by { font-size: .82em; color: var(--sd-muted); line-height: 1.4; margin: 0 }
+.sd-shelf h3, .rs-home .rs-shelf .sd-shelf h3 { font-family: var(--sd-display); font-weight: 400; font-size: 1.15em; line-height: 1.25; margin: 0; text-wrap: balance }
+.sd-shelf .rs-quiet, .rs-home .rs-shelf .sd-shelf .rs-quiet, .sd-shelf .sd-by { font-size: .82em; color: var(--sd-muted); line-height: 1.4; margin: 0; text-wrap: pretty }
 .sd-shelf .sd-line { font-size: .92em; color: var(--sd-ink2); line-height: 1.45; margin: 0 }
 .sd-shelf li a:hover h3 { color: var(--sd-accent-ink) }
+.rs-home .rs-text .rs-shelf ul.sd-shelf { margin: 0 0 var(--rs-s4); padding: 0 }
+.rs-home .rs-shelf li { margin: 0 }
 .rs-home .rs-body .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
 .rs-home .rs-text { grid-column: 1 !important }
 .rs-home .rs-text > :not(.rs-shelf) { max-width: var(--sd-measure) }
