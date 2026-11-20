@@ -10,11 +10,14 @@ licence: "Translation © 1987 Dharma Drum Publications: in copyright, reproduced
 status: published
 layout: plain
 syntaxMode: md
-scripts: /js/reading.js
+scripts:
+  - /js/reading.js
+  - /js/edition.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
+<a class="rs-kicker" href="/">Sutras</a>
 <h1>Faith in Mind</h1>
 <p class="rs-subtitle">Hsin Hsin Ming <span lang="zh">信心銘</span></p>
 <p class="rs-attribution">Attributed to Seng Ts’an, Third Patriarch of Ch’an<br>Translated by Master Sheng-yen</p>
@@ -251,7 +254,9 @@ The poem contains phrases that will later on assume importance in the Ts’ao Tu
 
 ## Source and licence
 
-**Source.** The text was taken from [Terebess Asia Online](https://terebess.hu/english/hsin3.html), fetched on 20 November 2026, and compared word for word with that page. The words of the poem are unchanged. Five line-end dashes missing from the poem on that page were put back; they appear where the same page quotes the lines in the talks, and in the DharmaNet electronic edition of the book (1994). The division into fifteen stanzas, and their numbers, follow the paragraphs of the source page; the DharmaNet edition prints the poem without breaks and words five lines differently (two in stanza 1, and one each in stanzas 2 and 12, where it also sets “not-two” in quotation marks). In the preface and introduction four slips were corrected (“he Founded”, “Nui Neng” for Hui Neng, “does not discriminates”, and a missing bracket), and straight quotation marks were made curly. The headings are ours.
+**Source.** The text was taken from [Terebess Asia Online](https://terebess.hu/english/hsin3.html) on 20 November 2026 and compared with that page word for word. No word of the poem has been changed. Five dashes at line ends, missing from the poem on that page, were put back: the page itself prints them where the talks quote those lines. The fifteen stanzas follow the paragraphs of the source page, and the numbers are ours.
+
+In the preface and introduction four slips were corrected (“he Founded”, “Nui Neng” for Hui Neng, “does not discriminates”, and a missing bracket), and straight quotation marks were made curly. The headings are ours. An earlier electronic edition of the book (DharmaNet, 1994) words five lines of the poem differently; those readings, and every change made here, are listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/faith-in-mind/NOTES.md).
 
 **Notes.** The notes are editorial. Where they quote Sheng-yen, the words are from his talks on the same source page.
 

@@ -15,6 +15,10 @@
 /* Edition header */
 .rs-head .rs-attribution { margin: 0; color: var(--rs-ink2); font-size: 1em; line-height: 1.45 }
 .rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: var(--rs-s5) 0 }
+.rs-head a.rs-kicker { text-decoration: none; align-self: flex-start }
+.rs-head a.rs-kicker:hover { color: var(--rs-accent) }
+/* fewer, longer hyphenated words in prose */
+.rs-text p { hyphenate-limit-chars: 8 4 4 }
 .rs-text .rs-signed { font-size: .9em; font-style: italic; color: var(--rs-muted) }
 
 /* Verse: one <p> per stanza, lines ended with two spaces. No hyphenation. */
