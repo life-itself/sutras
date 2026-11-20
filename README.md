@@ -12,7 +12,7 @@ syntaxMode: md
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics. Each is being made into an edition to read slowly: a clean page, a short introduction, a link for every passage, notes in the margin and an EPUB to download. *Faith in Mind* is the first finished one. Curated, not complete: each text is here because it is worth reading, and in time some will carry Rufus Pollock’s own notes alongside.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics. Each is being made into an edition to read slowly: a clean page, a short introduction, a link for every passage, notes in the margin and an EPUB to download. <em>Faith in Mind</em> is the first finished one. Curated, not complete: each text is here because it is worth reading, and in time some will carry Rufus Pollock’s own notes alongside.</p>
 
 ## Zen (Ch’an)
 
