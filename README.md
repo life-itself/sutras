@@ -30,23 +30,23 @@ The Song of Enlightenment: sixty-four verses on seeing one’s own nature, sung 
 
 ### [The Gateless Gate](/gateless-gate-mumonkan)
 
-<p class="rs-quiet">Wu-men Hui-k’ai (Mumon) · translated by Katsuki Sekida</p>
+<p class="rs-quiet">Wumen Huikai (Mumon Ekai) · translated by Katsuki Sekida</p>
 
-The Mumonkan: forty-eight koans with Wu-men’s comments and verses, beginning with Chao-chou’s “Mu”.
+The Mumonkan: forty-eight koans, each with Wumen’s comment and verse, beginning with Jōshū’s “Mu”. With the Chinese.
 
 ## Mahayana Buddhism
 
 ### [The Diamond Sutra](/diamond)
 
-<p class="rs-quiet">Translated by Thich Nhat Hanh · shortened version</p>
+<p class="rs-quiet">Translated by Thich Nhat Hanh</p>
 
-The Buddha and Subhuti on giving, and on helping all beings, without holding to any idea of a self.
+The Buddha and Subhuti on freeing all beings while holding on to no idea of self, of beings, or even of the teaching.
 
 ### [The Diamond Sutra, Red Pine’s translation](/diamond-red-pine)
 
-<p class="rs-quiet">Translated by Red Pine (Bill Porter) · partial</p>
+<p class="rs-quiet">Translated by Red Pine (Bill Porter)</p>
 
-The same sutra, translated from Sanskrit and Chinese. Only part of it is here so far.
+The same sutra from the Sanskrit, keeping its repetitions and its full closing verse.
 
 ## Early Buddhism
 

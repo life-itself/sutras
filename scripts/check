@@ -30,7 +30,7 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLISHED_IDS = ROOT / "scripts" / "published-ids.txt"
-PAGES = {"README.md", "about.md", "AGENTS.md", "CLAUDE.md"}
+PAGES = {"README.md", "about.md", "notes-demo.md", "AGENTS.md", "CLAUDE.md"}
 REQUIRED = ["title", "description", "author", "translator", "date", "tradition", "source", "licence", "status"]
 PAGE_SCRIPTS = ["/js/reading.js", "/js/edition.js"]
 STATUSES = {"published", "partial", "draft"}
