@@ -58,7 +58,7 @@ The body is the `.rs` wrapper copied from `faith-in-mind.md` (header, then `rs-b
 - **Blank lines round any Markdown inside raw HTML**, or Flowershow renders it as literal text. Inside an HTML element (`<p class="rs-inbrief">`), Markdown is not parsed: use `<em>`, not `*…*`.
 - **Verse:** wrap the text in `<div class="rs-verse">`. Each stanza starts with its link on its own line, `<a class="v" id="3" href="#3">3</a>`, then the lines, each ending in two spaces. `scripts/check` fails any stanza without one.
 - **Prose** (Seneca, *Meditations*, the Diamond Sutra): wrap the text in `<div class="rs-passages">` and put `<a class="v" id="4.3" href="#4.3">4.3</a>` at the start of each numbered paragraph; the paragraphs after it, up to the next number, belong to that passage. The number sits in the left margin.
-- **Chapter or case headings as passage targets:** `<h3 id="17"><a href="#17">XVII</a></h3>` (Seneca, Mumonkan).
+- **Chapter or case headings as passage targets:** `<h3 id="17">XVII</h3>` (Seneca, Mumonkan). Flowershow makes a heading with an id into a link itself; `scripts/check --record` records these ids too.
 - **Notes** are Markdown footnotes, `[^1]`, starting "*Editors’ note.*". reading.js moves them into the margin. Put the marker at the **end of a line**, never mid-line, or an opened note splits the line on a phone. Every quotation in a note is verbatim and its source is listed in `NOTES.md`.
 - Don't edit `css/`, `js/`, `custom.css` or `scripts/` from an edition track: file a bead for the site track.
 
