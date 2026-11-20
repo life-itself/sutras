@@ -9,6 +9,7 @@ source: https://terebess.hu/english/hsin3.html
 licence: "Translation © 1987 Dharma Drum Publications: in copyright, reproduced in full without permission. Editorial additions CC BY 4.0."
 status: published
 layout: plain
+syntaxMode: md
 scripts: /js/reading.js
 ---
 
