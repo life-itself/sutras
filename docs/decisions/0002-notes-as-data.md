@@ -1,0 +1,11 @@
+# 0002 — Notes as data: format, check and display
+
+Date: 2026-11-20. Decided by the notes track (agent), within D3 of [0001](0001-founding-decisions.md); Rufus may overturn any of it. Options and reasons: [annotation options paper](../2026-11-annotation-options.md). Bead sutras-m2v.9.2.
+
+1. **One notes file per text:** `annotations/<slug>.yaml`, a `text:` (default `<slug>.md`) and a list of `notes`. Each note: `id` (unique, never reused), `passage` (the passage id), `quote` (the exact words), optional `prefix`/`suffix` (only to tell a repeat apart), optional `note` (Markdown: emphasis, links), `by`, `date`. A note with no `note` is a highlight.
+2. **The check is strict and loud.** `scripts/notes` requires each quote exactly once in its passage, word for word. Only curly/straight quotes, kinds of dash and whitespace are forgiven, and Markdown/HTML markup is ignored as on the page. Not found, found twice, or a missing passage: it prints the note and exits 1, and writes nothing for that text. No fuzzy matching: a note is never shown against words its author did not quote.
+3. **Notes reach the page as a generated page script,** `js/notes/<slug>.js`, committed, because Flowershow pages cannot fetch data files (flowershow#1373). Rerun `scripts/notes` after editing a notes file or the text.
+4. **Display:** `js/notes.js` highlights with the CSS Custom Highlight API (`<mark>` fallback) and reuses the reading system's sidenote markup, so notes and footnotes share one margin column on a wide screen and open on a tap on a phone. The mark is a reference sign (※), not a number, so notes are not mistaken for footnotes; each note ends with its author's name. In verse the mark goes at the end of the line; in prose at the end of the quote. Tapping highlighted words also opens the note. A "Hide notes" switch gives the clean text and is remembered in the browser.
+5. **Page setup:** an edition with notes lists, in order, `/js/reading.js`, `/js/edition.js`, `/js/notes/<slug>.js`, `/js/notes.js`. `js/notes.js` loads `css/notes.css` itself unless the site's CSS already imports it.
+6. **Not in the EPUB for now.** Editions' EPUBs stay the clean text; a "with notes" EPUB is a later option.
+7. **Editors' glosses stay footnotes.** Notes files are for commentary by a named person (Rufus first).
