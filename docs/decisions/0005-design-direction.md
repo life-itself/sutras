@@ -26,3 +26,7 @@ Sample site A: https://claude.ai/artifact/FrqFoG8gtKYvTyApm4h3K8. The page compa
 ## What this changes
 
 The design session owns `css/` and `custom.css` (coordinator, 2026-11-21) and applies A to the live site in small commits, checking all nine editions plus home and about at 390 and 1280 wide; the home page is restyled with the landing session, which owns `README.md`, `about.md` and `css/home.css`. The EPUB cover follows later (bead sutras-m2v.8.3).
+
+## Outcome (2026-11-21, 01:00)
+
+Applied. Direction A is live on all eleven pages (nine editions including the two Tao Te Ching pages, home, About): `css/direction-a.css` selected by the last `@import` in `custom.css`; a figure and label on every edition; `assets/images/` with credits in `docs/design/images.md`; the home shelf. Checked with device emulation at 390×844 (no horizontal overflow on any page, title on the first screen) and at 1280×800. The coordinator's three live-review fixes (title at the fold, phone overflow verification, the Meditations scan's paper) were made the same night. Open for Rufus, filed as a needs-rufus bead: the mark (慧 live, wordmark alone as the one-line alternative). Filed: the EPUB cover and stylesheet to follow the direction. The home page's words and structure were being rewritten by the landing session at the time; design restyles after it lands. Backup C remains at its artifact link.
