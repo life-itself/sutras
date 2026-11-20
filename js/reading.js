@@ -78,7 +78,7 @@
 
   function contents(root) {
     var heads = Array.prototype.slice.call(root.querySelectorAll(".rs-text h2, .rs-text h3")).filter(function (h) { return !h.closest(".footnotes, [data-footnotes], [data-rs-sidenoted]"); });
-    heads.forEach(function (h) { if (!h.id) h.id = slug(h.textContent); });
+    heads.forEach(function (h) { if (!h.id) h.id = slug(label(h)); });
     root.querySelectorAll(".rs-toc[data-rs-auto]").forEach(function (ol) {
       if (ol.children.length) return;
       heads.forEach(function (h) {
@@ -95,7 +95,7 @@
 
   function label(h) {
     var num = h.querySelector(".rs-num");
-    var name = h.cloneNode(true); var n2 = name.querySelector(".rs-num"); if (n2) n2.remove();
+    var name = h.cloneNode(true); name.querySelectorAll(".rs-num, .rs-sn, sup, .heading-link").forEach(function (e) { e.remove(); }); // sutras: 5 — no note text in labels
     return (num && num.textContent ? num.textContent + ". " : "") + name.textContent.trim();
   }
 
