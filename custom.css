@@ -30,13 +30,34 @@
 
 /* Stanza numbers: <a class="v" id="3" href="#3">3</a> at the start of each stanza.
    The link target must land clear of the navbar. */
-.rs-verse a.v { display: block; font-size: .72em; line-height: 1.2; margin-bottom: .2em; color: var(--rs-muted); text-decoration: none; font-variant-numeric: lining-nums; scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
-.rs-verse a.v:hover, .rs-verse a.v:target { color: var(--rs-accent) }
+.rs-verse a.v, .rs-passages a.v { display: block; font-size: .72em; line-height: 1.2; margin-bottom: .2em; color: var(--rs-muted); text-decoration: none; font-variant-numeric: lining-nums; scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
+.rs-verse a.v:hover, .rs-verse a.v:target, .rs-passages a.v:hover, .rs-passages a.v:target { color: var(--rs-accent) }
 /* arriving on /faith-in-mind#3 focuses the number; the accent colour marks it, so no focus box */
-.rs-verse a.v:target:focus-visible { outline: none }
+.rs-verse a.v:target:focus-visible, .rs-passages a.v:target:focus-visible { outline: none }
 @container rs (min-width: 760px) {
-  .rs-verse a.v { position: absolute; left: -2.6em; top: .32em; margin: 0; width: 2.2em; text-align: right }
+  .rs-verse a.v, .rs-passages a.v { position: absolute; left: -2.6em; top: .32em; margin: 0; width: 2.2em; text-align: right }
 }
+/* Verse lines: edition.js wraps each line of a stanza in a .rs-line span, so a line too long for a
+   phone wraps with a hanging indent and does not read as a new line of the poem. */
+.rs-verse .rs-line { display: block; padding-left: 1.4em; text-indent: -1.4em }
+
+/* Prose passages: <div class="rs-passages">, a numbered paragraph starts with <a class="v" id="4.3" href="#4.3">4.3</a>;
+   paragraphs after it, until the next number, belong to the same passage. Numbers sit in the left margin as in verse. */
+.rs-passages p { position: relative }
+.rs-passages a.v { white-space: nowrap }
+
+/* Chapter headings as passage targets in prose: <h3 id="17"><a href="#17">XVII</a></h3>.
+   The heading reads as a heading; hover or arriving on /…#17 shows it is a link. */
+.rs-text :is(h2, h3)[id] > a[href^="#"]:only-child { color: inherit; text-decoration: none }
+.rs-text :is(h2, h3)[id] > a[href^="#"]:only-child:hover, .rs-text :is(h2, h3):target > a[href^="#"]:only-child { color: var(--rs-accent) }
+.rs-text :is(h2, h3):target > a:focus-visible { outline: none }
+
+/* Editors' notes beside the translator's: reading.js marks a note .rs-sn-editorial when its footnote label starts
+   with "e" ([^e1]) or its text starts "Editors’ note". Ours get a quieter number and an "ed." mark. */
+.rs-sn-editorial .rs-sn-ref, .rs-sn-editorial .rs-sn-n { color: var(--rs-muted) }
+.rs-sn-editorial .rs-sn-note { border-left-color: var(--rs-rule, #ccc) }
+.rs-sn-editorial .rs-sn-n::after { content: " ed."; font-style: italic; font-weight: 400 }
+
 .rs-text h2, .rs-text h3 { scroll-margin-top: calc(var(--navbar-height, 4rem) + 1.25rem) }
 
 /* Phones: the note number is the tap target. Upstream gives it line-height 0, so its box has no

@@ -32,6 +32,8 @@
       var inner = body.innerHTML.replace(/^\s*<p>/, "").replace(/<\/p>\s*$/, "").replace(/<\/p>\s*<p>/g, "<br><br>").trim();
       var sn = document.createElement("span");
       sn.className = "rs-sn";
+      // sutras: 4 — editors' notes ([^e1], or text starting "Editors’ note") are marked to tell them from the translator's
+      if (/fn-e\d+$/.test(id) || /^(<em>)?\s*Editors[’'] note/.test(inner)) sn.className += " rs-sn-editorial";
       var noteId = "rs-sn-" + slug(id);
       sn.innerHTML = '<button type="button" class="rs-sn-ref" aria-expanded="false" aria-controls="' + noteId + '" aria-label="Note ' + n + '">' + n + "</button>" +
         '<span class="rs-sn-note" id="' + noteId + '" role="note"><span class="rs-sn-n">' + n + "</span> " + inner + "</span>";

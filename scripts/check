@@ -12,8 +12,9 @@ its frontmatter has a `status`. For each edition:
 
 - frontmatter: every field in REQUIRED is present and not empty, `layout: plain`, `syntaxMode: md`,
   and the page scripts in PAGE_SCRIPTS;
-- passages: inside <div class="rs-verse"> or <div class="rs-passages">, every block (lines between
-  blank lines) starts with a passage link <a class="v" id="3" href="#3">; every such link has an id,
+- passages: inside <div class="rs-verse">, every stanza (lines between blank lines) starts with a
+  passage link <a class="v" id="3" href="#3">; inside <div class="rs-passages"> (prose), the first
+  paragraph does, and paragraphs after a number belong to that passage; every such link has an id,
   its href is "#" + the id, and the id is the number a reader would cite (levels joined by dots);
 - ids: no id appears twice in the file;
 - published ids: every `slug#id` in scripts/published-ids.txt still exists (ids never change);
@@ -36,7 +37,7 @@ STATUSES = {"published", "partial", "draft"}
 PASSAGE_ID = re.compile(r"^[0-9a-z]+(\.[0-9a-z]+)*$")
 PASSAGE_LINK = re.compile(r'<a\s+class="v"([^>]*)>')
 ANY_ID = re.compile(r'\sid="([^"]*)"')
-CONTAINER = re.compile(r'<div class="rs-(?:verse|passages)">(.*?)\n</div>', re.S)
+CONTAINER = re.compile(r'<div class="rs-(verse|passages)">(.*?)\n</div>', re.S)
 MD_LINK = re.compile(r"(?<!!)\[(?:[^\]\[]|\[[^\]]*\])*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 HREF = re.compile(r'\shref="([^"]*)"')
 WIKILINK = re.compile(r"\[\[([^\]|#]*)(#[^\]|]*)?(?:\|[^\]]*)?\]\]")
@@ -136,8 +137,11 @@ def check_edition(path, meta, body, published, errors):
         elif not href or href.group(1) != "#" + pid.group(1):
             errors.append(f'passage {pid.group(1)}: href must be "#{pid.group(1)}"')
     for c in CONTAINER.finditer(body):
-        for block in re.split(r"\n\s*\n", c.group(1).strip()):
-            if block.strip() and not block.lstrip().startswith('<a class="v"'):
+        blocks = [b for b in re.split(r"\n\s*\n", c.group(2).strip()) if b.strip()]
+        if c.group(1) == "passages":
+            blocks = blocks[:1]  # prose: paragraphs after a number belong to that passage
+        for block in blocks:
+            if not block.lstrip().startswith('<a class="v"'):
                 errors.append(f"passage without an id: {block.strip().splitlines()[0][:60]!r}")
 
     ids = ANY_ID.findall(body)
