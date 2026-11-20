@@ -88,10 +88,10 @@
 .rs-home .rs-head .rs-kicker { align-self: start }
 .rs-home .rs-text > h2, .rs-home .rs-text .rs-shelf h2 { font-family: var(--sd-text); font-style: italic; font-weight: 400; font-size: 1.1em; letter-spacing: 0; text-transform: none; color: var(--sd-muted); margin: var(--rs-s6) 0 var(--rs-s3) }
 .rs-home .rs-text .rs-shelf:first-of-type h2 { margin-top: 0 }
-.rs-home .rs-shelf ul.sd-shelf, .sd-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px); align-items: start; max-width: none }
+.rs-home .rs-shelf ul.sd-shelf, .sd-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 40px); align-items: start; max-width: 960px }
 .sd-shelf li { min-width: 0; margin: 0; display: grid; gap: 10px }
 .sd-shelf li a { color: var(--sd-ink); text-decoration: none; display: grid; gap: 10px }
-.sd-shelf .sd-thumb { width: 100%; max-width: 190px; aspect-ratio: 4 / 5; object-fit: cover; display: block; filter: saturate(.9); mix-blend-mode: multiply }
+.sd-shelf .sd-thumb { width: 100%; max-width: 210px; aspect-ratio: 4 / 5; object-fit: cover; display: block; filter: saturate(.9); mix-blend-mode: multiply }
 .sd-shelf h3, .rs-home .rs-shelf .sd-shelf h3 { font-family: var(--sd-display); font-weight: 400; font-size: 1.15em; line-height: 1.25; margin: 0; text-wrap: balance }
 .sd-shelf .rs-quiet, .rs-home .rs-shelf .sd-shelf .rs-quiet, .sd-shelf .sd-by { font-size: .82em; color: var(--sd-muted); line-height: 1.4; margin: 0; text-wrap: pretty }
 .sd-shelf .sd-line { font-size: .92em; color: var(--sd-ink2); line-height: 1.45; margin: 0 }
