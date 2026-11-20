@@ -24,9 +24,9 @@ A short poem on the mind that does not pick and choose.
 
 ### [Shodoka](/shodoka)
 
-<p class="rs-quiet">Attributed to Yung-chia Hsuan-chueh · translated by Nyogen Senzaki, revised by Robert Aitken</p>
+<p class="rs-quiet">Attributed to Yung-chia Hsuan-chueh · translated by Robert Aitken and Eido Shimano</p>
 
-The Song of Enlightenment, by a student of Hui-neng, the Sixth Patriarch.
+The Song of Enlightenment: sixty-four verses on seeing one’s own nature, sung by someone who has woken up.
 
 ### [The Gateless Gate](/gateless-gate-mumonkan)
 
