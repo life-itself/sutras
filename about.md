@@ -12,11 +12,11 @@ syntaxMode: md
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A curated library of wisdom texts, made into editions to read online and download, with Rufus Pollock’s notes and thoughts alongside.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A curated library of wisdom texts, made into editions to read online and download, and, in time, Rufus Pollock’s notes and thoughts alongside.</p>
 
 ## What it is
 
-Sutras is a small library of wisdom texts: key Buddhist sutras and Zen texts, and others such as Seneca and Marcus Aurelius’s *Meditations*. It is curated, not complete. Each text is here because Rufus Pollock finds it worth reading, or has found it useful, and wanted an edition of it he would really read.
+Sutras is a small library of wisdom texts: key Buddhist sutras and Zen texts, and others such as Seneca and Marcus Aurelius’s *Meditations*. Each text is here because Rufus Pollock finds it worth reading, or has found it useful, and wanted an edition of it he would really read.
 
 ## Who it is for
 
@@ -30,7 +30,7 @@ Then anyone looking online for a wisdom text in a good format: a clean page to r
 - **A link for every passage.** Each verse, stanza or section has a number you can link to, such as [/faith-in-mind#3](/faith-in-mind#3). Once published, a number does not change.
 - **Notes in the margin.** A few editorial notes now; Rufus’s own notes on some texts to come, shown beside the passages they are about.
 - **A download.** Each text as an EPUB for an e-reader.
-- **Its source.** Where the text came from, how it was checked against that source word for word, and every change made, listed in the edition notes.
+- **Its source.** Where the text came from and, once an edition is finished, how it was checked against that source word for word, with every change listed in the edition notes.
 
 ## Copyright
 

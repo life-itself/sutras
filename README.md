@@ -12,13 +12,13 @@ syntaxMode: md
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics. Each one is made into an edition to read slowly: a clean page with an introduction, a link for every passage, notes in the margin and an EPUB to download. Curated, not complete: each text is here because it is worth reading, and some will carry Rufus Pollock’s own notes alongside.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics. Each is being made into an edition to read slowly: a clean page, a short introduction, a link for every passage, notes in the margin and an EPUB to download. *Faith in Mind* is the first finished one. Curated, not complete: each text is here because it is worth reading, and in time some will carry Rufus Pollock’s own notes alongside.</p>
 
 ## Zen (Ch’an)
 
 ### [Faith in Mind](/faith-in-mind)
 
-<p class="rs-quiet">Attributed to Seng Ts’an · translated by Master Sheng-yen</p>
+<p class="rs-quiet">Attributed to Seng Ts’an · translated by Master Sheng-yen with Paul Kennedy</p>
 
 A short poem on the mind that does not pick and choose.
 
@@ -38,7 +38,7 @@ The Mumonkan: forty-eight koans with Wu-men’s comments and verses, beginning w
 
 ### [The Diamond Sutra](/diamond)
 
-<p class="rs-quiet">Translated by Thich Nhat Hanh</p>
+<p class="rs-quiet">Translated by Thich Nhat Hanh · shortened version</p>
 
 The Buddha and Subhuti on giving, and on helping all beings, without holding to any idea of a self.
 
@@ -54,7 +54,7 @@ The same sutra, translated from Sanskrit and Chinese. Only part of it is here so
 
 <p class="rs-quiet">Translated by Thanissaro Bhikkhu · coming</p>
 
-Short verses from the Pāli Canon on the mind and the path: the best-loved early Buddhist text.
+Short verses from the Pāli Canon on the mind and the path.
 
 ## Stoicism
 
@@ -68,11 +68,9 @@ Short verses from the Pāli Canon on the mind and the path: the best-loved early
 
 <p class="rs-quiet">Marcus Aurelius · translated by Gregory Hays · coming</p>
 
-A Roman emperor’s notes to himself on how to live, with Rufus Pollock’s notes in the margin.
+A Roman emperor’s notes to himself on how to live, with Rufus Pollock’s notes to come.
 
-## About
-
-Sutras is an experiment by [Life Itself](https://lifeitself.org) in making texts that are good to read, easy to link to and open to annotation. [More about it](/about), and the [source on GitHub](https://github.com/life-itself/sutras).
+<p class="rs-signed"><a href="/about">About Sutras</a> · <a href="https://github.com/life-itself/sutras">Source on GitHub</a></p>
 
 </article></div></div>
 </div>
