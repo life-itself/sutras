@@ -17,8 +17,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/tao-te-ching.jpg" alt="" width="900" height="568"><figcaption>Ma Yuan, <i>Walking on a Mountain Path in Spring</i>, Southern Song, album leaf. National Palace Museum, Taipei, public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Taoism · a classic</span>
 <h1>Tao Te Ching</h1>
 <p class="rs-subtitle">The Tao and its Characteristics <span lang="zh">道德經</span></p>
 <p class="rs-attribution">Attributed to Laozi<br>Translated by James Legge</p>

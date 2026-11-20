@@ -6,8 +6,9 @@ syntaxMode: md
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/tao-te-ching.jpg" alt="" width="900" height="568"><figcaption>Ma Yuan, <i>Walking on a Mountain Path in Spring</i>, Southern Song, album leaf. National Palace Museum, Taipei, public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Taoism · translations compared</span>
 <h1>Tao Te Ching, compared</h1>
 <p class="rs-subtitle">Five translations of five chapters</p>
 <p class="rs-attribution">Chapters 1, 8, 11, 33 and 76. Read with <a href="/tao-te-ching">the edition</a>.</p>
