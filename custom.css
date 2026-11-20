@@ -46,6 +46,11 @@
 .rs-passages p { position: relative }
 .rs-passages a.v { white-space: nowrap }
 
+/* Verse inside prose (a gatha in the Diamond Sutra): <p class="rs-gatha">, lines ended with two spaces.
+   Indented, left-aligned, no hyphenation; edition.js gives its lines the same hanging indent as verse. */
+.rs-text p.rs-gatha { margin-left: 1.5em; text-align: left; hyphens: none; -webkit-hyphens: none; text-wrap: wrap }
+.rs-gatha .rs-line { display: block; padding-left: 1.4em; text-indent: -1.4em }
+
 /* Chapter headings as passage targets in prose: <h3 id="17"><a href="#17">XVII</a></h3>.
    The heading reads as a heading; hover or arriving on /…#17 shows it is a link. */
 .rs-text :is(h2, h3)[id] > a[href^="#"]:only-child { color: inherit; text-decoration: none }
@@ -65,6 +70,13 @@
 @container rs (max-width: 759.98px) {
   .rs-sn-ref { line-height: 1; padding: .9em .7em; margin: -.9em -.45em -.9em -.5em; position: relative }
 }
+
+/* Site-wide, not .rs: the navbar, footer and page take the reading page's paper and ink (personal theme in
+   css/reading.css), so there are no white bands; a hairline rule marks them off. Light only, as the reading page is. */
+:root { --sutras-paper: #f8f7f4; --sutras-ink: #252421; --sutras-rule: #dedbd3 }
+body, .site-navbar, .site-footer { background-color: var(--sutras-paper) }
+.site-navbar { border-bottom: 1px solid var(--sutras-rule) }
+.site-footer { border-top: 1px solid var(--sutras-rule) !important; color: var(--sutras-ink) }
 
 /* Site-wide, not .rs: Flowershow's default footer says "(c) year Sutras. All rights reserved.", which is
    untrue here (texts belong to their rights holders, our additions are CC BY). Hidden until the Site

@@ -1,6 +1,6 @@
 /* Sutras edition pages: page script, listed after reading.js in a page's frontmatter.
 
-   1. Verse lines. Each line of a stanza (lines end in <br>) is wrapped in <span class="rs-line">, so a long line
+   1. Verse lines. Each line of a stanza, or of a verse inside prose (p.rs-gatha) (lines end in <br>), is wrapped in <span class="rs-line">, so a long line
    wraps on a phone with a hanging indent (custom.css). The stanza number (a.v) stays outside the lines.
    Only stanzas with more than one line are touched. Safe to run more than once.
 
@@ -26,7 +26,7 @@
 
 (() => {
   if (!document.currentScript?.isConnected) return;
-  document.querySelectorAll(".rs .rs-verse p").forEach((p) => {
+  document.querySelectorAll(".rs .rs-verse p, .rs p.rs-gatha").forEach((p) => {
     if (p.dataset.rsLines || !p.querySelector(":scope > br")) return;
     p.dataset.rsLines = "1";
     const nodes = Array.from(p.childNodes);
