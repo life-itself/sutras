@@ -35,7 +35,7 @@ jobs:
           curl -fsSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
           sudo apt-get update -q
           sudo apt-get install -y ./pandoc.deb python3-yaml default-jre-headless
-          unzip -q epubcheck.zip -d "$HOME/epubcheck"
+          unzip -q epubcheck.zip -d "$HOME"
           printf '#!/bin/sh\nexec java -jar "%s/epubcheck-5.4.0/epubcheck.jar" "$@"\n' "$HOME" | sudo tee /usr/local/bin/epubcheck > /dev/null
           sudo chmod +x /usr/local/bin/epubcheck
           pandoc --version | head -1
