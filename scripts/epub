@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Build an EPUB of one edition with Pandoc.
+"""Build the EPUB of one edition, or of every published edition, with Pandoc.
 
-Usage: scripts/epub faith-in-mind      (run from the repo root; writes downloads/<slug>.epub)
+Usage: scripts/epub <slug>     (run from anywhere; writes downloads/<slug>.epub)
+       scripts/epub --all      (every edition whose frontmatter has status: published)
 
 Reads <slug>.md, the same file the site publishes, and makes the small changes an e-reader needs:
 the page wrapper and header (raw HTML for the web layout) are dropped; verse (<div class="rs-verse">)
@@ -9,30 +10,75 @@ and prose (<div class="rs-passages">) become Pandoc fenced divs; passage numbers
 ids s3, s4.3, and linkable headings (<h3 id="17"><a href="#17">XVII</a></h3>) become headings with
 id s17; links to a passage of the same edition (#3 or /slug#3) point at it inside the book; other site
 links become full URLs; and the Download section is replaced by a line saying where the text lives
-online, naming the passage unit (frontmatter `passageUnit`, else "stanza" for verse, "passage"). Title, author, translator, source and licence come from the frontmatter.
-The output is committed, because Flowershow has no build step.
+online, naming the passage unit (frontmatter `passageUnit`, else "stanza" for verse, "passage").
+
+Metadata comes from the frontmatter: title, author (creator, without the dates and notes in brackets),
+translator (contributor, role trl), licence (rights), source, tradition (subject). The identifier is a
+UUID made from the site address, so it never changes. The date and the zip timestamps come from the
+source's last commit, not the clock, so an unchanged source gives an unchanged EPUB.
+
+The text is split into one file per chapter: at the level-3 headings if the text has any (Dhammapada,
+Seneca, Mumonkan), otherwise at level 2 (Meditations books, Diamond, Faith in Mind). The cover is a
+typographic SVG made from the title and author. The stylesheet is scripts/epub.css. If epubcheck is on
+the PATH, every EPUB is checked and the build fails on errors.
+
+The output is committed, because Flowershow has no build step; .github/workflows/epub.yml rebuilds it
+on every push that changes an edition.
 """
-import datetime, pathlib, re, subprocess, sys, tempfile
+import datetime, os, pathlib, re, subprocess, sys, tempfile, textwrap, time, uuid
+from xml.sax.saxutils import escape
 
 import yaml
 
+ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://sutras.lifeitself.org"
-CSS = """
-body { font-family: Georgia, serif; line-height: 1.5; }
-h1, h2, h3 { font-weight: normal; }
-.verse p { margin: 0 0 1.4em; text-align: left; hyphens: none; -webkit-hyphens: none; }
-.passages span.v { font-size: 0.75em; color: #777; margin-right: 0.5em; }
-span.v { display: block; font-size: 0.75em; color: #777; }
-p.inbrief { font-style: italic; }
-p.signed, p.meta { font-size: 0.9em; color: #555; }
-"""
+CSS = ROOT / "scripts" / "epub.css"
+PAGES = {"README.md", "about.md", "notes-demo.md", "AGENTS.md", "CLAUDE.md"}
+
+
+def read_edition(slug):
+    text = (ROOT / (slug + ".md")).read_text(encoding="utf-8")
+    m = re.match(r"---\n(.*?)\n---\n", text, re.S)
+    return yaml.safe_load(m.group(1)), text[m.end():]
+
+
+def published_slugs():
+    slugs = []
+    for path in sorted(ROOT.glob("*.md")):
+        if path.name in PAGES:
+            continue
+        m = re.match(r"---\n(.*?)\n---\n", path.read_text(encoding="utf-8"), re.S)
+        if m and yaml.safe_load(m.group(1)).get("status") == "published":
+            slugs.append(path.stem)
+    return slugs
+
+
+def source_time(slug):
+    """The last commit that changed the source, as a Unix time (the clock if it is not committed yet)."""
+    out = subprocess.run(["git", "log", "-1", "--format=%ct", "--", slug + ".md"], cwd=ROOT,
+                         capture_output=True, text=True).stdout.strip()
+    if not out:
+        print("warning: %s.md is not committed; using today's date" % slug, file=sys.stderr)
+        return int(time.time())
+    return int(out)
+
+
+def person(text):
+    """A name for the metadata: 'Wumen Huikai (Mumon Ekai, 1183–1260)' is 'Wumen Huikai'."""
+    return re.split(r"\s*[(;]", text)[0].strip()
+
+
+def chapter_level(body):
+    """Level-3 headings split the text into chapters if it has any; otherwise level 2."""
+    text = re.split(r"(?m)^## (?:About this translation|Source and licence|Download)", body, maxsplit=1)[0]
+    return 3 if re.search(r"(?m)^### |^<h3\b", text) else 2
 
 
 def containers(body):
     """Turn the passage containers into Pandoc fenced divs and drop the web layout's wrapper lines."""
     out, stack = [], []
     for line in body.split("\n"):
-        m = re.match(r'^<div class="rs-(verse|passages)">$', line)
+        m = re.match(r'^<div class="(?:[\w-]+ )*rs-(verse|passages|gatha)">$', line)
         if m:
             stack.append(m.group(1)); out.append("::: " + m.group(1)); continue
         if line == "</div>" and stack and stack[-1] != "drop":
@@ -48,12 +94,8 @@ def containers(body):
     return "\n".join(out)
 
 
-def main(slug):
-    root = pathlib.Path(__file__).resolve().parent.parent
-    text = (root / (slug + ".md")).read_text(encoding="utf-8")
-    m = re.match(r"---\n(.*?)\n---\n", text, re.S)
-    meta, body = yaml.safe_load(m.group(1)), text[m.end():]
-
+def to_book(slug, meta, body):
+    """The source's Markdown, with the web layout taken out and EPUB links and containers in."""
     # web-only header
     body = re.sub(r"(?s)<header class=\"rs-head\">.*?</header>\n", "", body)
     body = re.sub(r"(?s)<nav class=\"rs-rail\".*?</nav>\n?", "", body)  # web contents rail; the book has its own
@@ -74,6 +116,13 @@ def main(slug):
         ids.append(pid)
         return "%s %s {#s%s}" % ("#" * int(m.group(1)), inner, pid)
     body = re.sub(r'(?m)^<h([23])\b[^>]*?\bid="([^"]+)"[^>]*>(.*)</h\1>$', heading, body)
+    # a contents list of cases or chapters: raw HTML links are not moved between files by Pandoc, so the
+    # list becomes Markdown links, and the collapsible wrapper goes
+    body = re.sub(r'(?m)^<details class="koan-contents">\n<summary>(.*?)</summary>\n', r"**\1**\n", body)
+    body = re.sub(r"(?m)^</details>\n", "", body)
+    body = re.sub(r'(?m)^<ol class="koan-toc">\n', "", body)
+    body = re.sub(r'(?m)^<li><a href="#([^"]+)">(.*?)</a></li>$', r"- [\2](#\1)", body)
+    body = re.sub(r"(?m)^</ol>\n", "", body)
     # links to a passage of this edition (#3, /slug#3) go to its span in the book
     alt = "|".join(re.escape(i) for i in sorted(ids, key=len, reverse=True)) or "(?!)"
     body = re.sub(r'(\]\(|href=")(?:/%s)?#(%s)(?=[)"])' % (re.escape(slug), alt), r"\1#s\2", body)
@@ -85,27 +134,95 @@ def main(slug):
     body = re.sub(r"(?s)## Download\n.*?(?=\n\[\^|\Z)", "## Online\n\n" + online, body)
     body = re.sub(r"\]\(/(?!/)", "](%s/" % SITE, body)
     body = re.sub(r'href="/(?!/)', 'href="%s/' % SITE, body)
+    return body
 
-    out = root / "downloads" / (slug + ".epub")
+
+def metadata(slug, meta, day):
+    return {
+        "title": meta["title"],
+        "creator": [{"role": "aut", "text": person(meta["author"])}],
+        "contributor": [{"role": "trl", "text": "Translated by " + meta["translator"]}],
+        "lang": "en-GB",
+        "date": day,
+        "rights": meta["licence"],
+        "source": meta["source"],
+        "subject": meta["tradition"],
+        "publisher": "Sutras (%s)" % SITE,
+        "identifier": "urn:uuid:" + str(uuid.uuid5(uuid.NAMESPACE_URL, SITE + "/" + slug)),
+        "description": meta["description"],
+    }
+
+
+def cover(meta):
+    """A plain typographic cover: the title large, the author and translator under it, no picture."""
+    width, height, size = 1600, 2400, 120
+    title = textwrap.wrap(meta["title"], 14)
+    y0 = 1100 - (len(title) - 1) * size * 0.62
+    lines = "".join('<text x="800" y="%d">%s</text>' % (y0 + i * size * 1.25, escape(t)) for i, t in enumerate(title))
+    by = y0 + len(title) * size * 1.25 + 120
+    names = textwrap.wrap(person(meta["author"]) + "  ·  " + person(meta["translator"]), 34)
+    byline = "".join('<text x="800" y="%d">%s</text>' % (by + i * 64, escape(t)) for i, t in enumerate(names))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+<title>{escape(meta["title"])}</title>
+<rect width="{width}" height="{height}" fill="#f5f0e6"/>
+<g font-family="Georgia, 'Times New Roman', serif" fill="#222" text-anchor="middle">
+<g font-size="{size}">{lines}</g>
+<line x1="700" y1="{by - 110}" x2="900" y2="{by - 110}" stroke="#8a8170" stroke-width="2"/>
+<g font-size="56" font-style="italic" fill="#555">{byline}</g>
+<text x="800" y="2180" font-size="40" letter-spacing="8" fill="#8a8170">SUTRAS</text>
+</g>
+</svg>
+"""
+
+
+def build(slug):
+    root_meta, body = read_edition(slug)
+    seconds = source_time(slug)
+    day = datetime.datetime.fromtimestamp(seconds, datetime.timezone.utc).date().isoformat()
+    book = to_book(slug, root_meta, body)
+    out = ROOT / "downloads" / (slug + ".epub")
     out.parent.mkdir(exist_ok=True)
+    env = dict(os.environ, SOURCE_DATE_EPOCH=str(seconds))
     with tempfile.TemporaryDirectory() as tmp:
         tmp = pathlib.Path(tmp)
-        (tmp / "book.md").write_text(body, encoding="utf-8")
-        (tmp / "epub.css").write_text(CSS, encoding="utf-8")
+        (tmp / "book.md").write_text(book, encoding="utf-8")
+        (tmp / "cover.svg").write_text(cover(root_meta), encoding="utf-8")
+        (tmp / "metadata.yaml").write_text(yaml.safe_dump(metadata(slug, root_meta, day), allow_unicode=True, sort_keys=False), encoding="utf-8")
+        level = chapter_level(body)
         cmd = ["pandoc", str(tmp / "book.md"), "-f", "markdown", "-t", "epub3", "-o", str(out),
-               "--css", str(tmp / "epub.css"), "--split-level=2", "--toc", "--toc-depth=2",
-               "--metadata", "title=" + meta["title"],
-               "--metadata", "author=" + meta["author"],
-               "--metadata", "contributor=Translated by " + meta["translator"],
-               "--metadata", "lang=en-GB",
-               "--metadata", "date=" + datetime.date.today().isoformat(),
-               "--metadata", "rights=" + meta["licence"],
-               "--metadata", "source=" + meta["source"],
-               "--metadata", "publisher=Sutras (%s)" % SITE,
-               "--metadata", "identifier=%s/%s" % (SITE, slug)]
-        subprocess.run(cmd, check=True)
-    print("wrote", out.relative_to(root))
+               "--css", str(CSS), "--split-level=%d" % level, "--toc", "--toc-depth=3",
+               "--metadata-file", str(tmp / "metadata.yaml"), "--epub-cover-image", str(tmp / "cover.svg")]
+        subprocess.run(cmd, check=True, env=env)
+    print("wrote", out.relative_to(ROOT))
+    return out
+
+
+def validate(path):
+    """Run epubcheck if it is installed; return False on errors."""
+    if subprocess.run(["which", "epubcheck"], capture_output=True).returncode != 0:
+        print("warning: epubcheck not installed; %s not checked" % path.name, file=sys.stderr)
+        return True
+    result = subprocess.run(["epubcheck", str(path)], capture_output=True, text=True)
+    if result.returncode != 0:
+        print(result.stdout + result.stderr, file=sys.stderr)
+        print("epubcheck failed: %s" % path.name, file=sys.stderr)
+        return False
+    return True
+
+
+def main(args):
+    if args == ["--all"]:
+        slugs = published_slugs()
+    elif len(args) == 1 and not args[0].startswith("-"):
+        slugs = [args[0]]
+    else:
+        sys.exit(__doc__)
+    ok = True
+    for slug in slugs:
+        ok = validate(build(slug)) and ok
+    if not ok:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else sys.exit(__doc__))
+    main(sys.argv[1:])

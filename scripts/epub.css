@@ -1,0 +1,41 @@
+/* Sutras EPUB stylesheet. Small on purpose: restyle here, then run scripts/epub --all.
+   Pandoc's own classes: .verse and .passages are the containers, span.v the passage numbers,
+   p.inbrief and p.signed the front matter, p.orig the original-language text. */
+
+html { font-family: Georgia, "Times New Roman", serif; }
+body { line-height: 1.5; margin: 0 5%; color: #1d1d1d; }
+h1, h2, h3, h4 { font-family: inherit; font-weight: normal; line-height: 1.25; }
+h1 { font-size: 1.6em; margin: 1.2em 0 0.8em; }
+h2 { font-size: 1.3em; margin: 1.2em 0 0.6em; }
+h3 { font-size: 1.1em; margin: 1.2em 0 0.4em; }
+h4 { font-size: 1em; font-style: italic; margin: 1em 0 0.3em; }
+p { margin: 0 0 0.9em; text-align: left; hyphens: none; -webkit-hyphens: none; }
+a { color: inherit; }
+
+/* front matter */
+p.inbrief { font-style: italic; }
+p.signed, p.meta { font-size: 0.9em; color: #555; }
+
+/* verse: one paragraph per stanza, a line per line, a space between stanzas */
+.verse p { margin: 0 0 1.4em; }
+.verse br { line-height: 1.5; }
+
+/* prose: each numbered paragraph is one passage */
+.passages p { margin: 0 0 0.9em; }
+
+/* passage numbers sit beside the text, quiet */
+span.v { font-size: 0.75em; color: #777; margin-right: 0.4em; font-variant-numeric: lining-nums; }
+.verse span.v { display: block; margin: 0 0 0.2em; }
+
+/* original-language text (Chinese, Pali): smaller and quieter, with a CJK face */
+p.orig { font-size: 0.85em; color: #555; }
+p.orig[lang="zh"] { font-family: "Songti SC", "Noto Serif CJK SC", "Hiragino Mincho ProN", serif; }
+
+/* notes: EPUB pop-up notes; the list at the end of a file is the fallback */
+a.footnote-ref { font-size: 0.7em; vertical-align: super; text-decoration: none; }
+section.footnotes { font-size: 0.85em; color: #555; margin-top: 2em; }
+aside[role="doc-footnote"] { font-size: 0.9em; }
+
+/* the contents page keeps its own look */
+nav#toc ol { list-style: none; padding-left: 0; }
+nav#toc ol ol { padding-left: 1.2em; }
