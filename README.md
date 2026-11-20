@@ -23,13 +23,7 @@ syntaxMode: md
 
 <ul class="sd-shelf">
 <li><a href="/faith-in-mind"><img class="sd-thumb" src="/assets/images/faith-in-mind.jpg" alt="" width="800" height="1237"><h3>Faith in Mind</h3><span class="rs-quiet">Seng Ts’an, attributed · translated by Master Sheng-yen with Paul Kennedy · about 10&nbsp;min</span><span class="sd-line">A short poem on the mind that does not pick and choose.</span></a></li>
-</ul>
-
-<ul class="sd-shelf">
 <li><a href="/shodoka"><img class="sd-thumb" src="/assets/images/shodoka.jpg" alt="" width="900" height="533"><h3>Shodoka</h3><span class="rs-quiet">Yung-chia · translated by Robert Aitken and Eido Shimano · about 15&nbsp;min</span><span class="sd-line">Sixty-four verses on seeing one’s own nature, sung in the first person by someone who has woken up.</span></a></li>
-</ul>
-
-<ul class="sd-shelf">
 <li><a href="/gateless-gate-mumonkan"><img class="sd-thumb" src="/assets/images/gateless-gate-mumonkan.jpg" alt="" width="640" height="854"><h3>The Gateless Gate</h3><span class="rs-quiet">Wumen Huikai (Mumon Ekai) · translated by Katsuki Sekida · about 45&nbsp;min</span><span class="sd-line">Forty-eight koans, each with a comment and a verse by Wumen, beginning with Jōshū’s “Mu”. With the Chinese.</span></a></li>
 </ul>
 
@@ -41,9 +35,6 @@ syntaxMode: md
 
 <ul class="sd-shelf">
 <li><a href="/diamond"><img class="sd-thumb" src="/assets/images/diamond.jpg" alt="" width="680" height="913"><h3>The Diamond Sutra</h3><span class="rs-quiet">Translated by Thich Nhat Hanh · about 30&nbsp;min</span><span class="sd-line">The Buddha and Subhuti on freeing all beings while holding on to no idea of self, of beings, or even of the teaching.</span></a></li>
-</ul>
-
-<ul class="sd-shelf">
 <li><a href="/diamond-red-pine"><img class="sd-thumb" src="/assets/images/diamond-red-pine.jpg" alt="" width="720" height="829"><h3>The Diamond Sutra, Red Pine’s translation</h3><span class="rs-quiet">Translated by Red Pine (Bill Porter) · about 35&nbsp;min</span><span class="sd-line">The same sutra from the Sanskrit, keeping its repetitions and its full closing verse.</span></a></li>
 </ul>
 
@@ -65,9 +56,6 @@ syntaxMode: md
 
 <ul class="sd-shelf">
 <li><a href="/seneca-on-the-shortness-of-life"><img class="sd-thumb" src="/assets/images/seneca-on-the-shortness-of-life.jpg" alt="" width="640" height="1057"><h3>On the Shortness of Life</h3><span class="rs-quiet">Seneca · translated by John W. Basore · about 50&nbsp;min</span><span class="sd-line">Life is long enough, if we stop wasting it.</span></a></li>
-</ul>
-
-<ul class="sd-shelf">
 <li><a href="/meditations"><img class="sd-thumb" src="/assets/images/meditations.jpg" alt="" width="640" height="800"><h3>Meditations</h3><span class="rs-quiet">Marcus Aurelius · translated by Gregory Hays · about 235&nbsp;min</span><span class="sd-line">A Roman emperor’s notes to himself on how to live, with Rufus Pollock’s notes in the margin.</span></a></li>
 </ul>
 
