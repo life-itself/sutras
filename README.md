@@ -12,7 +12,7 @@ syntaxMode: md
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics. Each is being made into an edition to read slowly: a clean page, a short introduction, a link for every passage, notes in the margin and an EPUB to download. <em>Faith in Mind</em> is the first finished one. Curated, not complete: each text is here because it is worth reading, and in time some will carry Rufus Pollock’s own notes alongside.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics. Each is being made into an edition to read slowly: a clean page, a short introduction, a link for every passage, notes in the margin and an EPUB to download. <em>Faith in Mind</em> is the first finished one. Curated, not complete: each text is here because it is worth reading, and some carry Rufus Pollock’s own notes alongside, starting with <em>Meditations</em>.</p>
 
 ## Zen (Ch’an)
 
@@ -64,11 +64,11 @@ Short verses from the Pāli Canon on the mind and the path.
 
 “It is not that we have a short space of time, but that we waste much of it.”
 
-### Meditations
+### [Meditations](/meditations)
 
-<p class="rs-quiet">Marcus Aurelius · translated by Gregory Hays · coming</p>
+<p class="rs-quiet">Marcus Aurelius · translated by Gregory Hays</p>
 
-A Roman emperor’s notes to himself on how to live, with Rufus Pollock’s notes to come.
+A Roman emperor’s notes to himself on how to live, with Rufus Pollock’s notes in the margin.
 
 <p class="rs-signed"><a href="/about">About Sutras</a> · <a href="https://github.com/life-itself/sutras">Source on GitHub</a></p>
 
