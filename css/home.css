@@ -1,0 +1,41 @@
+/* Home page only (README.md, <div class="rs rs-home">). Loaded by custom.css; everything is scoped to .rs-home,
+   so the edition pages do not change. The look is the reading look (personal theme in reading.css).
+   Hooks for the design track:
+     .rs-home .rs-lead      the opening line (the first words of the page)
+     .rs-home .rs-intro     the one plain sentence on what this is
+     .rs-shelf              one group of the shelf (wrap a group's entries in it)
+     accent colour          the theme's --rs-accent; to change it for this page only, set it on
+                            .rs.rs-home[data-rs-theme="personal"] (a plain .rs-home rule loses to the theme) */
+
+.rs-home .rs-head .rs-wrap { padding-block: var(--rs-s4) 0 }
+.rs-home .rs-kicker { display: block; margin-bottom: var(--rs-s4) }
+
+/* The opening line: a teaching's own lines, each on its own line, large, with air round it.
+   Specificity matches the theme's .rs-text h2 rules, which load first, so these win. */
+.rs-home .rs-lead { font-family: var(--rs-display); font-size: clamp(1.9rem, 4.2cqi, 2.9rem); font-weight: 400; line-height: 1.18; letter-spacing: -.012em; color: var(--rs-ink); margin: 0 0 var(--rs-s3) }
+.rs-home .rs-lead span { display: block; text-wrap: balance }
+.rs-home .rs-head .rs-quiet { font-size: .92em; margin: 0 }
+.rs-home .rs-body .rs-wrap { padding-block: var(--rs-s4) var(--rs-s5) }
+.rs-home .rs-head .rs-quiet a { color: var(--rs-muted) }
+
+/* What this is: a plain sentence, no box */
+.rs-home .rs-intro { font-size: 1.12em; line-height: 1.55; color: var(--rs-ink2); max-width: 30em; margin: 0 0 var(--rs-s3); text-wrap: pretty }
+.rs-home .rs-start { font-size: 1.12em; margin: 0 0 var(--rs-s5) }
+.rs-home .rs-start a { color: var(--rs-ink); font-weight: 500 }
+
+/* The shelf: group labels in small capitals, titles in the display face, a quiet line of translator and time */
+.rs-home .rs-text .rs-shelf h2 { font-family: var(--rs-ui); font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--rs-ink2); margin: var(--rs-s6) 0 0; line-height: 1.4 }
+.rs-home .rs-shelf h3 { font-family: var(--rs-display); font-size: 1.55em; font-weight: 500; line-height: 1.2; margin: var(--rs-s3) 0 var(--rs-s1); text-wrap: balance }
+.rs-home .rs-shelf h3 a { color: var(--rs-ink); text-decoration: none; background-image: linear-gradient(var(--rs-rule), var(--rs-rule)); background-size: 100% 1px; background-position: 0 94%; background-repeat: no-repeat }
+.rs-home .rs-shelf h3 a:hover { color: var(--rs-accent); background-image: linear-gradient(var(--rs-accent), var(--rs-accent)) }
+.rs-home .rs-shelf .rs-quiet { font-size: 15px; line-height: 1.45; margin: 0 0 var(--rs-s1); text-wrap: balance; color: var(--rs-ink2) }
+.rs-home .rs-shelf h3 + .rs-quiet + p { margin-top: 0 }
+
+/* Sections below the shelf: serif headings, the same scale as the reading pages */
+.rs-home .rs-text > h2 { font-size: 2.1em; margin: var(--rs-s6) 0 var(--rs-s3) }
+
+@container rs (max-width: 480px) {
+  .rs-home .rs-lead { font-size: 1.9rem }
+  .rs-home .rs-shelf h3 { font-size: 1.4em }
+  .rs-home .rs-text > h2 { margin-top: var(--rs-s5) }
+}
