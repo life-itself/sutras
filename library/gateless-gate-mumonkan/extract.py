@@ -81,7 +81,7 @@ def label(part):
     return ""
 
 
-def prose(paras, sec_id):
+def prose(paras, sec_id, kind="text"):
     out = []
     for para in paras:
         lines, zhs = [], []
@@ -90,7 +90,7 @@ def prose(paras, sec_id):
                 zhs.append(zh(c))
             if e:
                 lines.append(en(e))
-        if sec_id == "24":                     # Fuketsu's quoted poem: the source sets it as lines
+        if sec_id == "24" and kind == "text":                     # Fuketsu's quoted poem: the source sets it as lines
             text = lines[0] + "\n\n" + "  \n".join(lines[1:])
         elif sec_id == "postscript" and lines[0].startswith("The change of era"):   # date and signature
             text = "  \n".join(l.replace("\t", "  \n") for l in lines)
@@ -127,17 +127,17 @@ def section(s):
     if s["id"] in ("preface", "postscript"):
         name = "Mumon’s preface" if s["id"] == "preface" else "Mumon’s postscript"
         zh_title = ' <span class="koan-title-zh" lang="zh">%s</span>' % s["zh"] if s["zh"] else ""
-        head = '<h3 class="koan-title" id="%s"><a href="#%s">%s%s</a></h3>' % (s["id"], s["id"], name, zh_title)
+        head = '<h3 class="koan-title" id="%s">%s%s</h3>' % (s["id"], name, zh_title)
     else:
-        head = ('<h3 class="koan-title" id="%s"><a href="#%s"><span class="koan-num">Case %s</span> %s <span class="koan-title-zh" lang="zh">%s</span></a></h3>'
-                % (s["id"], s["id"], s["id"], en(s["title"]), s["zh"]))
+        head = ('<h3 class="koan-title" id="%s"><span class="koan-num">Case %s</span> %s <span class="koan-title-zh" lang="zh">%s</span></h3>'
+                % (s["id"], s["id"], en(s["title"]), s["zh"]))
     out = [head]
     for part in s["parts"]:
         kind = {"text": "koan-case", "comment": "koan-comment", "verse": "koan-verse rs-verse"}[part["kind"]]
         if s["id"] in ("preface", "postscript"):
             kind = {"text": "koan-prose", "verse": "koan-verse rs-verse"}[part["kind"]]
         body = [label(part)] if label(part) else []
-        body += verse(part["paras"]) if part["kind"] == "verse" else prose(part["paras"], s["id"])
+        body += verse(part["paras"]) if part["kind"] == "verse" else prose(part["paras"], s["id"], part["kind"])
         out.append('<div class="%s">\n\n%s\n\n</div>' % (kind, "\n\n".join(body)))
     return "\n\n".join(out)
 
