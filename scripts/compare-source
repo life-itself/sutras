@@ -72,7 +72,7 @@ def edition_parts():
             continue
         lines = [norm(clean(l)) for l in block[m.end():].split("\n")]
         stanzas.append((int(m.group(1)), [l for l in lines if l]))
-    preface = [norm(clean(p)) for p in section("### Preface", "### Sheng-yen").split("\n\n") if p.strip()]
+    preface = [norm(clean(p)) for p in section("### Preface", "### Sheng-yen")[len(" to the 1987 book (unsigned)"):].split("\n\n") if p.strip()]
     intro = [norm(clean(p)) for p in section("### Sheng-yen", "## Source and licence").split("\n\n")[1:] if p.strip()]
     return preface, intro, stanzas
 

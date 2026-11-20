@@ -1,6 +1,7 @@
 /* Sutras custom.css. Loads on every page of the site.
    Everything here is scoped to .rs (the reading layout, used by edition pages with layout: plain),
-   so pages without a .rs wrapper are unchanged. @import lines must stay first. */
+   so pages without a .rs wrapper are unchanged, with one exception at the end (the footer line).
+   @import lines must stay first. */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap");
 @import url("/css/reading.css");
 
@@ -9,7 +10,7 @@
 
 /* Footnotes: Flowershow renders the footnote list after our closing </div>, outside .rs.
    reading.js marks it once the notes are in the margin; hide it on screen then. Before that, style it. */
-@media screen { [data-rs-sidenoted] { display: none } }
+@media screen { [data-rs-sidenoted], .footnotes:has([data-rs-sidenoted]) { display: none } }
 .rs ~ .footnotes, .rs ~ [data-footnotes] { max-width: 34em; margin: 0 auto; padding: 2rem 20px 4rem; font-family: "EB Garamond", Garamond, Georgia, serif; font-size: 17px; line-height: 1.5 }
 
 /* Edition header */
@@ -17,13 +18,15 @@
 .rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: var(--rs-s5) 0 }
 .rs-head a.rs-kicker { text-decoration: none; align-self: flex-start }
 .rs-head a.rs-kicker:hover { color: var(--rs-accent) }
-/* fewer, longer hyphenated words in prose */
-.rs-text p { hyphenate-limit-chars: 8 4 4 }
+/* no automatic hyphenation: the measure is wide enough, and broken words read badly in quotations */
+.rs-text p, .rs-inbrief { hyphens: manual; -webkit-hyphens: manual }
+/* the Personal theme sets the first line after every h2 in small caps; on these pages that lands on
+   link text, split names and the poem, so it is off */
+.rs[data-rs-theme="personal"] .rs-body .rs-text :is(.rs-first, h2 + p, h2 + .rs-inbrief + p)::first-line { font-variant: normal; letter-spacing: 0 }
 .rs-text .rs-signed { font-size: .9em; font-style: italic; color: var(--rs-muted) }
 
 /* Verse: one <p> per stanza, lines ended with two spaces. No hyphenation. */
 .rs-verse p { position: relative; hyphens: none; -webkit-hyphens: none; text-wrap: wrap; text-align: left; margin-bottom: var(--rs-s4); hanging-punctuation: none }
-.rs[data-rs-theme="personal"] .rs-verse p::first-line { font-variant: normal; letter-spacing: 0 }
 
 /* Stanza numbers: <a class="v" id="3" href="#3">3</a> at the start of each stanza.
    The link target must land clear of the navbar. */
@@ -41,3 +44,8 @@
 @container rs (max-width: 759.98px) {
   .rs-sn-ref { line-height: 1; padding: .9em .7em; margin: -.9em -.45em -.9em -.5em; position: relative }
 }
+
+/* Site-wide, not .rs: Flowershow's default footer says "(c) year Sutras. All rights reserved.", which is
+   untrue here (texts belong to their rights holders, our additions are CC BY). Hidden until the Site
+   workstream writes a real footer. */
+.site-footer-copyright { display: none }

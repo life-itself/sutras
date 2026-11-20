@@ -3,7 +3,7 @@ title: Faith in Mind
 description: "A short Ch’an (Zen) poem on the mind that does not pick and choose, attributed to Seng Ts’an, in Master Sheng-yen’s translation. Complete, with notes and an EPUB."
 author: "Seng Ts’an (attributed; doubtful)"
 translator: Master Sheng-yen, with Paul Kennedy
-date: "Unknown. Attributed to Seng Ts’an (d. 606); probably Tang dynasty (618–907)"
+date: "Unknown. Attributed to Seng Ts’an (d. 606); possibly written later"
 tradition: Ch’an (Zen) Buddhism
 source: https://terebess.hu/english/hsin3.html
 licence: "Translation © 1987 Dharma Drum Publications: in copyright, reproduced in full without permission. Editorial additions CC BY 4.0."
@@ -20,21 +20,21 @@ scripts:
 <a class="rs-kicker" href="/">Sutras</a>
 <h1>Faith in Mind</h1>
 <p class="rs-subtitle">Hsin Hsin Ming <span lang="zh">信心銘</span></p>
-<p class="rs-attribution">Attributed to Seng Ts’an, Third Patriarch of Ch’an<br>Translated by Master Sheng-yen</p>
+<p class="rs-attribution">Attributed to Seng Ts’an, Third Patriarch of Ch’an<br>Translated by Master Sheng-yen, with Paul Kennedy</p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A short Ch’an (Zen) poem on the mind that does not pick and choose. Tradition gives it to Seng Ts’an, the Third Patriarch, though he probably did not write it. Here complete in Master Sheng-yen’s translation, with his introduction after the poem.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A short Ch’an (Zen) poem on the mind that does not pick and choose. Tradition gives it to Seng Ts’an, the Third Patriarch, though he probably did not write it. A few minutes to read; Sheng-yen taught from it only on retreat.</p>
 
 ## Introduction
 
-*Faith in Mind* (in Chinese *Hsin Hsin Ming*, 信心銘) is a short poem from the Ch’an (Zen) tradition: 146 lines in this translation, a few minutes to read through. Tradition gives it to Seng Ts’an, the Third Patriarch of Ch’an, who by Sheng-yen’s account died in 606. The attribution is doubtful. Sheng-yen himself reports that scholars question it, and the poem is now thought to have been written well after Seng Ts’an’s death, probably under the Tang dynasty (618–907). Nobody knows who wrote it.
+*Faith in Mind* (in Chinese *Hsin Hsin Ming*, 信心銘) is a short poem from the Ch’an (Zen) tradition: 146 lines in this translation, a few minutes to read through. Tradition gives it to Seng Ts’an, the Third Patriarch of Ch’an, who by Sheng-yen’s account died in 606. The attribution is doubtful. Sheng-yen himself reports that scholars doubt it, and that some place the poem after the time of the Sixth Patriarch, Hui Neng. Who wrote it is not known.
 
-It says one thing, and says it in the first two lines: “The Supreme Way is not difficult / If only you do not pick and choose.” The rest turns that over. Love and hate, for and against, right and wrong, stillness and activity, existence and emptiness: each pair is taken up and put down. The poem ends where words stop.
+Its opening lines carry the theme: “The Supreme Way is not difficult / If only you do not pick and choose.” The rest returns to it through pairs: love and hate, for and against, right and wrong, stillness and activity, existence and emptiness. Its last stanza begins “The path of words is cut off”.
 
-Sheng-yen, whose translation this is, did not treat the poem as a text for study. He spoke on it only during seven-day retreats, as instruction for people in the middle of practice. One way to read it in that spirit: slowly, aloud if you can, a stanza at a time, without stopping to work out every term. The few notes are ours, for phrases that may be unfamiliar; they can wait for a second reading.
+Sheng-yen, whose translation this is, did not comment on it as a scholar. He spoke on it only during seven-day retreats, as instruction for people in the middle of practice. He writes that it and the *Song of Enlightenment* are the most highly regarded of the poems on enlightenment, “because of the clear guidance they provide on the method of Ch’an”. One way to read it in that spirit: slowly, aloud if you can, a stanza at a time, without stopping to work out every term. The three notes are ours; they can wait for a second reading.
 
-Sheng-yen’s own introduction follows the poem. In it he sets *Faith in Mind* beside Yung Chia’s *Song of Enlightenment*, which is also in this library as the [Shodoka](/shodoka).
+His own introduction follows the poem. The *Song of Enlightenment* is also in this library, as the [Shodoka](/shodoka).
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -224,7 +224,7 @@ There is no past, no future, no present.
 
 The translation is by Master Sheng-yen (1931–2009), with Paul Kennedy as co-translator. It comes from Sheng-yen’s book *Faith in Mind: A Guide to Ch’an Practice* (Dharma Drum Publications, 1987), which gives the poem and then twenty retreat talks on it. The book’s preface and Sheng-yen’s introduction are given here as they stand in the source, apart from the corrections listed under Source and licence. The preface was written while he was alive, so its present tense is of its time.
 
-### Preface
+### Preface to the 1987 book (unsigned)
 
 Master Sheng-yen is a renowned teacher of Ch’an (Zen) Buddhism. At the age of 13, he left his home near Shanghai to become a monk. During the period of Communist unrest, he went to southern Taiwan and spent six years in solitary retreat. Later, he continued his formal study, earning a doctorate in Buddhist Literature from Rissho University in Tokyo. He has received transmission in the two major branches of Ch’an: the Lin-chi (Rinzai) and Ts’ao-tung (Soto) schools.
 
@@ -254,9 +254,7 @@ The poem contains phrases that will later on assume importance in the Ts’ao Tu
 
 ## Source and licence
 
-**Source.** The text was taken from [Terebess Asia Online](https://terebess.hu/english/hsin3.html) on 20 November 2026 and compared with that page word for word. No word of the poem has been changed. Five dashes at line ends, missing from the poem on that page, were put back: the page itself prints them where the talks quote those lines. The fifteen stanzas follow the paragraphs of the source page, and the numbers are ours.
-
-In the preface and introduction four slips were corrected (“he Founded”, “Nui Neng” for Hui Neng, “does not discriminates”, and a missing bracket), and straight quotation marks were made curly. The headings are ours. An earlier electronic edition of the book (DharmaNet, 1994) words five lines of the poem differently; those readings, and every change made here, are listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/faith-in-mind/NOTES.md).
+**Source.** Taken from [Terebess Asia Online](https://terebess.hu/english/hsin3.html) on 20 November 2026 and checked against it word for word. No word of the poem is changed. Five dashes at line ends, dropped on that page, are restored; the stanza numbers and the headings are ours. Every correction is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/faith-in-mind/NOTES.md).
 
 **Notes.** The notes are editorial. Where they quote Sheng-yen, the words are from his talks on the same source page.
 
@@ -264,12 +262,12 @@ In the preface and introduction four slips were corrected (“he Founded”, “
 
 ## Download
 
-[Faith in Mind (EPUB)](/downloads/faith-in-mind.epub): the introduction, the poem, the preface and Sheng-yen’s introduction, and the source and licence.
+[Faith in Mind (EPUB)](/downloads/faith-in-mind.epub): everything on this page, including the translation, which is in copyright (see above).
 
 </article></div></div>
 </div>
 
-[^1]: *Editors’ note.* Sheng-yen, in his talk on these lines: “The Supreme Way in the first line of the poem refers to the stage of Buddhahood.” He adds that it “has never been separate from us.”
+[^1]: *Editors’ note.* Sheng-yen, in his talk on these lines: “The Supreme Way in the first line of the poem refers to the stage of Buddhahood. The wisdom of the Buddha is not difficult to perceive […] it has never been separate from us.”
 
 [^2]: *Editors’ note.* Something seen that is not there. Sheng-yen, on this line: “From the age of ten, I have always seen flower-like images in the sky. This is due to a malfunction of my eyesight. But I have learned not to pay any attention to them.”
 

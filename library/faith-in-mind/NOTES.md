@@ -33,7 +33,7 @@ Preface and introduction:
 
 Left as in the source, though possibly slips: "Kao Seng Chua", "fundamental unmoving" (preface, no comma), "practice" and "practicing" (American spelling, as in the book), romanisation without diacritics ("Soto", "Tathagatagarbha").
 
-Not the translator's words (ours): all headings ("The poem", "Preface", "Sheng-yen’s introduction"), the in brief, the editors' introduction, the three notes, About this translation's first paragraph, Source and licence.
+Not the translator's words (ours): all headings ("The poem", "Preface to the 1987 book (unsigned)", "Sheng-yen’s introduction"), the in brief, the editors' introduction, the three notes, About this translation's first paragraph, Source and licence.
 
 ## Where the DharmaNet edition differs in the poem
 
@@ -50,9 +50,9 @@ Which wording is the later revision is not known. Worth checking against a print
 
 ## Facts used in the editors' introduction and notes, and where each comes from
 
-- Seng Ts'an as Third Patriarch, died 606; scholars doubt his authorship; Sheng-yen lectured on the poem only during seven-day retreats; the pairing with Yung Chia's *Song of Enlightenment*; the later importance of "One thought for ten thousand years" in the Ts'ao-tung school: Sheng-yen's introduction (`hsin3.html`).
-- The three quotations from Sheng-yen in the notes: his talks in `hsin3.html` (chapters 1, 16 and 20), verbatim.
-- Chinese title 信心銘, *Hsin Hsin Ming*; "written well after Sengcan's death, probably during the Tang dynasty (618–907)": English Wikipedia, "Xinxin Ming", read 2026-11-20.
+- Seng Ts'an as Third Patriarch, died 606; scholars doubt his authorship, and some place the poem after the Sixth Patriarch; the two poems as "the most highly regarded"; Sheng-yen lectured on the poem only during seven-day retreats; the pairing with Yung Chia's *Song of Enlightenment*; the later importance of "One thought for ten thousand years" in the Ts'ao-tung school: Sheng-yen's introduction (`hsin3.html`).
+- The three quotations from Sheng-yen in the notes: his talks in `hsin3.html` (chapters 1, 16 and 20), verbatim; note 1 leaves out a passage, marked […].
+- Chinese title 信心銘, *Hsin Hsin Ming*: English Wikipedia, "Xinxin Ming", read 2026-11-20. (It also says the poem was "written well after Sengcan's death, probably during the Tang dynasty (618–907)"; not used on the page, which keeps to what Sheng-yen reports.)
 - Sheng-yen's dates (1931–2009): English Wikipedia, "Sheng-yen", read 2026-11-20.
 - Publisher, year, co-translator: front matter of `dharmanet-1994.pdf`.
 - "146 lines", "fifteen stanzas": counted by `scripts/compare-source`.
