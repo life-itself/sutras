@@ -1,595 +1,276 @@
-<title>Sutras Design Brief</title>
+<title>Sutras Mood Board</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400&family=Alegreya+Sans:wght@400;500&family=Gentium+Book+Plus:ital,wght@0,400;1,400&family=Instrument+Sans:wght@400;500;600&family=Noto+Serif+TC:wght@500&family=Spectral:ital,wght@0,400;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: a plain working document on white, one left edge, so the three papers of the specimens can be judged against a neutral. Light only, by choice: the directions are light only. */
+/* Layout: a quiet working document on white, one column about 1000px wide, so the references are judged against a neutral. Light only, by choice: the board is for a light-only site, and the images carry the colour. */
 :root{
-  --bg:#ffffff; --ink:#1d1d1b; --muted:#66645f; --rule:#dddbd5; --wash:#f4f3f0; --mark:#1d1d1b;
+  --bg:#ffffff; --ink:#1d1d1b; --muted:#6a6762; --rule:#e2e0da; --wash:#f6f5f2; --mark:#9a2f23;
   --ui:"Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --serif:"Newsreader","Iowan Old Style",Georgia,serif;
+  color-scheme:light;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:15.5px;line-height:1.55;margin:0}
-.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:36px 96px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:36px 96px}
 @media(min-width:700px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
 a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:3px}
 a:hover{text-decoration-color:var(--ink)}
 a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-h1,h2,h3{text-wrap:balance;font-weight:600;margin:0}
-h1{font-size:clamp(30px,4.6vw,44px);line-height:1.08;letter-spacing:-.015em;font-weight:500}
-h2{font-size:23px;line-height:1.2;letter-spacing:-.01em;margin-bottom:10px}
-h3.sub{font-size:17px;margin:56px 0 6px}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:500}
+h1{font-family:var(--serif);font-size:clamp(34px,5vw,52px);line-height:1.05;letter-spacing:-.01em}
+h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
+h3{font-family:var(--serif);font-size:clamp(26px,3.4vw,36px);line-height:1.1}
 p{margin:0 0 12px}
 .mast{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;color:var(--muted);font-size:13.5px;border-bottom:1px solid var(--ink);padding-bottom:10px}
 .mast b{color:var(--ink);font-weight:600}
-.top{padding:44px 0 8px;max-width:760px}
-.top p{font-size:18px;line-height:1.5;margin-top:18px}
-section{padding-top:64px}
-.lead{font-size:17.5px;line-height:1.5;max-width:68ch}
-.small{color:var(--muted);max-width:76ch;font-size:14.5px}
-.body{max-width:72ch}
-ul.plain{margin:0 0 12px;padding-left:1.1em;max-width:72ch}
-ul.plain li{margin-bottom:6px}
-.pick{font-size:13.5px;font-weight:500;color:var(--ink);margin-left:8px}
-.asks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border-top:1px solid var(--rule);margin-top:28px}
-.asks div{padding:14px 18px 14px 0;border-bottom:1px solid var(--rule)}
-.asks b{display:block}
-.asks span{color:var(--muted)}
-
-/* feel */
-.feel{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start;margin-top:28px}
-.phrases{display:grid;gap:0}
-.phrase{padding:18px 0;border-top:1px solid var(--rule)}
-.phrase:first-child{border-top:1px solid var(--ink)}
-.phrase q{quotes:none;font-size:clamp(24px,3.2vw,34px);line-height:1.12;letter-spacing:-.01em;font-weight:500;display:block;margin-bottom:8px}
-.phrase.alt q{font-size:20px;font-weight:500;color:var(--muted)}
-.phrase p{margin:0;color:var(--muted);max-width:52ch}
-dl.kv{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:12px 20px;margin:0}
-dl.kv dt{color:var(--muted)}
-dl.kv dd{margin:0}
-
-/* tables */
-.tbl{overflow-x:auto;margin:18px 0 8px}
-table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px;font-variant-numeric:tabular-nums}
-th,td{text-align:left;vertical-align:top;padding:8px 14px 8px 0;border-bottom:1px solid var(--rule)}
-th{font-weight:500;color:var(--muted);border-bottom-color:var(--ink);font-size:13px}
-td code,.sw code{font-family:var(--mono);font-size:12px}
-tr.us td{background:var(--wash)}
-.chip{display:inline-block;width:11px;height:11px;border:1px solid var(--rule);vertical-align:-1px;margin-right:5px}
-.find{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:4px 40px;margin-top:22px}
-.find div{border-top:1px solid var(--rule);padding:12px 0 6px}
-.find b{display:block;margin-bottom:2px}
-.find p{margin:0;color:var(--muted)}
-.find p strong{color:var(--ink);font-weight:500}
-
-/* boards */
-.mood{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:34px 26px;margin-top:22px}
-.mood figure,.before figure{margin:0;min-width:0}
-.mood img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border:1px solid var(--rule)}
-.mood img.tall{aspect-ratio:auto}
-.mood figcaption{padding-top:9px;font-size:14.5px}
-.mood figcaption b{font-weight:600}
-.mood .m{color:var(--muted);font-size:13px;display:block}
-.tk,.lv{display:block;margin-top:3px}
+.top{padding:48px 0 12px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:start}
+.top p{font-size:17px;line-height:1.5;max-width:58ch}
+.top .lede{font-family:var(--serif);font-size:21px;line-height:1.4;margin-top:20px}
+.feel{border-top:1px solid var(--ink);padding-top:12px;font-size:14.5px}
+.feel b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.feel ul{margin:0;padding-left:1.1em}
+.feel li{margin-bottom:5px}
+.feel li strong{font-weight:600}
+section{padding-top:72px}
+section.tight{padding-top:48px}
+.lead{font-size:17px;max-width:66ch;color:var(--ink)}
+.small{color:var(--muted);font-size:14px;max-width:76ch}
+/* before */
+.before{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:20px;align-items:start;margin-top:8px}
+.before img{display:block;width:100%;border:1px solid var(--rule)}
+.before figure{margin:0;min-width:0}
+.before figcaption{font-size:13px;color:var(--muted);padding-top:6px}
+/* directions */
+.dir{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding:56px 0 0}
+.dir+.dir{margin-top:24px;border-top:1px solid var(--rule)}
+.dir .n{font-family:var(--serif);font-size:15px;color:var(--muted);font-variant-numeric:tabular-nums}
+.dir .n::after{content:"";display:inline-block;width:28px;border-top:1px solid var(--muted);vertical-align:middle;margin-left:10px}
+.dir figure{margin:0;min-width:0}
+.dir img{display:block;width:100%;max-width:100%;border:1px solid var(--rule)}
+.dir img.narrow{width:auto;max-height:720px;margin:0 auto}
+.pair{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:14px;align-items:start}
+.pair img{height:100%;object-fit:cover}
+.dir figcaption{font-size:13px;color:var(--muted);padding-top:7px}
+.dir .text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 40px}
+.dir .text .for{grid-column:1/-1;font-size:17px;line-height:1.5;max-width:70ch}
+.dir .text .for b{font-weight:600}
+.tk,.lv,.kp,.tw,.rk{display:block;font-size:15px;line-height:1.5}
 .tk::before{content:"take → ";font-weight:600}
 .lv{color:var(--muted)}
-.lv::before{content:"leave → "}
-.before{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;margin-top:22px;align-items:start}
-.before img{display:block;width:100%;border:1px solid var(--rule)}
-.before figcaption{font-size:13px;color:var(--muted);padding-top:6px}
-
-/* directions */
-.dirs{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;margin-top:26px;align-items:start}
-.dir{min-width:0;border:1px solid var(--rule)}
-.dir-h{display:flex;align-items:baseline;gap:10px;padding:10px 14px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
-.dir-h h3{font-size:16px}
-.dir-k{font-weight:600;color:var(--muted)}
-.dir-p{color:var(--muted)}
-.dir-h .pick{margin-left:auto}
-.dir-m{padding:14px 14px 8px;border-top:1px solid var(--rule);font-size:14.5px}
-.dir-m p{margin:0 0 9px;color:var(--muted)}
-.dir-m p b{color:var(--ink);font-weight:600}
-.sw{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:12px}
-.sw i{width:20px;height:20px;border:1px solid var(--rule);display:block}
-.sw code{margin-right:8px;color:var(--muted)}
-.sheet{margin:22px 0 0}
-.sheet figcaption{font-size:14.5px;color:var(--muted);margin-bottom:8px;max-width:80ch}
-.sheet figcaption b{color:var(--ink)}
-.sheet .spec{border:1px solid var(--rule)}
-
-/* ---- specimens: shared mechanics ---- */
-.spec{padding:22px 18px 34px;text-align:left;overflow-wrap:break-word}
-.spec p{margin:0}
-.s-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.v,.prose{display:grid;grid-template-columns:var(--gut) minmax(0,1fr)}
-.v>*,.prose>*{grid-column:2}
-.v .n{grid-column:1;grid-row:1}
-.v .n2{grid-row:15}
-.v .l{padding-left:1.5em;text-indent:-1.5em}
-.v .gap{height:var(--stanza)}
-.prose{margin-top:3.4em}
-.desk{padding:36px 18px 48px}
-@media(min-width:820px){
-  .desk{padding:56px 48px 72px}
-  .desk .v,.desk .prose{grid-template-columns:var(--gut) var(--col) minmax(0,var(--notew))}
-  .desk .v .note{grid-column:3;grid-row:5 / span 7;align-self:start}
-  .desk .prose .note{grid-column:3;grid-row:2;align-self:start}
-  .desk .v .n2{grid-row:14}
+.lv::before{content:"leave → ";font-weight:600;color:var(--ink)}
+.kp::before{content:"keep → ";font-weight:600}
+.tw{color:var(--muted)}
+.tw::before{content:"tweak → ";font-weight:600;color:var(--ink)}
+.rk{grid-column:1/-1;color:var(--muted)}
+.rk::before{content:"risk → ";font-weight:600;color:var(--ink)}
+/* details and anti */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:26px 18px;margin-top:6px}
+.grid figure{margin:0;min-width:0}
+.grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border:1px solid var(--rule)}
+.grid img.fit{object-fit:contain;background:var(--wash)}
+.grid figcaption{font-size:13.5px;padding-top:7px;line-height:1.45}
+.grid figcaption b{font-weight:600;display:block}
+.grid figcaption span{color:var(--muted)}
+.anti .grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+/* shortlist */
+.short{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 36px;margin-top:8px;border-top:1px solid var(--ink)}
+.short div{padding:16px 0 14px;border-bottom:1px solid var(--rule)}
+.short b{font-family:var(--serif);font-size:22px;font-weight:500;display:block;line-height:1.15;margin-bottom:6px}
+.short p{color:var(--muted);margin:0;font-size:14.5px}
+.short p strong{color:var(--ink);font-weight:600}
+.ask{max-width:760px;margin-top:28px;counter-reset:q}
+.ask div{border-top:1px solid var(--rule);padding:14px 0 8px;display:grid;grid-template-columns:2rem minmax(0,1fr);counter-increment:q}
+.ask div::before{content:counter(q);color:var(--muted);font-variant-numeric:tabular-nums;font-family:var(--serif);font-size:17px}
+.ask b{display:block;font-weight:600}
+.ask p{grid-column:2;margin:3px 0 6px;color:var(--muted)}
+.ask p strong{color:var(--ink);font-weight:600}
+footer{margin-top:80px;border-top:1px solid var(--ink);padding-top:10px;color:var(--muted);font-size:13px}
+@media(max-width:760px){
+  .top,.before,.dir .text,.pair{grid-template-columns:minmax(0,1fr)}
+  .dir img.narrow{max-height:none;width:100%}
+  section{padding-top:56px}
 }
-
-/* ---- A · Bare: one face, one size, two greys ---- */
-.sA{--g:#66625c;--gut:1.5rem;--col:29rem;--notew:15rem;--stanza:1.62em;background:#f3f2ef;color:#33312e;font-family:"Spectral",Georgia,serif;font-size:17px;line-height:1.62}
-.sA .s-top,.sA .s-by,.sA .s-bl,.sA .n,.sA .note{color:var(--g)}
-.sA .s-site{color:#33312e}
-.sA .s-head{margin:4.6em 0 1.62em;padding-left:var(--gut)}
-.sA .s-brief{padding-left:var(--gut);margin-bottom:3.24em}
-.sA .note{padding-left:1.5em;margin:.5em 0 .8em}
-.sA .prose .s-by{margin-bottom:1.62em}
-@media(min-width:820px){
-  .sA.desk{font-size:19px;padding-left:9%}
-  .sA.desk .s-head{margin:0 0 3.24em}
-  .sA.desk .note{padding-left:2.5em;margin:0}
-}
-
-/* ---- B · The read copy: calligraphic face, blue-black pen ---- */
-.sB{--pen:#2f4a6d;--gut:1.4rem;--col:28rem;--notew:13.5rem;--stanza:1.5em;background:#fbf9f4;color:#2a2622;font-family:"Alegreya",Georgia,serif;font-size:18.5px;line-height:1.5}
-.sB .s-top{font-family:"Alegreya Sans","Gill Sans",sans-serif;font-size:14.5px;color:#7a746a}
-.sB .s-site{font-family:"Alegreya",Georgia,serif;font-style:italic;font-size:21px;color:#2a2622}
-.sB .s-head{margin:2.6em 0 1.1em;padding-left:var(--gut)}
-.sB .s-title{font-size:2em;line-height:1.1;font-weight:500}
-.sB .s-by{font-family:"Alegreya Sans","Gill Sans",sans-serif;font-size:14.5px;color:#7a746a;margin-top:.5em}
-.sB .s-brief{font-style:italic;padding-left:var(--gut);margin-bottom:2.2em}
-.sB .n{color:#7a746a;font-variant-numeric:oldstyle-nums}
-.sB .hl{text-decoration:underline;text-decoration-color:var(--pen);text-decoration-thickness:1px;text-underline-offset:.25em}
-.sB .note{font-style:italic;color:var(--pen);font-size:.9em;line-height:1.4;margin:.5em 0 .8em 1.5em;padding-left:.7em;border-left:1px solid var(--pen)}
-.sB .note i{font-style:normal}
-.sB .prose .s-by{margin:0 0 .9em}
-@media(min-width:820px){
-  .sB.desk{font-size:20px;padding-left:max(48px,calc(50% - 15rem))}
-  .sB.desk .s-head{margin:0 0 2.4em}
-  .sB.desk .v .l.lead{display:flex;align-items:baseline;padding-left:0;text-indent:0}
-  .sB.desk .v .l.lead::after{content:"";flex:1;border-bottom:1px solid var(--pen);margin-left:.35em;position:relative;top:calc(.25em + 1px)}
-  .sB.desk .note{border-left:0;margin:0;padding:.14em 0 0 .7em}
-}
-
-/* ---- C · Red and black: red for the numbers and the reader's marks, nothing else ---- */
-.sC{--red:#c22d1c;--gut:2.1rem;--col:29rem;--notew:14rem;--stanza:1.56em;background:#f5f4f0;color:#161514;font-family:"Gentium Book Plus","Gentium Plus",Georgia,serif;font-size:17.5px;line-height:1.56}
-.sC [lang="zh-Hant"]{font-family:"Noto Serif TC","Songti TC",serif;font-weight:500}
-.sC .s-top{border-bottom:1px solid #161514;padding-bottom:.5em;font-size:.9em}
-.sC .s-head{display:grid;grid-template-columns:var(--gut) minmax(0,1fr);margin:2.4em 0 1.3em;align-items:start}
-.sC .s-han{justify-self:start;writing-mode:vertical-rl;font-size:1em;letter-spacing:.2em;line-height:1;padding-top:.4em}
-.sC .s-title{font-size:1.7em;line-height:1.15}
-.sC .s-by{font-size:.9em;margin-top:.45em;line-height:1.45}
-.sC .s-brief{padding-left:var(--gut);margin-bottom:2.3em}
-.sC .s-bl{font-style:italic}
-.sC .n{color:var(--red);font-size:.8em;line-height:1.95}
-.sC .dot{position:relative}
-.sC .dot::before{content:"";position:absolute;left:calc(.14em - var(--gut));top:.64em;width:.3em;height:.3em;border-radius:50%;background:var(--red)}
-.sC .para .dot::before{top:.5em}
-.sC .note{font-size:.84em;line-height:1.45;padding-left:1.5em;margin:.6em 0 .9em}
-.sC .prose .s-by{margin-bottom:.8em;font-size:.9em}
-@media(min-width:820px){
-  .sC.desk{font-size:19px}
-  .sC.desk .s-head{border-top:1px solid #161514;padding-top:1.8em;margin:0 0 2.6em;max-width:calc(var(--gut) + var(--col) + var(--notew))}
-  .sC.desk .note{padding-left:1.4em;margin:.25em 0 0}
-}
-
-/* tics, decisions */
-td.ok{color:var(--muted)}
-.decide{display:grid;gap:0;max-width:820px;margin-top:20px;counter-reset:d}
-.decide div{border-top:1px solid var(--rule);padding:14px 0 6px;display:grid;grid-template-columns:2rem minmax(0,1fr);counter-increment:d}
-.decide div::before{content:counter(d);color:var(--muted);font-variant-numeric:tabular-nums}
-.decide b{display:block;font-weight:600}
-.decide p{grid-column:2;margin:2px 0 6px;color:var(--muted)}
-.decide p strong{color:var(--ink);font-weight:500}
-footer{margin-top:72px;border-top:1px solid var(--ink);padding-top:10px;color:var(--muted);font-size:13.5px}
-@media(max-width:760px){.feel{grid-template-columns:1fr;gap:28px}}
+@media(prefers-reduced-motion:no-preference){a{transition:text-decoration-color .15s}}
 </style>
 
 <div class="wrap">
-<div class="mast"><span><b>Sutras</b> design brief</span><span>Draft 1 · 20 November 2026 · stages 0 to 2 · prepared by an agent, not yet seen by Rufus</span></div>
+<div class="mast"><span><b>Sutras</b> · mood board</span><span>Draft 2 · 20 November 2026 · eight directions, ten details, a shortlist of three</span></div>
 
 <header class="top">
-  <h1>A look for Sutras that is the thing it shows</h1>
-  <p>Rufus's direction: “we want to <i>be</i> zen, to be the tao somehow in what we are building.” Stripped down, like Reports That Matter and Co–Star “but a little warmer”; “a little more Plum Village”, though that “can get a little twee”. And: Reports That Matter “has a pretty sober version, you could follow that… I think we do want our distinctive design here, and that often takes real work.” So sober is the floor and distinctive is the aim.</p>
-  <p>This page gives a feel to judge by, what the admired sites measure, a mood board, and three directions set with <i>Faith in Mind</i>. One is recommended.</p>
-</header>
-<div class="asks">
-  <div><b><a href="#feel">1. Is this the feel?</a></b><span>“Without lack, without excess”, or one of two others.</span></div>
-  <div><b><a href="#directions">2. Which direction?</a></b><span>A, B, C or a blend. C is recommended. This is the main thing to look at.</span></div>
-  <div><b><a href="#decisions">3. The smaller calls</a></b><span>Six, at the end, each with a default.</span></div>
-</div>
-
-<section id="feel">
-<h2>The feel</h2>
-<p class="lead">One phrase that every later choice is tested against. Three candidates; the first is recommended.</p>
-<div class="feel">
-  <div class="phrases">
-    <div class="phrase"><q>Without lack, without excess</q><p><span class="pick" style="margin-left:0">Recommended.</span> A line from <i>Faith in Mind</i> itself: “The Way is perfect like great space, / Without lack, without excess.” It works as a test in both directions. Would the reader miss this? If not, it goes. Is the reader missing something? Then it is added, plainly.</p></div>
-    <div class="phrase alt"><q>A plain room with good light</q><p>Warmer, and closer to Plum Village. It gives a picture, where the first gives a test, so it is easier to feel and harder to apply. It also invites furnishing the room.</p></div>
-    <div class="phrase alt"><q>Ordinary mind</q><p>From the Mumonkan, case 19: “Ordinary mind is the Way.” It gives licence to be plain, but says nothing about when something is missing.</p></div>
-  </div>
-  <dl class="kv">
-    <dt>Space</dt><dd>Space is the material. Calm and hierarchy come from where things sit and how much room they have, before size, rule or colour.</dd>
-    <dt>One hand</dt><dd>The only personality on the page is the reader's marks. Warmth comes from that, never from decoration.</dd>
-    <dt>Waiting</dt><dd>The page waits. Nothing moves, pops up or asks. It reads the same on the hundredth visit.</dd>
-    <dt>Character</dt><dd>A well-made paperback that someone has read with a pencil. Plain-spoken, unhurried, a little dry.</dd>
-    <dt>Not</dt><dd>A temple gift shop (lotus, ensō, brush script). A wellness app (pastel gradient, “start your journey”). A scholar's apparatus (toolbars, panels, tabs). A tasteful AI landing page (cream, terracotta, tracked capitals, three cards).</dd>
-  </dl>
-</div>
-</section>
-
-<section id="before">
-<h2>Before: the site today</h2>
-<p class="lead">The stand-in theme is Flowershow's default. It is clean, and nothing in it knows it is holding a poem.</p>
-<div class="before">
-  <figure><img src="{{shot:before-home}}" alt="Current Sutras home page: a large bold headline and a bullet list of six links"><figcaption>sutras.lifeitself.org, 20 Nov 2026, 1440×900</figcaption></figure>
-  <figure><img src="{{shot:before-fim}}" alt="Current Faith in Mind page: a three-line bold sans headline, a source link and a preface"><figcaption>/faith-in-mind, same day</figcaption></figure>
   <div>
-    <ul class="plain">
-      <li><b>The headline is a filename.</b> “Faith in Mind by Seng Ts'an translated by Master Sheng-yen” is one 59.5px bold sans heading. Title, author and translator are not told apart.</li>
-      <li><b>Small and wide.</b> Body text is 16px on 28px in a 672px column, about 89 characters a line. Every admired reading page below is 18 to 22px.</li>
-      <li><b>The poem is a long way down.</b> A source link, a preface and an introduction come first. The stranger who searched for the text meets a biography.</li>
-      <li><b>No numbers, no notes.</b> A stanza cannot be cited or linked, and nothing of Rufus is on the page.</li>
-      <li><b>The home page</b> is a 60px headline over six bullet links.</li>
-    </ul>
-    <p class="small">Later the same day the live page showed an “Error parsing MDX” message in place of the text (a build in progress in another workstream), so there is no phone or verse-close-up shot of the old page.</p>
+    <h1>A look for Sutras that is the thing it shows</h1>
+    <p class="lede">A curated library of wisdom texts: Zen poems, sutras, the Dhammapada, Seneca, Marcus Aurelius, made into editions to read slowly, with Rufus's notes in the margin.</p>
+    <p>The brief in three lines. The page should feel as the texts feel: plain, unhurried, exact, with nothing to sell. One look has to hold the Shodoka and Seneca without dressing up as either. Sober is the floor (Reports That Matter), distinctive is the aim, and “a little warmer” is still to be defined: this board is meant to define it. Full brief: <code>docs/design/brief.md</code>.</p>
+    <p class="small">Eight references below, each standing for a different direction, each with what to take and what to leave. Then a few details worth stealing, three things we are not, and a shortlist. Fifty-odd other candidates were looked at and are listed in the repo, not here.</p>
   </div>
-</div>
-</section>
+  <div class="feel">
+    <b>The feel, to judge each image by</b>
+    <ul>
+      <li><strong>Be the thing.</strong> The page feels as the texts feel.</li>
+      <li><strong>The text is the design.</strong> Everything else is quieter than the text.</li>
+      <li><strong>Space is the material.</strong> Hierarchy from room before size, rule or colour.</li>
+      <li><strong>Something to look at twice.</strong> One moment of real craft on every page. Restraint alone is not beauty.</li>
+      <li><strong>It waits.</strong> Nothing moves, pops up or asks.</li>
+      <li><strong>The notes are a hand</strong>, Rufus's, never mistakable for the text.</li>
+      <li><strong>Not:</strong> a temple gift shop, a wellness app, a scholar's apparatus, a tasteful AI landing page, or Garamond on off-white with grey numerals.</li>
+    </ul>
+  </div>
+</header>
 
-<section id="research">
-<h2>Why the admired pages work, measured</h2>
-<p class="lead">Computed styles read from the live pages with headless Chrome at 1440×900 on 20 November 2026. One factor at a time.</p>
-<p class="small">Characters per line are estimated from the column width and the face's average letter width, so read them as plus or minus five. Faces marked * are licensed and could not be used here.</p>
-<div class="tbl"><table>
-<thead><tr><th>Page</th><th>Text face</th><th>Size / line</th><th>Ratio</th><th>Column</th><th>Chars</th><th>Ground</th><th>Ink</th></tr></thead>
-<tbody>
-<tr class="us"><td>Sutras today</td><td>Flowershow default serif</td><td>16 / 28</td><td>1.75</td><td>672px</td><td>89</td><td><i class="chip" style="background:#fff"></i><code>#FFFFFF</code></td><td>dark grey</td></tr>
-<tr><td>Co–Star, home</td><td>Akkurat* sans; Romana* display 40/40; mono 12/16</td><td>14 / 20</td><td>1.43</td><td>centred</td><td>n/a</td><td><i class="chip" style="background:#f7f7f7"></i><code>#F7F7F7</code></td><td><i class="chip" style="background:#575657"></i><code>#575657</code></td></tr>
-<tr><td>Reports That Matter, report</td><td>EB Garamond title 56/59; Inter intro; IBM Plex Mono labels 12</td><td>20 / 30 (Garamond), 16.8 / 28.6 (Inter)</td><td>1.5, 1.7</td><td>564px</td><td>70 to 73</td><td><i class="chip" style="background:#f7f7f7"></i><code>#F7F7F7</code></td><td><i class="chip" style="background:#252525"></i><code>#252525</code> and <code>#575657</code></td></tr>
-<tr><td>Plum Village, a sutra</td><td>Gentium Plus; Cormorant Garamond title 42.75</td><td>20.25 / 28.35</td><td>1.4</td><td>657px</td><td>78</td><td><i class="chip" style="background:#fff"></i><code>#FFFFFF</code> (home <i class="chip" style="background:#faf1eb"></i><code>#FAF1EB</code>)</td><td><i class="chip" style="background:#222"></i><code>#222222</code></td></tr>
-<tr><td>SuttaCentral, Dhammapada</td><td>Skolar*; title 44.8 in grey small capitals</td><td>16 / 24</td><td>1.5</td><td>394px</td><td>56</td><td><i class="chip" style="background:#fff8f3"></i><code>#FFF8F3</code></td><td><i class="chip" style="background:#201b13"></i><code>#201B13</code></td></tr>
-<tr><td>Standard Ebooks, Meditations</td><td>Georgia</td><td>18 / 27</td><td>1.5</td><td>608px</td><td>75</td><td>white</td><td>black</td></tr>
-<tr><td>Sefaria, Pirkei Avot</td><td>Cardo, justified</td><td>22 / 35.2</td><td>1.6</td><td>700px</td><td>81</td><td>white</td><td>black</td></tr>
-<tr><td>84000, Heart Sutra</td><td>Noto Serif, justified</td><td>16 / 28</td><td>1.75</td><td>616px</td><td>78</td><td>near white</td><td>near black</td></tr>
-<tr><td>Craig Mod, essay</td><td>FF Meta Serif*</td><td>20 / 30</td><td>1.5</td><td>746px</td><td>85</td><td>white</td><td><i class="chip" style="background:#333"></i><code>#333333</code></td></tr>
-<tr><td>Public Domain Review, essay</td><td>Alegreya</td><td>19.6 / 32.4</td><td>1.65</td><td>665px</td><td>82</td><td>white</td><td><i class="chip" style="background:#1d2731"></i><code>#1D2731</code></td></tr>
-<tr><td>Tufte CSS</td><td>ET Book; sidenote 16.5 / 21.45</td><td>21 / 30</td><td>1.43</td><td>693px</td><td>81</td><td><i class="chip" style="background:#fffff8"></i><code>#FFFFF8</code></td><td><i class="chip" style="background:#111"></i><code>#111111</code></td></tr>
-<tr><td>Lotsawa House, a verse text</td><td>Spectral</td><td>18.6 / normal</td><td>n/a</td><td>800px</td><td>96</td><td>white</td><td><i class="chip" style="background:#444"></i><code>#444444</code></td></tr>
-</tbody></table></div>
-
-<div class="find">
-  <div><b>Type</b><p>Every one sets its text in a single book-weight serif and keeps a second voice for everything else. <strong>The second voice is where each gets its character</strong>: Co–Star's mono, Plum Village's handwriting, SuttaCentral's grey small capitals. None gets it from the text face.</p></div>
-  <div><b>Size</b><p>The pages that feel generous are 20 to 22px (Plum Village, Craig Mod, Tufte, Sefaria). The 16px pages are the archives. <strong>Take 19 to 20px on a laptop, 17 to 18px on a phone.</strong></p></div>
-  <div><b>Measure</b><p>Prose runs 70 to 85 characters, wider than the textbook 66. The calmest page here, SuttaCentral, is 56. <strong>Take about 65 to 70 for prose</strong>, and let verse set its own width from its longest line (50 characters in <i>Faith in Mind</i>).</p></div>
-  <div><b>Line height</b><p>1.4 to 1.6 at 20px. Only the 16px pages go to 1.75, to make up for the size. <strong>Take 1.5 to 1.6.</strong></p></div>
-  <div><b>Space</b><p>Co–Star and Reports That Matter use no rules, boxes or shadows; things are parted by distance. SuttaCentral sets its title small and grey and leaves a clear pause before the first line. <strong>Space does the work of hierarchy.</strong></p></div>
-  <div><b>Colour</b><p>All the grounds sit within a hair of white, and none of the reading pages uses colour inside the text. Co–Star's mid-grey ink is for short marketing lines; Reports That Matter went to #252525 for reading. <strong>Warmth in the admired pages is never a palette.</strong> At Plum Village it is a handwritten name and people's faces; at SuttaCentral a faint tint.</p></div>
-</div>
-</section>
-
-<section id="mood">
-<h2>Mood board</h2>
-<p class="lead">Real pages, captured 20 November 2026 at 1440×900 and reduced. Each says what to take and what to leave.</p>
-<div class="mood">
-  <figure><img src="{{shot:rtm-report}}" alt="Reports That Matter report page"><figcaption><b><a href="https://reportsthatmatter.org/reports/challenger-accident">Reports That Matter</a></b> <span class="m">the sober floor</span><span class="tk">One left edge for title and text. Grey ground, no boxes. Mono only for the small labels. A long document treated as a document.</span><span class="lv">The mono labels and the grey: they read as “investigation”, which is right for reports and cold for a poem.</span></figcaption></figure>
-  <figure><img src="{{shot:costar}}" alt="Co-Star home page"><figcaption><b><a href="https://www.costarastrology.com">Co–Star</a></b> <span class="m">the exemplar behind it</span><span class="tk">The nerve to leave it almost empty. One light serif for the name, at a modest 40px. Faint linework as the only texture.</span><span class="lv">Centring everything, 14px text, and the knowing tone. It is a poster for an app, not a page to read for an hour.</span></figcaption></figure>
-  <figure><img src="{{shot:plumvillage}}" alt="Plum Village home page"><figcaption><b><a href="https://plumvillage.org">Plum Village</a></b> <span class="m">warmth</span><span class="tk">The warmth comes from a hand: the name is brush-written, not typeset. A person made this.</span><span class="lv">Yellow buttons, carousel, peach panels. This is where it tips into twee.</span></figcaption></figure>
-  <figure><img src="{{shot:plumvillage-text}}" alt="Plum Village sutra page: Discourse on Love"><figcaption><b><a href="https://plumvillage.org/library/sutras/discourse-on-love">Plum Village, a sutra</a></b> <span class="m">their reading page</span><span class="tk">Gentium at 20px for the sutra, with the source given quietly under the title. One small woodcut. The text begins at once.</span><span class="lv">The floated picture pushing the lines about, and the audio buttons above the first line.</span></figcaption></figure>
-  <figure><img src="{{shot:suttacentral}}" alt="SuttaCentral Dhammapada page"><figcaption><b><a href="https://suttacentral.net/dhp1-20/en/sujato">SuttaCentral</a></b> <span class="m">verse, calm</span><span class="tk">A narrow column of verse on a faintly warm ground, with a grey title and a long pause before the first line. The quietest page here.</span><span class="lv">The amber toolbar, and 16px text.</span></figcaption></figure>
-  <figure><img src="{{shot:se-text}}" alt="Standard Ebooks Meditations book 2"><figcaption><b><a href="https://standardebooks.org/ebooks/marcus-aurelius/meditations/george-long/text/book-2">Standard Ebooks</a></b> <span class="m">the plain book</span><span class="tk">Typographic manners: real quotation marks and dashes, a centred roman numeral, nothing else. The standard for the text itself.</span><span class="lv">It is a browser default with good manners. No voice, no margin, no front door.</span></figcaption></figure>
-  <figure><img src="{{shot:craigmod}}" alt="Craig Mod essay page"><figcaption><b><a href="https://craigmod.com/essays/fast_software/">Craig Mod</a></b> <span class="m">one writer's page</span><span class="tk">A title at 50px regular weight with an italic line under it, left aligned, then straight into 20px text. Personal without a portrait.</span><span class="lv">The 85-character line.</span></figcaption></figure>
-  <figure><img src="{{shot:pdr-essay}}" alt="Public Domain Review essay opening"><figcaption><b><a href="https://publicdomainreview.org/essay/the-uncertain-heavens/">The Public Domain Review</a></b> <span class="m">old things, well kept</span><span class="tk">Alegreya carrying a whole site, and old images used as the only decoration. Proof that warm can be scholarly.</span><span class="lv">The shop banner and centred everything.</span></figcaption></figure>
-  <figure><img src="{{shot:lotsawa}}" alt="Lotsawa House text page"><figcaption><b><a href="https://www.lotsawahouse.org/tibetan-masters/patrul-rinpoche/advice-from-me-to-myself">Lotsawa House</a></b> <span class="m">a small library</span><span class="tk">Verse left aligned with EPUB and PDF beside it, and one traditional image per text.</span><span class="lv">The sidebar, the black bar and a 96-character line. The page reads as a database record.</span></figcaption></figure>
-</div>
-
-<h3 class="sub">From the printed page</h3>
-<p class="small">Two photographs from Wikimedia Commons (public domain objects), not screenshots.</p>
-<div class="mood">
-  <figure><img class="tall" src="{{shot:doves}}" alt="First page of the Doves Press Bible, 1903: black type with a long red initial I" style="max-width:300px"><figcaption><b>The Doves Press Bible, 1903</b> <span class="m">black and red</span><span class="tk">One face, one size, black, and a single stroke of red. No ornament at all, and unmistakable.</span><span class="lv">The solid block of capitals.</span></figcaption></figure>
-  <figure><img class="tall" src="{{shot:diamond}}" alt="The Diamond Sutra of 868, woodblock print: frontispiece and columns of text"><figcaption><b>The Diamond Sutra, 868</b> <span class="m">the form these texts came in</span><span class="tk">A ruled block, even columns, the text as a single continuous surface. The page is a frame and then gets out of the way.</span><span class="lv">Copying it. A vertical title is a nod; a scroll layout would be costume.</span></figcaption></figure>
-</div>
-
-<h3 class="sub">Anti-references</h3>
-<div class="mood">
-  <figure><img src="{{shot:terebess}}" alt="Terebess Faith in Mind page: maroon background, yellow and green text"><figcaption><b><a href="https://terebess.hu/english/hsin3.html">Terebess</a></b> <span class="m">our own source for this text</span><span class="lv">Everything is here and it is hard to read: small yellow type on maroon, and a contents list before any text.</span></figcaption></figure>
-  <figure><img src="{{shot:dailyzen}}" alt="Daily Zen home page with brush drawing and handwriting font"><figcaption><b><a href="https://www.dailyzen.com">Daily Zen</a></b> <span class="m">the gift shop</span><span class="lv">Brush drawing, a casual script font, “send a Zen card”.</span></figcaption></figure>
-  <figure><img src="{{shot:headspace}}" alt="Headspace home page: orange gradient and a 50 percent off offer"><figcaption><b><a href="https://www.headspace.com">Headspace</a></b> <span class="m">the wellness app</span><span class="lv">A friendly gradient, a smiling blob and a 50% off offer.</span></figcaption></figure>
-</div>
-<p class="small" style="margin-top:22px">Tried and not shown, because the capture failed or hit a consent or bot wall: Calm, BrainyQuote, iA, Fermat's Library (only its home page loaded), poets.org, sacred-texts.com, Tiny Buddha. Captured and left out to keep the board short: Organism.earth, Emergence Magazine, Gwern, Goodreads. No screenshot here is mocked up.</p>
-
-<h3 class="sub">Board: verse on screen</h3>
-<div class="mood">
-  <figure><img src="{{shot:poetryfoundation}}" alt="Poetry Foundation: The Road Not Taken"><figcaption><b><a href="https://www.poetryfoundation.org/poems/44272/the-road-not-taken">Poetry Foundation</a></b> <span class="m">20 / 32, ratio 1.6</span><span class="tk">Title, author, poem, in that order and close together. Lines left aligned, a full line between stanzas.</span><span class="lv">The promotional box sitting beside the first stanza.</span></figcaption></figure>
-  <figure><img src="{{shot:dhammatalks}}" alt="dhammatalks.org Dhammapada chapter 1 with stepped indents"><figcaption><b><a href="https://www.dhammatalks.org/suttas/KN/Dhp/Ch01.html">dhammatalks.org</a></b> <span class="m">19.2 / 28.8, ratio 1.5</span><span class="tk">Indents that show how the verse is phrased, and the verse number small after the verse, out of the way.</span><span class="lv">Stepped indents belong to this translator. They are not a house style.</span></figcaption></figure>
-  <figure><img src="{{shot:ati}}" alt="Access to Insight Dhammapada in Verdana"><figcaption><b><a href="https://www.accesstoinsight.org/tipitaka/kn/dhp/dhp.01.than.html">Access to Insight</a></b> <span class="m">14.4 / 18.7, ratio 1.3</span><span class="lv">The same verses as dhammatalks.org, at 14px in a screen sans with tight lines. Much harder to read as verse.</span></figcaption></figure>
-</div>
-<div class="find">
-  <div><b>What verse needs</b><p>Lines left aligned, never centred. A block narrower than prose, set by the longest line. Line height 1.5 to 1.6. One line of space between stanzas, and nothing else between them.</p></div>
-  <div><b>Numbers</b><p>Outside the block, small. SuttaCentral hides them until asked; dhammatalks puts them after the verse. Ours need to be seen, because the stanza number is the link (<code>/faith-in-mind#3</code>), so: in the left margin, in the second voice.</p></div>
-  <div><b>The turnover</b><p>On a 390px phone at 17 to 18px about 38 to 42 characters fit, and <i>Faith in Mind</i> has lines of up to 50. A turned line hangs in by 1.5em so it cannot be mistaken for a new line. Every card below shows one.</p></div>
-</div>
-
-<h3 class="sub">Board: notes in the margin</h3>
-<div class="mood">
-  <figure><img src="{{shot:tufte-notes}}" alt="Tufte CSS sidenote example"><figcaption><b><a href="https://edwardtufte.github.io/tufte-css/#sidenotes">Tufte CSS</a></b> <span class="m">note 16.5 / 21.45 beside text 21 / 30</span><span class="tk">The proportions. The note is 0.79 of the text size, with tighter lines, in a margin half the width of the column, level with the line it belongs to.</span><span class="lv">Superscript numbers (a poem should not be dotted with them) and the cream-and-Garamond look, which is now everybody's.</span></figcaption></figure>
-  <figure><img src="{{shot:inkswitch}}" alt="Ink and Switch essay with sans-serif margin notes"><figcaption><b><a href="https://www.inkandswitch.com/essay/local-first/">Ink &amp; Switch</a></b> <span class="m">note 13 / 20 sans beside text 16 / 24 serif</span><span class="tk">No markers at all. The note is tied to its paragraph by position only, and told apart by face and size.</span><span class="lv">A 168px margin makes the notes into ribbons.</span></figcaption></figure>
-  <figure><img src="{{shot:84000-body}}" alt="84000 reading room with passage numbers in the left margin"><figcaption><b><a href="https://84000.co/translation/toh21">84000</a></b> <span class="m">passage numbers</span><span class="tk">1.1, 1.2, 1.3 in the left margin, small and pale: every passage can be cited, and the numbers stay out of the reading.</span><span class="lv">The frame of toolbars, tabs and side panels around the text.</span></figcaption></figure>
-  <figure><img src="{{shot:sefaria}}" alt="Sefaria with a passage selected and the resources panel open"><figcaption><b><a href="https://www.sefaria.org/Pirkei_Avot.1.14">Sefaria</a></b> <span class="m">the text as a hub</span><span class="tk">Touch a passage and what others have said about it opens beside it. The model for reader annotation later.</span><span class="lv">For now. It is a tool with panels, and Sutras starts as a page.</span></figcaption></figure>
-</div>
-<div class="find">
-  <div><b>What a margin note needs</b><p>About 0.8 to 0.85 of the text size, tighter lines, a margin of 13 to 16rem, and its first line level with the line it is about. Told apart by at least two of size, face, colour and position.</p></div>
-  <div><b>The mark on the text</b><p>None of these marks the passage itself; they rely on a superscript or on position. For a reader's notes on verse the mark matters, since it says “he stopped here”. This is where each direction below differs most.</p></div>
-  <div><b>On a phone</b><p>There is no margin. Rufus's notes are few, so they are shown in place under the line, indented, with no tap needed.</p></div>
+<section class="tight" id="before">
+<h2>Before</h2>
+<p class="lead">The site today: Flowershow's default, tidied. Clean, and nothing in it knows it is holding a poem.</p>
+<div class="before">
+  <figure><img src="{{shot:before-fim}}" alt="Sutras today: Faith in Mind on a laptop, a white page with a red label, title, an In brief box and the introduction"><figcaption>sutras.lifeitself.org/faith-in-mind, 20 November 2026, 1440×900</figcaption></figure>
+  <figure><img src="{{shot:before-fim-mobile}}" alt="Sutras today on a phone: the same page at 390px wide"><figcaption>The same page at 390px</figcaption></figure>
 </div>
 </section>
 
 <section id="directions">
-<h2>Directions</h2>
-<p class="lead">Three readings of the feel, one from each pole in the brief: take away, the warm hand, the inherited book. They differ in where the column sits, how hierarchy is made, and above all in how a line Rufus has marked is shown.</p>
-<p class="small">Every specimen sets the same real lines of <i>Faith in Mind</i> (Sheng-yen's translation, as in the repo). The “in brief” line and the two notes are written by the agent to show the form; they are illustrative, not Rufus's. The cards are the phone layout, where the longer lines have to turn over. On a phone the three share one skeleton, because there is one column and no margin; they part more at desk width, below.</p>
+<h2>Eight directions, one image each</h2>
+<p class="lead">Each image was chosen because it is beautiful first and relevant second, and captured at the moment that matters, which is often not the top of the page. Museum objects are open-licence and credited.</p>
 
-<div class="dirs">
-
-<article class="dir">
-  <header class="dir-h"><span class="dir-k">A</span><h3>Bare</h3></header>
-  <div class="spec sA">
-    <div class="s-top"><span class="s-site">Sutras</span><span class="s-nav">Texts &nbsp; Notes &nbsp; About</span></div>
-    <div class="s-head">
-      <p class="s-title">Faith in Mind</p>
-      <p class="s-by">Seng Ts’an, died 606<br>Translated by Sheng-yen</p>
-    </div>
-    <p class="s-brief"><span class="s-bl">In brief.</span> The Way is not hard. What makes it hard is choosing: for and against, love and hate. Stop choosing and it is already here.</p>
-    <div class="v">
-      <span class="n">1</span>
-      <p class="l">The Supreme Way is not difficult</p>
-      <p class="l">If only you do not pick and choose.</p>
-      <p class="l">Neither love nor hate,</p>
-      <p class="l">And you will clearly understand.</p>
-      <p class="l">Be off by a hair,</p>
-      <p class="l">And you are as far from it as heaven from earth.</p>
-      <p class="note">Dōgen opens the <i>Fukanzazengi</i> with this same image, six centuries later.</p>
-      <p class="l">If you want the Way to appear,</p>
-      <p class="l">Be neither for nor against.</p>
-      </div>
-  </div>
-  <div class="dir-m">
-    <div class="sw"><i style="background:#f3f2ef"></i><code>#F3F2EF</code><i style="background:#33312e"></i><code>#33312E</code><i style="background:#66625c"></i><code>#66625C</code></div>
-    <p><b>Pole</b> Take away.</p>
-    <p><b>Type</b> Spectral, one size, one weight. Nothing else.</p>
-    <p><b>Signature: one size.</b> Title, text, note and navigation are all set at the same size. Hierarchy is made only by space, position and two tones of grey. No accent colour and no mark on the text: a note sits by its line, and that is the mark.</p>
-    <p><b>Says</b> Do not pick and choose. Nothing on the page is louder than anything else.</p>
-    <p><b>Risk</b> Reads as unfinished to a stranger. A long prose text loses its signposts, and a note in prose has nothing to show which words it is about. Closest of the three to Reports That Matter, so it is the floor more than the aim.</p>
-    <p><b>Draws on</b> Co–Star's grey ground and refusal of ornament; SuttaCentral's narrow, quiet column.</p>
-  </div>
-</article>
-<article class="dir">
-  <header class="dir-h"><span class="dir-k">B</span><h3>The read copy</h3></header>
-  <div class="spec sB">
-    <div class="s-top"><span class="s-site">Sutras</span><span class="s-nav">Texts · Notes · About</span></div>
-    <div class="s-head">
-      <p class="s-title">Faith in Mind</p>
-      <p class="s-by">Seng Ts’an · translated by Sheng-yen</p>
-    </div>
-    <p class="s-brief">The Way is not hard. What makes it hard is choosing: for and against, love and hate. Stop choosing and it is already here.</p>
-    <div class="v">
-      <span class="n">1</span>
-      <p class="l">The Supreme Way is not difficult</p>
-      <p class="l">If only you do not pick and choose.</p>
-      <p class="l">Neither love nor hate,</p>
-      <p class="l">And you will clearly understand.</p>
-      <p class="l lead"><span class="hl">Be off by a hair,</span></p>
-      <p class="l"><span class="hl">And you are as far from it as heaven from earth.</span></p>
-      <p class="note">Dōgen opens the <i>Fukanzazengi</i> with this same image, six centuries later.</p>
-      <p class="l">If you want the Way to appear,</p>
-      <p class="l">Be neither for nor against.</p>
-      </div>
-  </div>
-  <div class="dir-m">
-    <div class="sw"><i style="background:#fbf9f4"></i><code>#FBF9F4</code><i style="background:#2a2622"></i><code>#2A2622</code><i style="background:#2f4a6d"></i><code>#2F4A6D</code></div>
-    <p><b>Pole</b> The warm hand.</p>
-    <p><b>Type</b> Alegreya for the text, its italic for the notes, Alegreya Sans for the few labels.</p>
-    <p><b>Signature: the pen line.</b> A marked passage is underlined in blue-black, as with a fountain pen, and on a wide screen the line runs out of the verse to the note in the margin. The note is in italic, in the same ink.</p>
-    <p><b>Says</b> Someone has read this before you and left the book open on the table.</p>
-    <p><b>Risk</b> The nearest to twee: a calligraphic face and “handwritten” notes can turn cosy. A blue underline also looks like a link. Structurally it is Tufte CSS with a warmer face, so the pen line carries the distinctiveness alone.</p>
-    <p><b>Draws on</b> Plum Village's warmth (a hand, not a palette); Tufte and Ink &amp; Switch margin notes; The Public Domain Review's Alegreya.</p>
-  </div>
-</article>
-<article class="dir rec">
-  <header class="dir-h"><span class="dir-k">C</span><h3>Red and black</h3><span class="pick">recommended</span></header>
-  <div class="spec sC">
-    <div class="s-top"><span class="s-site">Sutras</span><span class="s-nav">Texts &nbsp; Notes &nbsp; About</span></div>
-    <div class="s-head">
-      <p class="s-han" lang="zh-Hant">信心銘</p>
-      <div>
-        <p class="s-title">Faith in Mind</p>
-        <p class="s-by">Seng Ts’an <span lang="zh-Hant">僧璨</span>, d. 606<br>Translated by Sheng-yen</p>
-      </div>
-    </div>
-    <p class="s-brief"><span class="s-bl">In brief.</span> The Way is not hard. What makes it hard is choosing: for and against, love and hate. Stop choosing and it is already here.</p>
-    <div class="v">
-      <span class="n">1</span>
-      <p class="l">The Supreme Way is not difficult</p>
-      <p class="l">If only you do not pick and choose.</p>
-      <p class="l">Neither love nor hate,</p>
-      <p class="l">And you will clearly understand.</p>
-      <p class="l dot">Be off by a hair,</p>
-      <p class="l dot">And you are as far from it as heaven from earth.</p>
-      <p class="note">Dōgen opens the <i>Fukanzazengi</i> with this same image, six centuries later.</p>
-      <p class="l">If you want the Way to appear,</p>
-      <p class="l">Be neither for nor against.</p>
-      </div>
-  </div>
-  <div class="dir-m">
-    <div class="sw"><i style="background:#f5f4f0"></i><code>#F5F4F0</code><i style="background:#161514"></i><code>#161514</code><i style="background:#c22d1c"></i><code>#C22D1C</code></div>
-    <p><b>Pole</b> The inherited book.</p>
-    <p><b>Type</b> Gentium Book Plus, with Noto Serif TC for Chinese. Gentium is what Plum Village sets its sutras in.</p>
-    <p><b>Signature: the red dot.</b> Black is the text. Red does one job: it is the apparatus, meaning the stanza numbers and a small dot in the margin beside whatever Rufus has marked. Red numbering is the scribe's rubric. The dot is loosely after 圈點, the small marks Chinese readers brushed beside passages they valued; ours is one per line in the margin, where theirs ran beside each character.</p>
-    <p><b>Says</b> Many hands have been over this text before yours. Here is one more.</p>
-    <p><b>Risk</b> Pastiche if the Chinese is overused or the red spreads. Red on off-white sits near the terracotta-on-cream habit, so the ground stays neutral and the red stays small. In prose the dot shows where a marked passage starts, not how far it runs.</p>
-    <p><b>Draws on</b> The Doves Press Bible's black and red; woodblock sutra pages; Plum Village's sutra pages; 84000's numbers in the margin.</p>
+<article class="dir" id="d1">
+  <span class="n">1</span>
+  <h3>The empty room</h3>
+  <figure><img src="{{shot:costar-scroll}}" alt="Co–Star: a black band with a grey moon, a hand and a skull, three short grey paragraphs beneath, then a birth chart on near-white"><figcaption><a href="https://www.costarastrology.com">costarastrology.com</a>, scrolled to the second screen. The reference Rufus named.</figcaption></figure>
+  <div class="text">
+    <p class="for"><b>For Sutras:</b> a page that is almost nothing. One typeface doing everything, the text, hierarchy by distance alone, grey on near-white (or ash on black for a single screen). Zen read as taking away.</p>
+    <span class="tk">the nerve to leave the page empty; three objects given a whole screen; one face for name, text and labels; texture from a faint line drawing, never from colour.</span>
+    <span class="lv">the cold, the centring, the knowing tone and the 14px text. It is a poster for an app, not a page to read for an hour.</span>
   </div>
 </article>
 
-</div>
+<article class="dir" id="d2">
+  <span class="n">2</span>
+  <h3>The sober document</h3>
+  <figure><img src="{{shot:rtm-report}}" alt="Reports That Matter: the Challenger smoke plume on black, then on grey a small mono kicker, a large Garamond title and the introduction, all on one left edge"><figcaption><a href="https://reportsthatmatter.org/reports/challenger-accident">reportsthatmatter.org</a>, the Challenger report. Rufus's other named reference, at its best moment.</figcaption></figure>
+  <div class="text">
+    <p class="for"><b>For Sutras:</b> the text treated as a document. Title, source line and text share one left edge on a grey ground; a photograph only where a text has one. This is the floor Rufus named: every other direction has to be at least this good.</p>
+    <span class="tk">one left edge; kicker, title and text on it; nothing boxed; a long text given weight and air; the ¶ link in the margin.</span>
+    <span class="lv">the mono labels and the investigative chill; the sans for reading. Right for a report, cold for a poem.</span>
+  </div>
+</article>
 
-<h3 class="sub">At desk width, with the notes in the margin</h3>
-<p class="small">The title block, the first stanza complete and the start of the second, then a marked sentence from Seneca's <i>On the Shortness of Life</i> (Basore's translation, as in the repo) to test each mark in prose. Below about 800px these fall back to the phone layout.</p>
+<article class="dir" id="d3">
+  <span class="n">3</span>
+  <h3>The warm page</h3>
+  <figure><img src="{{shot:emergence-poem-song-scroll2}}" alt="Emergence Magazine: four lines of Chinese verse, then DIM SCENT in small capitals, an italic attribution to Jiang Kui, and the English poem in a narrow serif column on warm grey"><figcaption><a href="https://emergencemagazine.org/poem/poems-from-the-song-dynasty/">emergencemagazine.org</a>, Poems from the Song Dynasty, scrolled to the second poem.</figcaption></figure>
+  <div class="text">
+    <p class="for"><b>For Sutras:</b> warm grey paper, a small-caps title, an italic line for poet and translator, the Chinese above the English, verse given a 50-character measure with air around it, and one piece of quiet art per text. The nearest thing on the web to our page, already carrying Song dynasty poems and Red Pine's Cold Mountain.</p>
+    <span class="tk">the ground (warm, not cream); the sequence of title, attribution, Listen, standfirst, text; Chinese and English set as equals; a drawn artwork opening a text, printed through the paper rather than pasted on.</span>
+    <span class="lv">the Store and Engage in the nav; a full screen of art before every piece (one per text, not per page); the slight sleekness that the Seeds of Renaissance feel already warns about.</span>
+  </div>
+</article>
 
-<figure class="sheet">
-<figcaption><b>A · Bare.</b> The column hangs from the left; the right of the page is empty except for the notes. The title is the same size as everything else.</figcaption>
-<div class="spec desk sA">
-    <div class="s-head">
-      <p class="s-title">Faith in Mind</p>
-      <p class="s-by">Seng Ts’an, died 606<br>Translated by Sheng-yen</p>
+<article class="dir" id="d4">
+  <span class="n">4</span>
+  <h3>The hand</h3>
+  <figure><img src="{{shot:plumvillage-sutra}}" alt="Plum Village: a brushed handwritten name, then Sutras / Discourse on Love in brown and italic, the source line, Play and Download Audio, and the text beside a small woodcut"><figcaption><a href="https://plumvillage.org/library/sutras/discourse-on-love">plumvillage.org</a>, Discourse on Love. Rufus's “a little more Plum Village”.</figcaption></figure>
+  <div class="text">
+    <p class="for"><b>For Sutras:</b> warmth from a person rather than a palette: one brushed title, a woodcut, a line in brown italic, and the text at once at 20px. Where “warmer” most plainly lives.</p>
+    <span class="tk">the brushed name as the only ornament on the page; “Sutras / Discourse on Love” with the source under it; the text starting straight away in a generous serif.</span>
+    <span class="lv">the Play and Download buttons above the first line; the picture floated into the text; the yellows and peaches of the rest of the site. This is where twee begins, one step past here.</span>
+  </div>
+</article>
+
+<article class="dir" id="d5">
+  <span class="n">5</span>
+  <h3>Red and black: the inherited page</h3>
+  <figure><img src="{{shot:heart-sutra-zhao}}" alt="A section of Zhao Mengfu's Heart Sutra handscroll: running script in black ink in ruled columns on gold-brown paper, with the red seals of later owners stamped at the top"><figcaption>Zhao Mengfu, <i>Heart Sutra</i>, Yuan dynasty, handscroll (detail). Wikimedia Commons, public domain.</figcaption></figure>
+  <div class="text">
+    <p class="for"><b>For Sutras:</b> the forms these texts came down in: ruled columns, black text as one continuous surface, and red for nothing but the marks of readers and owners. Our stanza numbers and Rufus's marks would be the red; the text stays black. Zen read as lineage.</p>
+    <span class="tk">text as a single block in a ruled frame; red for the apparatus and nothing else; the seals as the trace of the readers who came before, which is exactly what margin notes are.</span>
+    <span class="lv">copying it. Vertical text, a scroll layout or a seal-script wordmark would be costume. The open question is whether this page can hold Seneca; the next direction is its Western half.</span>
+  </div>
+</article>
+
+<article class="dir" id="d6">
+  <span class="n">6</span>
+  <h3>The pocket classic</h3>
+  <figure><img class="narrow" src="{{shot:aldus}}" alt="A page from Aldus Manutius's 1501 Virgil: a narrow block of italic type with a painted initial and a painted border, a wide outer margin"><figcaption>Aldus Manutius, <i>Virgil</i>, Venice 1501: the first italic, in the first pocket-sized classics. Wikimedia Commons, CC0.</figcaption></figure>
+  <div class="text">
+    <p class="for"><b>For Sutras:</b> the Western inheritance for Seneca and Marcus: a small book made to be carried and read anywhere, a narrow measure, the italic as a text face, one initial, and a wide margin that invites a pencil. The companion to direction 5 rather than a rival to it.</p>
+    <span class="tk">the measure; italic as a voice for the whole of a short text or for the notes; the outer margin as part of the page; one initial per text and no other ornament.</span>
+    <span class="lv">the painted border and anything that looks antique. The idea, not the look. Seeds of Renaissance's rule applies here too: nothing may look backwards.</span>
+  </div>
+</article>
+
+<article class="dir" id="d7">
+  <span class="n">7</span>
+  <h3>The text as object</h3>
+  <figure><img src="{{shot:fitzcarraldo}}" alt="Fitzcarraldo Editions: two photographed paperbacks, one white with a blue frame and spaced capitals, one plain blue with white spaced capitals, author above, title in the middle"><figcaption><a href="https://fitzcarraldoeditions.com">fitzcarraldoeditions.com</a>. The covers are the whole identity.</figcaption></figure>
+  <div class="text">
+    <p class="for"><b>For Sutras:</b> each text is an edition with a cover: one colour, spaced capitals, author and title and nothing else. The home page is a shelf of them, the EPUB is the same object, and the reading page is the inside of the book.</p>
+    <span class="tk">one colour per series (blue for fiction, white for essays: for us, perhaps one for the Buddhist texts and one for the Stoics); author in small caps above, title in spaced caps; a house style that never changes.</span>
+    <span class="lv">the shop: basket, breadcrumbs, photographs of books in rooms. A cover grid is a bookshop and Sutras is a reading room, so this is a home-page idea inside another direction rather than a direction on its own.</span>
+  </div>
+</article>
+
+<article class="dir" id="d8">
+  <span class="n">8</span>
+  <h3>Seeds of Renaissance, adapted</h3>
+  <figure>
+    <div class="pair">
+      <img src="{{shot:sor-home}}" alt="Seeds of Renaissance home page: FOR ALL THE LIVING BEINGS WHOSE HEARTS BURN TO SEE A NEW WORLD EMERGE in large Polyamine capitals on paper, two words in red, a newsletter field below">
+      <img src="{{shot:sor-spec-cover}}" alt="Seeds of Renaissance design system cover: Grounded hope, set in ink and paper, in a serif on near-black, with a labelled table and three drawn swallows">
     </div>
-    <div class="v">
-      <span class="n">1</span>
-      <p class="l">The Supreme Way is not difficult</p>
-      <p class="l">If only you do not pick and choose.</p>
-      <p class="l">Neither love nor hate,</p>
-      <p class="l">And you will clearly understand.</p>
-      <p class="l">Be off by a hair,</p>
-      <p class="l">And you are as far from it as heaven from earth.</p>
-      <p class="note">Dōgen opens the <i>Fukanzazengi</i> with this same image, six centuries later.</p>
-      <p class="l">If you want the Way to appear,</p>
-      <p class="l">Be neither for nor against.</p>
-      <p class="l">For and against opposing each other</p>
-      <p class="l">This is the mind’s disease.</p>
-      <p class="l">Without recognizing the mysterious principle</p>
-      <p class="l">It is useless to practice quietude.</p>
-      <p class="gap"></p>
-      <span class="n n2">2</span>
-      <p class="l">The Way is perfect like great space,</p>
-      <p class="l">Without lack, without excess.</p>
-      <p class="l">Because of grasping and rejecting,</p>
-      <p class="l">You cannot attain it.</p>
-      </div>
-    <div class="prose">
-      <p class="s-by">Seneca, On the Shortness of Life</p>
-      <p class="para">It is not that we have a short space of time, but that we waste much of it. Life is long enough, and it has been given in sufficiently generous measure to allow the accomplishment of the very greatest things if the whole of it is well invested.</p>
-      <p class="note">The whole essay is in this sentence.</p>
-    </div>
-</div>
-</figure>
-<figure class="sheet">
-<figcaption><b>B · The read copy.</b> The block sits in the middle like a book page; the pen line runs from the marked words to the note.</figcaption>
-<div class="spec desk sB">
-    <div class="s-head">
-      <p class="s-title">Faith in Mind</p>
-      <p class="s-by">Seng Ts’an · translated by Sheng-yen</p>
-    </div>
-    <div class="v">
-      <span class="n">1</span>
-      <p class="l">The Supreme Way is not difficult</p>
-      <p class="l">If only you do not pick and choose.</p>
-      <p class="l">Neither love nor hate,</p>
-      <p class="l">And you will clearly understand.</p>
-      <p class="l lead"><span class="hl">Be off by a hair,</span></p>
-      <p class="l"><span class="hl">And you are as far from it as heaven from earth.</span></p>
-      <p class="note">Dōgen opens the <i>Fukanzazengi</i> with this same image, six centuries later.</p>
-      <p class="l">If you want the Way to appear,</p>
-      <p class="l">Be neither for nor against.</p>
-      <p class="l">For and against opposing each other</p>
-      <p class="l">This is the mind’s disease.</p>
-      <p class="l">Without recognizing the mysterious principle</p>
-      <p class="l">It is useless to practice quietude.</p>
-      <p class="gap"></p>
-      <span class="n n2">2</span>
-      <p class="l">The Way is perfect like great space,</p>
-      <p class="l">Without lack, without excess.</p>
-      <p class="l">Because of grasping and rejecting,</p>
-      <p class="l">You cannot attain it.</p>
-      </div>
-    <div class="prose">
-      <p class="s-by">Seneca · On the Shortness of Life</p>
-      <p class="para"><span class="hl">It is not that we have a short space of time, but that we waste much of it.</span> Life is long enough, and it has been given in sufficiently generous measure to allow the accomplishment of the very greatest things if the whole of it is well invested.</p>
-      <p class="note">The whole essay is in this sentence.</p>
-    </div>
-</div>
-</figure>
-<figure class="sheet">
-<figcaption><b>C · Red and black.</b> One black rule, the Chinese title set vertically beside the English, numbers and dots on one axis in the left margin, notes plain and small on the right. <span class="pick" style="margin-left:0">Recommended.</span></figcaption>
-<div class="spec desk sC">
-    <div class="s-head">
-      <p class="s-han" lang="zh-Hant">信心銘</p>
-      <div>
-        <p class="s-title">Faith in Mind</p>
-        <p class="s-by">Seng Ts’an <span lang="zh-Hant">僧璨</span>, d. 606<br>Translated by Sheng-yen</p>
-      </div>
-    </div>
-    <div class="v">
-      <span class="n">1</span>
-      <p class="l">The Supreme Way is not difficult</p>
-      <p class="l">If only you do not pick and choose.</p>
-      <p class="l">Neither love nor hate,</p>
-      <p class="l">And you will clearly understand.</p>
-      <p class="l dot">Be off by a hair,</p>
-      <p class="l dot">And you are as far from it as heaven from earth.</p>
-      <p class="note">Dōgen opens the <i>Fukanzazengi</i> with this same image, six centuries later.</p>
-      <p class="l">If you want the Way to appear,</p>
-      <p class="l">Be neither for nor against.</p>
-      <p class="l">For and against opposing each other</p>
-      <p class="l">This is the mind’s disease.</p>
-      <p class="l">Without recognizing the mysterious principle</p>
-      <p class="l">It is useless to practice quietude.</p>
-      <p class="gap"></p>
-      <span class="n n2">2</span>
-      <p class="l">The Way is perfect like great space,</p>
-      <p class="l">Without lack, without excess.</p>
-      <p class="l">Because of grasping and rejecting,</p>
-      <p class="l">You cannot attain it.</p>
-      </div>
-    <div class="prose">
-      <p class="s-by">Seneca, <i>On the Shortness of Life</i></p>
-      <p class="para"><span class="dot">It is not that we have a short space of time, but that we waste much of it.</span> Life is long enough, and it has been given in sufficiently generous measure to allow the accomplishment of the very greatest things if the whole of it is well invested.</p>
-      <p class="note">The whole essay is in this sentence.</p>
-    </div>
-</div>
-</figure>
+    <figcaption><a href="https://seedsofrenaissance.org">seedsofrenaissance.org</a> and <a href="https://design.seedsofrenaissance.org">design.seedsofrenaissance.org</a>. The sister project's system: grounded hope, ink and paper, four faces, red is rare.</figcaption>
+  </figure>
+  <div class="text">
+    <p class="for"><b>For Sutras:</b> Rufus's suggestion: borrow the family system and tweak it. Ink and paper grounds, rigour as the form, hairline rules, red kept rare, Polyamine for the site title only, Restora for headings and the poetic italic, and a reading serif where Seeds uses Bricolage. The imagery of a movement removed, leaving the quiet of a library.</p>
+    <span class="kp">the grounds and inks (paper <code>#fbfaf6</code>, ink <code>#1b1916</code>); “red is rare” (there: links and footnote marks; here: stanza numbers and Rufus's marks); Apfel Grotezk labels at 11–14px; Restora for headings and italic lines; the plates-and-captions discipline, turned on the apparatus; four faces already licensed and self-hosted.</span>
+    <span class="tw">the reading face: Bricolage Grotesque is a sans with no italic, and a wisdom text wants a serif (Restora at 19px is one candidate, an open serif another). Drop the night section, the sunlight yellow, torn edges, woodcut swallows, collage photographs and paper grain: those are a movement's voice. Polyamine capitals for the site name alone, never a title.</span>
+    <span class="rk">Sutras reads as a Seeds of Renaissance sub-brand. Whether that family resemblance is wanted is Rufus's call, and the main question this direction asks.</span>
+  </div>
+</article>
 </section>
 
-<section id="recommendation">
-<h2>Recommendation: C, held to A's restraint</h2>
-<div class="body">
-<p class="lead">A is the sober floor and could ship tomorrow. C is the more distinctive, and the one I would build.</p>
-<ul class="plain">
-  <li><b>Its mark comes from the texts' own world and does a job.</b> A red dot in the margin is close to how these texts were marked by people who read them, and it is the smallest way to show what Sutras promises: one reader's hand beside the text.</li>
-  <li><b>It answers “warmer” without a warm palette.</b> The ground is as neutral as Co–Star's. The warmth is a few points of red.</li>
-  <li><b>Its parts are shapes.</b> The rule, the vertical title and the dots still read with the colour taken away. So does B's pen line. A, without its tones, is a serif on off-white.</li>
-  <li><b>It should carry to Seneca.</b> Red numbering is the Western scribe's habit as much as the Chinese printer's, so nothing changes for <i>Meditations</i>; the Chinese title simply does not appear on a text that has none. The weak point is the prose mark: a dot shows where a marked passage begins, not where it ends. That needs solving in the build.</li>
-</ul>
-<p>From A I would keep the discipline: one size for everything except the title, and the test of taking away. If C feels like costume to Rufus, the fallback is A with C's dots in grey.</p>
+<section id="details">
+<h2>Details worth stealing</h2>
+<p class="lead">Not directions: single moments that could live inside any of the eight.</p>
+<div class="grid">
+  <figure><img class="fit" src="{{shot:hakuin-virtue}}" alt="Hakuin's calligraphy of the character for Virtue, one huge character with small running script above"><figcaption><b>Hierarchy by size alone</b><span>Hakuin Ekaku, <i>Virtue</i> (悳), 18th c. Met, CC0. One character the size of a body; the rest small.</span></figcaption></figure>
+  <figure><img src="{{shot:sengai}}" alt="Sengai's brush painting of a square, a triangle and a circle"><figcaption><b>A mark, not a logo</b><span>Sengai Gibon, <i>Circle, Triangle, Square</i>. Wikimedia Commons, public domain. If Sutras ever has a mark, this is the register.</span></figcaption></figure>
+  <figure><img src="{{shot:emergence-essay-seeds}}" alt="Emergence Magazine: a circular diagram printed through a page of faint text, with a two-line small-caps title beneath"><figcaption><b>A diagram through the paper</b><span><a href="https://emergencemagazine.org/essay/seeds-and-our-coevolved-psyches/">Emergence</a>, Seeds and Our Coevolved Psyches. One image, printed rather than pasted, and a two-line small-caps title.</span></figcaption></figure>
+  <figure><img src="{{shot:suttacentral-scroll}}" alt="SuttaCentral: short verses of the Dhammapada in a narrow column on a faintly warm ground, no numbers visible"><figcaption><b>Numbers hidden until wanted</b><span><a href="https://suttacentral.net/dhp1-20/en/sujato">SuttaCentral</a>, Dhammapada. The quietest reading page found; verse numbers appear only when asked for.</span></figcaption></figure>
+  <figure><img src="{{shot:kaikado}}" alt="Kaikado: seven copper tea caddies in a row on grey, a brushed shop mark above"><figcaption><b>Things in a row, given room</b><span><a href="https://www.kaikado.jp/english/">Kaikado</a>, Kyoto. A row of made things on grey and a brushed mark: how a list of texts could look.</span></figcaption></figure>
+  <figure><img src="{{shot:diamond-sutra}}" alt="The Diamond Sutra of 868: the woodblock frontispiece of the Buddha preaching, with the first ruled columns of text to its left"><figcaption><b>The frame that gets out of the way</b><span><i>Diamond Sutra</i>, 868, British Library Or.8210/P.2, via Wikimedia Commons, public domain. The oldest dated printed book, and one of ours.</span></figcaption></figure>
+  <figure><img class="fit" src="{{shot:doves}}" alt="The Doves Press Bible: a page of black type with In the beginning in red capitals and a long red initial I"><figcaption><b>One red stroke</b><span>Doves Press Bible, 1903. Wikimedia Commons, public domain. Black type, one red initial, no ornament. Small because no larger open copy exists.</span></figcaption></figure>
+  <figure><img src="{{shot:caoquan}}" alt="An album of rubbings from the Stele of Cao Quan: white clerical-script characters on black"><figcaption><b>If there is ever a night mode</b><span>Stele of Cao Quan, Han dynasty, rubbing album. Wikimedia Commons, CC0. White on black is the inverse of the page, not a dimmed version of it.</span></figcaption></figure>
+  <figure><img src="{{shot:jingoji}}" alt="A Lotus Sutra scroll from Jingoji: gold and silver columns of text on indigo paper beside a gold frontispiece"><figcaption><b>Reverence as a page</b><span>Lotus Sutra, Jingoji, late Heian, gold and silver on indigo. Wikimedia Commons, public domain. Dark ground, light text, and it is still a page to read.</span></figcaption></figure>
+  <figure><img src="{{shot:moonjar}}" alt="A white Joseon moon jar, slightly off-round, on a dark grey ground"><figcaption><b>An object on a plain ground</b><span>Joseon moon jar, Cleveland Museum of Art, CC0. Photographed without drama. The manner for any picture of a book or an object on the site.</span></figcaption></figure>
 </div>
-
-<h3 class="sub">Where each direction sits near a habit we named</h3>
-<div class="tbl"><table>
-<thead><tr><th>Habit</th><th>A · Bare</th><th>B · The read copy</th><th>C · Red and black</th></tr></thead>
-<tbody>
-<tr><td>Cream ground, terracotta accent, serif headline</td><td class="ok">No: grey ground, no accent</td><td>Near: warm paper, though the accent is blue-black</td><td>Near: red on off-white. The ground is kept neutral and the red small</td></tr>
-<tr><td>Everything centred</td><td class="ok">Hung left</td><td>The block is centred; the lines are not</td><td class="ok">Hung left</td></tr>
-<tr><td>Lotus, ensō, brush script</td><td class="ok">None</td><td>Near: a calligraphic face and “handwritten” notes</td><td>Near: a vertical Chinese title is one step from decoration</td></tr>
-<tr><td>A Garamond-like serif on off-white with grey numerals (Tufte CSS, Standard Ebooks)</td><td>Yes, in effect</td><td>Close. Only the pen line parts it from Tufte</td><td class="ok">No: black and red, a rule, a vertical title</td></tr>
-</tbody></table></div>
-<p class="small">The other habits named in the brief (tracked capitals over headings, an italic accent word, rounded cards with shadows, rows of three cards) appear in none of the three.</p>
 </section>
 
-<section id="decisions">
-<h2>Decisions needed</h2>
-<p class="lead">Each has a default. If there is no answer, the default is built.</p>
-<div class="decide">
-  <div><b>Is the feel “Without lack, without excess”?</b><p><strong>Recommended: yes.</strong> It is from the first text on the site and it tests in both directions.</p></div>
-  <div><b>Which direction?</b><p><strong>Recommended: C, with A's restraint.</strong> Fallback: A, with C's dots in grey.</p></div>
-  <div><b>Does Chinese appear on the page?</b><p><strong>Recommended: the title and author's name only</strong>, on texts that have a Chinese original. The full original beside the translation is an edition question for later, not a design one.</p></div>
-  <div><b>Is the text near-black, or Co–Star's mid-grey?</b><p><strong>Recommended: near-black</strong> (#161514). Mid-grey suits a few lines; over an hour it tires. Reports That Matter made the same change.</p></div>
-  <div><b>Are notes shown at once on a phone, or on a tap?</b><p><strong>Recommended: shown at once</strong>, under the line. The notes are few, and a page that waits should not hide things.</p></div>
-  <div><b>Pictures?</b><p><strong>Recommended: none for now.</strong> Later, at most one public-domain image per text (an ink painting, a woodcut), as at Plum Village and Lotsawa House.</p></div>
+<section class="anti" id="not">
+<h2>Not this</h2>
+<div class="grid">
+  <figure><img src="{{shot:terebess}}" alt="Terebess: Faith in Mind as yellow and green links on a maroon background"><figcaption><b>The archive</b><span><a href="https://terebess.hu/english/hsin3.html">Terebess</a>, our own source for Faith in Mind. Everything is here and none of it can be read.</span></figcaption></figure>
+  <figure><img src="{{shot:dailyzen}}" alt="Daily Zen: a brush drawing of a monk, a casual script font, Send a Zen Card"><figcaption><b>The gift shop</b><span><a href="https://www.dailyzen.com">Daily Zen</a>. Brush drawing, casual script, “Send a Zen card”.</span></figcaption></figure>
+  <figure><img src="{{shot:headspace}}" alt="Headspace: an orange gradient, a smiling blob and 50% off a year"><figcaption><b>The wellness app</b><span><a href="https://www.headspace.com">Headspace</a>. A friendly gradient, a smiling blob, 50% off.</span></figcaption></figure>
 </div>
-<p class="small" style="margin-top:28px">Next, once a direction is picked: build it on the reading system for the <i>Faith in Mind</i> page and the home page, live, and check it on a phone. A Mumonkan case (case, comment, verse, Chinese) and the home list are designed then, on the chosen direction. The name and any wordmark stay parked.</p>
 </section>
 
-<footer>Source: <code>docs/design/brief.src.html</code> in the sutras repo, built with <code>docs/design/build.py</code>. Notes: <code>docs/design/README.md</code>. Fonts on this page: Spectral, Alegreya, Gentium Book Plus, Noto Serif TC (specimens) and Instrument Sans (this page's own text), all open licence, from Google Fonts.</footer>
+<section id="shortlist">
+<h2>Shortlist</h2>
+<p class="lead">Three to take to specimens, with the sober document as the floor under all of them. Each would be shown as the first screen of <i>Faith in Mind</i> on a phone and the same stanza at desk width with a margin note, plus a few lines of Seneca.</p>
+<div class="short">
+  <div><b>A · The warm page</b><p>Direction 3, with the hand (4) as its source of warmth: Emergence's paper and sequence, one brushed or drawn element per text. <strong>Nearest to “a little warmer”</strong>, and already proven on Chinese and English verse. Risk: tasteful and sleek.</p></div>
+  <div><b>B · Red and black</b><p>Direction 5 held to the empty room's (1) restraint, with the pocket classic (6) as its Western half: black text, red apparatus, ruled space, an italic for the notes. <strong>The most distinctive</strong>, from the texts' own world. Risk: costume, and holding Seneca.</p></div>
+  <div><b>C · Seeds of Renaissance, adapted</b><p>Direction 8 as described: the family system with a reading serif and the imagery removed. <strong>The least work and the clearest family tie.</strong> Risk: Sutras reads as a sub-brand.</p></div>
+</div>
+<p class="small" style="margin-top:16px">Not shortlisted: the text as object (7), which becomes the home page inside whichever direction wins; the sober document (2), which is the measure rather than a candidate.</p>
 
+<h2 style="margin-top:48px">For Rufus</h2>
+<div class="ask">
+  <div><b>Which of A, B and C go to specimens?</b><p>Recommended: all three, side by side, since they answer “warmer” in three different ways. <strong>Default if no answer: A and B.</strong></p></div>
+  <div><b>Is the Seeds of Renaissance family resemblance wanted?</b><p>If yes, C becomes the floor and A or B are tweaks to it. If no, C drops. <strong>Default: C stays in as one of three.</strong></p></div>
+  <div><b>Where does “warmer” live for you?</b><p>Paper and a hand (3, 4), or red on black (5)? One reaction to each image above is more useful than a verdict.</p></div>
+  <div><b>Three things you find beautiful that are not here.</b><p>On paper or screen. They would correct this board faster than anything else. <strong>Default: your ux-patterns archive stands in.</strong></p></div>
+</div>
+</section>
+
+<footer>Screenshots taken with headless Chromium at 1440×900 on 20 November 2026, scrolled where noted, none mocked up. Museum images from Wikimedia Commons and the Cleveland Museum of Art under the licences stated. Source: <code>docs/design/brief.src.html</code>; every candidate scanned: <code>docs/design/moodboard-candidates.md</code>; reading-page research moved to <code>docs/design/research-reading-features.md</code>.</footer>
 </div>

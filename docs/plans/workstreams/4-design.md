@@ -1,6 +1,6 @@
 # 4 Design — brief
 
-Status: draft 2, 2026-11-20 (tightened and critiqued by a fresh agent; not yet reviewed by Rufus). Part of [workstreams](../2026-11-20-workstreams.md). Bead: sutras-m2v.3 (mood board and design directions). Process: the `designing-look-and-feel` skill; this file is its stage-1 brief. Output of stages 0–2: [docs/design/](../../design/README.md).
+Status: draft 3, 2026-11-20. The first design page built from draft 2 was rejected by Rufus ("mood board is weak. where is the true beauty in this… start with clear brief and moodboard"); the restart is in `docs/design/brief.md` (the brief) and the mood board page. Rufus also asked (same day) for at most 5–10 directions on the board, a few details and a shortlist of 3–4, and for Seeds of Renaissance, adapted, as one direction. This file keeps the fuller specification for the specimen and build stages; where it differs from `docs/design/brief.md`, the brief wins. Part of [workstreams](../2026-11-20-workstreams.md). Bead: sutras-m2v.3 (mood board and design directions). Process: the `designing-look-and-feel` skill; this file is its stage-1 brief. Output of stages 0–2: [docs/design/](../../design/README.md).
 
 ## Goal
 
