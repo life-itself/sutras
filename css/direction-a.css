@@ -39,16 +39,16 @@
 .site-footer-publication-name { font-weight: 400; color: var(--sd-ink) }
 
 /* ---- the text's one image, then the title ---- */
-.sd-art { margin: 0; padding: clamp(28px, 6vw, 72px) 20px 0; display: grid; justify-items: center }
-.sd-art img { display: block; max-width: min(100%, 560px); max-height: 62vh; width: auto; height: auto; mix-blend-mode: multiply }
-.sd-art figcaption { font-family: var(--sd-text); font-style: italic; font-size: 14px; color: var(--sd-muted); margin-top: 14px; text-align: center; max-width: 36em; line-height: 1.45 }
-@media (max-width: 640px) { .sd-art { padding-top: 16px } .sd-art img { max-height: 50svh } }
-.rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: clamp(28px, 5vw, 56px) 0; text-align: center; display: grid; justify-items: center }
-.rs[data-rs-theme="personal"] .rs-head .rs-head-text { display: grid; justify-items: center; max-width: 34em }
+.sd-art { margin: 0; padding: clamp(20px, 3vw, 40px) 20px 0; display: grid; justify-items: center; max-width: 100% }
+.sd-art img { display: block; max-width: min(100%, 520px); max-height: 46vh; width: auto; height: auto; mix-blend-mode: multiply }
+.sd-art figcaption { font-family: var(--sd-text); font-style: italic; font-size: 13.5px; color: var(--sd-muted); margin-top: 10px; text-align: center; max-width: min(36em, 100%); line-height: 1.4; overflow-wrap: anywhere }
+@media (max-width: 640px) { .sd-art { padding: 12px 16px 0 } .sd-art img { max-height: 40svh } }
+.rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: clamp(18px, 3vw, 32px) 0; text-align: center; display: grid; justify-items: center }
+.rs[data-rs-theme="personal"] .rs-head .rs-head-text { display: grid; justify-items: center; max-width: min(34em, 100%); min-width: 0 }
 .rs[data-rs-theme="personal"] .rs-head .rs-kicker, .rs[data-rs-theme="personal"] .rs-head a.rs-kicker { align-self: center; font-family: var(--sd-label); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--sd-muted); font-weight: 500; text-decoration: none }
 .rs[data-rs-theme="personal"] .rs-head h1 { font-size: clamp(34px, 5vw, 50px); font-weight: 400; line-height: 1.12; margin: 14px 0 12px; font-variation-settings: "opsz" 48 }
 .rs[data-rs-theme="personal"] .rs-subtitle { font-style: italic; font-size: 1.05em; color: var(--sd-muted); margin: 0 0 14px; text-align: center }
-.rs[data-rs-theme="personal"] .rs-head .rs-attribution { font-size: .92em; line-height: 1.5; color: var(--sd-ink2); text-align: center; max-width: 26em }
+.rs[data-rs-theme="personal"] .rs-head .rs-attribution { font-size: .92em; line-height: 1.5; color: var(--sd-ink2); text-align: center; max-width: min(26em, 100%); overflow-wrap: anywhere }
 .rs[data-rs-theme="personal"] .rs-body .rs-wrap { padding-top: clamp(32px, 5vw, 64px) }
 
 /* ---- In brief: an italic paragraph with a small label, as a book's blurb; no box ---- */
