@@ -1,6 +1,6 @@
 # Faith in Mind spike — plan
 
-Status: draft, 2026-11-20, awaiting Rufus's OK. Epic: sutras-m2v. Vision: [docs/vision.md](../vision.md). SCQ: [2026-11-20-sutras-scq.md](2026-11-20-sutras-scq.md).
+Status: OK'd by Rufus to go ahead, 2026-11-20. Milestone 1 of the [workstreams plan](2026-11-20-workstreams.md). Epic: sutras-m2v. Vision: [docs/vision.md](../vision.md). SCQ: [2026-11-20-sutras-scq.md](2026-11-20-sutras-scq.md).
 
 ## Goal
 
@@ -17,10 +17,10 @@ On a preview site (not the live one), all pass:
 
 - the page has our intro, the poem, About this translation, Source and licence, and a Download link, in that order;
 - the reading layout loads: EB Garamond renders and the poem keeps its line breaks;
-- `…/faith-in-mind#s3` lands on stanza 3, not hidden under the navbar;
+- `…/faith-in-mind#3` lands on stanza 3, not hidden under the navbar;
 - at least two margin notes sit beside their lines at 1280px wide and open on tap at 390px;
 - the EPUB downloads and opens in Apple Books;
-- Rufus has added at least one note of his own;
+- Rufus has added at least one note of his own (if he hasn't by Monday, it ships with the editorial glosses and his notes follow);
 - the stay-or-leave decision on Flowershow is recorded below.
 
 Target: ready for Rufus by Sunday 2026-11-22, so the result can go live by Monday 2026-11-23 (the SCQ date).
@@ -31,7 +31,7 @@ The earlier idea of a small custom site (Astro) is dropped for now. Flowershow a
 
 - **Reading layout:** Rufus's reading system (`~/src/rufuspollock/ux-patterns/reading-system`, v0.1) is one CSS file and one script, already documented for Flowershow (`layout: plain`, page scripts). It does margin notes from Markdown footnotes. Theme: `personal` (EB Garamond), as a stand-in until the moodboard (sutras-m2v.3).
 - **Notes:** Markdown footnotes become margin notes. Simple, in the text file, versioned. Rufus writes them himself (or dictates them to an agent). Flowershow's annotations feature is not used: it is a review-comments tool, not a reader's notes on a text.
-- **Stanza links:** an inline `<a id="s3"></a>` at the start of each stanza: it keeps the Markdown line breaks and works without JavaScript. Fallback: add the ids in the page script.
+- **Stanza links:** an inline `<a id="3"></a>` at the start of each stanza: it keeps the Markdown line breaks and works without JavaScript. Fallback: add the ids in the page script.
 - **EPUB:** Pandoc (installed) from the same Markdown, one short script. Committed as a file the page links to.
 
 What Reports That Matter does that we skip: per-text repos, an ingest pipeline, fidelity gates, a custom app and database. Too much for short, already-clean texts. We keep only the ideas: a stable link per passage, a provenance note, a short intro.
