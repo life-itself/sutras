@@ -8,6 +8,7 @@ tradition: Ch’an (Zen) Buddhism
 source: https://www.sacred-texts.com/bud/zen/mumonkan.htm
 licence: "Translation © 1977 (Weatherhill; Shambhala edition 2005): in copyright, reproduced in full without permission. The Chinese text (1228) is in the public domain. Editorial additions CC BY 4.0."
 status: published
+passageUnit: case
 layout: plain
 syntaxMode: md
 scripts:
@@ -1796,7 +1797,7 @@ The Chinese was compared character by character with the Taishō text (T48 no. 2
 
 ## Download
 
-[The Gateless Gate (EPUB)](/downloads/gateless-gate-mumonkan.epub): everything on this page, including the translation, which is in copyright (see above).
+[The Gateless Gate (EPUB)](/downloads/gateless-gate-mumonkan.epub): the introduction, the text, About this translation, and the source and licence.
 
 </article></div></div>
 </div>

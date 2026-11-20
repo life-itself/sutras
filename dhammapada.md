@@ -3873,7 +3873,7 @@ The translator revised the book in 2017. That revision changes the wording of te
 
 ## Download
 
-[Dhammapada (EPUB)](/downloads/dhammapada.epub): everything on this page, including the translation, the translator’s notes and the licence statement above.
+[Dhammapada (EPUB)](/downloads/dhammapada.epub): the introduction, the text, About this translation, and the source and licence.
 
 </article></div></div>
 </div>

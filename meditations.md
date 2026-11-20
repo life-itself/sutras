@@ -5657,7 +5657,7 @@ GREGORY HAYS is assistant professor of classics at the University of Virginia. H
 
 ## Download
 
-[Meditations (EPUB)](/downloads/meditations.epub): everything on this page, including the translation, which is in copyright (see above).
+[Meditations (EPUB)](/downloads/meditations.epub): the introduction, the text, About this translation, and the source and licence.
 
 </article></div></div>
 </div>

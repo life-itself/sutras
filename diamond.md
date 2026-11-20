@@ -362,7 +362,7 @@ Until November 2026 this page carried a shorter version, about 1,500 words, from
 
 ## Download
 
-[The Diamond Sutra, Thich Nhat Hanh (EPUB)](/downloads/diamond.epub): the introduction, the sutra (in copyright; see above), and the source and licence.
+[The Diamond Sutra, Thich Nhat Hanh (EPUB)](/downloads/diamond.epub): the introduction, the text, About this translation, and the source and licence.
 
 </article></div></div>
 </div>

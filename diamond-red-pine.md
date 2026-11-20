@@ -382,7 +382,7 @@ Until November 2026 this page had only chapters 1, 2 and 32. The rest has now be
 
 ## Download
 
-[The Diamond Sutra, Red Pine (EPUB)](/downloads/diamond-red-pine.epub): the introduction, the sutra (in copyright; see above), and the source and licence.
+[The Diamond Sutra, Red Pine (EPUB)](/downloads/diamond-red-pine.epub): the introduction, the text, About this translation, and the source and licence.
 
 </article></div></div>
 </div>

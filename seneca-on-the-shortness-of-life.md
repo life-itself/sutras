@@ -167,7 +167,7 @@ The chapter numbers I to XX are the traditional ones, and each chapter has its o
 
 ## Download
 
-[On the Shortness of Life (EPUB)](/downloads/seneca-on-the-shortness-of-life.epub): the introduction, the essay with all the notes, About this translation, and the source and licence.
+[On the Shortness of Life (EPUB)](/downloads/seneca-on-the-shortness-of-life.epub): the introduction, the text, About this translation, and the source and licence.
 
 </article></div></div>
 </div>

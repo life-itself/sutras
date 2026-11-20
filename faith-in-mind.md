@@ -19,6 +19,7 @@ scripts:
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
+<a class="rs-kicker" href="/">Sutras</a>
 <h1>Faith in Mind</h1>
 <p class="rs-subtitle">Hsin Hsin Ming <span lang="zh">信心銘</span></p>
 <p class="rs-attribution">Attributed to Seng Ts’an, Third Patriarch of Ch’an<br>Translated by Master Sheng-yen, with Paul Kennedy</p>
@@ -263,7 +264,7 @@ The poem contains phrases that will later on assume importance in the Ts’ao Tu
 
 ## Download
 
-[Faith in Mind (EPUB)](/downloads/faith-in-mind.epub): everything on this page, including the translation, which is in copyright (see above).
+[Faith in Mind (EPUB)](/downloads/faith-in-mind.epub): the introduction, the text, About this translation, and the source and licence.
 
 </article></div></div>
 </div>

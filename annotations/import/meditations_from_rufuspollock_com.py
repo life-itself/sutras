@@ -2,7 +2,7 @@
 """One-off import: Rufus's Meditations notes (rufuspollock.com) -> annotations/meditations.yaml.
 
 Usage: python3 annotations/import/meditations_from_rufuspollock_com.py [Meditations.md] [edition.md]
-  defaults: ~/src/rufuspollock/rufuspollock.com/Meditations.md, library/meditations/edition-draft.md
+  defaults: ~/src/rufuspollock/rufuspollock.com/Meditations.md, meditations/edition-draft.md in the private sutras-library (SUTRAS_LIBRARY, default ../sutras-library)
 
 Rufus's page is a run of headings, quoted passages of the Hays translation (bold italic, in
 blockquotes) and his comments. Each quoted paragraph becomes a note; it is found in the edition and
@@ -21,7 +21,8 @@ spec = importlib.util.spec_from_loader("notes", importlib.machinery.SourceFileLo
 N = importlib.util.module_from_spec(spec); spec.loader.exec_module(N)
 
 SRC = Path(sys.argv[1] if len(sys.argv) > 1 else os.path.expanduser("~/src/rufuspollock/rufuspollock.com/Meditations.md"))
-ED = Path(sys.argv[2] if len(sys.argv) > 2 else ROOT / "library/meditations/edition-draft.md")
+LIBRARY = Path(os.environ.get("SUTRAS_LIBRARY", ROOT.parent / "sutras-library"))
+ED = Path(sys.argv[2] if len(sys.argv) > 2 else LIBRARY / "meditations" / "edition-draft.md")
 OUT = ROOT / "annotations" / "meditations.yaml"
 
 
@@ -64,7 +65,7 @@ if intro:
     passages.append((None, t, f, at))
 
 
-# typos in the EPUB that Rufus copied and the edition corrects (library/meditations/NOTES.md)
+# typos in the EPUB that Rufus copied and the edition corrects (docs/editions/meditations.md)
 EPUB_TYPOS = {"thewhole": "the whole", "upwithout": "up without"}
 
 
@@ -232,7 +233,7 @@ def yq(s):
 out = ["# Rufus Pollock's notes on Marcus Aurelius, Meditations (Hays translation).",
        "# Imported 2026-11-20 from rufuspollock.com/Meditations (written 2022-05-30 to 2024-07-15) by",
        "# annotations/import/meditations_from_rufuspollock_com.py; edit by hand from now on.",
-       "# Format: see scripts/notes. Matched first against library/meditations/edition-draft.md, then checked against meditations.md.",
+       "# Format: see scripts/notes. Matched first against meditations/edition-draft.md in the private sutras-library, then checked against meditations.md.",
        "# Check and rebuild: scripts/notes meditations",
        "text: meditations.md", "notes:"]
 count = 0

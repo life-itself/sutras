@@ -536,7 +536,7 @@ Four slips were corrected. Two follow the second copy: a stray letter (“vWhich
 
 ## Download
 
-[Shodoka (EPUB)](/downloads/shodoka.epub): the introduction, the poem, and the source and licence.
+[Shodoka (EPUB)](/downloads/shodoka.epub): the introduction, the text, About this translation, and the source and licence.
 
 </article></div></div>
 </div>
