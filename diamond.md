@@ -13,6 +13,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/diamond.js
+  - /js/notes.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
@@ -24,17 +26,17 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to live and train the mind: free all beings, while holding on to no idea of self, of beings, or even of the teaching. The complete text, all 32 sections, in Thich Nhat Hanh’s translation.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to live and train the mind: free all beings, while holding on to no idea of self, of beings, or even of the teaching. Complete, all 32 sections, in Thich Nhat Hanh’s translation; half an hour to read.</p>
 
 ## Introduction
 
-The *Diamond Sutra* (in Sanskrit *Vajracchedikā Prajñāpāramitā*, *the diamond that cuts through, perfection of wisdom*; in Chinese <span lang="zh">金剛經</span>) is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism. Nobody knows who composed it; scholars have argued for dates from the second to the fifth century CE. Kumārajīva put it into Chinese around 401, and his became the version most chanted in China and in Zen. A printed copy dated 868, found at Dunhuang, is the oldest dated printed book we have.
+The *Diamond Sutra* (in Sanskrit *Vajracchedikā Prajñāpāramitā*, *the diamond that cuts through, perfection of wisdom*; in Chinese <span lang="zh">金剛經</span>) is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism. Nobody knows who composed it; scholars have argued for dates from the second to the fifth century CE. Kumārajīva put it into Chinese in about 401, and his became the version most chanted in China and in Zen.
 
-The Buddha comes back from begging for his meal, washes his feet and sits down. Subhuti asks his question, and the Buddha answers: lead all beings to liberation, and do not think that a single being has been liberated. Then the same turn is applied to everything else: generosity, merit, the marks of a Buddha, the Buddha himself, and the teaching, which is “a raft”. One form of words comes back again and again: what is called X is not X, “that is why it is called” X.
+The Buddha comes back from begging for his meal, washes his feet and sits down. His disciple Subhuti asks how someone who wants to awaken should live and master their thinking, and the Buddha answers: lead all beings to liberation, and do not think that a single being has been liberated ([section 3](/diamond#3)). Then the same turn is applied to everything else: generosity, merit, the marks of a Buddha, the Buddha himself, and the teaching, which is “a raft” ([section 6](/diamond#6)). One form of words comes back again and again: what is called X is not X, “that is why it is called” X.
 
-Thich Nhat Hanh (1926–2022), the Vietnamese Zen teacher who founded the Plum Village tradition, translated it from the Sanskrit and from the Chinese (Taishō 235). In his book a commentary follows the sutra, and his first advice is: “Don’t rush into the commentaries or you may be unduly influenced by them. Please read the sutra first.” We find his English plain and easy to follow. It is about 6,000 words. One way in: read it straight through once, then a section a day. The few notes are ours, mostly quoting him; they can wait.
+Thich Nhat Hanh (1926–2022), the Vietnamese Zen teacher who founded the Plum Village tradition, translated it from the Sanskrit and the Chinese. In his book a commentary follows the sutra, and his first advice is: “Don’t rush into the commentaries or you may be unduly influenced by them. Please read the sutra first.” We find his the plainer of the two translations here. One way in: read it straight through once, half an hour, then a section a day. The five notes are ours, mostly quoting him; they can wait.
 
-For a translation from the Sanskrit alone, with its repetitions and its full closing verse, read [Red Pine’s translation](/diamond-red-pine), also in this library. Both use the same 32 sections, so [/diamond#14](/diamond#14) and [/diamond-red-pine#14](/diamond-red-pine#14) are the same passage.
+For a version from the Sanskrit alone, with its repetitions and its full closing verse, read [Red Pine’s translation](/diamond-red-pine). Both use the same 32 sections, so [/diamond#14](/diamond#14) and [/diamond-red-pine#14](/diamond-red-pine#14) are the same passage.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -354,7 +356,7 @@ Until November 2026 this page carried a shorter version, about 1,500 words, from
 
 **Source.** The text was taken from an unauthorised electronic copy of the 2010 Parallax Press edition, hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Thich%20Nhat%20Hanh%20-%20The%20Diamond%20That%20Cuts%20Through%20I.pdf), on 20 November 2026, and compared with it word for word by script. No word of the translation has been changed. Two faults of the electronic copy were put right: a capital M split from the rest of its word (“M oreover”), and line breaks inside the paragraphs. The section numbers are the book’s. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/diamond.md).
 
-**Notes.** The notes are editorial. Where they quote Thich Nhat Hanh, the words are from his commentary in the same book.
+**Notes.** The notes are editorial. Where they quote Thich Nhat Hanh, the words are from his commentary in the same book. In the introduction, the sutra’s dates, Kumārajīva’s translation and Thich Nhat Hanh’s dates are from Wikipedia; the division into 32 sections is Red Pine’s account. Each is listed in the edition notes.
 
 **Licence.** The translation is © Parallax Press (the publishing division of the Unified Buddhist Church) and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

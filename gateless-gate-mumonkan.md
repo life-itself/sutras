@@ -1,6 +1,6 @@
 ---
 title: The Gateless Gate
-description: "The Mumonkan: forty-eight Zen koans with a comment and a verse on each by the Chinese master Wumen Huikai (Mumon Ekai), 1228, in Katsuki Sekida’s translation, with the Chinese text. Complete, with notes and an EPUB."
+description: "The Mumonkan: 48 Zen koans with a comment and a verse on each by the Chinese master Wumen Huikai (Mumon Ekai), 1228, in Katsuki Sekida’s translation, with the Chinese text. Complete, with notes and an EPUB."
 author: "Wumen Huikai (Mumon Ekai, 1183–1260)"
 translator: Katsuki Sekida
 date: "1228 (Song dynasty)"
@@ -13,6 +13,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/gateless-gate-mumonkan.js
+  - /js/notes.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
@@ -24,17 +26,17 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Forty-eight Zen koans, short records of what teachers said and did, each followed by a comment and a four-line verse from the Chinese master Wumen (Mumon in Japanese), who gathered them in 1228. Still used in Rinzai Zen training. Here complete in Katsuki Sekida’s translation, with the Chinese.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> 48 Zen koans, short records of what teachers said and did, each followed by a comment and a four-line verse from the Chinese master Wumen (Mumon in Japanese), who gathered them in 1228. Still used in Rinzai Zen training. Complete, in Katsuki Sekida’s translation, with the Chinese; an hour or two to read through, though it is made for one case at a time.</p>
 
 ## Introduction
 
-*The Gateless Gate* (in Chinese *Wumenguan*, in Japanese *Mumonkan*, <span lang="zh">無門關</span>) is a collection of forty-eight koans: brief exchanges between Zen teachers and their students, a question and an answer, a gesture, a story. The Chinese master Wumen Huikai (1183–1260) gathered them in the summer of 1228, when he was head monk of a monastery at Longxiang (Ryūshō in the translation). He used them, his preface says, “as brickbats to batter the gate”. Sekida, whose translation this is, gives the names in their Japanese readings, and so does this page: Wumen is Mumon. His name means “no gate”, so the title also reads as *Mumon’s Barrier*.
+*The Gateless Gate* (in Chinese *Wumenguan*, in Japanese *Mumonkan*, <span lang="zh">無門關</span>) is a collection of 48 koans: brief exchanges between Zen teachers and their students, a question and an answer, a gesture, a story. The Chinese master Wumen Huikai (1183–1260) gathered them in the summer of 1228, when he was head monk of a monastery at Longxiang (Ryūshō in the translation). He used them, his preface says, “as brickbats to batter the gate”. Sekida, whose translation this is, gives the names in their Japanese readings, and so does this page: Wumen is Mumon. His name means “no gate”, so the title also reads as *Mumon’s Barrier*.
 
-Each case comes in three parts: the case itself, often a few lines; Mumon’s comment, which prods and teases; and his four-line verse. The first case is one exchange. A monk asks Jōshū whether a dog has the Buddha Nature, and Jōshū answers: “Mu.” Mumon calls that one word “the front gate to Zen”.
+Each case comes in three parts: the case itself, often a few lines; Mumon’s comment, a paragraph; and his four-line verse. The first case is one exchange. A monk asks Jōshū whether a dog has the Buddha Nature, and Jōshū answers: “Mu.” Mumon calls that one word “the front gate to Zen”.
 
-The book dropped out of the Chinese Buddhist canon after the Song dynasty, but Mumon’s disciples took it to Japan, where it was reprinted many times. With the *Blue Cliff Record* (*Hekiganroku* in Japanese, the other half of Sekida’s book) it is still central to training in the Rinzai school.
+After the Southern Song the Chinese Buddhist canon left the book out, but Mumon’s disciples took it to Japan, where it was reprinted many times. With the *Blue Cliff Record* (*Hekiganroku* in Japanese, the other half of Sekida’s book) it is still central to training in the Rinzai school.
 
-Mumon does not explain the cases. His advice, in his postscript: “Your direct realization is demanded; it should not be sought through others.” One way to read them is one case at a time, the comment and verse with it, and then to leave it alone for a day. The Chinese follows each part. The three notes are ours; they can wait for a second reading.
+Mumon does not explain the cases. His advice, in his postscript: “Your direct realization is demanded; it should not be sought through others.” An hour or two would take you straight through, but one way to read them is one case at a time, the comment and verse with it, and then to leave it alone for a day. The Chinese follows each part. The three notes are ours.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -1780,7 +1782,7 @@ The translation is by Katsuki Sekida (1893–1987), a Japanese Zen teacher and t
 
 The Chinese text comes from a Japanese edition of the *Mumonkan* published by Iwanami Bunko, through a Japanese website, and keeps that edition’s Japanese forms of some characters.
 
-What is here is the core of the book: Mumon’s preface and verse, the forty-eight cases, and his postscript. The Taishō text and the best-known Japanese edition add more around it: an introduction by Chen Xun, a dedication to the emperor, the “Zen Warnings” (thought to be Mumon’s) and a forty-ninth case by Anwan. Those are not in the source and are not given here.
+What is here is the core of the book: Mumon’s preface and verse, the 48 cases, and his postscript. The Taishō text and the best-known Japanese edition add more around it: an introduction by the publisher of the 1228 edition, a dedication to the emperor, the “Zen Warnings” (thought to be Mumon’s) and a forty-ninth case by Anwan. Those are not in the source and are not given here.
 
 ## Source and licence
 
@@ -1788,7 +1790,7 @@ What is here is the core of the book: Mumon’s preface and verse, the forty-eig
 
 The Chinese was compared character by character with the Taishō text (T48 no. 2005, from [CBETA](https://cbetaonline.dila.edu.tw/T2005)). Thirty-six characters that the source shows as empty boxes were filled from it. Forty slips of transcription were corrected, mostly where the source has a character of similar shape to the right one: for example 竪 “raise”, where the source has 堅. Other differences, mostly variant forms of the same character, were left as in the source. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/gateless-gate-mumonkan.md).
 
-**Notes.** The notes and headings are editorial.
+**Notes.** The notes and headings are editorial. In the introduction and About this translation, Mumon’s dates, the meaning of his name, the book’s history in China and Japan and the pieces the fuller editions add are from Wikipedia; what Mumon says of his own book is from his preface and postscript below; Sekida’s dates are from the Library of Congress. Each is listed in the edition notes.
 
 **Licence.** Sekida’s translation was published in 1977 and is in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Mumon’s Chinese text, from 1228, is in the public domain. Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
@@ -1799,8 +1801,8 @@ The Chinese was compared character by character with the Taishō text (T48 no. 2
 </article></div></div>
 </div>
 
-[^mu]: *Editors’ note.* 無: *wu* in Chinese, *mu* in Japanese. It means “to lack” or “without”, and so “no”. Mumon’s comment and verse below are about this one word. Jōshū is the Chinese master Zhaozhou Congshen (778–897); five cases carry his name in their titles: 1, 7, 11, 31 and 37.
+[^mu]: *Editors’ note.* 無: *wu* in Chinese, *mu* in Japanese. It means “to lack” or “without”, and so “no”. Mumon’s comment and verse below are about this one word. Jōshū is the Chinese master Zhaozhou Congshen (traditionally 778–897); five cases carry his name in their titles: 1, 7, 11, 31 and 37.
 
 [^patriarchs]: *Editors’ note.* “the four sevens of the West and the two threes of the East”: the twenty-eight patriarchs of Zen in India and the six in China. Bodhidharma is both the last in India and the first in China. The [Shodoka](/shodoka#42), also in this library, counts them the same way: “Twenty-eight generations of teachers in India”, then Bodhidharma’s robe “passed through six teachers here”.
 
-[^samadhi]: *Editors’ note.* Samādhi (Sanskrit and Pali): “a state of meditative consciousness”. The word comes back in cases 24 and 42.
+[^samadhi]: *Editors’ note.* Samādhi (Sanskrit and Pāli): “a state of meditative consciousness”. The word comes back in cases 24 and 42.

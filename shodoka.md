@@ -1,6 +1,6 @@
 ---
 title: Shodoka
-description: "A long Ch’an (Zen) poem in 64 verses on the basic teaching of Zen, attributed to Yung-chia (Yoka Genkaku), in the Diamond Sangha version of Robert Aitken and Eido Shimano. Complete, with notes and an EPUB."
+description: "A long Ch’an (Zen) poem in 64 verses, sung in the first person by someone who has woken up, attributed to Yung-chia (Yoka Genkaku), in the Diamond Sangha version of Robert Aitken and Eido Shimano. Complete, with notes and an EPUB."
 author: "Yung-chia Hsuan-chueh (Yoka Genkaku) (attributed; doubtful)"
 translator: Robert Aitken and Eido Shimano (1960s), revised by Robert Aitken (1991)
 date: "Unknown. Attributed to Yung-chia (665–713); probably Tang dynasty (618–907)"
@@ -13,6 +13,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/shodoka.js
+  - /js/notes.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
@@ -24,17 +26,17 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A long Ch’an (Zen) poem in 64 verses, sung in the first person by someone who has woken up and wants you to stop looking elsewhere. Tradition gives it to Yung-chia, who met the Sixth Patriarch, though he probably did not write it. Here complete, in Robert Aitken and Eido Shimano’s version, used in the Diamond Sangha’s Zen centres.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A long Ch’an (Zen) poem in 64 verses, sung in the first person by someone who has woken up and wants you to stop looking elsewhere. Tradition gives it to Yung-chia, who met the Sixth Patriarch, though he probably did not write it. Complete, in Robert Aitken and Eido Shimano’s version for the Diamond Sangha’s Zen centres; twenty minutes to read.</p>
 
 ## Introduction
 
-The *Shodoka*, or *Song of Enlightenment* (in Chinese *Cheng-tao-ko*, <span lang="zh">證道歌</span>), is a Ch’an (Zen) poem of 64 verses. Tradition gives it to Yung-chia Hsuan-chueh (665–713; in pinyin Yongjia Xuanjue), known in Japan as Yoka Genkaku. He trained as a monk in the T’ien-t’ai school and is remembered for one night: he visited Hui-neng, the Sixth Patriarch, was persuaded to stay a single night, and in that night his enlightenment was acknowledged. The poem speaks of the meeting in [verse 18](/shodoka#18).
+The *Shodoka*, or *Song of Enlightenment* (in Chinese *Cheng-tao-ko*, <span lang="zh">證道歌</span>), is a Ch’an (Zen) poem of 64 verses. Tradition gives it to Yung-chia Hsuan-chueh (Yongjia Xuanjue, 665–713), known in Japan as Yoka Genkaku. He trained as a monk in the T’ien-t’ai school, and the story told of him is one night: he visited Hui-neng (Huineng), the Sixth Patriarch, was persuaded to stay a single night, and in that night his enlightenment was acknowledged. The poem speaks of the meeting in [verse 18](/shodoka#18).
 
-The attribution is doubtful. The scholar Hu Shih, writing in 1960, pointed out that a manuscript copy from Tunhuang names a different author, and that a monk who died in 713 could not have sung of the 28 Patriarchs (here “twenty-eight generations of teachers in India”, [verse 42](/shodoka#42)), a list that, he said, was not invented until decades later. Whoever wrote it, the poem lasted. Master Sheng-yen counted it, with *[Faith in Mind](/faith-in-mind)*, as the most highly regarded of the Ch’an poems on enlightenment, “because of the clear guidance they provide on the method of Ch’an”. In Japan both poems belong, with the *Ten Oxherding Pictures* and a manual of sitting meditation, to a set of four texts used to introduce novice monks to Zen.
+The attribution is doubtful. The scholar Hu Shih, writing in 1960, pointed out that a manuscript from Tunhuang names a different author, and that a monk who died in 713 could not have sung of the 28 patriarchs ([verse 42](/shodoka#42)), a list that, he said, was not invented until decades later. Master Sheng-yen counted it, with *[Faith in Mind](/faith-in-mind)*, as the most highly regarded of the Ch’an poems on enlightenment, “because of the clear guidance they provide on the method of Ch’an”, and in Japanese Zen the two belong to a set of four texts used to introduce novice monks.
 
-Where *Faith in Mind* is quiet and even, this is a song: in the first person, sure of itself, defiant in places, full of lions, jewels and moons in water. Its claim is in the first verse: “The real nature of ignorance is the Buddha-nature itself”.
+Where *Faith in Mind* is quiet and even, this is a song: in the first person, sure of itself, defiant in places. Its claim is in the first verse: “The real nature of ignorance is the Buddha-nature itself”.
 
-This English version is plain, made to be said aloud: it was first printed in a book of sutras for chanting. Read it that way, a few verses at a time. The notes are ours, for names that may be unfamiliar; they can wait for a second reading.
+This English version was made for chanting in Zen centres, so read it that way: aloud, a few verses at a time. The six notes are ours, for names that may be unfamiliar.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -518,7 +520,7 @@ I will settle it for you.
 
 ## About this translation
 
-The translation was made from the Japanese in the 1960s by Robert Aitken (1917–2010) and Eido Shimano for the Diamond Sangha, the Zen community Aitken co-founded in Honolulu in 1959. It was reprinted by the New York Zendo in *Daily Sutras for Chanting and Recitation*. In December 1991 Aitken revised it, and it became the *Shodoka* in the Diamond Sangha’s *Daily Zen Sutras*, used in its centres. That 1991 version is the one given here. It shares some wording with Nyogen Senzaki’s earlier version (with Ruth Stout McCandless, 1953).
+The translation was made from the Japanese in the 1960s by Robert Aitken (1917–2010) and Eido Shimano for the Diamond Sangha, the Zen community Aitken co-founded in Honolulu in 1959. It was reprinted by the New York Zendo in *Daily Sutras for Chanting and Recitation*. In December 1991 Aitken revised it, and it became the *Shodoka* in the Diamond Sangha’s *Daily Zen Sutras*, used in its centres. That 1991 version is the one given here. It shares some wording with Nyogen Senzaki’s earlier version (with Ruth Strout McCandless, 1953).
 
 The source gives the 64 verses as unnumbered paragraphs. The numbers are ours, one to each paragraph, and they match the source’s own description of the poem as “a collection of 64 verses”. Other translations divide the poem differently, so verse numbers will not always match between versions. Names in the poem are spelt as in the source (“Hui Neng”, “Kwan-Yin”); in our notes they are in Wade-Giles, as in *Faith in Mind*.
 
@@ -528,7 +530,7 @@ The source gives the 64 verses as unnumbered paragraphs. The numbers are ours, o
 
 Four slips were corrected. Two follow the second copy: a stray letter (“vWhich”, [verse 42](/shodoka#42)) and a lost line break ([verse 36](/shodoka#36)). Two are in both copies and were corrected by us: “the some way” for “the same way” ([verse 16](/shodoka#16)) and “have have” ([verse 38](/shodoka#38)). Dashes and quotation marks were set in modern type. Otherwise every word is as in the source. Each change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/shodoka.md).
 
-**Notes.** The notes are editorial. They draw on John Balcom’s notes to his own translation (on the Terebess page) and on Wikipedia.
+**Notes.** The notes are editorial. They draw on John Balcom’s notes to his own translation (on the Terebess page) and on Wikipedia. In the introduction, Hu Shih’s doubts and the set of four texts are quoted on the same Terebess page; Yung-chia’s dates and story, and Aitken’s, are from Wikipedia; Sheng-yen’s judgement is from his introduction on the [Faith in Mind](/faith-in-mind) page. Each is listed in the edition notes.
 
 **Licence.** The translation is © 1991 Diamond Sangha Zen Buddhist Society and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

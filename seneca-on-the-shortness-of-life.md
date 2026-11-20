@@ -13,6 +13,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/seneca-on-the-shortness-of-life.js
+  - /js/notes.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
@@ -24,17 +26,17 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Seneca’s essay on time: life is long enough, if we stop wasting it. Complete, with the translator’s notes; about an hour to read.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Seneca’s essay on time: life is long enough, if we stop wasting it. Written in about 49 CE to a friend in high office. Complete, with the translator’s notes; about an hour to read.</p>
 
 ## Introduction
 
-*On the Shortness of Life* (in Latin *De Brevitate Vitae*) is a short essay by Seneca (about 4 BCE to 65 CE), the Roman Stoic philosopher, statesman and playwright. He addressed it to Paulinus, the official in charge of Rome’s grain supply and probably a relative of Seneca’s wife, Pompeia Paulina. It is usually dated to about 49 CE, the year Seneca came back from eight years’ exile on Corsica to tutor the young Nero; some scholars put it a few years later.
+*On the Shortness of Life* (in Latin *De Brevitate Vitae*) is a short essay by Seneca (about 4 BCE to 65 CE), the Roman Stoic philosopher and statesman. He addressed it to Paulinus, the official in charge of Rome’s grain supply and probably a relative of Seneca’s wife, Pompeia Paulina. It is usually dated to about 49 CE, the year Seneca came back from eight years’ exile on Corsica to tutor the young Nero; some scholars put it a few years later.
 
 Its claim comes in the first chapter: “It is not that we have a short space of time, but that we waste much of it.” The chapters that follow go through the ways time is lost: to ambition, to business, to other people’s demands, to putting life off until retirement. Seneca’s word for people caught up like this is *occupati*, which Basore translates as “the engrossed”. Against them he sets the few who give their time to philosophy, and who alone, he says, are at leisure. He ends by urging Paulinus to step down from office while he still can.
 
-Much of the detail is Roman: consuls, games, legacy-hunters, the emperor Augustus longing for rest. Very little of the argument is. The busy man of chapter 7 who cries out “I have no chance to live” is easy to recognise.
+Much of the detail is Roman: consuls, games, legacy-hunters, the emperor Augustus longing for rest. Very little of the argument is. The busy man of [chapter 7](/seneca-on-the-shortness-of-life#7) who cries out “I have no chance to live” is easy to recognise.
 
-The essay takes about an hour to read. One way is to read it straight through once, then a chapter a day. Basore’s notes explain the Roman names and quotations and can be left for later. The four marked “Editors’ note” are ours: three mark where the argument turns, one is on the essay’s date.
+The essay takes about an hour to read. One way is to read it straight through once, then a chapter a day. Basore’s notes explain the Roman names and quotations and can be left for later. The four marked “Editors’ note” are ours: three mark where the argument turns, one is on the essay’s date. The other Stoic in this library is Marcus Aurelius, whose *[Meditations](/meditations)* were written about a century later.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -158,6 +160,8 @@ The chapter numbers I to XX are the traditional ones, and each chapter has its o
 ## Source and licence
 
 **Source.** The text was taken from [Wikisource](https://en.wikisource.org/wiki/On_the_shortness_of_life) on 20 November 2026 and compared with it word for word by script. A second online copy, at Forum Romanum (the source of an earlier version of this page, now offline), was read from the [Internet Archive](http://web.archive.org/web/20061207132316/http://www.forumromanum.org/literature/seneca_younger/brev_e.html) and compared too. Where Wikisource drops one of Basore’s notes (on Scipio’s exile at Liternum, chapter 17) and misplaces two others, the Forum Romanum copy has been followed. An opening quotation mark missing in chapter 17 and a doubled full stop in one note have been put right, and straight quotation marks made curly. No other word has been changed. Every change, and the readings where the two copies differ, are listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/seneca-on-the-shortness-of-life.md).
+
+**Notes.** The four editors’ notes and the introduction take Paulinus, the date and the Latin terms from Basore’s notes; Seneca’s dates and exile, and Miriam Griffin’s dating, from Wikipedia; Basore’s dates from Wikidata. Each is listed in the edition notes.
 
 **Licence.** Basore’s translation was published in 1932, in London and New York. Wikisource records that its US copyright was not renewed, which would make it public domain in the United States; HathiTrust, though, still treats the volume as in copyright, so we say “probably”. Basore died in 1959, so in countries where copyright lasts seventy years after the author’s death, such as the UK and the EU, it stays in copyright until the end of 2029. It is published here in full. If you hold the rights and want this changed, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the editors’ notes, About this translation and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

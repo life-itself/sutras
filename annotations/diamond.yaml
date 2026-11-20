@@ -1,0 +1,57 @@
+# Editors' highlights on the Diamond Sutra (Thich Nhat Hanh's translation): passages worth stopping at.
+# Chosen by the editorial track, 2026-11-20 (docs/2026-11-editorial-review.md). Not Rufus's notes.
+# Format: see scripts/notes. Check and rebuild: scripts/notes diamond
+text: diamond.md
+notes:
+
+  - id: diamond-3-single-being
+    passage: "3"
+    quote: "And when this innumerable, immeasurable, infinite number of beings has become liberated, we do not, in truth, think that a single being has been liberated."
+    note: "The whole sutra is in this sentence. When Subhuti asks his question a second time, in section 17, the Buddha answers with it again, almost word for word."
+    by: Editors
+    date: 2026-11-20
+
+  - id: diamond-5-signless
+    passage: "5"
+    quote: "In a place where there is something that can be distinguished by signs, in that place there is deception. If you can see the signless nature of signs, then you can see the Tathagata."
+    by: Editors
+    date: 2026-11-20
+
+  - id: diamond-6-raft
+    passage: "6"
+    quote: "This is the hidden meaning when the Tathagata says, ‘Bhikshus, you should know that all of the teachings I give to you are a raft.’ All teachings must be abandoned, not to mention non-teachings."
+    by: Editors
+    date: 2026-11-20
+
+  - id: diamond-10-not-dwelling
+    passage: "10"
+    quote: "They should give rise to an intention with their minds not dwelling anywhere."
+    note: "Red Pine, from the Sanskrit, has “a thought that is not attached” ([/diamond-red-pine#10](/diamond-red-pine#10))."
+    by: Editors
+    date: 2026-11-20
+
+  - id: diamond-14-free-of-ideas
+    passage: "14"
+    quote: "Buddhas are called Buddhas because they are free of ideas."
+    by: Editors
+    date: 2026-11-20
+
+  - id: diamond-18-past-mind
+    passage: "18"
+    quote: "Subhuti, the past mind cannot be grasped, neither can the present mind or the future mind."
+    note: "After five eyes and all the sand in the Ganges, the section ends on this. Red Pine has “thought” for “mind” ([/diamond-red-pine#18](/diamond-red-pine#18))."
+    by: Editors
+    date: 2026-11-20
+
+  - id: diamond-27-cut-off
+    passage: "27"
+    quote: "Do not think that when one gives rise to the highest, most fulfilled, awakened mind, one needs to see all objects of mind as nonexistent, cut off from life."
+    note: "Having taken everything away, the sutra stops the reader drawing the obvious conclusion. Not-X is not nothing."
+    by: Editors
+    date: 2026-11-20
+
+  - id: diamond-32-dream
+    passage: "32"
+    quote: "All composed things are like a dream, a phantom, a drop of dew, a flash of lightning. That is how to meditate on them, that is how to observe them."
+    by: Editors
+    date: 2026-11-20

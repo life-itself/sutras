@@ -1,0 +1,57 @@
+# Editors' highlights on Seneca, On the Shortness of Life (Basore's translation): passages worth stopping at.
+# Chosen by the editorial track, 2026-11-20 (docs/2026-11-editorial-review.md). Not Rufus's notes.
+# Format: see scripts/notes. Check and rebuild: scripts/notes seneca-on-the-shortness-of-life
+text: seneca-on-the-shortness-of-life.md
+notes:
+
+  - id: seneca-1-waste
+    passage: "1"
+    quote: "It is not that we have a short space of time, but that we waste much of it."
+    by: Editors
+    date: 2026-11-20
+
+  - id: seneca-3-immortals
+    passage: "3"
+    quote: "You have all the fears of mortals and all the desires of immortals."
+    by: Editors
+    date: 2026-11-20
+
+  - id: seneca-7-living
+    passage: "7"
+    quote: "There is nothing the busy man is less busied with than living: there is nothing that is harder to learn."
+    note: "The busy man is one of the *occupati*, “the engrossed” in Basore’s word, the people this whole essay is about."
+    by: Editors
+    date: 2026-11-20
+
+  - id: seneca-9-expectancy
+    passage: "9"
+    quote: "The greatest hindrance to living is expectancy, which depends upon the morrow and wastes to-day. You dispose of that which lies in the hands of Fortune, you let go that which lies in your own."
+    note: "Marcus Aurelius says the same in his own notes ([Meditations 3.10](/meditations#3.10)): “Each of us lives only now, this brief instant.”"
+    by: Editors
+    date: 2026-11-20
+
+  - id: seneca-10-three
+    passage: "10"
+    quote: "Life is divided into three periods—that which has been, that which is, that which will be. Of these the present time is short, the future is doubtful, the past is certain."
+    note: "This reverses the usual complaint. The past, not the future, is the part we securely own, because Fortune has finished with it; chapters 14 and 15 build on this."
+    by: Editors
+    date: 2026-11-20
+
+  - id: seneca-14-fellowship
+    passage: "14"
+    quote: "Since Nature allows us to enter into fellowship with every age, why should we not turn from this paltry and fleeting span of time and surrender ourselves with all our soul to the past, which is boundless, which is eternal, which we share with our betters?"
+    by: Editors
+    date: 2026-11-20
+
+  - id: seneca-15-one
+    passage: "15"
+    quote: "He makes his life long by combining all times into one."
+    note: "The three periods of chapter 10, gathered up: the past by recollection, the present by use, the future by anticipation."
+    by: Editors
+    date: 2026-11-20
+
+  - id: seneca-19-own
+    passage: "19"
+    quote: "If these wish to know how short their life is, let them reflect how small a part of it is their own."
+    by: Editors
+    date: 2026-11-20

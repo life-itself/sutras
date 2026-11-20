@@ -13,6 +13,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/diamond-red-pine.js
+  - /js/notes.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
@@ -24,15 +26,15 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to set out on the path to awakening: free all beings, and cling to nothing, not even the teaching. The complete text, all 32 chapters, in Red Pine’s translation from the Sanskrit.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to set out on the path to awakening: free all beings, and cling to nothing, not even the teaching. Complete, all 32 chapters, in Red Pine’s translation from the Sanskrit; about forty minutes to read.</p>
 
 ## Introduction
 
-The *Diamond Sutra* is one of the Perfection of Wisdom sutras of Mahāyāna Buddhism, composed in India by an unknown author some time between the second and fifth centuries CE. There is more about the sutra itself in the introduction to [Thich Nhat Hanh’s translation](/diamond), also in this library.
+The *Diamond Sutra* was composed in India by an unknown author some time between the second and fifth centuries CE. This is the second translation of it in this library. For the sutra itself, and the plainer English, start with [Thich Nhat Hanh’s](/diamond). This one is for readers who want the shape of the Sanskrit text: the Buddha’s titles in full, the same question put again and again, and the closing verse with all nine of its images.
 
-Red Pine is the pen name of Bill Porter (born 1943), an American translator of Chinese Buddhist and Taoist texts. He first read the sutra some thirty years before this translation, and for years was told it was about emptiness. He translated it from the Sanskrit, using the editions of Max Müller (1881) and Edward Conze (1957), and compared all six Chinese translations. The Sanskrit changed how he read it. “The thought had never occurred to me that since the Diamond Sutra was originally in verse, even though it was now in prose, its meaning still depended on its poetry, which was still apparent in the Sanskrit but not in the Chinese.” And: “It turns out the sutra isn’t about emptiness. Or at least, it isn’t emptiness that distinguishes this sutra. It’s about bodies, beginning with the Buddha’s body and ending with the body of every noble son or daughter who practices this teaching.”
+Red Pine is the pen name of Bill Porter (born 1943), an American translator of Chinese Buddhist and Taoist texts. He translated the sutra from the Sanskrit and, he writes, compared all six Chinese translations. For years, he writes, he had been told it was about emptiness; the Sanskrit changed his mind. “It turns out the sutra isn’t about emptiness. Or at least, it isn’t emptiness that distinguishes this sutra. It’s about bodies, beginning with the Buddha’s body and ending with the body of every noble son or daughter who practices this teaching.” In his book each chapter is followed by his own remarks and the words of several dozen commentators, from Asanga to Hui-neng; only the sutra is here.
 
-His version keeps the sutra’s formal repetitions: the Buddha’s titles in full, the same questions put again and again. He writes that it “can be read in half an hour”. So read it once straight through, aloud if you can, for the rhythm he heard in the Sanskrit; then a chapter at a time. The few notes are ours, mostly quoting his commentary. We find Thich Nhat Hanh’s version easier going; the two use the same 32 chapters, so [/diamond-red-pine#14](/diamond-red-pine#14) and [/diamond#14](/diamond#14) are the same passage.
+He writes that it “can be read in half an hour”. Read it once straight through, aloud if you can, since its meaning, he says, “still depended on its poetry”; then a chapter at a time. The five notes are ours, mostly quoting his commentary. The two translations use the same 32 chapters, so [/diamond-red-pine#14](/diamond-red-pine#14) and [/diamond#14](/diamond#14) are the same passage.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -374,7 +376,7 @@ Until November 2026 this page had only chapters 1, 2 and 32. The rest has now be
 
 **Source.** The text was taken from an unauthorised electronic copy of the book hosted by [Terebess Asia Online](https://terebess.hu/zen/mesterek/Diamond-Sutra.pdf), on 20 November 2026, and compared with it word for word by script. In that copy the whole sutra comes first, chapter after chapter, before the commentaries. One word has been changed: “billionworld” to “billion-world” in chapter 30, where the same phrase is hyphenated earlier in the same paragraph. Four stray spaces before closing quotation marks were removed, and line breaks inside paragraphs were joined. Every change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/diamond-red-pine.md).
 
-**Notes.** The notes are editorial. Where they quote Red Pine, the words are from his commentary in the same book.
+**Notes.** The notes are editorial. Where they quote Red Pine, the words are from his commentary or preface in the same book. In the introduction, the sutra’s dates and Red Pine’s are from Wikipedia; what he says of his method is from his preface. Each is listed in the edition notes.
 
 **Licence.** The translation is © 2001 Red Pine and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

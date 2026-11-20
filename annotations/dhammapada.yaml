@@ -1,0 +1,57 @@
+# Editors' highlights on the Dhammapada (Thanissaro Bhikkhu's translation): verses worth stopping at.
+# Chosen by the editorial track, 2026-11-20 (docs/2026-11-editorial-review.md). Not Rufus's notes.
+# Format: see scripts/notes. Check and rebuild: scripts/notes dhammapada
+text: dhammapada.md
+notes:
+
+  - id: dhp-1-heart
+    passage: "1"
+    quote: "Phenomena are preceded by the heart, ruled by the heart, made of the heart."
+    note: "The whole book rests on this: what you meet is shaped by the state you meet it in. Everything after is about tending that state."
+    by: Editors
+    date: 2026-11-20
+
+  - id: dhp-80-themselves
+    passage: "80"
+    quote: "Carpenters shape the wood. The wise control themselves."
+    by: Editors
+    date: 2026-11-20
+
+  - id: dhp-121-drops
+    passage: "121"
+    quote: "A water jar fills, even with water falling in drops."
+    note: "Said twice, once of harm and once of good (verse 122). The small habit is the whole argument."
+    by: Editors
+    date: 2026-11-20
+
+  - id: dhp-183-teaching
+    passage: "183"
+    quote: "the cleansing of one’s own mind: this is the teaching of the Awakened."
+    by: Editors
+    date: 2026-11-20
+
+  - id: dhp-201-aside
+    passage: "201"
+    quote: "The calmed lie down with ease, having set winning & losing aside."
+    by: Editors
+    date: 2026-11-20
+
+  - id: dhp-252-own
+    passage: "252"
+    quote: "It’s easy to see the errors of others, but hard to see your own."
+    by: Editors
+    date: 2026-11-20
+
+  - id: dhp-276-way
+    passage: "276"
+    quote: "It’s for you to strive ardently. Tathagatas simply point out the way."
+    note: "The text declines to do the work for you. Reading it is not the practice."
+    by: Editors
+    date: 2026-11-20
+
+  - id: dhp-394-tangle
+    passage: "394"
+    quote: "The tangle’s inside you. You comb the outside."
+    note: "Addressed to an ascetic, but it lands on anyone who tidies the visible and leaves the rest."
+    by: Editors
+    date: 2026-11-20

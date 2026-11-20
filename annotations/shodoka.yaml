@@ -1,0 +1,50 @@
+# Editors' highlights on the Shodoka (Aitken and Shimano's version): passages worth stopping at.
+# Chosen by the editorial track, 2026-11-20 (docs/2026-11-editorial-review.md). Not Rufus's notes.
+# Format: see scripts/notes. Check and rebuild: scripts/notes shodoka
+text: shodoka.md
+notes:
+
+  - id: shodoka-1-ignorance
+    passage: "1"
+    quote: "The real nature of ignorance is the Buddha-nature itself; The empty delusory body is the very body of the Dharma."
+    by: Editors
+    date: 2026-11-20
+
+  - id: shodoka-10-moon
+    passage: "10"
+    quote: "It is not difficult to see images in a mirror, But who can take hold of the moon in the water?"
+    note: "The moon in water comes back in verse 36: one moon, reflected in many waters."
+    by: Editors
+    date: 2026-11-20
+
+  - id: shodoka-19-walking
+    passage: "19"
+    quote: "Walking is Zen, sitting is Zen; Speaking or silent, active or quiet, the essence is at peace."
+    by: Editors
+    date: 2026-11-20
+
+  - id: shodoka-28-seek
+    passage: "28"
+    quote: "The awakened one does not seek truth — Does not cut off delusion."
+    note: "The first verse said the same. So does [Faith in Mind](/faith-in-mind#3): “No need to seek the real; / Just extinguish your views.”"
+    by: Editors
+    date: 2026-11-20
+
+  - id: shodoka-39-gaining
+    passage: "39"
+    quote: "If you search elsewhere, you cannot see it. You cannot grasp it, you cannot reject it; In the midst of not gaining, In that condition you gain it."
+    by: Editors
+    date: 2026-11-20
+
+  - id: shodoka-52-sands
+    passage: "52"
+    quote: "I entered the sea to count the sands in vain And then the Tathagata scolded me kindly As I read “What profit in counting your neighbor’s treasure?”"
+    note: "The one place the singer tells his own story as a scholar. The other is verse 18, where the wandering ends at Ts’ao Ch’i."
+    by: Editors
+    date: 2026-11-20
+
+  - id: shodoka-64-sky
+    passage: "64"
+    quote: "Don’t belittle the sky by looking through a pipe. If you still don’t understand, I will settle it for you."
+    by: Editors
+    date: 2026-11-20

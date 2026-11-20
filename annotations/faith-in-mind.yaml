@@ -1,0 +1,57 @@
+# Editors' highlights on Faith in Mind (Sheng-yen's translation): passages worth stopping at.
+# Chosen by the editorial track, 2026-11-20 (docs/2026-11-editorial-review.md). Not Rufus's notes.
+# Format: see scripts/notes. Check and rebuild: scripts/notes faith-in-mind
+text: faith-in-mind.md
+notes:
+
+  - id: fim-1-pick-and-choose
+    passage: "1"
+    quote: "The Supreme Way is not difficult If only you do not pick and choose."
+    by: Editors
+    date: 2026-11-20
+
+  - id: fim-2-stillness-more-active
+    passage: "2"
+    quote: "Stop activity and return to stillness, And that stillness will be even more active."
+    note: "Stillness is not the resting place here. Stanza 10 goes further: when activity stops, there is no rest either."
+    by: Editors
+    date: 2026-11-20
+
+  - id: fim-3-extinguish-your-views
+    passage: "3"
+    quote: "No need to seek the real; Just extinguish your views."
+    by: Editors
+    date: 2026-11-20
+
+  - id: fim-4-not-even-the-one
+    passage: "4"
+    quote: "Two comes from one, Yet do not even keep the one."
+    note: "Oneness has been the poem’s word for the Way until now; here even that is let go. Stanza 10 asks the same thing the other way round: if two cannot be established, how can there be one?"
+    by: Editors
+    date: 2026-11-20
+
+  - id: fim-5-neither-easy-nor-difficult
+    passage: "5"
+    quote: "The Great Way is broad, Neither easy nor difficult."
+    note: "The first line said the Way is not difficult. Here it is neither easy nor difficult."
+    by: Editors
+    date: 2026-11-20
+
+  - id: fim-7-mind-to-cultivate-mind
+    passage: "7"
+    quote: "Using mind to cultivate mind — Is this not a great mistake?"
+    by: Editors
+    date: 2026-11-20
+
+  - id: fim-14-faith-in-mind
+    passage: "14"
+    quote: "Faith and mind are not two; Non-duality is faith in mind."
+    note: "The title arrives here, in the last full stanza. In his introduction below, Sheng-yen gives the phrase two senses: believing in the mind and realising it."
+    by: Editors
+    date: 2026-11-20
+
+  - id: fim-15-path-of-words
+    passage: "15"
+    quote: "The path of words is cut off; There is no past, no future, no present."
+    by: Editors
+    date: 2026-11-20

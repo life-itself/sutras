@@ -13,6 +13,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/faith-in-mind.js
+  - /js/notes.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
@@ -23,11 +25,11 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A short Ch’an (Zen) poem on the mind that does not pick and choose. Tradition gives it to Seng Ts’an, the Third Patriarch, though he probably did not write it. A few minutes to read; Sheng-yen taught from it only on retreat.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A short Ch’an (Zen) poem on the mind that does not pick and choose. Tradition gives it to Seng Ts’an, the Third Patriarch, though he probably did not write it. Complete, in Master Sheng-yen’s translation; ten minutes to read, though Sheng-yen taught from it only on retreat.</p>
 
 ## Introduction
 
-*Faith in Mind* (in Chinese *Hsin Hsin Ming*, <span lang="zh">信心銘</span>) is a short poem from the Ch’an (Zen) tradition: 146 lines in this translation, a few minutes to read through. Tradition gives it to Seng Ts’an, the Third Patriarch of Ch’an, who by Sheng-yen’s account died in 606. The attribution is doubtful. Sheng-yen himself reports that scholars doubt it, and that some place the poem after the time of the Sixth Patriarch, Hui Neng. Who wrote it is not known.
+*Faith in Mind* (in Chinese *Hsin Hsin Ming*, <span lang="zh">信心銘</span>) is a short poem from the Ch’an (Zen) tradition: 146 lines in this translation, ten minutes to read through. Tradition gives it to Seng Ts’an (Sengcan), the Third Patriarch of Ch’an, who by Sheng-yen’s account died in 606. The attribution is doubtful: Sheng-yen himself reports that scholars doubt it, and that some place the poem after the time of the Sixth Patriarch, Hui-neng (Huineng).
 
 Its opening lines carry the theme: “The Supreme Way is not difficult / If only you do not pick and choose.” The rest returns to it through pairs: love and hate, for and against, right and wrong, stillness and activity, existence and emptiness. Its last stanza begins “The path of words is cut off”.
 
@@ -255,7 +257,7 @@ The poem contains phrases that will later on assume importance in the Ts’ao Tu
 
 **Source.** Taken from [Terebess Asia Online](https://terebess.hu/english/hsin3.html) on 20 November 2026 and checked against it word for word. No word of the poem is changed. Five dashes at line ends, dropped on that page, are restored; the stanza numbers and the headings are ours. Every correction is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/faith-in-mind.md).
 
-**Notes.** The notes are editorial. Where they quote Sheng-yen, the words are from his talks on the same source page.
+**Notes.** The notes are editorial. Where they quote Sheng-yen, the words are from his talks on the same source page. The facts in the introduction are from Sheng-yen’s own introduction below and the book’s front matter; his dates are from Wikipedia. Each is listed in the edition notes.
 
 **Licence.** The translation, preface and introduction are © 1987 Dharma Drum Publications and remain in copyright. They are published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

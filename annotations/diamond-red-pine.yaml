@@ -1,0 +1,57 @@
+# Editors' highlights on the Diamond Sutra (Red Pine's translation): passages worth stopping at.
+# Chosen by the editorial track, 2026-11-20 (docs/2026-11-editorial-review.md). Not Rufus's notes.
+# Format: see scripts/notes. Check and rebuild: scripts/notes diamond-red-pine
+text: diamond-red-pine.md
+notes:
+
+  - id: redpine-3-liberated
+    passage: "3"
+    quote: "And though I thus liberate countless beings, not a single being is liberated."
+    by: Editors
+    date: 2026-11-20
+
+  - id: redpine-6-raft
+    passage: "6"
+    quote: "A dharma teaching is like a raft. If you should let go of dharmas, how much more so no dharmas."
+    note: "Thich Nhat Hanh ends the same saying: “All teachings must be abandoned, not to mention non-teachings.” ([/diamond#6](/diamond#6))"
+    by: Editors
+    date: 2026-11-20
+
+  - id: redpine-9-nowhere
+    passage: "9"
+    quote: "For he dwells nowhere at all."
+    note: "Thich Nhat Hanh has Subhuti dwelling in “the concentration of peaceful abiding” ([/diamond#9](/diamond#9)). The Sanskrit Red Pine follows has him dwelling nowhere."
+    by: Editors
+    date: 2026-11-20
+
+  - id: redpine-14-alarmed
+    passage: "14"
+    quote: "Those beings shall be most remarkably blessed, Subhuti, who are not alarmed, not frightened, and not distressed by what is said in this sutra."
+    by: Editors
+    date: 2026-11-20
+
+  - id: redpine-18-thought
+    passage: "18"
+    quote: "Subhuti, a past thought cannot be found. A future thought cannot be found. Nor can a present thought be found."
+    by: Editors
+    date: 2026-11-20
+
+  - id: redpine-26-gatha
+    passage: "26"
+    quote: "Who looks for me in form who seeks me in a voice indulges in wasted effort such people see me not."
+    by: Editors
+    date: 2026-11-20
+
+  - id: redpine-28-obtaining
+    passage: "28"
+    quote: "They would, Subhuti, but without grasping it. Thus is it called ‘obtaining.’"
+    note: "The merit is kept; only the having is let go. Thich Nhat Hanh puts the same exchange as not needing to “build up virtue and happiness” ([/diamond#28](/diamond#28))."
+    by: Editors
+    date: 2026-11-20
+
+  - id: redpine-32-explaining
+    passage: "32"
+    quote: "And how should they explain it? By not explaining. Thus is it called ‘explaining.’"
+    note: "Thich Nhat Hanh answers the same question at length ([/diamond#32](/diamond#32)): “Without being caught up in signs, just according to things as they are, without agitation.”"
+    by: Editors
+    date: 2026-11-20

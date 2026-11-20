@@ -13,6 +13,8 @@ syntaxMode: md
 scripts:
   - /js/reading.js
   - /js/edition.js
+  - /js/notes/dhammapada.js
+  - /js/notes.js
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
@@ -24,19 +26,17 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Dhammapada is 423 short verses attributed to the Buddha, in twenty-six chapters: about 10,000 words of verse. Here complete in Thanissaro Bhikkhu’s 2011 revised translation, with his notes at the verses they discuss, his introduction and an EPUB. Each verse has its own number, so you can link to any one of them.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> 423 short verses attributed to the Buddha, in 26 chapters, from the Pāli Canon. Complete in Thanissaro Bhikkhu’s translation, with his notes at the verses they discuss. Two hours straight through, though it is made for a verse at a time.</p>
 
 ## Introduction
 
-The Dhammapada is an anthology of verses attributed to the Buddha. Thanissaro Bhikkhu, who translated it, writes that it “has long been recognized as one of the masterpieces of early Buddhist literature.” It has been used for centuries as an introduction to Buddhism, though, as the translator notes, it is by no means elementary.
+The *Dhammapada* is an anthology of 423 verses attributed to the Buddha, in 26 chapters, from the Pāli Canon of Theravāda Buddhism. The verses were passed on by word of mouth and, the translator writes in his historical notes, written down with the rest of the canon around the beginning of the common era. It has, he says, long been used as an introduction to Buddhism.
 
-The translator says the teaching is in the first pair of verses. “Phenomena are / preceded by the heart, / ruled by the heart, / made of the heart.” If you speak or act with a corrupted heart, suffering follows you, as the wheel follows the track of the ox that pulls the cart. If you speak or act with a calm, bright heart, happiness follows you “like a shadow / that never leaves.” The rest of the book comes back to this one choice.
+The teaching is in the first pair of verses, he says: “Phenomena are / preceded by the heart, / ruled by the heart, / made of the heart.” Speak or act with a corrupted heart and suffering follows you, as the wheel of the cart follows the ox that pulls it; with a calm, bright heart, happiness follows “like a shadow / that never leaves” ([verses 1 and 2](/dhammapada#1)). The rest of the book comes back to this one choice, chapter by chapter, and the last two chapters ask, again and again, who is really a monk, or a brahman.
 
-The first three chapters set out two ways of living. The wise train the mind, and the fool sees no reason to. The rest of the book follows both paths. The wise path can lead to happiness within the cycle of death and rebirth, or all the way to the Deathless, beyond it. The fool’s path leads to suffering now and in the future, and to further entrapment. The translator says the purpose of the book is to make the wise path attractive, so that the reader follows it.
+Thanissaro Bhikkhu (Geoffrey DeGraff), a monk at Metta Forest Monastery in California, made this translation in 1997 and revised it in 2011. He reads the book as poetry as well as teaching, part of the Indian tradition of *kavya*, meant “to instruct in the highest ends of life while simultaneously giving delight”, and translates it in free verse, which he says “allows for a terse directness”. “Heart” for *mano* follows a Thai tradition, his note on the first verses says.
 
-Thanissaro reads the book as poetry as well as teaching. He points out that it belongs to the Indian tradition of *kavya*, where a work was meant “to instruct in the highest ends of life while simultaneously giving delight.” His translation is in free verse, which he chose because it needs the fewest departures from the literal sense and allows a terse directness. He renders *mano* as “heart” in verses 1 and 2, following a Thai tradition, as his note there explains.
-
-The translator’s notes sit at the verses they discuss, as margin notes where the screen allows. Each one is labelled with the verse or verses it is about. The translator’s introduction is aimed more at readers who want a guide to conduct, and the historical notes more at readers who want to read the text in the history of Buddhism. The end notes and glossary are for both. A reasonable way in is one chapter at a time, a verse at a time, with the notes at the verses that catch your attention.
+Read it a verse at a time, a chapter in a sitting. The translator’s notes sit at the verses they discuss and can wait; his introduction and historical notes follow the text. The one note of ours says only where his end notes have gone. The other Buddhist verse in this library is Ch’an: *[Faith in Mind](/faith-in-mind)* and the [Shodoka](/shodoka).
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -3857,7 +3857,7 @@ In addition to the above works, I have also consulted many previous English tran
 
 ## Source and licence
 
-**Source.** The text is from the EPUB of *Dhammapada: A Translation*, by Thanissaro Bhikkhu, revised edition 2011, supplied by Rufus Pollock on 20 November 2026. No word of the translation, of the translator’s front and back matter or of the end notes has been changed. The layout is ours: verse numbers, stanzas, chapter headings, indentation, the end notes as footnotes at their verses, each labelled with its verse, and the omissions from the copyright page. Every change, and how the words were checked, is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/dhammapada.md).
+**Source.** The text is from the EPUB of *Dhammapada: A Translation*, by Thanissaro Bhikkhu, revised edition 2011, supplied by Rufus Pollock on 20 November 2026. No word of the translation, of the translator’s front and back matter or of the end notes has been changed. The layout is ours, and everything the introduction says comes from the translator’s own preface, introduction, historical notes and notes, below: verse numbers, stanzas, chapter headings, indentation, the end notes as footnotes at their verses, each labelled with its verse, and the omissions from the copyright page. Every change, and how the words were checked, is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/dhammapada.md).
 
 **Licence.** The book’s copyright and licence statement reads, in full (the copyright page’s other blocks, on additional resources, printed copies and questions, are not reproduced):
 
@@ -3867,7 +3867,7 @@ In addition to the above works, I have also consulted many previous English tran
 >
 > You may copy, reformat, reprint, republish, and redistribute this work in any medium whatsoever without the author’s permission, provided that: (1) such copies, etc. are made available *free of any charge*; (2) any translations of this work state that they are derived herefrom; (3) any derivations of this work state that they are derived and differ herefrom; and (4) you include the full text of this license in any copies, translations or derivations of this work. Otherwise, all rights reserved.
 
-This edition is free of charge. It is a reformatting of the 2011 text, so it states here that it is derived from that text and differs from it in layout, labels and the editors’ words (the in brief, the introduction, and this section), and that it leaves out the book’s colophon and the copyright page’s other blocks. The licence text is reproduced above in full. Our own additions are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+This edition is free of charge. It is a reformatting of the 2011 text, so it states here that it is derived from that text and differs from it in layout, labels and the editors’ words (the in brief, the introduction, and this section), and that it leaves out the book’s colophon and the copyright page’s other blocks. The licence text is reproduced above in full. Our own additions (the in brief, the editors’ introduction, the note labels, the lead of About this translation and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 The translator revised the book in 2017. That revision changes the wording of ten verses and the punctuation of eight more, and it is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (non-commercial). This edition uses the 2011 text, as supplied, and the comparison is in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/dhammapada.md).
 
