@@ -79,3 +79,14 @@ Quoted, with scope, from his reply to the six-and-two board:
 - "I'm open here."
 
 What follows for the next board: widen towards Emergence and Kaikado (quiet, clean, with images); show what images could do on a textual site (drawn or photographed objects, scroll and ink imagery as pictures rather than as page forms); find a genuinely funky option; set Plum Village and the seals aside; carry the colour question (a warm red versus a cool blue) as a small strip. "A little warmer" now has a ceiling: Plum Village is past it.
+
+## Rufus's reactions to the second board (2026-11-20, night)
+
+- "i didn't really need more emergence. that's not really helpful. i already know that." (Lesson: widen into new territory, not more of the thing he already picked.)
+- "i like sesshu."
+- "no to making software. not this vibe at all."
+- "if i were basing off something it would be that one emergence page of red pine… but the drawing is doing a lot of the work."
+- "we don't really have logo or other sense of direction but i could imagine the character for wisdom and we could borrow the gold on indigo or turn it to red on something… just ideas."
+- "Overall i think we have a decent first direction… and color inspirations from the red, blue and gold etc."
+
+What follows: the direction is Emergence's Red Pine page as the base, held to Kaikado's restraint, with an ink image of the Sesshū kind doing the work the drawing does there; colour drawn from the warm red, the Fitzcarraldo blue and the gold-on-indigo; a possible mark in a single character for wisdom. No funk. Next stage: specimens.
