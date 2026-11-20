@@ -1,6 +1,6 @@
 ---
 title: Meditations
-description: "Marcus Aurelius’s notes to himself, written in Greek in the 170s, in Gregory Hays’s translation (2002). Complete, in twelve books, with Hays’s introduction and notes and an EPUB."
+description: "Marcus Aurelius’s notes to himself, written in Greek, probably in the 170s, in Gregory Hays’s translation (2002). Complete, in 12 books, with Hays’s introduction and notes and an EPUB."
 author: Marcus Aurelius (Marcus Aurelius Antoninus, 121–180 CE)
 translator: Gregory Hays
 date: "Written in Greek, probably in the 170s CE (Marcus died in 180)"
@@ -28,15 +28,15 @@ scripts:
 <nav class="rs-rail" aria-label="Contents"><p class="rs-rail-label">Contents</p><ol class="rs-toc" data-rs-auto></ol></nav>
 <article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Marcus Aurelius’s notes to himself, written as he ruled the Roman Empire and fought on its northern frontier. Complete, in twelve books, in Gregory Hays’s translation, with his introduction and notes; about 35,000 words.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Marcus Aurelius’s notes to himself, written in Greek as he ruled the Roman Empire and fought on its northern frontier. Complete, in 12 books, in Gregory Hays’s translation, with his introduction and notes; four or five hours straight through, though it is made for a few entries at a time.</p>
 
 ## Introduction
 
-The *Meditations* are short entries that Marcus Aurelius, Roman emperor from 161 to 180, wrote for himself, in Greek, probably in the 170s. They were not written for publication, and the title is not his. Hays says the lost Greek manuscript used for the first printed edition was entitled *Eis heauton*, “To Himself,” and that the English title *Meditations* is “not only not original, but positively misleading.”
+The *Meditations* are 12 books of short entries that Marcus Aurelius (121–180 CE), Roman emperor from 161, wrote for himself in Greek, probably in the 170s, in the years of his wars on the northern frontier. They were not written for publication, and the title is not his. Hays says the lost Greek manuscript behind the first printed edition was headed *Eis heauton*, “To Himself”, though he thinks that no more likely to be Marcus’s own title, and that the English title *Meditations* is “not only not original, but positively misleading”.
 
-Hays calls the entries “spiritual exercises,” after Pierre Hadot: short pieces to hold steady against the stress and confusion of a day. Most are a line or a paragraph. Book 1 is the exception. In it Marcus lists what he owes to his family and teachers, one entry for each, and ends with the gods. The title “Debts and Lessons” is Hays’s, not Marcus’s. Books 2 to 12 have no such plan, and Hays finds no argument running through the whole.
+Most entries are a line or a paragraph: a reminder, a rebuke, an exercise. Hays, after Pierre Hadot, calls them “spiritual exercises”, written “to provide a momentary stay against the stress and confusion of everyday life”. One from the third book ([3.10](/meditations#3.10)) says what most of them are for: “Forget everything else. Keep hold of this alone and remember it: Each of us lives only now, this brief instant.” Book 1 is the exception. In it Marcus lists what he owes to his family and teachers, one entry for each, and ends with the gods; the heading “Debts and Lessons” is Hays’s, not Marcus’s. Hays finds no such plan in the other books.
 
-Hays picks out the sense of mortality that runs through the book, and with it the worthlessness of worldly concerns. He points out that neither is peculiar to the Stoics; ancient literature is full of both. The book can be read a few entries at a time. If you want somewhere to start, [4.15](/meditations#4.15) (the lumps of incense on an altar) and [5.9](/meditations#5.9) (philosophy as “the sponge and egg white that relieve ophthalmia”) are short and typical.
+Hays reads them as written for Marcus’s own use, “a self-help book in the most literal sense”, not to teach anyone else. Take them the same way, a few entries at a time; straight through would take four or five hours. If you want somewhere to start, [4.15](/meditations#4.15) (the lumps of incense on an altar) and [5.9](/meditations#5.9) (philosophy as “the sponge and egg white that relieve ophthalmia”) are short and typical. Hays’s notes sit at the words they explain, and his introduction follows the text. The notes in the margin marked ※ and signed are Rufus Pollock’s own. The other Stoic in this library is Seneca, whose *[On the Shortness of Life](/seneca-on-the-shortness-of-life)* was written about a century earlier.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -5653,7 +5653,9 @@ GREGORY HAYS is assistant professor of classics at the University of Virginia. H
 
 **Source.** The text was taken from the EPUB of the 2002 Modern Library edition (a conversion of the Kindle edition) on 20 November 2026, and checked against it word for word by script. Its words are Hays’s, as printed, except for the few fixes listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/meditations.md). Small capitals are set as capitals; nothing else in the words has been changed.
 
-**Licence.** The 2002 Modern Library edition is marked “All rights reserved,” and its introduction and notes are © 2002 Gregory Hays. The book is in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the contents list and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+**Notes.** Hays’s notes are his, as printed. The margin notes marked ※ and signed are Rufus Pollock’s, kept as data in `annotations/meditations.yaml`. The facts in the introduction are from Hays’s introduction below. Each is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/docs/editions/meditations.md).
+
+**Licence.** The 2002 Modern Library edition is marked “All rights reserved,” and its introduction and notes are © 2002 Gregory Hays. The book is in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the contents list, the lead of About this translation and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## Download
 

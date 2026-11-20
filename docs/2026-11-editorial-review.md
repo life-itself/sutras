@@ -43,10 +43,10 @@ Does badly: "prods and teases" is a touch of colour; the paragraph on the book's
 Does well: the teaching located in the first pair of verses, with the ox-cart and the shadow; the translator's reasons for free verse and for "heart".
 Does badly: a third too long. The third paragraph retells the translator's introduction (the two paths, "further entrapment") in his sermon register rather than ours; "has long been recognized as one of the masterpieces of early Buddhist literature" is a praise quotation; "though, as the translator notes, it is by no means elementary" is hedging; the fifth paragraph is about where the notes sit and which readers the translator's apparatus is for, which belongs under About this translation. No date at all for the text (the frontmatter has one, from the translator's historical notes). The in brief ends with a feature ("so you can link to any one of them").
 
-### Meditations (234 words)
+### Meditations (234 words, before; 291 after)
 
 Does well: what it is and is not (notes to himself; the title is not his), Hadot's "spiritual exercises", Book 1 as the exception, two short entries to start with.
-Does badly: no sentence on why read it beyond Hays's two themes; "Hays says", "Hays calls", "Hays picks out", "Hays finds" four times in three paragraphs, so it reads as a summary of his introduction rather than as ours. Left as it stands until the Meditations session has finished (its tmux session was still running on 2026-11-20).
+Did badly: no sentence on why read it beyond Hays's two themes; "Hays says", "Hays calls", "Hays picks out", "Hays finds" four times in three paragraphs, so it read as a summary of his introduction rather than as ours. Revised last, after its session had finished: one of Marcus's own entries quoted (3.10), one reason of ours to read it, Rufus's margin notes named as his, the Seneca link, "or taken down" restored in the licence, and a sources sentence under Source and licence. Its eight proposed highlights stay in this file until Rufus says whether the text's margin stays his alone.
 
 ## 2. Across the set
 
@@ -222,4 +222,4 @@ One page with the eight in-briefs and introductions one after another, each with
 - The time to read replaces word counts in every in brief.
 - Each page follows its translator's romanisation, pinyin in brackets at first mention.
 - Sources for facts in an introduction are named in one sentence under Source and licence ("… are from Wikipedia; … from his preface. Each is listed in the edition notes"), since the critic could not otherwise see where a date came from.
-- Meditations is untouched until its session ends; its proposed introduction changes are in the review page's questions.
+- Meditations was revised last, once its session had ended; its proposed highlights are not added to Rufus's notes file until he answers.
