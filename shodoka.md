@@ -1,9 +1,9 @@
 ---
 title: Shodoka
-description: "A long Ch’an (Zen) poem in 64 verses on seeing one’s own nature, attributed to Yung-chia (Yoka Genkaku), in the Diamond Sangha version of Robert Aitken and Eido Shimano. Complete, with notes and an EPUB."
+description: "A long Ch’an (Zen) poem in 64 verses on the basic teaching of Zen, attributed to Yung-chia (Yoka Genkaku), in the Diamond Sangha version of Robert Aitken and Eido Shimano. Complete, with notes and an EPUB."
 author: "Yung-chia Hsuan-chueh (Yoka Genkaku) (attributed; doubtful)"
 translator: Robert Aitken and Eido Shimano (1960s), revised by Robert Aitken (1991)
-date: "Unknown. Attributed to Yung-chia (665–713); Tang dynasty (618–907)"
+date: "Unknown. Attributed to Yung-chia (665–713); probably Tang dynasty (618–907)"
 tradition: Ch’an (Zen) Buddhism
 source: http://www.ciolek.com/WWWVLPages/ZenPages/Daily-Zen-Sutras.html#SHODO
 licence: "Translation © 1991 Diamond Sangha Zen Buddhist Society: in copyright, reproduced in full without permission. Editorial additions CC BY 4.0."
@@ -24,17 +24,17 @@ scripts:
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A long Ch’an (Zen) poem in 64 verses, sung in the first person by someone who has woken up and wants you to stop looking elsewhere. Tradition gives it to Yung-chia, a student of the Sixth Patriarch, though he probably did not write it. Here complete, in the version chanted in the Diamond Sangha’s Zen centres.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A long Ch’an (Zen) poem in 64 verses, sung in the first person by someone who has woken up and wants you to stop looking elsewhere. Tradition gives it to Yung-chia, who met the Sixth Patriarch, though he probably did not write it. Here complete, in Robert Aitken and Eido Shimano’s version, used in the Diamond Sangha’s Zen centres.</p>
 
 ## Introduction
 
-The *Shodoka*, or *Song of Enlightenment* (in Chinese *Cheng-tao-ko*, 證道歌), is a Ch’an (Zen) poem of 64 verses. Tradition gives it to Yung-chia Hsuan-chueh (665–713), known in Japan as Yoka Genkaku. He trained as a monk in the Tiantai school and is remembered for one night: he visited Hui-neng, the Sixth Patriarch, was persuaded to stay a single night, and in that night his enlightenment was acknowledged. The poem speaks of the meeting in [verse 18](/shodoka#18).
+The *Shodoka*, or *Song of Enlightenment* (in Chinese *Cheng-tao-ko*, 證道歌), is a Ch’an (Zen) poem of 64 verses. Tradition gives it to Yung-chia Hsuan-chueh (665–713; in pinyin Yongjia Xuanjue), known in Japan as Yoka Genkaku. He trained as a monk in the T’ien-t’ai school and is remembered for one night: he visited Hui-neng, the Sixth Patriarch, was persuaded to stay a single night, and in that night his enlightenment was acknowledged. The poem speaks of the meeting in [verse 18](/shodoka#18).
 
-The attribution is doubtful. The historian Hu Shih pointed out that a manuscript copy from Dunhuang names a different author, and that a monk who died in 713 could not have sung of the “twenty-eight generations of teachers in India” ([verse 42](/shodoka#42)): that list of patriarchs was made up decades later. Whoever wrote it, the poem lasted. Master Sheng-yen counted it, with *[Faith in Mind](/faith-in-mind)*, as the most highly regarded of the Ch’an poems on enlightenment, In Japan both poems belong, with the *Ten Oxherding Pictures* and a manual of sitting meditation, to a set of four texts used to introduce novice monks to Zen.
+The attribution is doubtful. The scholar Hu Shih, writing in 1960, pointed out that a manuscript copy from Tunhuang names a different author, and that a monk who died in 713 could not have sung of the 28 Patriarchs (here “twenty-eight generations of teachers in India”, [verse 42](/shodoka#42)), a list that, he said, was not invented until decades later. Whoever wrote it, the poem lasted. Master Sheng-yen counted it, with *[Faith in Mind](/faith-in-mind)*, as the most highly regarded of the Ch’an poems on enlightenment, “because of the clear guidance they provide on the method of Ch’an”. In Japan both poems belong, with the *Ten Oxherding Pictures* and a manual of sitting meditation, to a set of four texts used to introduce novice monks to Zen.
 
-Where *Faith in Mind* is quiet and even, this is a song: first person, boastful in places, full of lions, jewels, thunder and moons in water. Its claim is in the first verse, that “the real nature of ignorance is the Buddha-nature itself”. The rest is someone who has seen this telling you not to look for it anywhere else.
+Where *Faith in Mind* is quiet and even, this is a song: in the first person, sure of itself, defiant in places, full of lions, jewels and moons in water. Its claim is in the first verse: “The real nature of ignorance is the Buddha-nature itself”.
 
-This English version was made for chanting, translated from the Japanese by Robert Aitken and Eido Shimano. Read it aloud, a few verses at a time. The notes are ours, for names that may be unfamiliar; they can wait for a second reading.
+This English version is plain, made to be said aloud: it was first printed in a book of sutras for chanting. Read it that way, a few verses at a time. The notes are ours, for names that may be unfamiliar; they can wait for a second reading.
 
 <p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
 
@@ -83,7 +83,7 @@ Now let us polish it completely, once and for all.
 Who has no-thought? Who is not-born?  
 If we are truly not-born,  
 We are not un-born either.  
-Ask a robot if this is not so.  
+Ask a robot if this is not so.[^1]  
 How can we realize ourselves  
 By virtuous deeds or by seeking the Buddha?
 
@@ -103,7 +103,7 @@ This is the very point of the Buddha-seal.
 I can’t respond to any concern about leaves and branches.
 
 <a class="v" id="9" href="#9">9</a>
-People do not recognize the Mani-jewel.[^1]  
+People do not recognize the Mani-jewel.[^2]  
 Living intimately within the Tathagata-garbha,  
 It operates our sight, hearing, smell, taste, sensation, awareness;  
 And all of these are empty, yet not empty.
@@ -133,7 +133,7 @@ But they have the jewel of no price treasured within.
 <a class="v" id="13" href="#13">13</a>
 This jewel of no price can never be used up  
 Though they spend it freely to help people they meet.  
-Dharmakaya, Sambogakaya, Nirmanakaya,[^2]  
+Dharmakaya, Sambogakaya, Nirmanakaya,[^3]  
 And the four kinds of wisdom  
 Are all contained within.  
 The eight kinds of emancipation and the six universal powers  
@@ -174,7 +174,7 @@ Only the heavenly dragon listens calmly, with pure delight.
 <a class="v" id="18" href="#18">18</a>
 I wandered over rivers and seas, crossing mountains and streams,  
 Visiting teachers, asking about the Way in personal interviews;  
-Since I recognized the Sixth Founding Teacher at Ts’ao Ch’i,[^3]  
+Since I recognized the Sixth Founding Teacher at Ts’ao Ch’i,[^4]  
 I know what is beyond the relativity of birth and death.
 
 <a class="v" id="19" href="#19">19</a>
@@ -412,7 +412,7 @@ Of permanent soul or complete extinction.
 Being is not being; non-being is not non-being;  
 Miss this rule by a hair,  
 And you are off by a thousand miles.  
-Understanding it, the dragon-child abruptly attains Buddhahood;[^4]  
+Understanding it, the dragon-child abruptly attains Buddhahood;[^5]  
 Misunderstanding it, the greatest scholar falls into hell.
 
 <a class="v" id="52" href="#52">52</a>
@@ -471,7 +471,7 @@ Not seeing the secret of the Tathagata teaching.
 Two monks were guilty of murder and carnality.  
 Their leader, Upali, had the light of a glow-worm;  
 He just added to their guilt.  
-Vimalakirti cleared their doubts at once[^5]  
+Vimalakirti cleared their doubts at once[^6]  
 As sunshine melts the frost and snow.
 
 <a class="v" id="60" href="#60">60</a>
@@ -518,19 +518,17 @@ I will settle it for you.
 
 ## About this translation
 
-The translation was made from the Japanese in the 1960s by Robert Aitken (1917–2010) and Eido Shimano for the Diamond Sangha, the Zen community Aitken co-founded in Honolulu in 1959. It was reprinted by the New York Zendo in *Daily Sutras for Chanting and Recitation*. In December 1991 Aitken revised it, and it became the *Shodoka* in the Diamond Sangha’s *Daily Zen Sutras*, the chanting book used in its centres. That 1991 version is the one given here.
+The translation was made from the Japanese in the 1960s by Robert Aitken (1917–2010) and Eido Shimano for the Diamond Sangha, the Zen community Aitken co-founded in Honolulu in 1959. It was reprinted by the New York Zendo in *Daily Sutras for Chanting and Recitation*. In December 1991 Aitken revised it, and it became the *Shodoka* in the Diamond Sangha’s *Daily Zen Sutras*, used in its centres. That 1991 version is the one given here. It shares some wording with Nyogen Senzaki’s earlier version (with Ruth Stout McCandless, 1953).
 
-It is a version to be said aloud, not a scholar’s translation: plain words, some of them modern (“Ask a robot if this is not so”, [verse 6](/shodoka#6), where other translations have a wooden puppet). Earlier copies of this page credited the translation to Nyogen Senzaki; that was a mistake. Senzaki’s own version, with Ruth Stout McCandless, is a different text.
-
-The source gives the 64 verses as unnumbered paragraphs. The numbers are ours, one to each paragraph, and they match the source’s own description of the poem as “a collection of 64 verses”. Other translations divide the poem differently, so verse numbers will not always match between versions.
+The source gives the 64 verses as unnumbered paragraphs. The numbers are ours, one to each paragraph, and they match the source’s own description of the poem as “a collection of 64 verses”. Other translations divide the poem differently, so verse numbers will not always match between versions. Names in the poem are spelt as in the source (“Hui Neng”, “Kwan-Yin”); in our notes they are in Wade-Giles, as in *Faith in Mind*.
 
 ## Source and licence
 
 **Source.** The text was taken from the Diamond Sangha *Daily Zen Sutras* (“December 1991 version”) as published by [T. Matthew Ciolek](http://www.ciolek.com/WWWVLPages/ZenPages/Daily-Zen-Sutras.html#SHODO) on 20 November 2026, and compared with that page word for word by script. It was checked against a second copy of the same translation on [Terebess Asia Online](https://terebess.hu/zen/sodoka.html).
 
-Four slips were corrected: a stray letter (“vWhich”), a lost line break in [verse 36](/shodoka#36) (both as in the second copy), “the some way” for “the same way” ([verse 16](/shodoka#16)), and “have have” ([verse 38](/shodoka#38)), which are in both copies. Dashes and quotation marks were set in modern type. Otherwise every word is as in the source. Each change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/shodoka/NOTES.md).
+Four slips were corrected. Two follow the second copy: a stray letter (“vWhich”, [verse 42](/shodoka#42)) and a lost line break ([verse 36](/shodoka#36)). Two are in both copies and were corrected by us: “the some way” for “the same way” ([verse 16](/shodoka#16)) and “have have” ([verse 38](/shodoka#38)). Dashes and quotation marks were set in modern type. Otherwise every word is as in the source. Each change is listed in the [edition notes](https://github.com/life-itself/sutras/blob/main/library/shodoka/NOTES.md).
 
-**Notes.** The notes are editorial.
+**Notes.** The notes are editorial. They draw on John Balcom’s notes to his own translation (on the Terebess page) and on Wikipedia.
 
 **Licence.** The translation is © 1991 Diamond Sangha Zen Buddhist Society and remains in copyright. It is published here in full, without the permission of the rights holder. If you hold the rights and want this changed or taken down, please [open an issue](https://github.com/life-itself/sutras/issues). Our own additions (the in brief, the editors’ introduction, the notes and this section) are free to reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
@@ -541,12 +539,14 @@ Four slips were corrected: a stray letter (“vWhich”), a lost line break in [
 </article></div></div>
 </div>
 
-[^1]: *Editors’ note.* The Mani-jewel is the wish-fulfilling jewel of Buddhist stories. In Buddhist writing it can stand for the Buddha-nature each of us has and does not see. The poem comes back to it in verses 10, 25 and 61.
+[^1]: *Editors’ note.* “Robot” is this translation’s word; Senzaki’s 1953 version also has it (“Ask a robot whether it is happy or not”), and other translations have a wooden puppet.
 
-[^2]: *Editors’ note.* The three bodies of a Buddha: the Dharma body (reality itself, without form), the enjoyment body (seen by advanced bodhisattvas) and the body that appears in the world, as the historical Buddha did.
+[^2]: *Editors’ note.* The Mani-jewel is the wish-fulfilling jewel of Buddhist stories. In Buddhist writing it can stand for the Buddha-nature each of us has and does not see. The poem comes back to it in verses 10, 25 and 61.
 
-[^3]: *Editors’ note.* Ts’ao Ch’i (Caoxi) is where Hui-neng, the Sixth Patriarch, taught; the name is also used for Hui-neng himself. This is the visit of the introduction, when Yung-chia stayed one night.
+[^3]: *Editors’ note.* The three bodies of a Buddha (Sambogakaya is more often spelt Sambhogakaya): the Dharma body (reality itself, without form), the enjoyment body (seen by advanced bodhisattvas) and the body that appears in the world, as the historical Buddha did.
 
-[^4]: *Editors’ note.* In the Lotus Sutra the young daughter of the dragon king becomes a Buddha in an instant, though one of the Buddha’s disciples has just said that a woman cannot.
+[^4]: *Editors’ note.* Ts’ao Ch’i is where Hui-neng, the Sixth Patriarch, taught; the name is also used for Hui-neng himself. This is the visit of the introduction, when Yung-chia stayed one night.
 
-[^5]: *Editors’ note.* From chapter 3 of the Vimalakirti Sutra. Upali, one of the Buddha’s disciples, judges the two monks’ offences by the monastic rules; the layman Vimalakirti tells them their offences are as empty as everything else, and they are freed.
+[^5]: *Editors’ note.* In the Lotus Sutra the young daughter of the dragon king becomes a Buddha in an instant, though one of the Buddha’s disciples has just said that a woman cannot.
+
+[^6]: *Editors’ note.* From chapter 3 of the Vimalakirti Sutra. Upali, one of the Buddha’s disciples, judges the two monks’ offences by the monastic rules; the layman Vimalakirti tells them their offences are as illusory as everything else, and their doubts are cleared.

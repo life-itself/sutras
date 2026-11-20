@@ -31,7 +31,9 @@ Not the translators' words (ours): the headings, the in brief, the editors' intr
 
 ## Translator: a correction
 
-The earlier page said "Translated by Nyogen Senzaki and revised by Robert Aitken Roshi". No source for that was found. The source names only Aitken; the Terebess note says the translation was "prepared in the 1960s by Mr Robert Aitken and Eido Shimano Sensei for the Diamond Sangha Zen Buddhist Society", reprinted in *Daily Sutras for Chanting and Recitation* (New York Zendo, n.d.), and "In December 1991 the Aitken-Shimano's translation was revised by Robert Aitken Roshi". Senzaki's version (with Ruth Stout McCandless, "Song of Realization") is a different text, on the same Terebess page. The page now credits Aitken and Shimano.
+The earlier page said "Translated by Nyogen Senzaki and revised by Robert Aitken Roshi". No source for that was found. The source names only Aitken; the Terebess note says the translation was "prepared in the 1960s by Mr Robert Aitken and Eido Shimano Sensei for the Diamond Sangha Zen Buddhist Society", reprinted in *Daily Sutras for Chanting and Recitation* (New York Zendo, n.d.), and "In December 1991 the Aitken-Shimano's translation was revised by Robert Aitken Roshi". The page now credits Aitken and Shimano.
+
+The old credit was not baseless, though: Senzaki's own version ("Song of Realization", with Ruth Stout McCandless, *Buddhism and Zen*, 1953, excerpted on the same Terebess page) shares wording with this one, e.g. "the six noble deeds and the ten thousand good actions are already complete within you" and "Ask a robot whether it is happy or not". The page says so in About this translation and in note 1. Whether Aitken and Shimano worked from Senzaki's text is not known.
 
 ## Facts used in the editors' introduction, notes and About, and where each comes from
 
@@ -42,12 +44,18 @@ The earlier page said "Translated by Nyogen Senzaki and revised by Robert Aitken
 - Sheng-yen on *Faith in Mind* and Yung Chia's *Song of Enlightenment* as "the most highly regarded" poems on enlightenment: his introduction, `library/faith-in-mind/hsin3.html`.
 - The translation's history: Ciolek's note on `terebess-sodoka.html` (quoted above) and the source's header ("translated from Japanese", "used in Zen centers and communities affiliated within the framework of the Diamond Sangha").
 - Aitken's dates (1917–2010) and co-founding the Honolulu Diamond Sangha in 1959: English Wikipedia, "Robert Baker Aitken", read 2026-11-20.
-- "Wooden puppet" in other translations of verse 6: the Hoshin translation on `terebess-sodoka.html` ("Can a wooden puppet attain Buddhahood").
-- Note 1, Mani-jewel: English Wikipedia, "Mani Jewel" ("The Mani Jewel itself represents each being's Buddha-nature"; "One version is the Cintamani or wish-fulfilling jewel"); Balcom's note 12 on `terebess-sodoka.html` ("A mythical pearl capable of fulfilling wishes").
-- Note 2, the three bodies: English Wikipedia, "Trikaya".
-- Note 3, Ts'ao Ch'i: Balcom's note 23 on `terebess-sodoka.html` ("Where Huineng taught; also used to refer to Huineng himself") and Suzuki's note there.
-- Note 4, the dragon girl: Balcom's note 44 on `terebess-sodoka.html` ("Reference to the Devadatta Chapter of the Lotus Sutra, where a young dragon girl becomes a Buddha, though Sariputra, one of the Buddha's disciples, claims that women are incapable of attaining Buddhahood").
-- Note 5, Upali and Vimalakirti: Balcom's note 49 on `terebess-sodoka.html` ("Upali explains their transgressions according to the monastic rules, while Vimalakirti states that their transgressions are as illusory as all phenomena"); the 84000 translation of the Vimalakirti Sutra, chapter 3 (https://84000.co/translation/toh176).
+- Note 1, "robot": the Senzaki and McCandless excerpt on `terebess-sodoka.html` ("Ask a robot whether it is happy or not"); "wooden puppet" from the Hoshin translation there ("Can a wooden puppet attain Buddhahood").
+- Note 2, Mani-jewel: English Wikipedia, "Mani Jewel" ("The Mani Jewel itself represents each being's Buddha-nature"; "One version is the Cintamani or wish-fulfilling jewel"); Balcom's note 12 on `terebess-sodoka.html` ("A mythical pearl capable of fulfilling wishes"). It recurs in verses 10, 25 and 61.
+- Note 3, the three bodies: English Wikipedia, "Trikaya" (which spells Sambhogakaya).
+- Note 4, Ts'ao Ch'i: Balcom's note 23 on `terebess-sodoka.html` ("Where Huineng taught; also used to refer to Huineng himself") and Suzuki's note there.
+- Note 5, the dragon girl: Balcom's note 44 on `terebess-sodoka.html` ("Reference to the Devadatta Chapter of the Lotus Sutra, where a young dragon girl becomes a Buddha, though Sariputra, one of the Buddha's disciples, claims that women are incapable of attaining Buddhahood").
+- Note 6, Upali and Vimalakirti: Balcom's note 49 on `terebess-sodoka.html` ("Upali explains their transgressions according to the monastic rules, while Vimalakirti states that their transgressions are as illusory as all phenomena"); "cleared their doubts" is the poem's own phrase.
+- Sheng-yen's reason, "because of the clear guidance they provide on the method of Ch'an": his introduction in `library/faith-in-mind/hsin3.html`.
+- "Hu Shih, writing in 1960": the citation on `terebess-sodoka.html` (*Bukkyō to bunka*, Kyoto, 1960). Tunhuang and T'ien-t'ai are given in Wade-Giles, as on that page and in *Faith in Mind*.
+
+Not given a note, for want of a source read: "Pradhanashura" (verse 57), "fei-ni grass" (verse 35; probably the Nirvana Sutra's Himalayan grass "patience", unconfirmed), "the burning iron ring" (verse 63). Worth adding when a source is found.
+
+Critique: a fresh subagent reviewed the page on 2026-11-20. Applied: comma splice; Hu Shih's claim attributed to him; "chanted" softened to what the sources say; "boastful" and "thunder" dropped; the Senzaki wording; translator named in the in brief; romanisation made consistent; the "robot" point moved to a note; source-and-licence slips sentence rewritten.
 
 ## Copyright
 
