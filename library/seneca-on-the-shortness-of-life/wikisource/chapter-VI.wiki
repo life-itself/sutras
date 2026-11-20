@@ -1,0 +1,15 @@
+{{header
+ | title    = [[../]]
+ | author   = Seneca
+| translator = John W. Basore
+ | section  = Chapter VI
+ | previous = [[../Chapter V|Chapter V.]]
+ | next     = [[../Chapter VII|Chapter VII.]]
+ | notes    = 
+}}
+'''6.''' When Livius Drusus,<ref>As tribune in 91 {{smaller|B.C.}} he proposed a corn law and the granting of citizenship to the Italians.</ref> a bold and energetic man, had with the support of a huge crowd drawn from all Italy proposed new laws and the evil measures of the Gracchi, seeing no way out for his policy, which he could neither carry through nor abandon when once started on, he is said to have complained bitterly against the life of unrest he had had from the cradle, and to have exclaimed that he was the only person who had never had a holiday even as a boy. For, while he was still a ward and wearing the dress of a boy, he had had the courage to commend to the favour of a jury those who were accused, and to make his influence felt in the law-courts, so powerfully, indeed, that it is very well known that in certain trials he forced a favourable verdict. To what lengths was not such premature ambition destined to go? One might have known that such precocious hardihood would result in great personal and public misfortune. And so it was too late for him to complain that he had never had a holiday when from boyhood he had been a trouble-maker and a nuisance in the forum. It is a question whether he died by his own hand; for he fell from a sudden wound received in his groin, some doubting whether his death was voluntary, no one, whether it was timely.
+
+It would be superfluous to mention more who, though others deemed them the happiest of men, have expressed their loathing for every act of their years, and with their own lips have given true testimony against themselves; but by these complaints they changed neither themselves nor others. For when they have vented their feelings in words, they fall back into their usual round. Heaven knows! such lives as yours, though they should pass the limit of a thousand years, will shrink into the merest span; your vices will swallow up any amount of time. The space you have, which reason can prolong, although it naturally hurries away, of necessity escapes from you quickly; for you do not seize it, you neither hold it back, nor impose delay upon the swiftest thing in the world, but you allow it to slip away as if it were something superfluous and that could be replaced.
+
+==Footnotes==
+{{reflist}}

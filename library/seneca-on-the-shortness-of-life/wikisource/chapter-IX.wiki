@@ -1,0 +1,18 @@
+{{header
+ | title    = [[../]]
+ | author   = Seneca
+| translator = John W. Basore
+ | section  = Chapter IX
+ | previous = [[../Chapter VIII|Chapter VIII.]]
+ | next     = [[../Chapter X|Chapter X.]]
+ | notes    = 
+}}
+'''9.''' Can anything be sillier than the point of view of certain people—I mean those who boast of their foresight? They keep themselves very busily engaged in order that they may be able to live better; they spend life in making ready to live! They form their purposes with a view to the distant future; yet postponement is the greatest waste of life; it deprives them of each day as it comes, it snatches from them the present by promising something hereafter. The greatest hindrance to living is expectancy, which depends upon the morrow and wastes to-day. You dispose of that which lies in the hands of Fortune, you let go that which lies in your own. Whither do you look? At what goal do you aim? All things that are still to come lie in uncertainty; live straightway! See how the greatest of bards cries out, and, as if inspired with divine utterance, sings the saving strain: 
+
+{{center block|The fairest day in hapless mortals' life<br/>
+Is ever first to flee.<ref>Virgil, ''Georgics'', iii. 66 sq.</ref>}}
+
+"Why do you delay," says he, "Why are you idle? Unless you seize the day, it flees." Even though you seize it, it still will flee; therefore you must vie with time's swiftness in the speed of using it, and, as from a torrent that rushes by and will not always flow, you must drink quickly. And, too, the utterance of the bard is most admirably worded to cast censure upon infinite delay, in that he says, not "the fairest age," but "the fairest day." Why, to whatever length your greed inclines, do you stretch before yourself months and years in long array, unconcerned and slow though time flies so fast? The poet speaks to you about the day, and about this very day that is flying. Is there, then, any doubt that for hapless mortals, that is, for men who are engrossed, the fairest day is ever the first to flee? Old age surprises them while their minds are still childish, and they come to it unprepared and unarmed, for they have made no provision for it; they have stumbled upon it suddenly and unexpectedly, they did not notice that it was drawing nearer day by day. Even as conversation or reading or deep meditation on some subject beguiles the traveller, and he finds that he has reached the end of his journey before he was aware that he was approaching it, just so with this unceasing and most swift journey of life, which we make at the same pace whether waking or sleeping; those who are engrossed become aware of it only at the end.
+
+==Footnotes==
+{{reflist}}

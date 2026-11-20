@@ -1,0 +1,10 @@
+{{header
+ | title    = [[../]]
+ | author   = Seneca
+| translator = John W. Basore
+ | section  = Chapter XI
+ | previous = [[../Chapter X|Chapter X.]]
+ | next     = [[../Chapter XII|Chapter XII.]]
+ | notes    = 
+}}
+'''11.''' In a word, do you want to know how they do not "live long"? See how eager they are to live long! Decrepit old men beg in their prayers for the addition of a few more years; they pretend that they are younger than they are; they comfort themselves with a falsehood, and are as pleased to deceive themselves as if they deceived Fate at the same time. But when at last some infirmity has reminded them of their mortality, in what terror do they die, feeling that they are being dragged out of life, and not merely leaving it. They cry out that they have been fools, because they have not really lived, and that they will live henceforth in leisure if only they escape from this illness; then at last they reflect how uselessly they have striven for things which they did not enjoy, and how all their toil has gone for nothing. But for those whose life is passed remote from all business, why should it not be ample? None of it is assigned to another, none of it is scattered in this direction and that, none of it is committed to Fortune, none of it perishes from neglect, none is subtracted by wasteful giving, none of it is unused; the whole of it, so to speak, yields income. And so, however small the amount of it, it is abundantly sufficient, and therefore, whenever his last day shall come, the wise man will not hesitate to go to meet death with steady step.
