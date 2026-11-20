@@ -2,9 +2,12 @@
    Everything here is scoped to .rs (the reading layout, used by edition pages with layout: plain),
    so pages without a .rs wrapper are unchanged, with one exception at the end (the footer line).
    @import lines must stay first. */
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+TC:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400&display=swap");
 @import url("/css/reading.css");
 @import url("/css/home.css");
+/* The design direction: one line selects it, and it must stay the last import so it wins (decision 0005).
+   Remove it for the stand-in look (EB Garamond on the personal theme); swap the file to try another direction. */
+@import url("/css/direction-a.css");
 
 /* The reading system under Flowershow's sticky navbar */
 .rs { --rs-sticky-top: var(--navbar-height, 4rem) }
@@ -12,7 +15,7 @@
 /* Footnotes: Flowershow renders the footnote list after our closing </div>, outside .rs.
    reading.js marks it once the notes are in the margin; hide it on screen then. Before that, style it. */
 @media screen { [data-rs-sidenoted], .footnotes:has([data-rs-sidenoted]) { display: none } }
-.rs ~ .footnotes, .rs ~ [data-footnotes] { max-width: 34em; margin: 0 auto; padding: 2rem 20px 4rem; font-family: "EB Garamond", Garamond, Georgia, serif; font-size: 17px; line-height: 1.5 }
+.rs ~ .footnotes, .rs ~ [data-footnotes] { max-width: 34em; margin: 0 auto; padding: 2rem 20px 4rem; font-family: var(--sd-text, "EB Garamond", Garamond, Georgia, serif); font-size: 17px; line-height: 1.5 }
 
 /* Edition header */
 .rs-head .rs-attribution { margin: 0; color: var(--rs-ink2); font-size: 1em; line-height: 1.45 }
@@ -104,7 +107,7 @@
 
 /* Site-wide, not .rs: the navbar, footer and page take the reading page's paper and ink (personal theme in
    css/reading.css), so there are no white bands; a hairline rule marks them off. Light only, as the reading page is. */
-:root { --sutras-paper: #f8f7f4; --sutras-ink: #252421; --sutras-rule: #dedbd3 }
+:root { --sutras-paper: var(--sd-bg, #f8f7f4); --sutras-ink: var(--sd-ink, #252421); --sutras-rule: var(--sd-rule, #dedbd3) }
 body, .site-navbar, .site-footer { background-color: var(--sutras-paper) }
 .site-navbar { border-bottom: 1px solid var(--sutras-rule) }
 .site-footer { border-top: 1px solid var(--sutras-rule) !important; color: var(--sutras-ink) }

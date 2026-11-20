@@ -18,8 +18,9 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<figure class="sd-art"><img src="/assets/images/faith-in-mind.jpg" alt="" width="800" height="1237"><figcaption>Sesshū Tōyō, <i>Haboku Sansui</i>, 1495. Tokyo National Museum, public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<a class="rs-kicker" href="/">Sutras</a>
+<span class="rs-kicker">Zen · a poem</span>
 <h1>Faith in Mind</h1>
 <p class="rs-subtitle">Hsin Hsin Ming <span lang="zh">信心銘</span></p>
 <p class="rs-attribution">Attributed to Seng Ts’an, Third Patriarch of Ch’an<br>Translated by Master Sheng-yen, with Paul Kennedy</p>

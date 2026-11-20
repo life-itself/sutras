@@ -1,0 +1,94 @@
+/* Sutras · design direction A, "warm red". Decision 0005 (docs/decisions/0005-design-direction.md).
+   Loaded by one @import line in custom.css, after css/reading.css: remove that line to go back to the
+   stand-in look, or swap this file for another direction (the samples are in docs/design/directions/).
+
+   The direction, from Rufus's reactions to the mood boards: Emergence Magazine's Red Pine poem page as the base
+   (warm grey paper, one open-licence image per text given room, a small label, the title, then the text in a
+   narrow serif column), held to Kaikado's restraint. The apparatus (stanza and passage numbers, note marks, the
+   label before "In brief", the mark in the navbar) is the only place the warm red appears. Text in Literata.
+
+   Everything here is tokens and small overrides on the live reading system; the markup an edition needs is one
+   <figure class="sd-art"> before its <header class="rs-head"> and a label in its .rs-kicker. */
+@import url("https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400;1,7..72,500&family=Instrument+Sans:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap");
+
+/* ---- tokens ---- */
+:root {
+  --sd-bg: #ebe7e0; --sd-ink: #211e1b; --sd-ink2: #3b3733; --sd-muted: #6f6a62; --sd-rule: #d9d4ca;
+  --sd-accent: #d85f3f; --sd-accent-ink: #c9502f;
+  --sd-text: "Literata", Georgia, serif; --sd-display: "Literata", Georgia, serif; --sd-label: "Instrument Sans", system-ui, sans-serif;
+  --sd-mark: "Noto Serif TC", serif;
+  --sd-size: 20px; --sd-size-phone: 18.5px; --sd-lh: 1.58; --sd-measure: 32em;
+  /* the mark beside the site name in the navbar: the character for wisdom. Set to "" for the wordmark alone. */
+  --sutras-mark: "慧";
+}
+.rs[data-rs-theme="personal"] {
+  --rs-bg: var(--sd-bg); --rs-ink: var(--sd-ink); --rs-ink2: var(--sd-ink2); --rs-muted: var(--sd-muted); --rs-rule: var(--sd-rule);
+  --rs-accent: var(--sd-accent); --rs-tint: transparent;
+  --rs-text: var(--sd-text); --rs-display: var(--sd-display); --rs-ui: var(--sd-label);
+  --rs-size: var(--sd-size); --rs-size-phone: var(--sd-size-phone); --rs-lh: var(--sd-lh); --rs-measure: var(--sd-measure);
+}
+
+/* ---- site chrome: Flowershow's navbar and footer in the paper and the text face; the mark before the name ---- */
+.site-navbar, .site-navbar-inner { font-family: var(--sd-text) }
+.site-navbar-site-title { text-decoration: none }
+.site-navbar-site-name { font-size: 18px; font-weight: 400; letter-spacing: .01em; color: var(--sd-ink) }
+.site-navbar-site-name::before { content: var(--sutras-mark); font-family: var(--sd-mark); font-weight: 600; font-size: 1.2em; color: var(--sd-accent-ink); margin-right: .5em; vertical-align: -.06em }
+.site-navbar-link { font-size: 15px; color: var(--sd-muted) }
+.site-navbar-link:hover { color: var(--sd-ink) }
+.site-footer { font-family: var(--sd-text); font-size: 14px; color: var(--sd-muted) }
+.site-footer-publication-name { font-weight: 400; color: var(--sd-ink) }
+
+/* ---- the text's one image, then the title ---- */
+.sd-art { margin: 0; padding: clamp(28px, 6vw, 72px) 20px 0; display: grid; justify-items: center }
+.sd-art img { display: block; max-width: min(100%, 560px); max-height: 62vh; width: auto; height: auto; mix-blend-mode: multiply }
+.sd-art figcaption { font-family: var(--sd-text); font-style: italic; font-size: 14px; color: var(--sd-muted); margin-top: 14px; text-align: center; max-width: 36em; line-height: 1.45 }
+@media (max-width: 640px) { .sd-art { padding-top: 16px } .sd-art img { max-height: 50svh } }
+.rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: clamp(28px, 5vw, 56px) 0; text-align: center; display: grid; justify-items: center }
+.rs[data-rs-theme="personal"] .rs-head .rs-head-text { display: grid; justify-items: center; max-width: 34em }
+.rs[data-rs-theme="personal"] .rs-head .rs-kicker, .rs[data-rs-theme="personal"] .rs-head a.rs-kicker { align-self: center; font-family: var(--sd-label); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--sd-muted); font-weight: 500; text-decoration: none }
+.rs[data-rs-theme="personal"] .rs-head h1 { font-size: clamp(34px, 5vw, 50px); font-weight: 400; line-height: 1.12; margin: 14px 0 12px; font-variation-settings: "opsz" 48 }
+.rs[data-rs-theme="personal"] .rs-subtitle { font-style: italic; font-size: 1.05em; color: var(--sd-muted); margin: 0 0 14px; text-align: center }
+.rs[data-rs-theme="personal"] .rs-head .rs-attribution { font-size: .92em; line-height: 1.5; color: var(--sd-ink2); text-align: center; max-width: 26em }
+.rs[data-rs-theme="personal"] .rs-body .rs-wrap { padding-top: clamp(32px, 5vw, 64px) }
+
+/* ---- In brief: an italic paragraph with a small label, as a book's blurb; no box ---- */
+.rs[data-rs-theme="personal"] .rs-inbrief { background: none; border: 0; padding: 0; margin: 0 0 var(--rs-s5) !important; font-style: italic; font-size: 1em; color: var(--sd-ink2) }
+.rs[data-rs-theme="personal"] .rs-inbrief-label { display: inline; font-family: var(--sd-text); font-style: italic; font-size: 1em; letter-spacing: 0; text-transform: none; font-weight: 400; color: var(--sd-accent-ink); margin-right: 8px }
+.rs[data-rs-theme="personal"] .rs-inbrief-label::after { content: "." }
+.rs[data-rs-theme="personal"] .rs-inbrief em { font-style: normal }
+
+/* ---- headings, numbers, notes: the apparatus carries the red ---- */
+.rs[data-rs-theme="personal"] .rs-text h2 { font-size: 1.5em; font-weight: 400; font-style: italic; margin-top: var(--rs-s6) }
+.rs[data-rs-theme="personal"] .rs-text h3 { font-weight: 400 }
+.rs[data-rs-theme="personal"] .rs-verse a.v, .rs[data-rs-theme="personal"] .rs-passages a.v { color: var(--sd-accent-ink); opacity: .85; font-family: var(--sd-text); font-variant-numeric: oldstyle-nums; font-size: .78em }
+.rs[data-rs-theme="personal"] .rs-sn-ref, .rs[data-rs-theme="personal"] .rs-sn-n { color: var(--sd-accent-ink) }
+.rs[data-rs-theme="personal"] .rs-sn-note { color: var(--sd-ink2) }
+.rs[data-rs-theme="personal"] .rs-text mark.nt-mark { background: none; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--sd-accent) 55%, transparent); text-decoration-thickness: 1px; text-underline-offset: .18em }
+.rs[data-rs-theme="personal"] .rs-text mark.nt-mark.nt-active { background: none; text-decoration-color: var(--sd-accent-ink) }
+.rs[data-rs-theme="personal"] .rs-text p.nt-switch { font-family: var(--sd-text); font-style: italic; font-size: .85em }
+.rs[data-rs-theme="personal"] .rs-text .rs-signed { color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] a, .rs[data-rs-theme="personal"] .rs-text a { color: var(--sd-ink); text-decoration-color: color-mix(in srgb, var(--sd-accent) 50%, transparent) }
+.rs[data-rs-theme="personal"] .rs-text hr::before { content: "·  ·  ·"; letter-spacing: .2em; color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] :is(.rs-first, .rs-text h2 + p:not(.rs-inbrief), .rs-text h2 + .rs-inbrief + p)::first-line { font-variant: normal; letter-spacing: 0 }
+.rs[data-rs-theme="personal"] .rs-text h3.koan-title .koan-num { font-family: var(--sd-text); font-style: italic; font-size: .9em; letter-spacing: 0; text-transform: none; color: var(--sd-accent-ink); font-weight: 400 }
+.rs[data-rs-theme="personal"] .rs-btn { font-family: var(--sd-text); border-color: var(--sd-rule); color: var(--sd-ink) !important }
+.rs[data-rs-theme="personal"] .rs-btn.rs-primary { color: var(--sd-accent-ink) !important; border-color: var(--sd-accent-ink) }
+
+/* ---- home: the shelf, Kaikado's row (README.md, .rs-home) ---- */
+.rs-home .rs-head .rs-wrap { text-align: left; justify-items: start }
+.rs-home .rs-head .rs-head-text { justify-items: start; max-width: none }
+.rs-home .rs-head .rs-kicker { align-self: start }
+.rs-home .rs-text > h2, .rs-home .rs-text .rs-shelf h2 { font-family: var(--sd-text); font-style: italic; font-weight: 400; font-size: 1.1em; letter-spacing: 0; text-transform: none; color: var(--sd-muted); margin: var(--rs-s6) 0 var(--rs-s3) }
+.rs-home .rs-text .rs-shelf:first-of-type h2 { margin-top: 0 }
+.rs-home .rs-shelf ul.sd-shelf, .sd-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px); align-items: start; max-width: none }
+.sd-shelf li { min-width: 0; margin: 0; display: grid; gap: 10px }
+.sd-shelf li a { color: var(--sd-ink); text-decoration: none; display: grid; gap: 10px }
+.sd-shelf .sd-thumb { width: 100%; max-width: 190px; aspect-ratio: 4 / 5; object-fit: cover; display: block; filter: saturate(.9); mix-blend-mode: multiply }
+.sd-shelf h3 { font-family: var(--sd-display); font-weight: 400; font-size: 1.15em; line-height: 1.25; margin: 0 }
+.sd-shelf .rs-quiet, .sd-shelf .sd-by { font-size: .82em; color: var(--sd-muted); line-height: 1.4; margin: 0 }
+.sd-shelf .sd-line { font-size: .92em; color: var(--sd-ink2); line-height: 1.45; margin: 0 }
+.sd-shelf li a:hover h3 { color: var(--sd-accent-ink) }
+.rs-home .rs-body .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
+.rs-home .rs-text { grid-column: 1 !important }
+.rs-home .rs-text > :not(.rs-shelf) { max-width: var(--sd-measure) }
+@media (max-width: 640px) { .sd-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px } .sd-shelf .sd-thumb { max-width: 150px } }
