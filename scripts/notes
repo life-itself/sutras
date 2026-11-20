@@ -44,10 +44,11 @@ FOLD = {"‘": "'", "’": "'", "‚": "'", "′": "'", "“": '"', "”": '"', 
 
 def fold(s):
     """Quotes straight, every dash a hyphen and a run of them one (Flowershow turns -- into a dash),
-    an ellipsis three dots (Flowershow turns ... into one), whitespace one space."""
+    an ellipsis three dots (Flowershow turns ... and . . . into one), whitespace one space."""
     s = "".join(FOLD.get(c, c) for c in s)
     s = re.sub(r"-+", "-", s)
-    return re.sub(r"\s+", " ", s)
+    s = re.sub(r"\s+", " ", s)
+    return re.sub(r"\. (?=\.)", ".", s)     # ". . ." is "...": Flowershow makes both an ellipsis
 
 
 # ---------- the text of a page, as a reader sees it ----------

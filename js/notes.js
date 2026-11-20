@@ -36,7 +36,7 @@
   }
 
   // ---------- the page's text, as matched ----------
-  // Same folding as scripts/notes: quotes, dashes (a run of them is one), ellipsis, whitespace.
+  // Same folding as scripts/notes: quotes, dashes (a run of them is one), ellipses (… and . . . are ...), whitespace.
   var FOLD = { "‘": "'", "’": "'", "‚": "'", "′": "'", "“": '"', "”": '"', "„": '"', "″": '"',
     "‐": "-", "‑": "-", "‒": "-", "–": "-", "—": "-", "―": "-", "−": "-", "…": "..." };
   function folder() {
@@ -47,6 +47,7 @@
       for (var k = 0; k < c.length; k++) {
         if (c[k] === " " && !f.s) continue;
         if ((c[k] === " " || c[k] === "-") && f.s[f.s.length - 1] === c[k]) continue;
+        if (c[k] === "." && f.s.slice(-2) === ". ") { f.s = f.s.slice(0, -1); f.at.pop(); } // ". . ." is "..."
         f.s += c[k]; f.at.push(pos);
       }
     };
