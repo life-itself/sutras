@@ -8,4 +8,6 @@ Date: 2026-11-20. Decided by Rufus ("we need a library location where we commit 
 
 **State on the day.** The private repo exists and holds a copy of everything that was in `library/` here, plus the two EPUBs Rufus supplied. `library/` is still in the public repo until the scripts are changed to read from the private checkout (bead under the Site epic). Whole-book PDFs already pushed here remain in this repo's git history until Rufus OKs rewriting it.
 
+**Done, 2026-11-20 (site track):** `library/` is out of the public repo (d9f0659). The private repo already held every source file; `library/tools` moved to its `tools/epub-editions`. `scripts/compare-source` reads `SUTRAS_LIBRARY` (default `../sutras-library`). Each edition's notes are public in `docs/editions/<slug>.md`. History not rewritten.
+
 **Later.** If Sutras moves under a wider Open Literature home, this becomes that project's library.
