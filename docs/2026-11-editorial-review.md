@@ -74,7 +74,7 @@ Does badly: no sentence on why read it beyond Hays's two themes; "Hays says", "H
 
 ## 3. Facts checked
 
-Checked 2026-11-20 against (a) the sources in the private library checkout and `library/<slug>/` (the translators' own introductions, prefaces and commentaries, read in the edition files or the source copies), (b) each edition's `NOTES.md`, which already lists where each fact came from, and (c) online references read by a fact-checking subagent (English Wikipedia first, then a second source: Open Library, Library of Congress, Dharma Drum, Tricycle, Bodleian, Oxford Research Archive, Access to Insight, dhammatalks.org, BMCR, the Internet Encyclopedia of Philosophy, Publishers Weekly). "Local" below means read in this repo; "web" means the subagent read the page named.
+Checked 2026-11-20 against (a) the sources in the private library checkout (`~/src/life-itself/sutras-library/<slug>/`, which now holds what was `library/<slug>/`) (the translators' own introductions, prefaces and commentaries, read in the edition files or the source copies), (b) each edition’s notes (`docs/editions/<slug>.md`, formerly `library/<slug>/NOTES.md`), which already list where each fact came from, and (c) online references read by a fact-checking subagent (English Wikipedia first, then a second source: Open Library, Library of Congress, Dharma Drum, Tricycle, Bodleian, Oxford Research Archive, Access to Insight, dhammatalks.org, BMCR, the Internet Encyclopedia of Philosophy, Publishers Weekly). "Local" below means read in this repo; "web" means the subagent read the page named.
 
 | Claim | Where it is | Verdict | Source read |
 |---|---|---|---|
@@ -213,4 +213,13 @@ Chosen 2026-11-20, three to eight a text, each quoted verbatim and checked by `s
 
 ## 5. Review page for Rufus
 
-(URL to be added.)
+One page with the eight in-briefs and introductions one after another, each with a link to its live page and two or three questions for his judgement, plus five questions across the set (voice, highlights on by default, reading time, names, the doubt formula): https://claude.ai/artifact/TW7s6He6k9Ex5fynwzfCqU (private artifact; regenerate with the script noted on the needs-rufus bead if the introductions change). Bead: see `bd list --label needs-rufus`.
+
+## 6. Decisions taken without Rufus (reversible)
+
+- Introductions keep the editorial "we" and the signature line; his voice is the margin notes.
+- Editors' highlights show on every text by default, marked ※ and signed "Editors", as notes data in `annotations/<slug>.yaml`; Meditations' are held back until he says whether that text stays his alone.
+- The time to read replaces word counts in every in brief.
+- Each page follows its translator's romanisation, pinyin in brackets at first mention.
+- Sources for facts in an introduction are named in one sentence under Source and licence ("… are from Wikipedia; … from his preface. Each is listed in the edition notes"), since the critic could not otherwise see where a date came from.
+- Meditations is untouched until its session ends; its proposed introduction changes are in the review page's questions.

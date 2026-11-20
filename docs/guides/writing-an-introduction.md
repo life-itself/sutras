@@ -34,7 +34,7 @@ Sign it: `<p class="rs-signed">Editors’ introduction, drafted with an AI assis
 
 ## Facts
 
-Every date, name and attribution comes from a source you have read: the translator's own introduction or notes (the best source, since it is on the page), the book's front matter, or a reference you fetched and recorded in `library/<slug>/NOTES.md` under "Facts and where each comes from". Never from memory. Things that went wrong in the first eight and were caught on review:
+Every date, name and attribution comes from a source you have read: the translator's own introduction or notes (the best source, since it is on the page), the book's front matter, or a reference you fetched and recorded in `docs/editions/<slug>.md` (the public edition notes; the sources themselves are in the private sutras-library checkout) under "Facts and where each comes from". Never from memory. Things that went wrong in the first eight and were caught on review:
 
 - A name copied from a web page with a typo in it ("Ruth Stout McCandless" for Strout). Check names against a catalogue.
 - A claim stronger than its source ("dropped out of the Chinese canon" when the source said the canon stopped including it; "first printed in a book for chanting" when the source said it was later reprinted in one).
@@ -51,7 +51,7 @@ Every quotation is verbatim from the text on the page or from a named source, an
 ## Process
 
 1. Read the whole text, and the translator's introduction and notes.
-2. Draft the in brief and introduction to the shape above. Record every fact's source in `NOTES.md` as you go.
+2. Draft the in brief and introduction to the shape above. Record every fact’s source in `docs/editions/<slug>.md` as you go.
 3. Have a fresh subagent critique it with the brief and this guide in hand: voice, missing elements, unsupported facts, quotations checked by grep. Apply what is right.
 4. `scripts/check`, ship, read it on the live page at phone width.
 5. When Rufus edits it, keep his edit and note what changed here.
