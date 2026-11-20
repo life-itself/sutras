@@ -93,7 +93,8 @@
 .rs-text details.koan-contents { margin: 0 0 var(--rs-s4); font-family: var(--rs-text) }
 .rs-text details.koan-contents summary { cursor: pointer; color: var(--rs-muted); font-style: italic }
 .rs-text details.koan-contents summary:hover { color: var(--rs-accent) }
-.rs-text ol.koan-toc { margin: var(--rs-s2) 0 0; padding-left: 2em; font-size: .9em; line-height: 1.45 }
+.rs-text ol.koan-toc { margin: var(--rs-s2) 0 0; padding-left: 2em; font-size: .9em; line-height: 1.45; list-style: decimal outside }
+.rs-text ol.koan-toc li::marker { color: var(--rs-muted); font-variant-numeric: lining-nums; font-size: .9em }
 .rs-text ol.koan-toc li { margin: 0 0 .15em; break-inside: avoid }
 .rs-text ol.koan-toc a { color: var(--rs-ink2); text-decoration: none }
 .rs-text ol.koan-toc a:hover { color: var(--rs-accent) }
