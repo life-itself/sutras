@@ -18,6 +18,12 @@ Start with `git pull` and `bd ready`. The map of the work is `docs/plans/2026-11
 
 Use Beads (`bd`) for all tasks; no TODO lists in Markdown. `git push` also pushes Beads (pre-push hook runs `bd dolt push`).
 
+## Changelog
+
+At session end, only log new features or significant reader-facing changes (behaviour, fixes to materially broken functionality, or public content). Skip polish, tidying, and small fixes as standalone entries; include them only as supporting detail in a larger feature or release announcement that qualifies on its own. Planning/research/design must itself be a significant public deliverable. When unsure, skip.
+
+Use `changelog/YYYY-MM-DD-slug.md` with `date`/`title`/`promote` frontmatter: a plain-text title, one or two reader-facing sentences, a live link where available, and consider a screenshot for visual work. Substantial announcements can use paragraphs or bullets. Omit internal implementation detail. For the first entry or when the format is unclear, fetch and follow https://raw.githubusercontent.com/life-itself/changelog/main/CONVENTION.md Entries live in `changelog/` (published at /changelog); the weekly roll-up into Rufus's central changelog (rufuspollock.com/changelog) is done from the planning repo.
+
 ## Publishing
 
 `README.md` is the home page. `config.json` `contentExclude` keeps `docs/`, `.beads/`, `AGENTS.md` and `CLAUDE.md` off the live site. Don't publish new top-level folders without checking that list. `yogins-of-ladakh.md` is an untracked source dump with unclear copyright: don't commit or publish it.
