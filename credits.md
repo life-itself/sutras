@@ -1,6 +1,6 @@
 ---
 title: Credits
-description: "The images and typefaces used on Sutras, with their sources and licences."
+description: "The images used on Sutras, with their sources and licences."
 layout: plain
 syntaxMode: md
 ---
@@ -11,7 +11,7 @@ syntaxMode: md
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Each text has one image, an old painting, print or page in the public domain, toned in the site’s two inks. They are listed here rather than on the pages. The typefaces follow.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Each text has one image, an old painting, print or page in the public domain, toned in the site’s two inks. They are listed here rather than on the pages.</p>
 
 ## Images
 
@@ -29,15 +29,6 @@ syntaxMode: md
 
 The images are shown toned in slate or coral and cropped; the originals are at the sources above. None of their licences asks for a credit beside the image.
 
-## Typefaces
-
-<ul class="cr-list">
-<li><p class="cr-text">Polyamine</p><p>Titles. Used under licence by Life Itself.</p></li>
-<li><p class="cr-text">Restora</p><p>Subtitles, verse and headings. By Nasir Udin. Used under licence by Life Itself.</p></li>
-<li><p class="cr-text">Bricolage Grotesque</p><p>Reading text. By Mathieu Triay, from Google Fonts, under the SIL Open Font License.</p></li>
-<li><p class="cr-text">Apfel Grotezk</p><p>Labels. By Luigi Gorlero, published by <a href="https://collletttivo.it">Collletttivo</a>.</p></li>
-<li><p class="cr-text">Noto Serif TC</p><p>Chinese. From Google Fonts, under the SIL Open Font License.</p></li>
-</ul>
 
 </article></div></div>
 </div>

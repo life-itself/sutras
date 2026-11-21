@@ -72,3 +72,6 @@ a.footnote-back { text-decoration: none; font-variant-numeric: oldstyle-nums; }
 /* the contents page keeps its own look */
 nav#toc ol { list-style: none; padding-left: 0; }
 nav#toc ol ol { padding-left: 1.2em; }
+
+/* no photo credits in the book either: the caption is the image's description, kept as its alt text only */
+figure.frontispiece figcaption { display: none; }

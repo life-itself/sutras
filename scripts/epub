@@ -101,8 +101,11 @@ def to_book(slug, meta, body):
     body = re.sub(r"(?s)<nav class=\"rs-rail\".*?</nav>\n?", "", body)  # web contents rail; the book has its own
     # the image above the title becomes the frontispiece: a Markdown figure, so Pandoc packages the file
     # (assets/images/<slug>.jpg); frontispiece() then moves it onto the title page
-    body = re.sub(r'(?m)^<figure class="sd-art"><img src="/([^"]+)"[^>]*><figcaption>(.*?)</figcaption></figure>$',
-                  lambda m: "\n![%s](%s){.frontispiece}\n" % (re.sub(r"</?i>", "*", m.group(2)), m.group(1)), body)
+    # (assets/images/<slug>.jpg). The site shows no photo credits (Rufus, 2026-11-21; they are on /credits), so the
+    # figure has only alt text; it becomes the Markdown caption, which Pandoc also uses as the image's alt, and
+    # epub.css hides the visible caption.
+    body = re.sub(r'(?m)^<figure class="sd-art"><img src="/([^"]+)" alt="([^"]*)"[^>]*>(?:<figcaption>(.*?)</figcaption>)?</figure>$',
+                  lambda m: "\n![%s](%s){.frontispiece}\n" % (re.sub(r"</?i>", "*", m.group(3) or m.group(2) or "Frontispiece"), m.group(1)), body)
     # in brief and signature: keep the words, drop the web classes
     body = re.sub(r'<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> (.*?)</p>', r'<p class="inbrief"><span class="label">In brief.</span> \1</p>', body)
     body = body.replace('<p class="rs-signed">', '<p class="signed">')
