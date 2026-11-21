@@ -17,7 +17,7 @@ scripts:
   - /js/notes.js
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/dhammapada.jpg" alt="" width="640" height="800"><figcaption>A printed sutra page, Song dynasty, detail. Public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Early Buddhism · verses</span>
@@ -25,7 +25,7 @@ scripts:
 <p class="rs-subtitle">The verses of the Dhamma, from the Pāli</p>
 <p class="rs-attribution">Verses attributed to the Buddha<br />Translated by Thanissaro Bhikkhu</p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> 423 short verses attributed to the Buddha, in 26 chapters, from the Pāli Canon. Complete in Thanissaro Bhikkhu’s translation, with his notes at the verses they discuss. Two hours straight through, though it is made for a verse at a time.</p>
 
@@ -39,7 +39,7 @@ Thanissaro Bhikkhu (Geoffrey DeGraff), a monk at Metta Forest Monastery in Calif
 
 Read it a verse at a time, a chapter in a sitting. The translator’s notes sit at the verses they discuss and can wait; his introduction and historical notes follow the text. The one note of ours says only where his end notes have gone. The other Buddhist verse in this library is Ch’an: *[Faith in Mind](/faith-in-mind)* and the [Shodoka](/shodoka).
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The verses
 

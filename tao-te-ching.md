@@ -16,7 +16,7 @@ scripts:
   - /js/edition.js
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/tao-te-ching.jpg" alt="" width="900" height="568"><figcaption>Ma Yuan, <i>Walking on a Mountain Path in Spring</i>, Southern Song, album leaf. National Palace Museum, Taipei, public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Taoism · a classic</span>
@@ -24,7 +24,7 @@ scripts:
 <p class="rs-subtitle">The Tao and its Characteristics <span lang="zh">道德經</span></p>
 <p class="rs-attribution">Attributed to Laozi<br>Translated by James Legge</p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A short classic of Taoism in 81 chapters. Tradition gives it to Laozi, though that has been doubted. Complete, in James Legge’s 1891 translation, with a Chinese text under each chapter. About forty minutes straight through; a chapter at a time is enough.</p>
 
@@ -38,7 +38,7 @@ Legge made this translation for the *Sacred Books of the East*. His text was tha
 
 Read a chapter at a time, aloud if you can. The Chinese under each chapter comes from Project Gutenberg, which does not say what edition it follows, so it may differ here and there from the text Legge translated. The [comparison page](/tao-te-ching-compared) sets other translations beside his for five chapters, among them short samples of modern ones, Red Pine’s first.
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The chapters
 

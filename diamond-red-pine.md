@@ -17,7 +17,7 @@ scripts:
   - /js/notes.js
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/diamond-red-pine.jpg" alt="" width="720" height="829"><figcaption>A sutra from the Jingoji canon, late Heian period, gold and silver on indigo, detail. Public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Mahayana · a sutra</span>
@@ -25,7 +25,7 @@ scripts:
 <p class="rs-subtitle">The Perfection of Wisdom<br><i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
 <p class="rs-attribution">Translated by Red Pine<br>Also in this library: <a href="/diamond">Thich Nhat Hanh’s translation</a></p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to set out on the path to awakening: free all beings, and cling to nothing, not even the teaching. Complete, all 32 chapters, in Red Pine’s translation from the Sanskrit; about forty minutes to read.</p>
 
@@ -37,7 +37,7 @@ Red Pine is the pen name of Bill Porter (born 1943), an American translator of C
 
 He writes that it “can be read in half an hour”. Read it once straight through, aloud if you can, since its meaning, he says, “still depended on its poetry”; then a chapter at a time. The five notes are ours, mostly quoting his commentary. The two translations use the same 32 chapters, so [/diamond-red-pine#14](/diamond-red-pine#14) and [/diamond#14](/diamond#14) are the same passage.
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The sutra
 

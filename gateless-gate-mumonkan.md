@@ -18,7 +18,7 @@ scripts:
   - /js/notes.js
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-layout="parallel" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/gateless-gate-mumonkan.jpg" alt="" width="640" height="854"><figcaption>Hakuin Ekaku, <i>Virtue</i> (悳), 18th century, detail. Metropolitan Museum of Art, CC0.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Zen · koans</span>
@@ -26,7 +26,7 @@ scripts:
 <p class="rs-subtitle">Mumonkan <span lang="zh">無門關</span></p>
 <p class="rs-attribution">Forty-eight cases, with comments and verses by Wumen Huikai (Mumon Ekai)<br />Translated by Katsuki Sekida</p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> 48 Zen koans, short records of what teachers said and did, each followed by a comment and a four-line verse from the Chinese master Wumen (Mumon in Japanese), who gathered them in 1228. Still used in Rinzai Zen training. Complete, in Katsuki Sekida’s translation, with the Chinese; an hour or two to read through, though it is made for one case at a time.</p>
 
@@ -40,7 +40,7 @@ After the Southern Song the Chinese Buddhist canon left the book out, but Mumon�
 
 Mumon does not explain the cases. His advice, in his postscript: “Your direct realization is demanded; it should not be sought through others.” An hour or two would take you straight through, but one way to read them is one case at a time, the comment and verse with it, and then to leave it alone for a day. The Chinese follows each part. The three notes are ours.
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The text
 

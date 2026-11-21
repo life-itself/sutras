@@ -5,7 +5,7 @@ layout: plain
 syntaxMode: md
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/tao-te-ching.jpg" alt="" width="900" height="568"><figcaption>Ma Yuan, <i>Walking on a Mountain Path in Spring</i>, Southern Song, album leaf. National Palace Museum, Taipei, public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Taoism · translations compared</span>
@@ -13,7 +13,7 @@ syntaxMode: md
 <p class="rs-subtitle">Old and new translations of five chapters</p>
 <p class="rs-attribution">Chapters 1, 8, 11, 33 and 76. Read with <a href="/tao-te-ching">the edition</a>.</p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The same 5 chapters in 5 public-domain translations, one after another, and short samples of 6 modern translations, Red Pine’s first. Legge is the edition. The modern ones are in copyright, so each is quoted for 1 chapter only (Red Pine for 2).</p>
 

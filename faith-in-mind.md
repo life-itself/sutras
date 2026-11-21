@@ -17,7 +17,7 @@ scripts:
   - /js/notes.js
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/faith-in-mind.jpg" alt="" width="800" height="1237"><figcaption>Sesshū Tōyō, <i>Haboku Sansui</i>, 1495. Tokyo National Museum, public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Zen · a poem</span>
@@ -25,7 +25,7 @@ scripts:
 <p class="rs-subtitle">Hsin Hsin Ming <span lang="zh">信心銘</span></p>
 <p class="rs-attribution">Attributed to Seng Ts’an, Third Patriarch of Ch’an<br>Translated by Master Sheng-yen, with Paul Kennedy</p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A short Ch’an (Zen) poem on the mind that does not pick and choose. Tradition gives it to Seng Ts’an, the Third Patriarch, though he probably did not write it. Complete, in Master Sheng-yen’s translation; ten minutes to read, though Sheng-yen taught from it only on retreat.</p>
 
@@ -39,7 +39,7 @@ Sheng-yen, whose translation this is, did not comment on it as a scholar. He spo
 
 His own introduction follows the poem. The *Song of Enlightenment* is also in this library, as the [Shodoka](/shodoka).
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The poem
 

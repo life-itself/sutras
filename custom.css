@@ -7,7 +7,8 @@
 @import url("/css/home.css");
 /* The design direction: one line selects it, and it must stay the last import so it wins (decision 0005).
    Remove it for the stand-in look (EB Garamond on the personal theme); swap the file to try another direction. */
-@import url("/css/direction-a.css");
+@import url("/css/direction-seeds.css");
+/* previous look (direction A, decision 0005): @import url("/css/direction-a.css"); */
 
 /* The reading system under Flowershow's sticky navbar */
 .rs { --rs-sticky-top: var(--navbar-height, 4rem) }

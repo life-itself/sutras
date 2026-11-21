@@ -1,0 +1,156 @@
+/* Sutras · design round 2, "Red Pine in the Seeds faces". Decision 0006 (docs/decisions/0006-red-pine-seeds.md).
+   Loaded by the last @import in custom.css, after css/reading.css; swap that line back to direction-a.css for the
+   previous look. Sample site and builder: docs/design/round2/.
+
+   The look: Emergence Magazine's Red Pine poem page. Every word in slate blue on grey paper; images toned in
+   slate or coral (assets/images, toned on white so the multiply blend leaves the page's own paper); titles in
+   Polyamine, the poetic voice (subtitles, verse, numbers, chapter heads) in Restora, reading text in Bricolage
+   Grotesque, labels in Apfel Grotezk capitals. The apparatus (note marks, the label, the current place in the
+   contents) is coral. A contents rail on the left marks where you are; notes hang in the right margin.
+   The mark: 道, the Way, in a square stamp line. */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Noto+Serif+TC:wght@300;400;600&display=swap");
+
+@font-face { font-family: "Polyamine"; src: url("/assets/fonts/Polyamine-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap }
+@font-face { font-family: "Restora"; src: url("/assets/fonts/Restora-ExtraLight.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap }
+@font-face { font-family: "Restora"; src: url("/assets/fonts/Restora-ThinItalic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap }
+@font-face { font-family: "Apfel Grotezk"; src: url("/assets/fonts/ApfelGrotezk-Regular.otf") format("opentype"); font-weight: 400; font-display: swap }
+@font-face { font-family: "Apfel Grotezk"; src: url("/assets/fonts/ApfelGrotezk-Mittel.otf") format("opentype"); font-weight: 500; font-display: swap }
+
+/* ---- tokens ---- */
+:root {
+  --sd-bg: #ece9e4; --sd-ink: #3c586b; --sd-ink2: #4b687b; --sd-muted: #7c919d; --sd-rule: #c9d3d9; --sd-slate: #5a7a8f;
+  --sd-accent: #ee8a70; --sd-accent-ink: #c45a3e; --sd-hair: #e4b5a3; --sd-wash: #e5e1db;
+  --sd-title: "Polyamine", Georgia, serif; --sd-voice: "Restora", Georgia, serif; --sd-text: "Bricolage Grotesque", system-ui, sans-serif;
+  --sd-label: "Apfel Grotezk", system-ui, sans-serif; --sd-mark: "Noto Serif TC", serif;
+  --sutras-mark: "道";
+}
+.rs[data-rs-theme="personal"] {
+  --rs-bg: var(--sd-bg); --rs-ink: var(--sd-ink); --rs-ink2: var(--sd-ink2); --rs-muted: var(--sd-muted); --rs-rule: var(--sd-rule);
+  --rs-accent: var(--sd-accent-ink); --rs-tint: var(--sd-wash);
+  --rs-text: var(--sd-text); --rs-display: var(--sd-voice); --rs-ui: var(--sd-label);
+  --rs-size: 18.5px; --rs-size-phone: 17.5px; --rs-lh: 1.62; --rs-measure: 36em; --rs-margin: 220px; --rs-rail-w: 200px; --rs-gap: 52px;
+  font-optical-sizing: auto;
+}
+
+/* ---- site chrome: name in Polyamine, the mark in a stamp ---- */
+.site-navbar, .site-navbar-inner { font-family: var(--sd-label) }
+.site-navbar-site-title { text-decoration: none }
+.site-navbar-site-name { font-family: var(--sd-title); font-size: 20px; font-weight: 400; letter-spacing: .01em; color: var(--sd-slate); display: inline-flex; align-items: center }
+.site-navbar-site-name::before { content: var(--sutras-mark); display: inline-grid; place-items: center; width: 1.55em; height: 1.55em; border: 1.5px solid var(--sd-accent-ink); border-radius: 2px; font-family: var(--sd-mark); font-weight: 400; font-size: 15px; line-height: 1; color: var(--sd-accent-ink); margin-right: .6em }
+.site-navbar-link { font-size: 15px; color: var(--sd-slate) }
+.site-navbar-link:hover { color: var(--sd-accent-ink) }
+.site-footer { font-family: var(--sd-label); font-size: 14px; color: var(--sd-muted) }
+.site-footer-publication-name { font-family: var(--sd-title); font-weight: 400; color: var(--sd-slate) }
+
+/* ---- the head: the toned picture, the label, the title, the voice ---- */
+.sd-art { margin: 0; padding: clamp(24px, 4vw, 48px) 20px 0; display: grid; justify-items: center; max-width: 100% }
+.sd-art img { display: block; max-width: min(100%, 460px); max-height: 50vh; width: auto; height: auto; mix-blend-mode: multiply }
+.sd-art figcaption { font-family: var(--sd-text); font-size: 12.5px; color: var(--sd-muted); margin-top: 10px; text-align: center; max-width: min(36em, 100%); line-height: 1.4; overflow-wrap: anywhere }
+@media (max-width: 640px) { .sd-art { padding: 16px 16px 0 } .sd-art img { max-height: 40svh } }
+.rs[data-rs-theme="personal"] .rs-head .rs-wrap { padding-block: clamp(18px, 3vw, 32px) 0; text-align: center; display: grid; justify-items: center; grid-template-columns: minmax(0, 1fr) }
+.rs[data-rs-theme="personal"] .rs-head .rs-head-text { display: grid; justify-items: center; max-width: min(40em, 100%); min-width: 0; grid-column: 1 }
+.rs[data-rs-theme="personal"] .rs-head .rs-kicker, .rs[data-rs-theme="personal"] .rs-head a.rs-kicker { align-self: center; font-family: var(--sd-label); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--sd-slate); font-weight: 500; text-decoration: none }
+.rs[data-rs-theme="personal"] .rs-head h1 { font-family: var(--sd-title); font-size: clamp(40px, 5.6vw, 76px); font-weight: 400; line-height: 1; letter-spacing: 0; margin: 4vh 0 10px; color: var(--sd-slate); max-width: 14ch; text-wrap: balance }
+.rs[data-rs-theme="personal"] .rs-subtitle { font-family: var(--sd-voice); font-weight: 300; font-size: clamp(24px, 2.8vw, 36px); line-height: 1.15; color: var(--sd-slate); margin: 0 0 16px; text-align: center }
+.rs[data-rs-theme="personal"] .rs-subtitle :lang(zh) { font-family: var(--sd-mark); font-weight: 300; font-size: .7em; letter-spacing: .3em; color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] .rs-head .rs-attribution { font-family: var(--sd-text); font-size: 16px; line-height: 1.5; color: var(--sd-ink2); text-align: center; max-width: min(30em, 100%); overflow-wrap: anywhere }
+.rs[data-rs-theme="personal"] .rs-body .rs-wrap { padding-top: clamp(40px, 6vw, 72px) }
+
+/* ---- In brief: the standfirst ---- */
+.rs[data-rs-theme="personal"] .rs-inbrief { background: none; border: 0; padding: 0; margin: 0 0 var(--rs-s5) !important; font-size: 1.12em; line-height: 1.5; color: var(--sd-slate) }
+.rs[data-rs-theme="personal"] .rs-inbrief-label { display: block; font-family: var(--sd-label); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--sd-accent-ink); margin: 0 0 8px }
+.rs[data-rs-theme="personal"] .rs-inbrief em { font-style: italic }
+
+/* ---- headings: Polyamine for parts, Restora for chapters and cases ---- */
+.rs[data-rs-theme="personal"] .rs-text h2 { font-family: var(--sd-title); font-size: 2em; font-weight: 400; font-style: normal; line-height: 1.08; color: var(--sd-slate); margin-top: var(--rs-s6) }
+.rs[data-rs-theme="personal"] .rs-text h3 { font-family: var(--sd-voice); font-weight: 300; font-size: 1.75em; line-height: 1.12; color: var(--sd-slate) }
+.rs[data-rs-theme="personal"] .rs-text h4 { font-family: var(--sd-text); font-weight: 600; color: var(--sd-slate) }
+
+/* ---- verse in the poetic voice; prose in Bricolage ---- */
+.rs[data-rs-theme="personal"] .rs-verse p { font-family: var(--sd-voice); font-weight: 360; font-size: 1.14em; line-height: 1.52; color: var(--sd-ink) }
+.rs[data-rs-theme="personal"] .rs-text .rs-gatha, .rs[data-rs-theme="personal"] .rs-text p.rs-gatha { font-family: var(--sd-voice); font-weight: 360; font-size: 1.08em }
+.rs[data-rs-theme="personal"] .rs-verse a.v, .rs[data-rs-theme="personal"] .rs-passages a.v { color: var(--sd-slate); font-family: var(--sd-voice); font-weight: 300; font-variant-numeric: lining-nums; font-size: 1.15em; opacity: 1 }
+.rs[data-rs-theme="personal"] .rs-verse a.v:hover, .rs[data-rs-theme="personal"] .rs-verse a.v:target, .rs[data-rs-theme="personal"] .rs-passages a.v:hover, .rs[data-rs-theme="personal"] .rs-passages a.v:target { color: var(--sd-accent-ink) }
+@container rs (min-width: 760px) {
+  .rs[data-rs-theme="personal"] .rs-verse a.v, .rs[data-rs-theme="personal"] .rs-passages a.v { left: -3em; width: 2.4em; top: .05em }
+}
+.rs[data-rs-theme="personal"] .rs-text p.orig, .rs[data-rs-theme="personal"] .rs-text .orig { color: var(--sd-slate); border-left-color: var(--sd-hair) }
+
+/* ---- notes in the margin: slate text, coral numbers ---- */
+.rs[data-rs-theme="personal"] .rs-sn-ref, .rs[data-rs-theme="personal"] .rs-sn-n { color: var(--sd-accent-ink); font-family: var(--sd-label) }
+.rs[data-rs-theme="personal"] .rs-sn-note { font-family: var(--sd-text); font-size: 14px; line-height: 1.5; color: var(--sd-slate) }
+.rs[data-rs-theme="personal"] .rs-text mark.nt-mark { background: none; text-decoration: underline; text-decoration-color: var(--sd-accent); text-decoration-thickness: 1.5px; text-underline-offset: .22em }
+.rs[data-rs-theme="personal"] .rs-text mark.nt-mark.nt-active { background: none; text-decoration-color: var(--sd-accent-ink) }
+.rs[data-rs-theme="personal"] .rs-text p.nt-switch { font-family: var(--sd-label); font-size: 13px; letter-spacing: .02em; color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] .rs-text .rs-signed { color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] a, .rs[data-rs-theme="personal"] .rs-text a { color: inherit; text-decoration-color: var(--sd-hair) }
+.rs[data-rs-theme="personal"] .rs-text a:hover { text-decoration-color: var(--sd-accent-ink) }
+.rs[data-rs-theme="personal"] .rs-text hr::before { content: ""; display: block; width: 90px; height: 1px; background: var(--sd-hair); margin: 0 auto }
+.rs[data-rs-theme="personal"] .rs-text blockquote p { font-family: var(--sd-voice); font-style: normal; font-weight: 350; font-size: 1.05em; color: var(--sd-slate) }
+.rs[data-rs-theme="personal"] .rs-btn { font-family: var(--sd-label); border-color: var(--sd-rule); color: var(--sd-slate) !important }
+.rs[data-rs-theme="personal"] .rs-btn.rs-primary { color: var(--sd-accent-ink) !important; border-color: var(--sd-accent-ink) }
+.rs[data-rs-theme="personal"] :is(.rs-first, .rs-text h2 + p:not(.rs-inbrief), .rs-text h2 + .rs-inbrief + p)::first-line { font-variant: normal; letter-spacing: 0 }
+
+/* ---- the contents rail, after LessWrong's: a quiet list, the current place marked in coral ---- */
+.rs[data-rs-theme="personal"] .rs-rail-label { font-family: var(--sd-title); font-size: 16px; font-weight: 400; letter-spacing: .01em; text-transform: none; color: var(--sd-slate); margin-bottom: 12px }
+.rs[data-rs-theme="personal"] .rs-rail { scrollbar-width: none }
+.rs[data-rs-theme="personal"] .rs-rail .rs-toc { font-family: var(--sd-text); font-size: 13.5px; line-height: 1.3; gap: 0; border-left: 1px solid var(--sd-rule) }
+.rs[data-rs-theme="personal"] .rs-rail .rs-toc li a { display: block; padding: 4px 0 4px 14px; margin-left: -1px; border-left: 1px solid transparent; color: var(--sd-ink) }
+.rs[data-rs-theme="personal"] .rs-rail .rs-toc li.rs-l3 a { padding: 2px 0 2px 24px; font-size: 13px; color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] .rs-rail .rs-toc li.rs-active a { color: var(--sd-ink); border-left-color: var(--sd-accent-ink) }
+.rs[data-rs-theme="personal"] .rs-rail .rs-toc a:hover { color: var(--sd-accent-ink) }
+
+/* ---- koans: the case number large in Restora, the parts labelled in coral ---- */
+.rs[data-rs-theme="personal"] .rs-text h3.koan-title .koan-num { font-family: var(--sd-voice); font-style: normal; font-weight: 250; font-size: 1.9em; line-height: 1; letter-spacing: 0; text-transform: none; color: var(--sd-slate); margin-bottom: 10px }
+.rs[data-rs-theme="personal"] .rs-text h3.koan-title .koan-title-zh { color: var(--sd-muted) }
+.rs[data-rs-theme="personal"] .rs-text p.koan-label { font-family: var(--sd-label); font-variant: normal; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; font-weight: 500; color: var(--sd-accent-ink) }
+.rs[data-rs-theme="personal"] .rs-text .koan-verse p:not(.koan-label):not(.orig) { font-family: var(--sd-voice); font-weight: 360; font-size: 1.12em }
+.rs[data-rs-theme="personal"] .rs-text .koan-comment { color: var(--sd-ink) }
+
+/* ---- the original beside the translation (Gateless Gate): on a wide screen each part of a case is a two-column
+   grid, the Chinese on the left level with its English; the notes stay in the right margin.
+   Needs <div class="rs" data-rs-layout="parallel">. ---- */
+@container rs (min-width: 1180px) {
+  .rs[data-rs-layout="parallel"] { --rs-measure: 50em }
+  .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) { display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr); column-gap: 2.4em; grid-auto-flow: row dense; align-items: start }
+  .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > * { grid-column: 2 }
+  .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > p.orig { grid-column: 1; margin: 0 0 var(--rs-s3); border-left: 0; padding: .15em 0 0; font-size: .86em; line-height: 1.85; text-align: justify; text-align-last: right; color: var(--sd-slate) }
+  .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > p.koan-label { grid-column: 1 / -1 }
+  .rs[data-rs-layout="parallel"] .koan-verse > p.orig { writing-mode: vertical-rl; justify-self: end; text-align: start; text-align-last: auto; font-size: 1.05em; letter-spacing: .25em; line-height: 2 }
+  .rs[data-rs-layout="parallel"] .rs-text > :not(.koan-case):not(.koan-comment):not(.koan-verse):not(h3.koan-title):not(.footnotes) { margin-left: calc(15em / .95 + 2.4em); }
+  .rs[data-rs-layout="parallel"] .rs-text > h3.koan-title { padding-left: calc(15em / 1.75 + 2.4em / 1.75) }
+}
+
+/* ---- home: the picture beside the name, then the first lines, the intro, the shelf (README.md, .rs-home) ---- */
+.sd-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(32px, 6vw, 96px); max-width: 1160px; margin: 0 auto; padding: clamp(24px, 5vw, 64px) 20px 0; color: var(--sd-slate) }
+.sd-hero img { width: 100%; max-width: 520px; max-height: 70vh; object-fit: contain; justify-self: end; mix-blend-mode: multiply }
+.sd-hero .sd-name { font-family: var(--sd-title); font-weight: 400; font-size: clamp(56px, 9vw, 132px); line-height: .95; margin: 0; color: var(--sd-slate) }
+.sd-hero .sd-tag { font-family: var(--sd-voice); font-weight: 300; font-size: clamp(22px, 2.8vw, 36px); line-height: 1.15; margin: 14px 0 0 }
+@media (max-width: 700px) { .sd-hero { grid-template-columns: minmax(0, 1fr); gap: 16px; text-align: center } .sd-hero img { justify-self: center; max-width: 280px; max-height: 44svh } }
+.rs-home .rs-head .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
+.rs.rs-home[data-rs-theme="personal"] .rs-head .rs-head-text { grid-column: 1 !important; max-width: none; justify-items: center }
+.rs-home .rs-head .rs-kicker { display: none }
+.rs.rs-home[data-rs-theme="personal"] .rs-lead { font-family: var(--sd-voice); font-weight: 300; max-width: 30em; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.15; color: var(--sd-slate); text-align: center; margin-top: clamp(32px, 8vh, 96px) }
+.rs-home .rs-lead span { display: block; white-space: normal; text-wrap: balance }
+.rs-home .rs-head .rs-quiet, .rs-home .rs-head .rs-quiet a { font-family: var(--sd-label); font-size: 14px; color: var(--sd-muted) }
+.rs.rs-home[data-rs-theme="personal"] .rs-intro { font-size: 1.12em; line-height: 1.5; color: var(--sd-slate); text-align: center; max-width: 34em; margin: 0 auto var(--rs-s5) }
+.rs-home .rs-text > h2, .rs-home .rs-text .rs-shelf h2 { font-family: var(--sd-label); font-weight: 500; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--sd-muted); margin: var(--rs-s6) 0 var(--rs-s3) }
+.rs-home .rs-text .rs-shelf:first-of-type h2 { margin-top: 0 }
+.rs-home .rs-shelf ul.sd-shelf, .sd-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(48px, 6vw, 88px) clamp(20px, 4vw, 56px); align-items: start; max-width: 1080px }
+.sd-shelf li { min-width: 0; margin: 0 }
+.sd-shelf li a { color: var(--sd-slate); text-decoration: none; display: grid; gap: 8px }
+.sd-shelf .sd-thumb { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; mix-blend-mode: multiply; transition: transform .6s ease }
+.sd-shelf li a:hover .sd-thumb { transform: scale(1.02) }
+.sd-shelf .sd-kind { order: 2; display: block; font-family: var(--sd-label); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--sd-accent-ink); line-height: 1.3; margin: 8px 0 0 }
+.sd-shelf h3, .rs-home .rs-shelf .sd-shelf h3 { order: 3; font-family: var(--sd-title); font-weight: 400; font-size: 1.6em; line-height: 1.05; margin: 0; color: var(--sd-slate); text-wrap: balance }
+.sd-shelf .rs-quiet, .rs-home .rs-shelf .sd-shelf .rs-quiet { order: 4; font-family: var(--sd-voice); font-weight: 300; font-size: 1.02em; line-height: 1.3; color: var(--sd-slate); margin: 0; text-wrap: pretty }
+.sd-shelf .sd-line { order: 5; font-size: .86em; color: var(--sd-ink); line-height: 1.5; margin: 2px 0 0 }
+.sd-shelf .sd-thumb { order: 1 }
+.sd-shelf li a:hover h3 { color: var(--sd-accent-ink) }
+.rs.rs-home[data-rs-theme="personal"] .rs-text .rs-shelf ul.sd-shelf { margin: var(--rs-s4) auto; padding: 0 }
+.rs-home .rs-body .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
+.rs-home .rs-text { grid-column: 1 !important }
+.rs.rs-home[data-rs-theme="personal"] .rs-text > :not(.rs-shelf) { max-width: 36em; margin-inline: auto }
+.rs.rs-home[data-rs-theme="personal"] .rs-text > p { color: var(--sd-slate); text-align: center }
+@media (max-width: 640px) { .sd-shelf, .rs-home .rs-shelf ul.sd-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 16px } .sd-shelf h3, .rs-home .rs-shelf .sd-shelf h3 { font-size: 1.25em } .sd-shelf .sd-line { display: none } }
+@media (prefers-reduced-motion: reduce) { .sd-shelf .sd-thumb { transition: none } }

@@ -17,7 +17,7 @@ scripts:
   - /js/notes.js
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/shodoka.jpg" alt="" width="900" height="533"><figcaption>Sengai Gibon, <i>Circle, Triangle, Square</i>, Edo period. Public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Zen · a song</span>
@@ -25,7 +25,7 @@ scripts:
 <p class="rs-subtitle">Song of Enlightenment <span lang="zh">證道歌</span></p>
 <p class="rs-attribution">Attributed to Yung-chia (Yoka Genkaku)<br>Translated by Robert Aitken and Eido Shimano</p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A long Ch’an (Zen) poem in 64 verses, sung in the first person by someone who has woken up and wants you to stop looking elsewhere. Tradition gives it to Yung-chia, who met the Sixth Patriarch, though he probably did not write it. Complete, in Robert Aitken and Eido Shimano’s version for the Diamond Sangha’s Zen centres; twenty minutes to read.</p>
 
@@ -39,7 +39,7 @@ Where *Faith in Mind* is quiet and even, this is a song: in the first person, su
 
 This English version was made for chanting in Zen centres, so read it that way: aloud, a few verses at a time. The six notes are ours, for names that may be unfamiliar.
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The poem
 

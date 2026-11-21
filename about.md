@@ -43,7 +43,7 @@ Not an academic archive, and not a complete catalogue. For a vast collection of 
 
 ## Who makes it
 
-Sutras is made by Rufus Pollock with AI assistants, as part of [Life Itself](https://lifeitself.org). It is also an experiment in texts that are easy to read, to link to, to annotate and to download, which might carry over to literature in general. The pages are Markdown, published with [Flowershow](https://flowershow.app). The [source is on GitHub](https://github.com/life-itself/sutras), where you can also [report a mistake](https://github.com/life-itself/sutras/issues).
+Sutras is made by Rufus Pollock at [Life Itself](https://lifeitself.org). It is also an experiment in texts that are easy to read, to link to, to annotate and to download, which might carry over to literature in general. The pages are Markdown, published with [Flowershow](https://flowershow.app). The [source is on GitHub](https://github.com/life-itself/sutras), where you can also [report a mistake](https://github.com/life-itself/sutras/issues).
 
 </article></div></div>
 </div>

@@ -5,6 +5,7 @@ layout: plain
 syntaxMode: md
 ---
 
+<div class="sd-hero"><img src="/assets/images/faith-in-mind.jpg" alt="" width="800" height="1237"><div><p class="sd-name">Sutras</p><p class="sd-tag">texts worth reading slowly</p></div></div>
 <div class="rs rs-home" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <p class="rs-lead"><span>There is the leisurely one,</span> <span>Walking the Tao, beyond philosophy,</span></p>
@@ -32,7 +33,7 @@ syntaxMode: md
 
 Every passage has a number that links to it and does not change. On most texts, notes sit in the margin beside the passage they are about: the translator’s, ours, and on *Meditations* Rufus Pollock’s own. Five translations of five chapters of the Tao Te Ching stand [side by side](/tao-te-ching-compared). Each text is also an EPUB, from its own page.
 
-Sutras is made by Rufus Pollock, with AI assistants, as part of [Life Itself](https://lifeitself.org). More, including the copyright of each translation, is on the [about page](/about); the source is [on GitHub](https://github.com/life-itself/sutras).
+Made by Rufus Pollock at [Life Itself](https://lifeitself.org). More, including the copyright of each translation, is on the [about page](/about); the source is [on GitHub](https://github.com/life-itself/sutras).
 
 </article></div></div>
 </div>

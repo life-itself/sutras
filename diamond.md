@@ -17,7 +17,7 @@ scripts:
   - /js/notes.js
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/diamond.jpg" alt="" width="680" height="913"><figcaption>The Diamond Sutra of 868, frontispiece, detail. British Library Or.8210/P.2, public domain.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Mahayana · a sutra</span>
@@ -25,7 +25,7 @@ scripts:
 <p class="rs-subtitle">The Diamond That Cuts through Illusion<br><i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
 <p class="rs-attribution">Translated by Thich Nhat Hanh<br>Also in this library: <a href="/diamond-red-pine">Red Pine’s translation</a></p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> The Buddha’s answer to his disciple Subhuti on how to live and train the mind: free all beings, while holding on to no idea of self, of beings, or even of the teaching. Complete, all 32 sections, in Thich Nhat Hanh’s translation; half an hour to read.</p>
 
@@ -39,7 +39,7 @@ Thich Nhat Hanh (1926–2022), the Vietnamese Zen teacher who founded the Plum V
 
 For a version from the Sanskrit alone, with its repetitions and its full closing verse, read [Red Pine’s translation](/diamond-red-pine). Both use the same 32 sections, so [/diamond#14](/diamond#14) and [/diamond-red-pine#14](/diamond-red-pine#14) are the same passage.
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The sutra
 

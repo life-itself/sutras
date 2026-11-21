@@ -17,7 +17,7 @@ scripts:
   - /js/notes.js
 ---
 
-<div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
+<div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
 <figure class="sd-art"><img src="/assets/images/seneca-on-the-shortness-of-life.jpg" alt="" width="640" height="1057"><figcaption>A page from Aldus Manutius’s Virgil, Venice 1501: the pocket editions the Roman authors were read in. CC0.</figcaption></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Stoicism · an essay</span>
@@ -25,7 +25,7 @@ scripts:
 <p class="rs-subtitle"><span lang="la">De Brevitate Vitae</span></p>
 <p class="rs-attribution">Seneca, to Paulinus<br>Translated by John W. Basore</p>
 </div></div></header>
-<div class="rs-body"><div class="rs-wrap"><article class="rs-text">
+<div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 
 <p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> Seneca’s essay on time: life is long enough, if we stop wasting it. Written in about 49 CE to a friend in high office. Complete, with the translator’s notes; about an hour to read.</p>
 
@@ -39,7 +39,7 @@ Much of the detail is Roman: consuls, games, legacy-hunters, the emperor Augustu
 
 The essay takes about an hour to read. One way is to read it straight through once, then a chapter a day. Basore’s notes explain the Roman names and quotations and can be left for later. The four marked “Editors’ note” are ours: three mark where the argument turns, one is on the essay’s date. The other Stoic in this library is Marcus Aurelius, whose *[Meditations](/meditations)* were written about a century later.
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The essay
 

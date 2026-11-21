@@ -39,7 +39,7 @@ Most entries are a line or a paragraph: a reminder, a rebuke, an exercise. Hays,
 
 Hays reads them as written for Marcus’s own use, “a self-help book in the most literal sense”, not to teach anyone else. Read them a few entries at a time; straight through would take four or five hours. If you want somewhere to start, [4.15](/meditations#4.15) and [5.9](/meditations#5.9) are short and typical. Hays’s notes sit at the words they explain, and his introduction follows the text. The notes in the margin marked ※ and signed are Rufus Pollock’s own. The other Stoic in this library is Seneca, whose *[On the Shortness of Life](/seneca-on-the-shortness-of-life)* was written about a century earlier.
 
-<p class="rs-signed">Editors’ introduction, drafted with an AI assistant. November 2026.</p>
+<p class="rs-signed">Editors’ introduction. November 2026.</p>
 
 ## The text
 
