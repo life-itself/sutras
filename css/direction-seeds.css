@@ -114,7 +114,8 @@
    grid, the Chinese on the left level with its English; the notes stay in the right margin.
    Needs <div class="rs" data-rs-layout="parallel">. ---- */
 @container rs (min-width: 1180px) {
-  .rs[data-rs-layout="parallel"] { --rs-max: 1480px; --rs-measure: 56em; --rs-rail-w: 180px; --rs-margin: 190px; --rs-gap: 44px; --zh-col: 270px; --zh-gap: 40px }
+  /* a container query styles only the container's descendants, so the widths are set on the wrappers */
+  .rs[data-rs-layout="parallel"] .rs-wrap { --rs-max: 1480px; --rs-measure: 56em; --rs-rail-w: 180px; --rs-margin: 190px; --rs-gap: 44px; --rs-margin-now: 190px; --rs-gap-now: 44px; --zh-col: 270px; --zh-gap: 40px; max-width: 1480px }
   .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) { display: grid; grid-template-columns: var(--zh-col) minmax(0, 1fr); column-gap: var(--zh-gap); grid-auto-flow: row dense; align-items: start }
   .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > * { grid-column: 2 }
   .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > p.orig { grid-column: 1; margin: 0 0 var(--rs-s3); border-left: 0; padding: .15em 0 0; font-size: .86em; line-height: 1.85; text-align: left; color: var(--sd-slate) }
@@ -124,8 +125,8 @@
 }
 
 /* the editors' highlights: a coral tint, not the notes system's default yellow */
-::highlight(sutras-note) { background-color: rgba(238, 138, 112, .16) }
-::highlight(sutras-note-active) { background-color: rgba(238, 138, 112, .32) }
+:root::highlight(sutras-note) { background-color: rgba(238, 138, 112, .16) }
+:root::highlight(sutras-note-active) { background-color: rgba(238, 138, 112, .32) }
 .rs[data-rs-theme="personal"] { --nt-hl: rgba(238, 138, 112, .16); --nt-hl-active: rgba(238, 138, 112, .32) }
 
 /* ---- home: the picture beside the name, then the first lines, the intro, the shelf (README.md, .rs-home) ---- */
