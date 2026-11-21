@@ -19,7 +19,7 @@ source's last commit, not the clock, so an unchanged source gives an unchanged E
 
 The text is split into one file per chapter: at the level-3 headings if the text has any (Dhammapada,
 Seneca, Mumonkan), otherwise at level 2 (Meditations books, Diamond, Faith in Mind). The cover is a
-typographic SVG made from the title and author. The stylesheet is scripts/epub.css. If epubcheck is on
+typographic PNG made from the title and author (cover()). The stylesheet is scripts/epub.css. If epubcheck is on
 the PATH, every EPUB is checked and the build fails on errors.
 
 The output is committed, because Flowershow has no build step; .github/workflows/epub.yml rebuilds it
@@ -159,10 +159,14 @@ def metadata(slug, meta, day):
     }
 
 
-# The cover, in the manner of Fitzcarraldo Editions' covers: one flat colour, the author and the title,
-# nothing else. Change these two to recolour every cover (the paper #ebe7e0 with ink #211e1b is the quiet
-# alternative). The text's image is not on the cover: it is the frontispiece, with its credit (see titlepage).
-COVER_GROUND, COVER_INK = "#c9502f", "#f4efe6"
+# The cover, in the manner of Fitzcarraldo Editions' covers: one flat colour, the name and the title in spaced
+# capitals, nothing else. Change these two to recolour every cover (the paper #ebe7e0 with ink #211e1b is the
+# quiet alternative). The text's image is not on the cover: it is the frontispiece, with its credit (see
+# titlepage). The cover is a PNG, not an SVG, because Kindle and Kobo want a raster for the library thumbnail;
+# it is drawn with Pillow in Literata (scripts/fonts/Literata-cover.ttf: Latin capitals only, OFL), and the
+# Action pins the same Pillow as a wheel (it bundles FreeType and zlib), so a build here and there match.
+COVER_GROUND, COVER_INK = "#c9502f", "#ebe7e0"
+COVER_FONT = ROOT / "scripts" / "fonts" / "Literata-cover.ttf"
 
 
 def balanced(text, most):
@@ -176,29 +180,46 @@ def balanced(text, most):
     return textwrap.wrap(text, most, break_long_words=False)
 
 
-def cover(meta):
-    """A typographic cover: a name above, the title in spaced capitals below, centred, one colour. The name is
-    the author's, or for an anonymous or traditional text the translator's, which also tells the two Diamond
-    Sutras apart; a bracketed note on the title ("(Red Pine)") is left off."""
-    width, height, size, track = 1600, 2400, 124, 0.12
-    title = balanced(re.sub(r"\s*\(.*?\)", "", meta["title"]).upper(), 13)
-    name = person(meta["author"])
-    if re.match(r"(?i)anonymous|traditionally", name):
-        name = "Translated by " + person(meta["translator"])
-    y = 860
-    out = ['<text x="800" y="%d" font-size="76" font-style="italic">%s</text>' % (y, escape(name))]
-    y += 150 + size
-    for line in title:
-        out.append('<text x="800" y="%d" font-size="%d" letter-spacing="%.0f">%s</text>' % (y, size, size * track, escape(line)))
-        y += size * 1.3
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
-<title>{escape(meta["title"])}</title>
-<rect width="{width}" height="{height}" fill="{COVER_GROUND}"/>
-<g font-family="Literata, Georgia, 'Times New Roman', serif" fill="{COVER_INK}" text-anchor="middle">
-{"".join(out)}
-</g>
-</svg>
-"""
+def cover(meta, path):
+    """A typographic cover, written to path as a PNG: a name above, the title below, both in spaced capitals,
+    centred in the upper half, one colour. The name is the author's, or for an anonymous or traditional text
+    the translator's, which also tells the two Diamond Sutras apart; a bracketed note on the title
+    ("(Red Pine)") is left off. Type shrinks only if a line would not fit."""
+    from PIL import Image, ImageDraw, ImageFont
+    width, height, margin = 1600, 2400, 150
+    image = Image.new("RGB", (width, height), COVER_GROUND)
+    draw = ImageDraw.Draw(image)
+
+    def spaced(lines, size, track):
+        """The font size that fits every line in the measure, and each line's letters with their x positions."""
+        while True:
+            font = ImageFont.truetype(str(COVER_FONT), size)
+            widths = [sum(font.getlength(c) for c in line) + size * track * (len(line) - 1) for line in lines]
+            if max(widths) <= width - 2 * margin or size <= 40:
+                return font, size, widths
+            size -= 4
+
+    def setline(line, font, size, track, w, y):
+        x = (width - w) / 2
+        for c in line:
+            draw.text((x, y), c, font=font, fill=COVER_INK, anchor="ls")
+            x += font.getlength(c) + size * track
+
+    names = balanced(person(meta["author"]).upper(), 20)
+    if re.match(r"(?i)anonymous|traditionally", names[0]):
+        names = ["TRANSLATED BY"] + balanced(person(meta["translator"]).upper(), 20)
+    titles = balanced(re.sub(r"\s*\(.*?\)", "", meta["title"]).upper(), 12)
+    nfont, nsize, nwidths = spaced(names, 88, 0.14)
+    tfont, tsize, twidths = spaced(titles, 150, 0.10)
+    y = 880
+    for line, w in zip(names, nwidths):
+        setline(line, nfont, nsize, 0.14, w, y)
+        y += nsize * 1.45
+    y += tsize * 1.1
+    for line, w in zip(titles, twidths):
+        setline(line, tfont, tsize, 0.10, w, y)
+        y += tsize * 1.25
+    image.save(path, "PNG", optimize=True)
 
 
 def backlink(text):
@@ -211,9 +232,21 @@ def backlink(text):
     return re.sub(r'(<aside epub:type="footnote" role="doc-footnote" id="(fn\d+)">\s*<p>)', number, text)
 
 
+def verse_lines(text):
+    """Wrap each line of a stanza in <span class="l">, so the stylesheet can give a wrapped line a hanging indent
+    and a reader can tell it from a new line. The <br /> stays, for readers that ignore the stylesheet."""
+    def stanza(m):
+        number, rest = re.match(r'(?s)(<span id="[^"]+" class="v">[^<]*</span>\s*)?(.*)', m.group(2)).groups()
+        lines = re.split(r"<br />\s*", rest.strip())
+        return m.group(1) + (number or "") + "<br />\n".join('<span class="l">%s</span>' % l for l in lines) + "</p>"
+    def block(m):
+        return re.sub(r"(?s)(<p>)(.*?)</p>", stanza, m.group(0))
+    return re.sub(r'(?s)<div class="verse">.*?</div>', block, text)
+
+
 def retitle(path):
     """Pandoc names each chapter file's <title> after the file (ch004.xhtml); give it the first heading instead.
-    Also numbers the notes (backlink)."""
+    Also numbers the notes (backlink) and marks the verse lines (verse_lines)."""
     with zipfile.ZipFile(path) as z:
         entries = [(info, z.read(info.filename)) for info in z.infolist()]
     with zipfile.ZipFile(path, "w") as z:
@@ -224,7 +257,7 @@ def retitle(path):
                 if m:
                     title = html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
                     text = re.sub(r"<title>[^<]*</title>", lambda _: "<title>%s</title>" % escape(title), text, count=1)
-                data = backlink(text).encode("utf-8")
+                data = backlink(verse_lines(text)).encode("utf-8")
             z.writestr(info, data)
 
 
@@ -249,6 +282,9 @@ def titlepage(path, kicker, translator):
                             '<section epub:type="titlepage" class="titlepage">\n' + figure, 1)
     if kicker:
         page = page.replace('<h1 class="title">', '<p class="kicker">%s</p>\n  <h1 class="title">' % escape(kicker), 1)
+    # the publisher, date and rights are in the metadata and in the book's last section, Source and licence;
+    # on the title page they would push the title off a phone's first screen
+    page = re.sub(r'\s*<(p|div) class="(publisher|date|rights)">.*?</\1>', "", page)
     page = re.sub(r'(<p class="aut">.*?</p>)', lambda m: m.group(1) + '\n  <p class="trl">Translated by %s</p>' % escape(translator), page, count=1)
     files[name] = page
     with zipfile.ZipFile(path, "w") as z:
@@ -267,12 +303,12 @@ def build(slug):
     with tempfile.TemporaryDirectory() as tmp:
         tmp = pathlib.Path(tmp)
         (tmp / "book.md").write_text(book, encoding="utf-8")
-        (tmp / "cover.svg").write_text(cover(root_meta), encoding="utf-8")
+        cover(root_meta, tmp / "cover.png")
         (tmp / "metadata.yaml").write_text(yaml.safe_dump(metadata(slug, root_meta, day), allow_unicode=True, sort_keys=False), encoding="utf-8")
         level = chapter_level(body)
         cmd = ["pandoc", str(tmp / "book.md"), "-f", "markdown", "-t", "epub3", "-o", str(out),
                "--css", str(CSS), "--resource-path", str(ROOT), "--split-level=%d" % level, "--toc", "--toc-depth=3",
-               "--metadata-file", str(tmp / "metadata.yaml"), "--epub-cover-image", str(tmp / "cover.svg")]
+               "--metadata-file", str(tmp / "metadata.yaml"), "--epub-cover-image", str(tmp / "cover.png")]
         subprocess.run(cmd, check=True, env=env)
     kicker = re.search(r'<span class="rs-kicker">(.*?)</span>', body)
     titlepage(out, html.unescape(kicker.group(1)) if kicker else None, person(root_meta["translator"]))

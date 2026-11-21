@@ -7,7 +7,7 @@
    the title. What does not: the paper colour and the ink. Readers have their own themes (white, sepia,
    night) and a fixed background or text colour fights them, so the page takes the reader's paper.
 
-   Classes: .verse and .passages are the containers, span.v the passage numbers, a.footnote-ref and a.footnote-back the note numbers, p.inbrief (with
+   Classes: .verse and .passages are the containers, span.v the passage numbers, .verse span.l the verse lines, p.koan-label a label in the text, a.footnote-ref and a.footnote-back the note numbers, p.inbrief (with
    span.label) and p.signed the front matter, p.orig the original-language text, figure.frontispiece
    and p.kicker / p.trl on the title page. */
 
@@ -23,28 +23,33 @@ a { color: inherit; }
 em em, i em, em i { font-style: normal; }
 
 /* the red: one colour, used only for numbers and labels */
-span.v, a.footnote-ref, a.footnote-back, span.label, p.kicker { color: #c9502f; }
+span.v, a.footnote-ref, a.footnote-back, span.label, p.kicker, p.koan-label { color: #c9502f; }
 
 /* title page: the image, its credit, then the label, title, author, translator; centred */
 section.titlepage { text-align: center; }
 section.titlepage p { text-align: center; }
 figure.frontispiece { margin: 1em 0 2em; text-align: center; page-break-inside: avoid; break-inside: avoid; }
-figure.frontispiece img { max-width: 100%; max-height: 45vh; width: auto; height: auto; }
+figure.frontispiece img { max-width: 100%; max-height: 20em; max-height: 45vh; width: auto; height: auto; }
 figure.frontispiece figcaption { font-size: 0.75em; font-style: italic; line-height: 1.4; margin-top: 0.6em; opacity: 0.75; }
 p.kicker { font-style: italic; font-size: 0.9em; margin: 0 0 0.4em; }
 h1.title { font-size: 2em; margin: 0.2em 0 0.5em; }
 p.aut { font-size: 1.05em; margin: 0 0 0.2em; }
-p.trl { font-style: italic; font-size: 0.95em; margin: 0 0 2em; }
-p.publisher, p.date, div.rights { font-size: 0.75em; opacity: 0.75; margin: 0 0 0.4em; }
+p.trl { font-style: italic; font-size: 0.9em; margin: 0 0 2em; }
+body#cover { margin: 0; }
 
 /* front matter: In brief is an italic paragraph with a red label, as a book's blurb */
 p.inbrief { font-style: italic; }
 p.inbrief em { font-style: normal; }
 span.label { margin-right: 0.3em; }
+/* labels inside the text (the Mumonkan's "Mumon's comment") */
+p.koan-label { font-style: italic; margin: 1.4em 0 0.4em; }
+
 p.signed, p.meta { font-size: 0.9em; font-style: italic; opacity: 0.75; }
 
-/* verse: one paragraph per stanza, a line per line, a space between stanzas */
+/* verse: one paragraph per stanza, a span per line (a wrapped line hangs), a space between stanzas */
 .verse p { margin: 0 0 1.4em; }
+.verse span.l { display: block; padding-left: 1.5em; text-indent: -1.5em; }
+.verse br { display: none; }
 
 /* prose: each numbered paragraph is one passage */
 .passages p { margin: 0 0 0.9em; }
