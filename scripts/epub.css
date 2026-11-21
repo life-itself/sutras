@@ -60,7 +60,7 @@ span.v { font-size: 0.78em; margin-right: 0.4em; font-variant-numeric: oldstyle-
 
 /* original-language text (Chinese): a little smaller, with a CJK face */
 p.orig { font-size: 0.9em; opacity: 0.8; }
-[lang="zh"] { font-family: "Noto Serif TC", "Songti TC", "Songti SC", "Noto Serif CJK TC", "Hiragino Mincho ProN", serif; }
+[lang|="zh"] { font-family: "Noto Serif TC", "Songti TC", "Songti SC", "Noto Serif CJK TC", "Hiragino Mincho ProN", serif; }
 
 /* notes: EPUB pop-up notes; the list at the end of a file is the fallback */
 a.footnote-ref { font-size: 0.7em; vertical-align: super; line-height: 0; text-decoration: none; }
