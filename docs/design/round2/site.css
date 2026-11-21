@@ -1,0 +1,192 @@
+/* Sutras round 2: the Red Pine page's world in the Seeds of Renaissance faces.
+   Two registers on one system:
+     feature  a text given the full Red Pine treatment (faith-in-mind.html, built by ../redpine/build.py)
+     reading  a plain page for any text: picture, title, then a column with contents on the left and notes on the right
+     parallel the original beside the translation, with the notes in a third column (mumonkan.html)
+   Layout: one centred reading column; the contents list sits in a left rail, the notes hang in a right rail. */
+
+@font-face { font-family: "Polyamine"; src: url(fonts/Polyamine-Regular.woff2) format("woff2"); font-weight: 400; font-display: swap }
+@font-face { font-family: "Restora"; src: url(fonts/Restora-ExtraLight.woff2) format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap }
+@font-face { font-family: "Restora"; src: url(fonts/Restora-ThinItalic.woff2) format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap }
+@font-face { font-family: "Apfel Grotezk"; src: url(fonts/ApfelGrotezk-Regular.otf) format("opentype"); font-weight: 400; font-display: swap }
+@font-face { font-family: "Apfel Grotezk"; src: url(fonts/ApfelGrotezk-Mittel.otf) format("opentype"); font-weight: 500; font-display: swap }
+
+:root {
+  --paper: #ece9e4; --slate: #5a7a8f; --ink: #3c586b; --soft: #8a9ea9; --coral: #ee8a70; --coral-ink: #c45a3e;
+  --hair: #e4b5a3; --hair2: #c9d3d9; --wash: #e5e1db;
+  --f-title: "Polyamine", Georgia, serif; --f-display: "Restora", Georgia, serif; --f-read: "Bricolage Grotesque", system-ui, sans-serif;
+  --f-label: "Apfel Grotezk", system-ui, sans-serif; --f-zh: "Noto Serif TC", "Songti TC", serif;
+  --measure: 640px; --rail: 220px; --gap: 56px;
+  color-scheme: light;
+}
+* { box-sizing: border-box }
+html { background: var(--paper); scroll-padding-top: 24px }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-read); font-size: 18.5px; line-height: 1.62; font-optical-sizing: auto; -webkit-font-smoothing: antialiased; overflow-x: hidden }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; text-decoration-color: var(--hair) }
+a:hover { text-decoration-color: var(--coral-ink) }
+:focus-visible { outline: 2px solid var(--coral-ink); outline-offset: 2px }
+img { max-width: 100%; display: block }
+.label { font-family: var(--f-label); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--slate) }
+
+/* site line */
+.top { display: flex; justify-content: space-between; align-items: baseline; padding: 18px max(16px, env(safe-area-inset-right, 0px)) 18px max(16px, env(safe-area-inset-left, 0px)); font-size: 15px; color: var(--slate); position: relative; z-index: 5 }
+.top a { text-decoration: none }
+.top .name { font-family: var(--f-title); font-size: 20px; letter-spacing: .01em }
+.top .mark { font-family: var(--f-zh); color: var(--coral); margin-right: .4em; font-size: 18px }
+.top nav { display: flex; gap: 22px; font-family: var(--f-label) }
+
+/* ---------- reading register: the head ---------- */
+.head { text-align: center; padding: 28px 16px 0; color: var(--slate) }
+.head .art { width: min(78vw, 460px); margin: 0 auto }
+.head .art img { width: 100%; mix-blend-mode: multiply; max-height: 46svh; object-fit: contain }
+.head .label { margin: 22px 0 0 }
+.head h1 { font-family: var(--f-title); font-weight: 400; font-size: clamp(40px, 5.5vw, 72px); line-height: 1; margin: 4vh auto 0; max-width: 14ch; text-wrap: balance }
+.head .by { font-family: var(--f-display); font-weight: 300; font-size: clamp(28px, 4vw, 52px); line-height: 1.1; margin: 10px 0 0 }
+.head .orig { font-family: var(--f-zh); font-weight: 300; letter-spacing: .5em; font-size: 20px; color: var(--soft); margin: 22px 0 0 }
+.stand { max-width: 680px; margin: 4vh auto 0; padding: 0 16px; font-size: clamp(19px, 1.7vw, 22px); line-height: 1.5; color: var(--slate); text-wrap: pretty }
+.stand .meta { display: block; margin-top: 14px; font-family: var(--f-label); font-size: 14px; letter-spacing: .02em; color: var(--soft) }
+.thread { width: 1px; height: 56px; background: var(--hair); margin: 5vh auto 0 }
+
+/* ---------- reading register: the body grid ---------- */
+.page { display: grid; grid-template-columns: var(--rail) minmax(0, var(--measure)) var(--rail); column-gap: var(--gap); justify-content: center; padding: 40px max(16px, env(safe-area-inset-right, 0px)) 80px max(16px, env(safe-area-inset-left, 0px)) }
+.page > .text { grid-column: 2; min-width: 0 }
+.page > .toc { grid-column: 1; grid-row: 1 / span 9 }
+
+.text h2 { font-family: var(--f-title); font-weight: 400; font-size: 40px; line-height: 1.08; color: var(--slate); margin: 96px 0 24px; text-wrap: balance }
+.text h2:first-child { margin-top: 0 }
+.text h3 { font-family: var(--f-display); font-weight: 300; font-size: 34px; line-height: 1.1; color: var(--slate); margin: 64px 0 16px; scroll-margin-top: 24px }
+.text h3 a { text-decoration: none }
+.text p { margin: 0 0 1.05em; text-wrap: pretty; hanging-punctuation: first }
+.text blockquote { margin: 1.4em 0; font-family: var(--f-display); font-size: 1.12em; line-height: 1.45; color: var(--slate) }
+.text hr { border: 0; height: 1px; background: var(--hair); width: 90px; margin: 64px auto }
+.text .small { font-size: 16px; color: var(--slate) }
+
+/* a passage the editors marked: a coral underline, the note in the margin */
+mark.hl { background: none; color: inherit; text-decoration: underline; text-decoration-color: var(--coral); text-decoration-thickness: 1.5px; text-underline-offset: .22em }
+
+/* notes in the right rail (Tufte's float), on a phone opened by their number */
+.snr { font-family: var(--f-label); font-size: .62em; color: var(--coral-ink); vertical-align: .55em; line-height: 0; padding: 0 .12em; cursor: pointer }
+.snt { display: none }
+.sn { float: right; clear: right; width: var(--rail); margin: .2em calc(-1 * (var(--rail) + var(--gap))) 1.2em 0; font-family: var(--f-read); font-size: 14px; line-height: 1.5; color: var(--slate); text-wrap: pretty; position: relative }
+.sn b { font-family: var(--f-label); font-weight: 500; color: var(--coral-ink); margin-right: .35em }
+.sn .by { display: block; margin-top: 4px; font-family: var(--f-label); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--soft) }
+.sn.ed { border-left: 1px solid var(--coral); padding-left: 10px }
+
+/* ---------- contents, after LessWrong's: a quiet list in the left rail, the current section marked ---------- */
+.toc { position: sticky; top: 24px; align-self: start; max-height: calc(100svh - 48px); overflow: auto; font-family: var(--f-read); font-size: 13.5px; line-height: 1.3; scrollbar-width: none }
+.toc p { font-family: var(--f-title); font-size: 18px; color: var(--slate); margin: 0 0 14px }
+.toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--hair2) }
+.toc li a { color: var(--ink) !important; display: block; padding: 4px 0 4px 14px; margin-left: -1px; border-left: 1px solid transparent; text-decoration: none; color: var(--soft); transition: color .2s, border-color .2s }
+.toc li a:hover { color: var(--ink) }
+.toc li a.on { color: var(--ink); border-left-color: var(--coral-ink) }
+.toc li.sub a { padding: 2px 0 2px 26px; font-size: 13px; color: var(--soft) !important }
+.toc li a.on { color: var(--ink) !important }
+.toc li.off a { color: color-mix(in srgb, var(--soft) 55%, var(--paper)); pointer-events: none }
+.toc .end { margin-top: 18px; font-family: var(--f-label); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--soft) }
+details.toc-phone { display: none }
+
+/* ---------- parallel register: original | translation | notes ---------- */
+.page.par { grid-template-columns: 180px 300px minmax(0, 560px) 180px; column-gap: 44px; --rail: 180px; --gap: 44px; padding-inline: 40px }
+.page.par > .text { grid-column: 2 / span 2 }
+.pair { display: grid; grid-template-columns: 300px minmax(0, 560px); column-gap: 44px; align-items: start; margin: 0 0 1.1em }
+.pair > .zh { grid-column: 1; grid-row: 1; font-family: var(--f-zh); font-size: 16px; line-height: 1.9; letter-spacing: .06em; color: var(--slate); text-align: justify; text-align-last: right }
+.pair > .en { grid-column: 2; grid-row: 1; min-width: 0 }
+.pair > .en p:last-child { margin-bottom: 0 }
+.pair.solo > .en { grid-column: 2 }
+.case-head { display: grid; grid-template-columns: 300px minmax(0, 560px); column-gap: 44px; align-items: end; margin: 120px 0 36px; scroll-margin-top: 24px }
+.case-head .zh-title { writing-mode: vertical-rl; font-family: var(--f-zh); font-size: 30px; letter-spacing: .3em; color: var(--slate); justify-self: end; line-height: 1.4 }
+.case-head .n { display: block; font-family: var(--f-display); font-weight: 200; font-size: 84px; line-height: .9; color: var(--slate); margin-bottom: 16px }
+.case-head h3 { margin: 0 }
+.part { font-family: var(--f-label); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--coral-ink); margin: 40px 0 14px }
+.part span:lang(zh) { font-family: var(--f-zh); letter-spacing: .2em; margin-left: .6em; text-transform: none; color: var(--slate) }
+.pair.verse .en { font-family: var(--f-display); font-weight: 350; font-size: 1.22em; line-height: 1.5; color: var(--ink) }
+.pair.verse .zh p { writing-mode: vertical-rl; font-size: 22px; letter-spacing: .3em; line-height: 2; margin: 0 0 0 auto; height: auto; color: var(--slate) }
+.pair.verse > .zh { justify-self: end }
+.par-legend { display: grid; grid-template-columns: 300px minmax(0, 560px); column-gap: 44px; margin: 0 0 40px }
+.par-legend .label { font-size: 12px; color: var(--soft) }
+.par .text > h2 { margin-left: 344px }
+.par .text > .wide { margin-left: 344px }
+
+/* ---------- home ---------- */
+.home-hero { min-height: 92svh; display: grid; place-items: center; padding: 20px 16px 40px; text-align: center; color: var(--slate); position: relative }
+.home-hero .art { width: min(70vw, 620px); margin-inline: auto }
+.home-hero .art img { mix-blend-mode: multiply; max-height: 62svh; margin: 0 auto }
+.home-hero h1 { font-family: var(--f-title); font-weight: 400; font-size: clamp(56px, 11vw, 150px); line-height: .95; margin: -6vh 0 0; letter-spacing: -.01em; position: relative; margin-top: -.55em }
+.home-hero .tag { font-family: var(--f-display); font-weight: 300; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.15; margin: 14px 0 0 }
+.opening { text-align: center; color: var(--slate); padding: 14vh 16px 0 }
+.opening .lines { font-family: var(--f-display); font-weight: 300; font-size: clamp(30px, 4.6vw, 60px); line-height: 1.15; margin: 0 }
+.opening .lines span { display: block; text-wrap: balance }
+.opening .src { font-family: var(--f-label); font-size: 14px; letter-spacing: .04em; margin: 22px 0 0; color: var(--soft) }
+.intro { max-width: 640px; margin: 12vh auto 0; padding: 0 16px; font-size: 21px; line-height: 1.5; color: var(--slate); text-align: center; text-wrap: pretty }
+.shelf { list-style: none; margin: 14vh auto 0; padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)); max-width: 1200px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 88px 56px }
+.shelf li { min-width: 0 }
+.shelf a { text-decoration: none; display: grid; gap: 10px; color: var(--slate) }
+
+.shelf .pic { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: var(--paper) }
+.shelf .pic img { width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply;  transition: transform .6s ease }
+.shelf a:hover .pic img { transform: scale(1.03) }
+.shelf .kind { font-family: var(--f-label); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; color: var(--coral-ink); margin-top: 8px }
+.shelf h3 { font-family: var(--f-title); font-weight: 400; font-size: 32px; line-height: 1.05; margin: 0; text-wrap: balance }
+.shelf .who { font-family: var(--f-display); font-weight: 300; font-size: 21px; line-height: 1.2; margin: 0 }
+.shelf .line { font-size: 15.5px; line-height: 1.5; color: var(--ink); margin: 4px 0 0; text-wrap: pretty }
+.shelf .soon { opacity: .9 }
+.colophon { max-width: 640px; margin: 16vh auto 0; padding: 0 16px 40px; text-align: center; font-size: 16px; color: var(--slate) }
+
+.foot { border-top: 1px solid var(--hair2); margin-top: 80px; padding: 22px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px)); font-family: var(--f-label); font-size: 13px; color: var(--soft); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap }
+
+/* ---------- narrower screens ---------- */
+@media (max-width: 1360px) {
+  .page.par { grid-template-columns: 260px minmax(0, 540px) 190px; --rail: 190px; --gap: 40px; column-gap: 40px }
+  .page.par > .toc { display: none }
+  .page.par > .text { grid-column: 1 / span 2 }
+  .pair, .case-head, .par-legend { grid-template-columns: 260px minmax(0, 540px); column-gap: 40px }
+  .par .text > h2, .par .text > .wide { margin-left: 300px }
+  .page.par details.toc-phone { display: block; grid-column: 1 / span 2 }
+}
+@media (max-width: 1100px) {
+  .page { grid-template-columns: minmax(0, var(--measure)) 200px; --rail: 200px; --gap: 40px; column-gap: 40px }
+  .page > .toc { display: none }
+  .page > .text { grid-column: 1 }
+  details.toc-phone { display: block; grid-column: 1 }
+  .page.par { grid-template-columns: minmax(0, 1fr) 180px; --rail: 180px }
+  .page.par > .text { grid-column: 1 }
+  .pair, .case-head, .par-legend { grid-template-columns: minmax(0, 1fr); }
+  .pair > .zh, .pair > .en { grid-column: 1; grid-row: auto }
+  .pair > .zh { order: 2; font-size: 14.5px; line-height: 1.8; margin-top: 8px; padding-left: 12px; border-left: 1px solid var(--hair2); text-align: left; text-align-last: auto }
+  .case-head .zh-title { writing-mode: horizontal-tb; justify-self: start; font-size: 20px; order: 2; margin-top: 10px }
+  .pair.verse .zh p { writing-mode: horizontal-tb; font-size: 17px; letter-spacing: .2em; margin: 0 }
+  .pair.verse > .zh { justify-self: start }
+  .par .text > h2, .par .text > .wide { margin-left: 0 }
+  .par-legend { display: none }
+}
+details.toc-phone { margin: 0 0 48px; border-top: 1px solid var(--hair2); border-bottom: 1px solid var(--hair2); padding: 12px 0; font-size: 15px }
+details.toc-phone summary { cursor: pointer; font-family: var(--f-label); text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--slate); list-style: none }
+details.toc-phone ol { list-style: none; margin: 12px 0 0; padding: 0; columns: 2; column-gap: 24px }
+details.toc-phone li { break-inside: avoid; padding: 3px 0 }
+details.toc-phone a { text-decoration: none; color: var(--slate) }
+details.toc-phone li.off a { color: var(--soft); pointer-events: none }
+
+@media (max-width: 760px) {
+  body { font-size: 17.5px }
+  .top { flex-wrap: wrap; row-gap: 6px }
+  .top nav { gap: 14px; font-size: 13.5px }
+  .opening .lines { font-size: 27px }
+  .opening { padding-top: 8vh }
+  .page, .page.par { grid-template-columns: minmax(0, 1fr); padding-top: 40px }
+  .page > .text, .page.par > .text { grid-column: 1 }
+  .sn { display: none; float: none; width: auto; margin: .6em 0 1em; padding: 10px 12px; background: var(--wash); border-left: 1px solid var(--coral) }
+  .snt:checked + .sn { display: block }
+  .snr { padding: .6em .4em; margin: -.6em -.2em }
+  .text h2 { font-size: 32px; margin-top: 72px }
+  .text h3 { font-size: 28px; margin-top: 52px }
+  .case-head { margin-top: 80px }
+  .case-head .n { font-size: 64px }
+  .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 18px }
+  .shelf h3 { font-size: 23px }
+  .shelf .who { font-size: 17px }
+  .shelf .line { display: none }
+  .home-hero { min-height: 80svh }
+  .home-hero h1 { margin-top: -4vh }
+  details.toc-phone ol { columns: 1 }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }

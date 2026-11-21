@@ -100,7 +100,7 @@ def seeds_css():
 --f-label:"Apfel Grotezk",system-ui,sans-serif;--label-stretch:100%;--label-weight:500;
 --f-poem:"Restora",Georgia,serif;--poem-weight:430;--poem-style:normal;--poem-size:20px;--poem-vs:normal;
 --f-num:"Restora",Georgia,serif;--num-weight:300;--num-vs:normal}
-html .title .by{font-size:clamp(30px,5vw,64px)}
+html .title .by{font-size:clamp(24px,3.6vw,48px)}
 """
 
 

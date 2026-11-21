@@ -24,7 +24,11 @@ Emergence Magazine's Red Pine poem page as the base (warm grey paper, one open-l
 | 2026-11-20 | Second mood board, widened | "i like sesshu"; "if i were basing off something it would be that one emergence page of red pine" | [Mood board](https://claude.ai/artifact/Wv1GFH5C3QQtXykof4eSrg) |
 | 2026-11-21 | Three directions as sample sites, with marks and fonts | Not seen before the choice; agents chose A (decision 0005) | [Summary page: directions, marks, fonts](https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr) · [A warm red](https://claude.ai/artifact/FrqFoG8gtKYvTyApm4h3K8) · [B blue](https://claude.ai/artifact/WFPMxwZ9UNWuFJyenM4uUc) · [C gold on indigo](https://claude.ai/artifact/FLoxRQmuVwdcpHwh4yZD4F) |
 | 2026-11-21 | A live on the site; home page rewritten as a shelf | "the site isn't bad, but it's not great… not nearly as beautiful" as Emergence | https://sutras.lifeitself.org |
-| 2026-11-21 | Round 2: Faith in Mind as a near-copy of the Red Pine page, in open-licence faces and in the Seeds of Renaissance faces | (pending) | [Open faces](https://claude.ai/artifact/1EWyZdNMhjruSC3YTUN7Ta) · [Seeds faces](https://claude.ai/artifact/HDLYRfSpMtc2Sn8C13mxnh) · built by `redpine/build.py` |
+| 2026-11-21 | Round 2: Faith in Mind as a near-copy of the Red Pine page, in open-licence faces and in the Seeds of Renaissance faces | "this direction is the way to go, and probably the Seeds of Renaissance fonts"; but "quite elaborate… not going to work for general text pages" | [Open faces](https://claude.ai/artifact/1EWyZdNMhjruSC3YTUN7Ta) · [Seeds faces](https://claude.ai/artifact/HDLYRfSpMtc2Sn8C13mxnh) · built by `redpine/build.py` |
+
+| 2026-11-21 | Round 2 sample site, Seeds faces: home; feature (Faith in Mind); plain reading page with contents rail and margin notes (Seneca); three columns, Chinese, English, notes (Mumonkan) | (pending) | [Sample site](https://claude.ai/artifact/2bxZGknNTrPacMyfcq9iyb) · built by `round2/build.py` |
+
+Why the first rounds missed: [the lesson](../lessons/2026-11-21-copy-the-reference-before-interpreting-it.md).
 
 ## Pages
 
