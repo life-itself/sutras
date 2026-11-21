@@ -25,7 +25,7 @@ the PATH, every EPUB is checked and the build fails on errors.
 The output is committed, because Flowershow has no build step; .github/workflows/epub.yml rebuilds it
 on every push that changes an edition.
 """
-import datetime, html, os, pathlib, re, subprocess, sys, tempfile, textwrap, time, uuid, zipfile
+import datetime, hashlib, html, inspect, os, pathlib, re, subprocess, sys, tempfile, textwrap, time, uuid, zipfile
 from xml.sax.saxutils import escape
 
 import yaml
@@ -163,8 +163,8 @@ def metadata(slug, meta, day):
 # capitals, nothing else. Change these two to recolour every cover (the paper #ebe7e0 with ink #211e1b is the
 # quiet alternative). The text's image is not on the cover: it is the frontispiece, with its credit (see
 # titlepage). The cover is a PNG, not an SVG, because Kindle and Kobo want a raster for the library thumbnail;
-# it is drawn with Pillow in Literata (scripts/fonts/Literata-cover.ttf: Latin capitals only, OFL), and the
-# Action pins the same Pillow as a wheel (it bundles FreeType and zlib), so a build here and there match.
+# it is drawn with Pillow in Literata (scripts/fonts/Literata-cover.ttf: Latin capitals only, OFL) and kept
+# in downloads/covers/ (see cover()).
 COVER_GROUND, COVER_INK = "#c9502f", "#ebe7e0"
 COVER_FONT = ROOT / "scripts" / "fonts" / "Literata-cover.ttf"
 
@@ -181,11 +181,23 @@ def balanced(text, most):
 
 
 def cover(meta, path):
-    """A typographic cover, written to path as a PNG: a name above, the title below, both in spaced capitals,
-    centred in the upper half, one colour. The name is the author's, or for an anonymous or traditional text
-    the translator's, which also tells the two Diamond Sutras apart; a bracketed note on the title
-    ("(Red Pine)") is left off. Type shrinks only if a line would not fit."""
-    from PIL import Image, ImageDraw, ImageFont
+    """A typographic cover as a PNG at path: a name above, the title below, both in spaced capitals, centred in
+    the upper half, one colour. The name is the author's, or for an anonymous or traditional text the
+    translator's, which also tells the two Diamond Sutras apart; a bracketed note on the title ("(Red Pine)")
+    is left off. Type shrinks only if a line would not fit.
+
+    The PNG is kept (downloads/covers/<slug>.png, committed) and redrawn only when what it is drawn from
+    changes: the words, the colours, the font or this function. Pillow on a Mac and on Linux anti-alias a
+    little differently, so redrawing every time would make every local build differ from the Action's."""
+    from PIL import Image, ImageDraw, ImageFont, PngImagePlugin
+    names = balanced(person(meta["author"]).upper(), 20)
+    if re.match(r"(?i)anonymous|traditionally", names[0]):
+        names = ["TRANSLATED BY"] + balanced(person(meta["translator"]).upper(), 20)
+    titles = balanced(re.sub(r"\s*\(.*?\)", "", meta["title"]).upper(), 12)
+    key = hashlib.sha256(repr((names, titles, COVER_GROUND, COVER_INK, inspect.getsource(cover))).encode()
+                         + COVER_FONT.read_bytes()).hexdigest()
+    if path.exists() and Image.open(path).text.get("source") == key:
+        return
     width, height, margin = 1600, 2400, 150
     image = Image.new("RGB", (width, height), COVER_GROUND)
     draw = ImageDraw.Draw(image)
@@ -205,10 +217,6 @@ def cover(meta, path):
             draw.text((x, y), c, font=font, fill=COVER_INK, anchor="ls")
             x += font.getlength(c) + size * track
 
-    names = balanced(person(meta["author"]).upper(), 20)
-    if re.match(r"(?i)anonymous|traditionally", names[0]):
-        names = ["TRANSLATED BY"] + balanced(person(meta["translator"]).upper(), 20)
-    titles = balanced(re.sub(r"\s*\(.*?\)", "", meta["title"]).upper(), 12)
     nfont, nsize, nwidths = spaced(names, 88, 0.14)
     tfont, tsize, twidths = spaced(titles, 150, 0.10)
     y = 880
@@ -219,7 +227,10 @@ def cover(meta, path):
     for line, w in zip(titles, twidths):
         setline(line, tfont, tsize, 0.10, w, y)
         y += tsize * 1.25
-    image.save(path, "PNG", optimize=True)
+    info = PngImagePlugin.PngInfo()
+    info.add_text("source", key)
+    path.parent.mkdir(exist_ok=True)
+    image.save(path, "PNG", optimize=True, pnginfo=info)
 
 
 def backlink(text):
@@ -300,15 +311,16 @@ def build(slug):
     out = ROOT / "downloads" / (slug + ".epub")
     out.parent.mkdir(exist_ok=True)
     env = dict(os.environ, SOURCE_DATE_EPOCH=str(seconds))
+    cover_png = ROOT / "downloads" / "covers" / (slug + ".png")
+    cover(root_meta, cover_png)
     with tempfile.TemporaryDirectory() as tmp:
         tmp = pathlib.Path(tmp)
         (tmp / "book.md").write_text(book, encoding="utf-8")
-        cover(root_meta, tmp / "cover.png")
         (tmp / "metadata.yaml").write_text(yaml.safe_dump(metadata(slug, root_meta, day), allow_unicode=True, sort_keys=False), encoding="utf-8")
         level = chapter_level(body)
         cmd = ["pandoc", str(tmp / "book.md"), "-f", "markdown", "-t", "epub3", "-o", str(out),
                "--css", str(CSS), "--resource-path", str(ROOT), "--split-level=%d" % level, "--toc", "--toc-depth=3",
-               "--metadata-file", str(tmp / "metadata.yaml"), "--epub-cover-image", str(tmp / "cover.png")]
+               "--metadata-file", str(tmp / "metadata.yaml"), "--epub-cover-image", str(cover_png)]
         subprocess.run(cmd, check=True, env=env)
     kicker = re.search(r'<span class="rs-kicker">(.*?)</span>', body)
     titlepage(out, html.unescape(kicker.group(1)) if kicker else None, person(root_meta["translator"]))

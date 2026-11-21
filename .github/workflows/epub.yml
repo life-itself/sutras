@@ -38,8 +38,7 @@ jobs:
           unzip -q epubcheck.zip -d "$HOME"
           printf '#!/bin/sh\nexec java -jar "%s/epubcheck-5.4.0/epubcheck.jar" "$@"\n' "$HOME" | sudo tee /usr/local/bin/epubcheck > /dev/null
           sudo chmod +x /usr/local/bin/epubcheck
-          # the covers are drawn with Pillow; the wheel bundles its own FreeType and zlib, so pinning it here and
-          # locally gives the same PNG on both (scripts/epub, cover())
+          # the covers are drawn with Pillow, and only when downloads/covers/ lacks an up-to-date one (scripts/epub, cover())
           python3 -m pip install --quiet --break-system-packages "pillow==11.3.0"
           pandoc --version | head -1
           epubcheck --version
