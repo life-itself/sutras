@@ -7,28 +7,27 @@ syntaxMode: md
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
-<span class="rs-kicker">About</span>
 <h1>About</h1>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A curated library of wisdom texts, made into editions to read online and download, with Rufus Pollock’s notes and thoughts alongside.</p>
+<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> A curated library of wisdom texts, made into editions to read online and download, with our notes and thoughts alongside.</p>
 
 ## What it is
 
-Sutras is a small library of texts worth reading slowly: Zen poems and koans, the Diamond Sutra, the Dhammapada, the Tao Te Ching, Seneca and Marcus Aurelius’s *Meditations*. Each text is here because Rufus Pollock finds it worth reading, or has found it useful, and wanted an edition of it he would really read.
+Sutras is a small library of texts worth reading slowly: Zen poems and koans, the Diamond Sutra, the Dhammapada, the Tao Te Ching, Seneca and Marcus Aurelius’s *Meditations*. Each text is here because we value it, or have found it useful, and wanted an edition of it we would really read.
 
 ## Who it is for
 
-First, Rufus himself. In his words: “I’m always serving myself here.” Making and annotating the library is also his way of studying these texts and the practice they describe.
+Sutras began as a personal library: the texts Rufus Pollock returns to, in editions he would really read, with his notes in the margin. Making and annotating it is also a way of studying these texts and the practice they describe.
 
-Then anyone looking online for a wisdom text in a good format: a clean page to read, and a file to take away.
+We offer it here in the hope that others find it useful too: anyone looking for a wisdom text in a good format, a clean page to read online and a file to take away.
 
 ## What each edition has
 
 - **A clean reading page.** The text first, set to be read slowly, with a short introduction and a note on the translation.
 - **A link for every passage.** Each verse, stanza or section has a number you can link to, such as [/faith-in-mind#3](/faith-in-mind#3). Once published, a number does not change.
-- **Notes in the margin.** Editorial notes, and Rufus’s own notes beside the passages they are about, starting with [<em>Meditations</em>](/meditations).
+- **Notes in the margin.** Editorial notes, and our own notes beside the passages they are about, starting with [<em>Meditations</em>](/meditations).
 - **A download.** Each text as an EPUB for an e-reader.
 - **Translations compared.** Where more than one translation is worth reading, we set them side by side, beginning with [five chapters of the Tao Te Ching](/tao-te-ching-compared).
 - **Its source.** Where the text came from and, once an edition is finished, how it was checked against that source word for word, with every change listed in the edition notes.

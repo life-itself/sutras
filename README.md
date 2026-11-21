@@ -1,11 +1,11 @@
 ---
 title: Sutras
-description: "A small library of texts worth reading slowly, from Zen poems and the Diamond Sutra to the Tao Te Ching, Seneca and Marcus Aurelius: each complete and free to read, with a link to every passage and an EPUB."
+description: "A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics, each made for reading online or offline: a clean page, a short introduction, a link for every passage, notes in the margin and an EPUB to download."
 layout: plain
 syntaxMode: md
 ---
 
-<div class="sd-hero"><img src="/assets/images/faith-in-mind.jpg" alt="" width="800" height="1237"><div><p class="sd-name">Sutras</p><p class="sd-tag">texts worth reading slowly</p></div></div>
+<div class="sd-hero"><img src="/assets/images/faith-in-mind.jpg" alt="" width="800" height="1237"><div><p class="sd-name">Sutras</p><p class="sd-tag">a library of wisdom texts</p></div></div>
 <div class="rs rs-home" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <p class="rs-lead"><span>There is the leisurely one,</span> <span>Walking the Tao, beyond philosophy,</span></p>
@@ -13,7 +13,7 @@ syntaxMode: md
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><article class="rs-text">
 
-<p class="rs-intro">Sutras is a small library of texts worth reading slowly, from Zen poems to the Stoics. Each is here complete and free, with a link to every passage and an EPUB; most have notes in the margin.</p>
+<p class="rs-intro">A small library of wisdom texts, from Buddhist sutras and Zen poems to the Stoics. Each is made for reading online or offline: a clean page, a short introduction, a link for every passage, notes in the margin and an EPUB to download. The library is curated, not complete: each text is here because we value it.</p>
 
 <div class="rs-shelf">
 <ul class="sd-shelf">
@@ -25,15 +25,15 @@ syntaxMode: md
 <li><a href="/dhammapada"><img class="sd-thumb" src="/assets/images/dhammapada.jpg" alt="" width="640" height="800"><h3>Dhammapada</h3><span class="sd-kind">Early Buddhism · verses</span><span class="rs-quiet">The Buddha, attributed · translated by Thanissaro Bhikkhu · two hours</span><span class="sd-line">423 short verses from the Pāli Canon, with the translator’s notes at the verses they discuss.</span></a></li>
 <li><a href="/tao-te-ching"><img class="sd-thumb" src="/assets/images/tao-te-ching.jpg" alt="" width="900" height="568"><h3>Tao Te Ching</h3><span class="sd-kind">Taoism · a classic</span><span class="rs-quiet">Laozi, attributed · translated by James Legge, 1891 · about forty minutes</span><span class="sd-line">81 short chapters, most only a few lines, with the Chinese beside each. Water takes the low place, and so is near to the Tao.</span></a></li>
 <li><a href="/seneca-on-the-shortness-of-life"><img class="sd-thumb" src="/assets/images/seneca-on-the-shortness-of-life.jpg" alt="" width="640" height="1057"><h3>On the Shortness of Life</h3><span class="sd-kind">Stoicism · an essay</span><span class="rs-quiet">Seneca · translated by John W. Basore · about an hour</span><span class="sd-line">Life is long enough, if we stop wasting it.</span></a></li>
-<li><a href="/meditations"><img class="sd-thumb" src="/assets/images/meditations.jpg" alt="" width="640" height="800"><h3>Meditations</h3><span class="sd-kind">Stoicism · a journal</span><span class="rs-quiet">Marcus Aurelius · translated by Gregory Hays · four or five hours</span><span class="sd-line">Notes to himself, in Greek, written as he ruled Rome and fought on its northern frontier. Rufus Pollock’s own notes are in the margin.</span></a></li>
+<li><a href="/meditations"><img class="sd-thumb" src="/assets/images/meditations.jpg" alt="" width="640" height="800"><h3>Meditations</h3><span class="sd-kind">Stoicism · a journal</span><span class="rs-quiet">Marcus Aurelius · translated by Gregory Hays · four or five hours</span><span class="sd-line">Notes to himself, in Greek, written as he ruled Rome and fought on its northern frontier. With our notes in the margin.</span></a></li>
 </ul>
 </div>
 
 ---
 
-Every passage has a number that links to it and does not change. On most texts, notes sit in the margin beside the passage they are about: the translator’s, ours, and on *Meditations* Rufus Pollock’s own. Five translations of five chapters of the Tao Te Ching stand [side by side](/tao-te-ching-compared). Each text is also an EPUB, from its own page.
+Every passage has a number that links to it and does not change. Five chapters of the Tao Te Ching stand [side by side](/tao-te-ching-compared) in five older translations, with short samples of six modern ones.
 
-Made by Rufus Pollock at [Life Itself](https://lifeitself.org). More, including the copyright of each translation, is on the [about page](/about); the source is [on GitHub](https://github.com/life-itself/sutras).
+Made by Rufus Pollock at [Life Itself](https://lifeitself.org). More, including the copyright of each translation, is on the [about page](/about).
 
 </article></div></div>
 </div>
