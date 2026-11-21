@@ -18,7 +18,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/diamond.jpg" alt="" width="680" height="913"><figcaption>The Diamond Sutra of 868, frontispiece, detail. British Library Or.8210/P.2, public domain.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/diamond.jpg" alt="The frontispiece of the Diamond Sutra of 868: the Buddha teaching among his disciples, toned slate." width="680" height="913"></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Mahayana · a sutra</span>
 <h1>The Diamond Sutra</h1>

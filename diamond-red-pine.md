@@ -18,7 +18,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/diamond-red-pine.jpg" alt="" width="720" height="829"><figcaption>A sutra from the Jingoji canon, late Heian period, gold and silver on indigo, detail. Public domain.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/diamond-red-pine.jpg" alt="A page of a Heian-period sutra in gold and silver on indigo, toned coral." width="720" height="829"></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Mahayana · a sutra</span>
 <h1>The Diamond Sutra</h1>

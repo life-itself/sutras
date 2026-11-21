@@ -18,7 +18,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/seneca-on-the-shortness-of-life.jpg" alt="" width="640" height="1057"><figcaption>A page from Aldus Manutius’s Virgil, Venice 1501: the pocket editions the Roman authors were read in. CC0.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/seneca-on-the-shortness-of-life.jpg" alt="A page of italic type from Aldus Manutius’s Virgil, Venice 1501, toned slate." width="640" height="1057"></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Stoicism · an essay</span>
 <h1>On the Shortness of Life</h1>

@@ -17,7 +17,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/tao-te-ching.jpg" alt="" width="900" height="568"><figcaption>Ma Yuan, <i>Walking on a Mountain Path in Spring</i>, Southern Song, album leaf. National Palace Museum, Taipei, public domain.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/tao-te-ching.jpg" alt="Ma Yuan’s album leaf: a scholar on a mountain path under a willow, toned coral." width="900" height="568"></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Taoism · a classic</span>
 <h1>Tao Te Ching</h1>

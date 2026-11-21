@@ -19,7 +19,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-layout="parallel" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/gateless-gate-mumonkan.jpg" alt="" width="640" height="854"><figcaption>Hakuin Ekaku, <i>Virtue</i> (悳), 18th century, detail. Metropolitan Museum of Art, CC0.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/gateless-gate-mumonkan.jpg" alt="Hakuin’s single brushed character for virtue, 悳, toned coral." width="640" height="854"></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Zen · koans</span>
 <h1>The Gateless Gate</h1>

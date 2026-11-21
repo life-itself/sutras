@@ -18,7 +18,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/shodoka.jpg" alt="" width="900" height="533"><figcaption>Sengai Gibon, <i>Circle, Triangle, Square</i>, Edo period. Public domain.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/shodoka.jpg" alt="Sengai’s brushed circle, triangle and square, toned slate." width="900" height="533"></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Zen · a song</span>
 <h1>Shodoka</h1>

@@ -18,7 +18,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/dhammapada.jpg" alt="" width="640" height="800"><figcaption>A printed sutra page, Song dynasty, detail. Public domain.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/dhammapada.jpg" alt="Columns of Chinese characters on a printed Song-dynasty sutra page, toned slate." width="640" height="800"></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Early Buddhism · verses</span>
 <h1>Dhammapada</h1>

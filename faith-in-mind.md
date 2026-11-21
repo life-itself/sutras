@@ -18,7 +18,7 @@ scripts:
 ---
 
 <div class="rs" data-rs-theme="personal" data-rs-rail="on" data-rs-dropcap="off">
-<figure class="sd-art"><img src="/assets/images/faith-in-mind.jpg" alt="" width="800" height="1237"><figcaption>Sesshū Tōyō, <i>Haboku Sansui</i>, 1495. Tokyo National Museum, public domain.</figcaption></figure>
+<figure class="sd-art"><img src="/assets/images/faith-in-mind.jpg" alt="Sesshū’s splashed-ink landscape: a few strokes of trees and rock, most of the paper empty, toned coral." width="800" height="1237"></figure>
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <span class="rs-kicker">Zen · a poem</span>
 <h1>Faith in Mind</h1>

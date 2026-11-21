@@ -187,3 +187,11 @@
 .rs.rs-home[data-rs-theme="personal"] .rs-text > p { color: var(--sd-slate); text-align: center }
 @media (max-width: 640px) { .sd-shelf, .rs-home .rs-shelf ul.sd-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 16px } .sd-shelf h3, .rs-home .rs-shelf .sd-shelf h3 { font-size: 1.25em } .sd-shelf .sd-line { display: none } }
 @media (prefers-reduced-motion: reduce) { .sd-shelf .sd-thumb { transition: none } }
+
+/* ---- the credits page (credits.md): one entry per image or typeface, no boxes ---- */
+.rs[data-rs-theme="personal"] .rs-text ul.cr-list { list-style: none; padding: 0; margin: 0 0 var(--rs-s4) }
+.rs[data-rs-theme="personal"] .rs-text ul.cr-list li { margin: 0; padding: 18px 0; border-top: 1px solid var(--sd-rule) }
+.rs[data-rs-theme="personal"] .rs-text ul.cr-list li p { margin: 0; font-size: .92em; line-height: 1.5 }
+.rs[data-rs-theme="personal"] .rs-text ul.cr-list li p.cr-text { font-family: var(--sd-label); font-weight: 500; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--sd-accent-ink); margin-bottom: 4px }
+.rs[data-rs-theme="personal"] .rs-text ul.cr-list li p.cr-text a { color: inherit; text-decoration: none }
+.rs[data-rs-theme="personal"] .rs-text ul.cr-list li p.cr-lic { color: var(--sd-muted); font-size: .84em; margin-top: 2px }

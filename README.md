@@ -5,7 +5,7 @@ layout: plain
 syntaxMode: md
 ---
 
-<div class="sd-hero"><img src="/assets/images/faith-in-mind.jpg" alt="" width="800" height="1237"><div><p class="sd-name">Sutras</p><p class="sd-tag">a library of wisdom texts</p></div></div>
+<div class="sd-hero"><img src="/assets/images/faith-in-mind.jpg" alt="Sesshū’s splashed-ink landscape: a few strokes of trees and rock, most of the paper empty, toned coral." width="800" height="1237"><div><p class="sd-name">Sutras</p><p class="sd-tag">a library of wisdom texts</p></div></div>
 <div class="rs rs-home" data-rs-theme="personal" data-rs-rail="off" data-rs-dropcap="off">
 <header class="rs-head"><div class="rs-wrap"><div class="rs-head-text">
 <p class="rs-lead"><span>There is the leisurely one,</span> <span>Walking the Tao, beyond philosophy,</span></p>
