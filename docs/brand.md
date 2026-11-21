@@ -30,6 +30,8 @@ Open; see bead sutras-m2v.4. (guess: texts, people, concepts, as in wilber-wiki)
 
 ## Visual identity
 
+Live since 2026-11-21: Emergence Magazine's Red Pine page in the Seeds of Renaissance faces, with 道 in a stamp as the mark. The decision, tokens and faces: [decisions/0006](decisions/0006-red-pine-seeds.md); every round and its artifacts: [design/README.md](design/README.md). What follows is the starting direction from visioning.
+
 Direction from Rufus (2026-11-20); the moodboard bead (sutras-m2v.3) works it out.
 
 - **Be the thing.** The brand should resonate with the very texts shown: "we want to *be* zen, to be the tao somehow in what we are building."

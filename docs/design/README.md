@@ -1,6 +1,6 @@
 # Sutras design
 
-Status, 2026-11-21: **direction A, warm red, is live on the site** (decision [0005](../decisions/0005-design-direction.md)), chosen by the design and coordination sessions on Rufus's instruction to build and decide without him, with C kept as the backup for him to compare. Bead: sutras-m2v.3. Process: the `designing-look-and-feel` skill.
+Status, 2026-11-21: **round 2 is live**: Emergence's Red Pine page in the Seeds of Renaissance faces (decision [0006](../decisions/0006-red-pine-seeds.md)), chosen by Rufus. `css/direction-seeds.css` is selected by the last `@import` in `custom.css`; direction A (decision 0005, described below) is the one-line fallback. Bead: sutras-m2v.3. Process: the `designing-look-and-feel` skill.
 
 ## The direction
 
@@ -26,9 +26,11 @@ Emergence Magazine's Red Pine poem page as the base (warm grey paper, one open-l
 | 2026-11-21 | A live on the site; home page rewritten as a shelf | "the site isn't bad, but it's not great… not nearly as beautiful" as Emergence | https://sutras.lifeitself.org |
 | 2026-11-21 | Round 2: Faith in Mind as a near-copy of the Red Pine page, in open-licence faces and in the Seeds of Renaissance faces | "this direction is the way to go, and probably the Seeds of Renaissance fonts"; but "quite elaborate… not going to work for general text pages" | [Open faces](https://claude.ai/artifact/1EWyZdNMhjruSC3YTUN7Ta) · [Seeds faces](https://claude.ai/artifact/HDLYRfSpMtc2Sn8C13mxnh) · built by `redpine/build.py` |
 
-| 2026-11-21 | Round 2 sample site, Seeds faces: home; feature (Faith in Mind); plain reading page with contents rail and margin notes (Seneca); three columns, Chinese, English, notes (Mumonkan) | (pending) | [Sample site](https://claude.ai/artifact/2bxZGknNTrPacMyfcq9iyb) · built by `round2/build.py` |
+| 2026-11-21 | Round 2 sample site, Seeds faces: home; feature (Faith in Mind); plain reading page with contents rail and margin notes (Seneca); three columns, Chinese, English, notes (Mumonkan); Restora or Fraunces | "good enough to ship for now"; the mark 道 in a stamp; home picture beside the name; Fraunces to compare |  [Sample site](https://claude.ai/artifact/2bxZGknNTrPacMyfcq9iyb) · built by `round2/build.py` |
 
 Why the first rounds missed: [the lesson](../lessons/2026-11-21-copy-the-reference-before-interpreting-it.md).
+
+| 2026-11-21 | Round 2 live (decision 0006) | (pending) | https://sutras.lifeitself.org |
 
 ## Pages
 
