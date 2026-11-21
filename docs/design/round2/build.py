@@ -32,9 +32,9 @@ GOOGLE = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel=
 
 
 def top(here):
-    links = [("index.html", "Library"), ("seneca.html", "Reading"), ("mumonkan.html", "Parallel"), ("faith-in-mind.html", "Feature")]
+    links = [("index.html", "Library"), ("seneca.html", "Reading"), ("mumonkan.html", "Parallel"), ("faith-in-mind.html", "Feature"), ("faces.html", "Restora or Fraunces")]
     nav = "".join('<a href="%s"%s>%s</a>' % (h, ' aria-current="page"' if h == here else "", t) for h, t in links)
-    return '<header class="top"><a href="index.html"><span class="mark" lang="zh-Hant">慧</span><span class="name">Sutras</span></a><nav>%s</nav></header>' % nav
+    return '<header class="top"><a href="index.html"><span class="mark" lang="zh-Hant" title="道, the Way">道</span><span class="name">Sutras</span></a><nav>%s</nav></header>' % nav
 
 
 FOOT = '<footer class="foot"><span>Sutras · a library of wisdom texts · Life Itself</span><span>Round 2 sample · Seeds of Renaissance faces · not the live site</span></footer>'
@@ -269,12 +269,12 @@ def home():
         href = pages.get(slug)
         tag = 'a href="%s"' % href if href else 'a href="#" class="soon" title="Not in this sample"'
         lis.append('<li><%s><span class="pic"><img src="img/%s.jpg" alt=""></span><span class="kind">%s</span><h3>%s</h3><p class="who">%s</p><p class="line">%s</p></a></li>' % (tag, slug, kind, title, who, line))
-    body = f"""<section class="home-hero"><div><div class="art"><img src="img/hero-coral.jpg" alt="Sesshū's splashed-ink landscape, toned coral."></div>
-<h1>Sutras</h1><p class="tag">texts worth reading slowly</p></div></section>
+    body = f"""<section class="home-hero"><div class="art"><img src="img/hero-coral.jpg" alt="Sesshū's splashed-ink landscape, toned coral."></div>
+<div class="name"><h1>Sutras</h1><p class="tag">texts worth reading slowly</p></div></section>
 <section class="opening"><p class="lines"><span>There is the leisurely one,</span><span>Walking the Tao, beyond philosophy,</span></p><p class="src">The first lines of the Shodoka, a Zen song</p></section>
 <p class="intro">A small library of texts worth reading slowly, from Zen poems to the Stoics. Each is here complete and free, with a link to every passage and an EPUB; most have notes in the margin.</p>
 <ul class="shelf">{''.join(lis)}</ul>
-<p class="colophon">Made by Rufus Pollock, with AI assistants, as part of Life Itself. In this sample, three texts open: <a href="faith-in-mind.html">Faith in Mind</a> as a feature, <a href="seneca.html">Seneca</a> as a plain reading page, and <a href="mumonkan.html">the Gateless Gate</a> with its Chinese beside the translation.</p>"""
+<p class="colophon">Made by Rufus Pollock at Life Itself.</p><p class="colophon" style="margin-top:24px;font-size:14px;color:var(--soft)">In this sample, three texts open: <a href="faith-in-mind.html">Faith in Mind</a> as a feature, <a href="seneca.html">Seneca</a> as a plain reading page, and <a href="mumonkan.html">the Gateless Gate</a> with its Chinese beside the translation.</p>"""
     return doc("Sutras Round Two", body, "index.html", main=True)
 
 
@@ -291,6 +291,47 @@ def feature():
         title.replace("Faith in Mind, Seeds Faces", "Faith in Mind"), page.replace(title, ""))
 
 
+# ---------- Restora or Fraunces: the same moments in each ----------
+def faces():
+    spec = """
+<p class="label">On a reading page</p>
+<div class="sx-head"><h1>On the Shortness of Life</h1><p class="by">Seneca</p></div>
+<p class="label">A feature title</p>
+<div class="sx-head"><h1>Faith in Mind</h1><p class="by">translated by Master <span style="white-space:nowrap">Sheng-yen</span></p></div>
+<p class="label">A stanza</p>
+<div class="sx-st"><span class="n">1</span><p class="poem">The Supreme Way is not difficult<br>If only you do not pick and choose.<br>Neither love nor hate,<br>And you will clearly understand.</p></div>
+<p class="label">A chapter</p>
+<div class="text"><h3>IV</h3><p>You will see that the most powerful and highly placed men let drop remarks in which they long for leisure, acclaim it, and prefer it to all their blessings.</p></div>
+<p class="label">Mumon’s verse</p>
+<div class="sx-st"><p class="poem">The Great Way is gateless,<br>Approached in a thousand ways.<br>Once past this checkpoint<br>You stride through the universe.</p></div>
+<p class="label">The home page’s opening</p>
+<div class="opening sx-open"><p class="lines"><span>There is the leisurely one,</span><span>Walking the Tao, beyond philosophy,</span></p></div>
+"""
+    body = """<section class="sx-intro"><h1>Restora or Fraunces</h1><p>The same moments set twice. Restora is the Seeds of Renaissance face for the poetic voice; Fraunces is an open-licence alternative, set light with its soft, upright drawing. Everything else (Polyamine titles, Bricolage text, Apfel labels) is the same.</p></section>
+<div class="sx"><section class="sx-col f-restora"><h2 class="sx-name">Restora</h2>%s</section><section class="sx-col f-fraunces"><h2 class="sx-name">Fraunces</h2>%s</section></div>""" % (spec, spec)
+    css = """<style>
+.f-fraunces { --f-display: "Fraunces", Georgia, serif }
+.sx .f-fraunces .by, .sx .f-fraunces .poem, .sx .f-fraunces .n, .sx .f-fraunces .lines, .sx .f-fraunces h3 { font-variation-settings: "SOFT" 50, "WONK" 0; font-weight: 300 }
+.sx-intro { max-width: 680px; margin: 48px auto 0; padding: 0 16px; text-align: center; color: var(--slate) }
+.sx-intro h1 { font-family: var(--f-title); font-weight: 400; font-size: clamp(36px, 5vw, 60px); margin: 0 0 16px }
+.sx { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; max-width: 1240px; margin: 56px auto 0; padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)) }
+.sx-col { padding: 0 clamp(16px, 3vw, 48px); min-width: 0; color: var(--slate) }
+.sx-col + .sx-col { border-left: 1px solid var(--hair) }
+.sx-name { font-family: var(--f-display); font-weight: 300; font-size: 44px; margin: 0 0 32px; color: var(--coral-ink) }
+.sx-col .label { font-size: 11px; color: var(--soft); margin: 56px 0 14px; border-top: 1px solid var(--hair2); padding-top: 10px }
+.sx-head h1 { font-family: var(--f-title); font-weight: 400; font-size: clamp(32px, 3.6vw, 52px); line-height: 1; margin: 0 }
+.sx-head .by { font-family: var(--f-display); font-weight: 300; font-size: clamp(24px, 2.6vw, 36px); margin: 8px 0 0 }
+.sx-st .n { display: block; font-family: var(--f-display); font-weight: 300; font-size: 72px; line-height: .9; margin-bottom: 18px }
+.sx-st .poem { font-family: var(--f-display); font-weight: 380; font-size: 21px; line-height: 1.5; color: var(--ink); margin: 0 }
+.sx-col .text h3 { margin-top: 0 }
+.sx-open { padding: 0; text-align: left }
+.sx-open .lines { font-size: clamp(26px, 2.8vw, 38px) }
+@media (max-width: 760px) { .sx { grid-template-columns: minmax(0, 1fr) } .sx-col + .sx-col { border-left: 0; border-top: 1px solid var(--hair); margin-top: 56px; padding-top: 40px } }
+</style>"""
+    page = doc("Restora or Fraunces", css + body, "faces.html")
+    return page.replace("family=Bricolage+Grotesque", "family=Fraunces:opsz,wght,SOFT,WONK@9..144,200..600,0..100,0..1&family=Bricolage+Grotesque")
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     (OUT / "fonts").mkdir(exist_ok=True)
@@ -303,6 +344,7 @@ def main():
     (OUT / "seneca.html").write_text(seneca())
     (OUT / "mumonkan.html").write_text(mumonkan())
     (OUT / "faith-in-mind.html").write_text(feature())
+    (OUT / "faces.html").write_text(faces())
     for p in sorted(OUT.rglob("*")):
         if p.is_file(): print(p.relative_to(OUT), p.stat().st_size // 1024, "KB")
 

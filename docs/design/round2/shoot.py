@@ -3,7 +3,7 @@ import pathlib, sys
 from playwright.sync_api import sync_playwright
 CH = "/Users/rgrp/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
 OUT = pathlib.Path(__file__).parent / "out"
-dest = pathlib.Path(sys.argv[1]); pages = sys.argv[2:] or ["index", "faith-in-mind", "seneca", "mumonkan"]
+dest = pathlib.Path(sys.argv[1]); pages = sys.argv[2:] or ["index", "faith-in-mind", "seneca", "mumonkan", "faces"]
 (OUT / "_index.html").write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"></head><body>' + (OUT / "index.html").read_text() + "</body></html>")
 with sync_playwright() as p:
     b = p.chromium.launch(executable_path=CH)

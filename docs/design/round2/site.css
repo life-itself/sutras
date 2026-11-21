@@ -32,7 +32,8 @@ img { max-width: 100%; display: block }
 .top { display: flex; justify-content: space-between; align-items: baseline; padding: 18px max(16px, env(safe-area-inset-right, 0px)) 18px max(16px, env(safe-area-inset-left, 0px)); font-size: 15px; color: var(--slate); position: relative; z-index: 5 }
 .top a { text-decoration: none }
 .top .name { font-family: var(--f-title); font-size: 20px; letter-spacing: .01em }
-.top .mark { font-family: var(--f-zh); color: var(--coral); margin-right: .4em; font-size: 18px }
+/* the mark: 道, the Way, in a square stamp line */
+.mark, .top .mark { display: inline-grid; place-items: center; width: 1.6em; height: 1.6em; border: 1.5px solid var(--coral-ink); border-radius: 2px; font-family: var(--f-zh); font-weight: 400; font-size: 16px; line-height: 1; color: var(--coral-ink); margin-right: .55em; vertical-align: -.3em }
 .top nav { display: flex; gap: 22px; font-family: var(--f-label) }
 
 /* ---------- reading register: the head ---------- */
@@ -108,10 +109,10 @@ details.toc-phone { display: none }
 .par .text > .wide { margin-left: 344px }
 
 /* ---------- home ---------- */
-.home-hero { min-height: 92svh; display: grid; place-items: center; padding: 20px 16px 40px; text-align: center; color: var(--slate); position: relative }
-.home-hero .art { width: min(70vw, 620px); margin-inline: auto }
-.home-hero .art img { mix-blend-mode: multiply; max-height: 62svh; margin: 0 auto }
-.home-hero h1 { font-family: var(--f-title); font-weight: 400; font-size: clamp(56px, 11vw, 150px); line-height: .95; margin: -6vh 0 0; letter-spacing: -.01em; position: relative; margin-top: -.55em }
+.home-hero { min-height: 86svh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(32px, 6vw, 96px); max-width: 1200px; margin: 0 auto; padding: 20px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px)); color: var(--slate) }
+.home-hero .art { width: 100%; max-width: 560px; justify-self: end }
+.home-hero .art img { mix-blend-mode: multiply; max-height: 74svh; margin-left: auto }
+.home-hero h1 { font-family: var(--f-title); font-weight: 400; font-size: clamp(56px, 11vw, 150px); line-height: .95; margin: -6vh 0 0; letter-spacing: -.01em; margin: 0 }
 .home-hero .tag { font-family: var(--f-display); font-weight: 300; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.15; margin: 14px 0 0 }
 .opening { text-align: center; color: var(--slate); padding: 14vh 16px 0 }
 .opening .lines { font-family: var(--f-display); font-weight: 300; font-size: clamp(30px, 4.6vw, 60px); line-height: 1.15; margin: 0 }
@@ -185,8 +186,9 @@ details.toc-phone li.off a { color: var(--soft); pointer-events: none }
   .shelf h3 { font-size: 23px }
   .shelf .who { font-size: 17px }
   .shelf .line { display: none }
-  .home-hero { min-height: 80svh }
-  .home-hero h1 { margin-top: -4vh }
+  .home-hero { min-height: 0; grid-template-columns: minmax(0, 1fr); gap: 20px; text-align: center; padding-top: 12px }
+  .home-hero .art { justify-self: center; max-width: 300px }
+  .home-hero .art img { max-height: 46svh; margin: 0 auto }
   details.toc-phone ol { columns: 1 }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important } }

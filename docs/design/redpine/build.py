@@ -116,7 +116,7 @@ a:hover{text-decoration-color:var(--coral)}
 /* the site's own line: the name, small, and the way back */
 .top{position:absolute;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;z-index:3}
 .top a{text-decoration:none;font-family:var(--f-body);font-size:15px;color:var(--slate)}
-.top .mark{font-family:"Noto Serif TC",serif;font-size:17px;margin-right:.45em;color:var(--coral)}
+.top .mark{display:inline-grid;place-items:center;width:1.6em;height:1.6em;border:1.5px solid #c45a3e;border-radius:2px;font-family:"Noto Serif TC",serif;font-size:16px;line-height:1;margin-right:.55em;color:#c45a3e;vertical-align:-.3em}
 
 /* opening: the picture alone on the paper, a coral sun across it, the kind of text beneath */
 .hero{min-height:100svh;display:grid;grid-template-rows:1fr auto;justify-items:center;padding:80px 20px 28px}
@@ -233,7 +233,7 @@ def build(variant):
     }
     body = "".join(stanza_html(n, l, z, notes, opts) for (n, l), z in zip(stanzas, zh))
     page = f"""<title>{face['title']}</title>{face['head']}<style>{css}{CSS}</style>
-<nav class="top"><a href="#"><span class="mark" lang="zh-Hant">慧</span>Sutras</a><a href="#">Library</a></nav>
+<nav class="top"><a href="#"><span class="mark" lang="zh-Hant">道</span>Sutras</a><a href="#">Library</a></nav>
 <section class="hero"><div class="art"><img src="{coralhero}" alt="An ink landscape: a few dark strokes of trees and rock, most of the paper empty."></div><p class="label">Poem</p></section>
 <header class="title"><h1>Faith in Mind</h1><p class="by">translated by Master <span style="white-space:nowrap">Sheng-yen</span></p><p class="zh" lang="zh-Hant">信心銘</p></header>
 <p class="stand">{inline(inbrief)}</p>
