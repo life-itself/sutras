@@ -114,15 +114,19 @@
    grid, the Chinese on the left level with its English; the notes stay in the right margin.
    Needs <div class="rs" data-rs-layout="parallel">. ---- */
 @container rs (min-width: 1180px) {
-  .rs[data-rs-layout="parallel"] { --rs-measure: 50em }
-  .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) { display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr); column-gap: 2.4em; grid-auto-flow: row dense; align-items: start }
+  .rs[data-rs-layout="parallel"] { --rs-max: 1480px; --rs-measure: 56em; --rs-rail-w: 180px; --rs-margin: 190px; --rs-gap: 44px; --zh-col: 270px; --zh-gap: 40px }
+  .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) { display: grid; grid-template-columns: var(--zh-col) minmax(0, 1fr); column-gap: var(--zh-gap); grid-auto-flow: row dense; align-items: start }
   .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > * { grid-column: 2 }
-  .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > p.orig { grid-column: 1; margin: 0 0 var(--rs-s3); border-left: 0; padding: .15em 0 0; font-size: .86em; line-height: 1.85; text-align: justify; text-align-last: right; color: var(--sd-slate) }
+  .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > p.orig { grid-column: 1; margin: 0 0 var(--rs-s3); border-left: 0; padding: .15em 0 0; font-size: .86em; line-height: 1.85; text-align: left; color: var(--sd-slate) }
   .rs[data-rs-layout="parallel"] :is(.koan-case, .koan-comment, .koan-verse) > p.koan-label { grid-column: 1 / -1 }
-  .rs[data-rs-layout="parallel"] .koan-verse > p.orig { writing-mode: vertical-rl; justify-self: end; text-align: start; text-align-last: auto; font-size: 1.05em; letter-spacing: .25em; line-height: 2 }
-  .rs[data-rs-layout="parallel"] .rs-text > :not(.koan-case):not(.koan-comment):not(.koan-verse):not(h3.koan-title):not(.footnotes) { margin-left: calc(15em / .95 + 2.4em); }
-  .rs[data-rs-layout="parallel"] .rs-text > h3.koan-title { padding-left: calc(15em / 1.75 + 2.4em / 1.75) }
+  .rs[data-rs-layout="parallel"] .koan-verse > p.orig { writing-mode: vertical-rl; justify-self: end; font-size: 1.05em; letter-spacing: .25em; line-height: 2 }
+  .rs[data-rs-layout="parallel"] .rs-text > :not(.koan-case):not(.koan-comment):not(.koan-verse):not(.footnotes) { margin-left: calc(var(--zh-col) + var(--zh-gap)) }
 }
+
+/* the editors' highlights: a coral tint, not the notes system's default yellow */
+::highlight(sutras-note) { background-color: rgba(238, 138, 112, .16) }
+::highlight(sutras-note-active) { background-color: rgba(238, 138, 112, .32) }
+.rs[data-rs-theme="personal"] { --nt-hl: rgba(238, 138, 112, .16); --nt-hl-active: rgba(238, 138, 112, .32) }
 
 /* ---- home: the picture beside the name, then the first lines, the intro, the shelf (README.md, .rs-home) ---- */
 .sd-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(32px, 6vw, 96px); max-width: 1160px; margin: 0 auto; padding: clamp(24px, 5vw, 64px) 20px 0; color: var(--sd-slate) }
