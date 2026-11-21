@@ -1,40 +1,68 @@
-/* Sutras EPUB stylesheet. Small on purpose: restyle here, then run scripts/epub --all.
-   Pandoc's own classes: .verse and .passages are the containers, span.v the passage numbers,
-   p.inbrief and p.signed the front matter, p.orig the original-language text. */
+/* Sutras EPUB stylesheet, design direction A ("warm red", docs/decisions/0005-design-direction.md),
+   cut down for e-readers. Small on purpose: restyle here, then run scripts/epub --all.
 
-html { font-family: Georgia, "Times New Roman", serif; }
-body { line-height: 1.5; margin: 0 5%; color: #1d1d1d; }
+   What carries over from the site: Literata if the reader has it, else its own serif; the warm red
+   (#c9502f) only on the apparatus (passage and stanza numbers, note marks, the label before "In brief",
+   the label on the title page); italic labels in the text face, no tracked capitals; the image above
+   the title. What does not: the paper colour and the ink. Readers have their own themes (white, sepia,
+   night) and a fixed background or text colour fights them, so the page takes the reader's paper.
+
+   Classes: .verse and .passages are the containers, span.v the passage numbers, a.footnote-ref and a.footnote-back the note numbers, p.inbrief (with
+   span.label) and p.signed the front matter, p.orig the original-language text, figure.frontispiece
+   and p.kicker / p.trl on the title page. */
+
+html { font-family: Literata, Georgia, "Times New Roman", serif; }
+body { line-height: 1.5; margin: 0 5%; }
 h1, h2, h3, h4 { font-family: inherit; font-weight: normal; line-height: 1.25; }
 h1 { font-size: 1.6em; margin: 1.2em 0 0.8em; }
-h2 { font-size: 1.3em; margin: 1.2em 0 0.6em; }
-h3 { font-size: 1.1em; margin: 1.2em 0 0.4em; }
+h2 { font-size: 1.35em; font-style: italic; margin: 1.4em 0 0.6em; }
+h3 { font-size: 1.1em; margin: 1.4em 0 0.4em; }
 h4 { font-size: 1em; font-style: italic; margin: 1em 0 0.3em; }
 p { margin: 0 0 0.9em; text-align: left; hyphens: none; -webkit-hyphens: none; }
 a { color: inherit; }
+em em, i em, em i { font-style: normal; }
 
-/* front matter */
+/* the red: one colour, used only for numbers and labels */
+span.v, a.footnote-ref, a.footnote-back, span.label, p.kicker { color: #c9502f; }
+
+/* title page: the image, its credit, then the label, title, author, translator; centred */
+section.titlepage { text-align: center; }
+section.titlepage p { text-align: center; }
+figure.frontispiece { margin: 1em 0 2em; text-align: center; page-break-inside: avoid; break-inside: avoid; }
+figure.frontispiece img { max-width: 100%; max-height: 45vh; width: auto; height: auto; }
+figure.frontispiece figcaption { font-size: 0.75em; font-style: italic; line-height: 1.4; margin-top: 0.6em; opacity: 0.75; }
+p.kicker { font-style: italic; font-size: 0.9em; margin: 0 0 0.4em; }
+h1.title { font-size: 2em; margin: 0.2em 0 0.5em; }
+p.aut { font-size: 1.05em; margin: 0 0 0.2em; }
+p.trl { font-style: italic; font-size: 0.95em; margin: 0 0 2em; }
+p.publisher, p.date, div.rights { font-size: 0.75em; opacity: 0.75; margin: 0 0 0.4em; }
+
+/* front matter: In brief is an italic paragraph with a red label, as a book's blurb */
 p.inbrief { font-style: italic; }
-p.signed, p.meta { font-size: 0.9em; color: #555; }
+p.inbrief em { font-style: normal; }
+span.label { margin-right: 0.3em; }
+p.signed, p.meta { font-size: 0.9em; font-style: italic; opacity: 0.75; }
 
 /* verse: one paragraph per stanza, a line per line, a space between stanzas */
 .verse p { margin: 0 0 1.4em; }
-.verse br { line-height: 1.5; }
 
 /* prose: each numbered paragraph is one passage */
 .passages p { margin: 0 0 0.9em; }
 
-/* passage numbers sit beside the text, quiet */
-span.v { font-size: 0.75em; color: #777; margin-right: 0.4em; font-variant-numeric: lining-nums; }
+/* passage numbers sit beside the text, small; on their own line above a stanza */
+span.v { font-size: 0.78em; margin-right: 0.4em; font-variant-numeric: oldstyle-nums; }
 .verse span.v { display: block; margin: 0 0 0.2em; }
 
-/* original-language text (Chinese, Pali): smaller and quieter, with a CJK face */
-p.orig { font-size: 0.85em; color: #555; }
-p.orig[lang="zh"] { font-family: "Songti SC", "Noto Serif CJK SC", "Hiragino Mincho ProN", serif; }
+/* original-language text (Chinese): a little smaller, with a CJK face */
+p.orig { font-size: 0.9em; opacity: 0.8; }
+[lang="zh"] { font-family: "Noto Serif TC", "Songti TC", "Songti SC", "Noto Serif CJK TC", "Hiragino Mincho ProN", serif; }
 
 /* notes: EPUB pop-up notes; the list at the end of a file is the fallback */
-a.footnote-ref { font-size: 0.7em; vertical-align: super; text-decoration: none; }
-section.footnotes { font-size: 0.85em; color: #555; margin-top: 2em; }
+a.footnote-ref { font-size: 0.7em; vertical-align: super; line-height: 0; text-decoration: none; }
+section.footnotes { font-size: 0.85em; margin-top: 2em; }
+section.footnotes hr { width: 3em; margin: 0 0 1em; border: 0; border-top: 1px solid currentColor; opacity: 0.4; }
 aside[role="doc-footnote"] { font-size: 0.9em; }
+a.footnote-back { text-decoration: none; font-variant-numeric: oldstyle-nums; }
 
 /* the contents page keeps its own look */
 nav#toc ol { list-style: none; padding-left: 0; }
