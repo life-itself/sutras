@@ -41,7 +41,7 @@
 .site-navbar-site-name { font-family: var(--sd-title); font-size: 20px; font-weight: 400; letter-spacing: .01em; color: var(--sd-slate); display: inline-flex; align-items: center }
 .site-navbar-site-name::before { content: var(--sutras-mark); display: inline-grid; place-items: center; width: 1.55em; height: 1.55em; border: 1.5px solid var(--sd-accent-ink); border-radius: 2px; font-family: var(--sd-mark); font-weight: 400; font-size: 15px; line-height: 1; color: var(--sd-accent-ink); margin-right: .6em }
 /* the links sit on the right, the name and mark alone on the left (Rufus, 2026-11-21) */
-.site-navbar-links-container { margin-left: auto; gap: 28px }
+.site-navbar-links-container { margin-left: auto; padding-left: 24px; justify-content: flex-end; gap: 28px }
 .site-navbar-mobile-nav-button { margin-left: auto }
 .site-navbar-link { font-size: 15px; color: var(--sd-slate) }
 .site-navbar-link:hover { color: var(--sd-accent-ink) }
