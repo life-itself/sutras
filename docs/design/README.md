@@ -15,6 +15,17 @@ Emergence Magazine's Red Pine poem page as the base (warm grey paper, one open-l
 - The home shelf: `README.md` keeps the landing session's copy and structure; each entry is a list item (`<ul class="sd-shelf">`, one per group) with image, title link, author line and one-line description.
 - Checks after a change: `scripts/check`, then every page at 390 (device emulation, `scrollWidth` must equal 390) and 1280; the audit script used is in the session scratch, its rule is simple: no element's right edge past the viewport, and the title on the first screen.
 
+## History: every round and where it is
+
+| Date | Round | What Rufus said | Where |
+|---|---|---|---|
+| 2026-11-20 | First design page: feel, measured research, eight directions | "mood board is weak. where is the true beauty in this" | `archive/2026-11-20-first-page/` (not republished) |
+| 2026-11-20 | First mood board: six references, two anti-references | Loves Kaikado and Emergence's Red Pine page; Co–Star's images; Plum Village too warm; wants something funkier | [Mood board](https://claude.ai/artifact/Wv1GFH5C3QQtXykof4eSrg) (since republished as the second board) |
+| 2026-11-20 | Second mood board, widened | "i like sesshu"; "if i were basing off something it would be that one emergence page of red pine" | [Mood board](https://claude.ai/artifact/Wv1GFH5C3QQtXykof4eSrg) |
+| 2026-11-21 | Three directions as sample sites, with marks and fonts | Not seen before the choice; agents chose A (decision 0005) | [Summary page: directions, marks, fonts](https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr) · [A warm red](https://claude.ai/artifact/FrqFoG8gtKYvTyApm4h3K8) · [B blue](https://claude.ai/artifact/WFPMxwZ9UNWuFJyenM4uUc) · [C gold on indigo](https://claude.ai/artifact/FLoxRQmuVwdcpHwh4yZD4F) |
+| 2026-11-21 | A live on the site; home page rewritten as a shelf | "the site isn't bad, but it's not great… not nearly as beautiful" as Emergence | https://sutras.lifeitself.org |
+| 2026-11-21 | Round 2: Faith in Mind as a near-copy of the Red Pine page, in open-licence faces and in the Seeds of Renaissance faces | (pending) | [Open faces](https://claude.ai/artifact/1EWyZdNMhjruSC3YTUN7Ta) · [Seeds faces](https://claude.ai/artifact/HDLYRfSpMtc2Sn8C13mxnh) · built by `redpine/build.py` |
+
 ## Pages
 
 - **The direction, three sample sites, marks, fonts, recommendation:** https://claude.ai/artifact/P76Wz3n8TeN2CXTrgbYnwr. Sample sites: [A warm red](https://claude.ai/artifact/FrqFoG8gtKYvTyApm4h3K8) (live), [B blue](https://claude.ai/artifact/WFPMxwZ9UNWuFJyenM4uUc) (set aside), [C gold on indigo](https://claude.ai/artifact/FLoxRQmuVwdcpHwh4yZD4F) (the backup). Built by `directions/build.py` from snapshots of the live pages plus the direction CSS.
