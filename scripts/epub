@@ -99,6 +99,10 @@ def to_book(slug, meta, body):
     # web-only header
     body = re.sub(r"(?s)<header class=\"rs-head\">.*?</header>\n", "", body)
     body = re.sub(r"(?s)<nav class=\"rs-rail\".*?</nav>\n?", "", body)  # web contents rail; the book has its own
+    # the image above the title becomes the frontispiece: a Markdown figure, so Pandoc packages the file
+    # (assets/images/<slug>.jpg); frontispiece() then moves it onto the title page
+    body = re.sub(r'(?m)^<figure class="sd-art"><img src="/([^"]+)"[^>]*><figcaption>(.*?)</figcaption></figure>$',
+                  lambda m: "\n![%s](%s){.frontispiece}\n" % (re.sub(r"</?i>", "*", m.group(2)), m.group(1)), body)
     # in brief and signature: keep the words, drop the web classes
     body = re.sub(r'<p class="rs-inbrief"><span class="rs-inbrief-label">In brief</span> (.*?)</p>', r'<p class="inbrief">\1</p>', body)
     body = body.replace('<p class="rs-signed">', '<p class="signed">')
@@ -193,6 +197,28 @@ def retitle(path):
             z.writestr(info, data)
 
 
+def frontispiece(path):
+    """Move the frontispiece figure from the first chapter file to the top of the title page, above the title."""
+    with zipfile.ZipFile(path) as z:
+        entries = [(info, z.read(info.filename)) for info in z.infolist()]
+    files = {info.filename: data.decode("utf-8") for info, data in entries if info.filename.endswith(".xhtml")}
+    figure = None
+    for name, text in files.items():
+        m = re.search(r'(?s)\n?<figure>\s*<img [^>]*class="frontispiece".*?</figure>', text)
+        if m and name.startswith("EPUB/text/ch"):
+            figure = m.group(0).strip()
+            files[name] = text[:m.start()] + text[m.end():]
+            break
+    if not figure:
+        return
+    name = "EPUB/text/title_page.xhtml"
+    files[name] = files[name].replace('<section epub:type="titlepage" class="titlepage">',
+                                      '<section epub:type="titlepage" class="titlepage">\n' + figure, 1)
+    with zipfile.ZipFile(path, "w") as z:
+        for info, data in entries:
+            z.writestr(info, files[info.filename].encode("utf-8") if info.filename in files else data)
+
+
 def build(slug):
     root_meta, body = read_edition(slug)
     seconds = source_time(slug)
@@ -208,9 +234,10 @@ def build(slug):
         (tmp / "metadata.yaml").write_text(yaml.safe_dump(metadata(slug, root_meta, day), allow_unicode=True, sort_keys=False), encoding="utf-8")
         level = chapter_level(body)
         cmd = ["pandoc", str(tmp / "book.md"), "-f", "markdown", "-t", "epub3", "-o", str(out),
-               "--css", str(CSS), "--split-level=%d" % level, "--toc", "--toc-depth=3",
+               "--css", str(CSS), "--resource-path", str(ROOT), "--split-level=%d" % level, "--toc", "--toc-depth=3",
                "--metadata-file", str(tmp / "metadata.yaml"), "--epub-cover-image", str(tmp / "cover.svg")]
         subprocess.run(cmd, check=True, env=env)
+    frontispiece(out)
     retitle(out)
     print("wrote", out.relative_to(ROOT))
     return out
