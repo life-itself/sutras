@@ -10,11 +10,14 @@
    The mark: 道, the Way, in a square stamp line. */
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Noto+Serif+TC:wght@300;400;600&display=swap");
 
-@font-face { font-family: "Polyamine"; src: url("/assets/fonts/Polyamine-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap }
-@font-face { font-family: "Restora"; src: url("/assets/fonts/Restora-ExtraLight.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap }
-@font-face { font-family: "Restora"; src: url("/assets/fonts/Restora-ThinItalic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap }
-@font-face { font-family: "Apfel Grotezk"; src: url("/assets/fonts/ApfelGrotezk-Regular.otf") format("opentype"); font-weight: 400; font-display: swap }
-@font-face { font-family: "Apfel Grotezk"; src: url("/assets/fonts/ApfelGrotezk-Mittel.otf") format("opentype"); font-weight: 500; font-display: swap }
+
+/* Fonts by a path relative to this file: Flowershow serves css/ and assets/ from its file store, so a root path
+   ("/assets/…") would resolve against the store's domain, not the site's. */
+@font-face { font-family: "Polyamine"; src: url("../assets/fonts/Polyamine-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap }
+@font-face { font-family: "Restora"; src: url("../assets/fonts/Restora-ExtraLight.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap }
+@font-face { font-family: "Restora"; src: url("../assets/fonts/Restora-ThinItalic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap }
+@font-face { font-family: "Apfel Grotezk"; src: url("../assets/fonts/ApfelGrotezk-Regular.otf") format("opentype"); font-weight: 400; font-display: swap }
+@font-face { font-family: "Apfel Grotezk"; src: url("../assets/fonts/ApfelGrotezk-Mittel.otf") format("opentype"); font-weight: 500; font-display: swap }
 
 /* ---- tokens ---- */
 :root {
