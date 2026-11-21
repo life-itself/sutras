@@ -51,7 +51,7 @@
 .site-navbar-mobile-nav-button { color: var(--sd-slate); padding: 10px; margin-right: -10px }
 .site-navbar-mobile-nav-button[data-open] { color: var(--sd-accent-ink) }
 .site-navbar-mobile-nav-icon { width: 24px; height: 24px; stroke-width: 1.5 }
-.mobile-nav { background: var(--sd-bg) !important; border-top: 1px solid var(--sd-rule); padding: 8px 20px 32px !important }
+.mobile-nav { background: var(--sd-bg) !important; border-top: 0; padding: 8px 20px 32px !important }
 .mobile-nav-links-container { display: grid; gap: 0 }
 .mobile-nav-link { display: block; font-family: var(--sd-title) !important; font-size: 34px !important; font-weight: 400 !important; line-height: 1.1; color: var(--sd-slate) !important; padding: 18px 0 !important; border-bottom: 1px solid var(--sd-rule); text-decoration: none }
 .mobile-nav-link:hover, .mobile-nav-link:active { color: var(--sd-accent-ink) !important }
