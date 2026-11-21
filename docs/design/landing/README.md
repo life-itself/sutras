@@ -11,6 +11,8 @@ Status, 2026-11-21: the home page was rewritten by the landing track (bead sutra
 
 What changed: the kicker that repeated the navbar went; the line under the opening lines now names the text, its kind and its length, and is the link into it; the intro is two sentences; the five tradition sections became one shelf of nine with each edition's own label; reading times are in the editions' words; "Reading here" is one paragraph; "About" is one sentence.
 
+Later on 2026-11-21, after the design session closed: the page is one centred spine. The opening lines were centred but the intro and the three-across shelf sat left (88px of margin on the left, about 220px to the right of the shelf); now the door line, the intro, the shelf (960px) and the colophon all share the centre with the opening lines, with the text inside each block set left. Checked at 1280×800, 1440×900 and 390×844 (no change on the phone). The rules are in `css/direction-a.css` under "home".
+
 ## The first sketches (2026-11-20, before the design direction was chosen)
 
 Three static sketches of the opening screen in the stand-in look (EB Garamond, IBM Plex Mono labels), kept for the record. They load `css/reading.css` and `css/home.css` directly, so they no longer match the live site.

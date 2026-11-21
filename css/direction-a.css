@@ -76,16 +76,14 @@
 
 /* ---- home: the shelf, Kaikado's row (README.md, .rs-home) ---- */
 .rs-home .rs-head .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
-.rs.rs-home[data-rs-theme="personal"] .rs-head .rs-head-text { grid-column: 1 !important; max-width: none; justify-items: start }
+.rs.rs-home[data-rs-theme="personal"] .rs-head .rs-head-text { grid-column: 1 !important; max-width: none; justify-items: center }
 .rs-home .rs-head .rs-kicker { display: none }
 .rs-home .rs-lead { max-width: 30em; font-size: clamp(1.9rem, 3vw, 2.4rem); line-height: 1.18 }
 .rs-home .rs-lead span { display: block; white-space: normal }
 @media (min-width: 900px) { .rs-home .rs-lead span { white-space: nowrap } }
 .rs-home .rs-head .rs-quiet, .rs-home .rs-head .rs-quiet a { font-style: italic; color: var(--sd-muted) }
 .sd-shelf .sd-kind { display: block; font-size: .78em; font-style: italic; color: var(--sd-accent-ink); line-height: 1.3; margin: 0 }
-.rs-home .rs-head .rs-wrap { text-align: left; justify-items: start }
-.rs-home .rs-head .rs-head-text { justify-items: start; max-width: none }
-.rs-home .rs-head .rs-kicker { align-self: start }
+/* The home page is one centred spine: the opening lines, the door line, the intro, the shelf (960px) and the colophon all share the viewport's centre; text inside each block is set left. */
 .rs-home .rs-text > h2, .rs-home .rs-text .rs-shelf h2 { font-family: var(--sd-text); font-style: italic; font-weight: 400; font-size: 1.1em; letter-spacing: 0; text-transform: none; color: var(--sd-muted); margin: var(--rs-s6) 0 var(--rs-s3) }
 .rs-home .rs-text .rs-shelf:first-of-type h2 { margin-top: 0 }
 .rs-home .rs-shelf ul.sd-shelf, .sd-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 40px); align-items: start; max-width: 960px }
@@ -96,9 +94,9 @@
 .sd-shelf .rs-quiet, .rs-home .rs-shelf .sd-shelf .rs-quiet, .sd-shelf .sd-by { font-size: .82em; color: var(--sd-muted); line-height: 1.4; margin: 0; text-wrap: pretty }
 .sd-shelf .sd-line { font-size: .92em; color: var(--sd-ink2); line-height: 1.45; margin: 0 }
 .sd-shelf li a:hover h3 { color: var(--sd-accent-ink) }
-.rs-home .rs-text .rs-shelf ul.sd-shelf { margin: 0 0 var(--rs-s4); padding: 0 }
+.rs.rs-home[data-rs-theme="personal"] .rs-text .rs-shelf ul.sd-shelf { margin: var(--rs-s4) auto; padding: 0 }
 .rs-home .rs-shelf li { margin: 0 }
 .rs-home .rs-body .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
 .rs-home .rs-text { grid-column: 1 !important }
-.rs-home .rs-text > :not(.rs-shelf) { max-width: var(--sd-measure) }
+.rs.rs-home[data-rs-theme="personal"] .rs-text > :not(.rs-shelf) { max-width: var(--sd-measure); margin-inline: auto }
 @media (max-width: 640px) { .sd-shelf, .rs-home .rs-shelf ul.sd-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px } .sd-shelf .sd-thumb { max-width: 150px } }
