@@ -25,6 +25,7 @@ scripts:
 <h1>The Gateless Gate</h1>
 <p class="rs-subtitle">Mumonkan <span lang="zh">無門關</span></p>
 <p class="rs-attribution">Forty-eight cases, with comments and verses by Wumen Huikai (Mumon Ekai)<br />Translated by Katsuki Sekida</p>
+<p class="rs-get"><a href="/downloads/gateless-gate-mumonkan.epub">Download the EPUB</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 

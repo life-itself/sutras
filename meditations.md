@@ -24,6 +24,7 @@ scripts:
 <h1>Meditations</h1>
 <p class="rs-subtitle">Also known as <span lang="grc">Eis heauton</span>, “To Himself”</p>
 <p class="rs-attribution">Marcus Aurelius<br>Translated by Gregory Hays</p>
+<p class="rs-get"><a href="/downloads/meditations.epub">Download the EPUB</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap">
 <nav class="rs-rail" aria-label="Contents"><p class="rs-rail-label">Contents</p><ol class="rs-toc" data-rs-auto></ol></nav>

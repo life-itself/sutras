@@ -24,6 +24,7 @@ scripts:
 <h1>The Diamond Sutra</h1>
 <p class="rs-subtitle">The Perfection of Wisdom<br><i>Vajracchedikā Prajñāpāramitā</i> <span lang="zh">金剛經</span></p>
 <p class="rs-attribution">Translated by Red Pine<br>Also in this library: <a href="/diamond">Thich Nhat Hanh’s translation</a></p>
+<p class="rs-get"><a href="/downloads/diamond-red-pine.epub">Download the EPUB</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 

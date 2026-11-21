@@ -24,6 +24,7 @@ scripts:
 <h1>Shodoka</h1>
 <p class="rs-subtitle">Song of Enlightenment <span lang="zh">證道歌</span></p>
 <p class="rs-attribution">Attributed to Yung-chia (Yoka Genkaku)<br>Translated by Robert Aitken and Eido Shimano</p>
+<p class="rs-get"><a href="/downloads/shodoka.epub">Download the EPUB</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 

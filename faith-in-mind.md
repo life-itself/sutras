@@ -24,6 +24,7 @@ scripts:
 <h1>Faith in Mind</h1>
 <p class="rs-subtitle">Hsin Hsin Ming <span lang="zh">信心銘</span></p>
 <p class="rs-attribution">Attributed to Seng Ts’an, Third Patriarch of Ch’an<br>Translated by Master Sheng-yen, with Paul Kennedy</p>
+<p class="rs-get"><a href="/downloads/faith-in-mind.epub">Download the EPUB</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 

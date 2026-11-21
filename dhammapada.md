@@ -24,6 +24,7 @@ scripts:
 <h1>Dhammapada</h1>
 <p class="rs-subtitle">The verses of the Dhamma, from the Pāli</p>
 <p class="rs-attribution">Verses attributed to the Buddha<br />Translated by Thanissaro Bhikkhu</p>
+<p class="rs-get"><a href="/downloads/dhammapada.epub">Download the EPUB</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 

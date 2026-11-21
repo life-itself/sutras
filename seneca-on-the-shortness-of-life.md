@@ -24,6 +24,7 @@ scripts:
 <h1>On the Shortness of Life</h1>
 <p class="rs-subtitle"><span lang="la">De Brevitate Vitae</span></p>
 <p class="rs-attribution">Seneca, to Paulinus<br>Translated by John W. Basore</p>
+<p class="rs-get"><a href="/downloads/seneca-on-the-shortness-of-life.epub">Download the EPUB</a></p>
 </div></div></header>
 <div class="rs-body"><div class="rs-wrap"><nav class="rs-rail" aria-label="Contents"><span class="rs-rail-label">Contents</span><ol class="rs-toc" data-rs-auto></ol></nav><article class="rs-text">
 

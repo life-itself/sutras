@@ -6,7 +6,7 @@ Status: v2, 2026-11-20 (sources moved out of this repo; see step 2), written fro
 
 One page per text at the root (`/<slug>`, the URL never changes), in this order:
 
-1. **Header:** kicker linking home, title, subtitle with the original title, attribution and translator.
+1. **Header:** kicker linking home, title, subtitle with the original title, attribution and translator. Then the EPUB, offered in the head: `<p class="rs-get"><a href="/downloads/<slug>.epub">Download the EPUB</a></p>` as the last line inside `.rs-head-text`, after `rs-attribution` (see `faith-in-mind.md`). Add the same link to the text's home shelf entry, as a second link after the entry's own `<a>`: `<a class="sd-epub" href="/downloads/<slug>.epub" aria-label="Download <title> as an EPUB">EPUB</a>`.
 2. **In brief:** two or three sentences: what it is, who it is attributed to, what this edition holds.
 3. **Introduction:** ours, short, signed "Editors’ introduction, drafted with an AI assistant. Month YYYY."
 4. **The text,** every passage with a link.
