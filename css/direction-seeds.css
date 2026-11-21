@@ -45,6 +45,17 @@
 .site-navbar-mobile-nav-button { margin-left: auto }
 .site-navbar-link { font-size: 15px; color: var(--sd-slate) }
 .site-navbar-link:hover { color: var(--sd-accent-ink) }
+/* the bar's content keeps to the page's width on a large screen, not the viewport's edge */
+.site-navbar-inner { max-width: 1240px; margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)) !important; padding-right: max(20px, env(safe-area-inset-right, 0px)) !important }
+/* phone menu: the button in slate, the open panel on the paper, the links large in Polyamine */
+.site-navbar-mobile-nav-button { color: var(--sd-slate); padding: 10px; margin-right: -10px }
+.site-navbar-mobile-nav-button[data-open] { color: var(--sd-accent-ink) }
+.site-navbar-mobile-nav-icon { width: 24px; height: 24px; stroke-width: 1.5 }
+.mobile-nav { background: var(--sd-bg) !important; border-top: 1px solid var(--sd-rule); padding: 8px 20px 32px !important }
+.mobile-nav-links-container { display: grid; gap: 0 }
+.mobile-nav-link { display: block; font-family: var(--sd-title) !important; font-size: 34px !important; font-weight: 400 !important; line-height: 1.1; color: var(--sd-slate) !important; padding: 18px 0 !important; border-bottom: 1px solid var(--sd-rule); text-decoration: none }
+.mobile-nav-link:hover, .mobile-nav-link:active { color: var(--sd-accent-ink) !important }
+.mobile-nav-links-container::after { content: "a library of wisdom texts"; display: block; margin-top: 28px; font-family: var(--sd-voice); font-weight: 300; font-size: 22px; color: var(--sd-muted) }
 .site-footer { font-family: var(--sd-label); font-size: 14px; color: var(--sd-muted) }
 .site-footer-publication-name { font-family: var(--sd-title); font-weight: 400; color: var(--sd-slate) }
 
@@ -61,6 +72,12 @@
 .rs[data-rs-theme="personal"] .rs-subtitle :lang(zh) { font-family: var(--sd-mark); font-weight: 300; font-size: .7em; letter-spacing: .3em; color: var(--sd-muted) }
 .rs[data-rs-theme="personal"] .rs-head .rs-attribution { font-family: var(--sd-text); font-size: 16px; line-height: 1.5; color: var(--sd-ink2); text-align: center; max-width: min(30em, 100%); overflow-wrap: anywhere }
 .rs[data-rs-theme="personal"] .rs-body .rs-wrap { padding-top: clamp(40px, 6vw, 72px) }
+
+/* ---- the EPUB, offered in the head of every edition (p.rs-get after the attribution) ---- */
+.rs[data-rs-theme="personal"] .rs-head p.rs-get { margin: 18px 0 0; text-align: center }
+.rs[data-rs-theme="personal"] .rs-head p.rs-get a { display: inline-flex; align-items: center; gap: .5em; font-family: var(--sd-label); font-weight: 500; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--sd-accent-ink); text-decoration: none; border: 1px solid var(--sd-hair); border-radius: 2px; padding: 8px 14px }
+.rs[data-rs-theme="personal"] .rs-head p.rs-get a::before { content: "↓"; font-size: 1.15em; letter-spacing: 0 }
+.rs[data-rs-theme="personal"] .rs-head p.rs-get a:hover { border-color: var(--sd-accent-ink) }
 
 /* ---- In brief: the standfirst ---- */
 .rs[data-rs-theme="personal"] .rs-inbrief { background: none; border: 0; padding: 0; margin: 0 0 var(--rs-s5) !important; font-size: 1.12em; line-height: 1.5; color: var(--sd-slate) }
@@ -158,6 +175,11 @@
 .sd-shelf .sd-line { order: 5; font-size: .86em; color: var(--sd-ink); line-height: 1.5; margin: 2px 0 0 }
 .sd-shelf .sd-thumb { order: 1 }
 .sd-shelf li a:hover h3 { color: var(--sd-accent-ink) }
+/* each shelf entry: the entry link, then its EPUB as a second link, not nested */
+.sd-shelf li { display: grid; gap: 10px; align-content: start }
+.sd-shelf li a.sd-epub { display: inline-flex; justify-self: start; align-items: center; gap: .45em; font-family: var(--sd-label); font-weight: 500; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--sd-accent-ink); text-decoration: none; border-bottom: 1px solid var(--sd-hair); padding: 6px 0 3px }
+.sd-shelf li a.sd-epub::before { content: "↓"; font-size: 1.15em; letter-spacing: 0 }
+.sd-shelf li a.sd-epub:hover { border-bottom-color: var(--sd-accent-ink) }
 .rs.rs-home[data-rs-theme="personal"] .rs-text .rs-shelf ul.sd-shelf { margin: var(--rs-s4) auto; padding: 0 }
 .rs-home .rs-body .rs-wrap { grid-template-columns: minmax(0, 1fr) !important; max-width: 1120px !important; justify-content: stretch }
 .rs-home .rs-text { grid-column: 1 !important }
