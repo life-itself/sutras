@@ -47,15 +47,13 @@
 .site-navbar-link:hover { color: var(--sd-accent-ink) }
 /* the bar's content keeps to the page's width on a large screen, not the viewport's edge */
 .site-navbar-inner { max-width: 1240px; margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)) !important; padding-right: max(20px, env(safe-area-inset-right, 0px)) !important }
-/* phone menu: the button in slate, the open panel on the paper, the links large in Polyamine */
+/* phone menu: the same links as the desktop bar (Apfel, 15px, slate), a plain list on the paper with hairlines */
 .site-navbar-mobile-nav-button { color: var(--sd-slate); padding: 10px; margin-right: -10px }
-.site-navbar-mobile-nav-button[data-open] { color: var(--sd-accent-ink) }
-.site-navbar-mobile-nav-icon { width: 24px; height: 24px; stroke-width: 1.5 }
-.mobile-nav { background: var(--sd-bg) !important; border-top: 0; padding: 8px 20px 32px !important }
+.site-navbar-mobile-nav-icon { width: 22px; height: 22px; stroke-width: 1.5 }
+.mobile-nav { background: var(--sd-bg) !important; border-top: 0; padding: 4px 20px 24px !important }
 .mobile-nav-links-container { display: grid; gap: 0 }
-.mobile-nav-link { display: block; font-family: var(--sd-title) !important; font-size: 34px !important; font-weight: 400 !important; line-height: 1.1; color: var(--sd-slate) !important; padding: 18px 0 !important; border-bottom: 1px solid var(--sd-rule); text-decoration: none }
+.mobile-nav-link { display: block; font-family: var(--sd-label) !important; font-size: 15px !important; font-weight: 400 !important; line-height: 1.3; color: var(--sd-slate) !important; padding: 14px 0 !important; border-bottom: 1px solid var(--sd-rule); text-decoration: none }
 .mobile-nav-link:hover, .mobile-nav-link:active { color: var(--sd-accent-ink) !important }
-.mobile-nav-links-container::after { content: "a library of wisdom texts"; display: block; margin-top: 28px; font-family: var(--sd-voice); font-weight: 300; font-size: 22px; color: var(--sd-muted) }
 .site-footer { font-family: var(--sd-label); font-size: 14px; color: var(--sd-muted) }
 .site-footer-publication-name { font-family: var(--sd-title); font-weight: 400; color: var(--sd-slate) }
 
